@@ -1,0 +1,103 @@
+h1 {
+  color: $color-charcoal-gray;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -1.2px;
+  line-height: 32px;
+  margin: 8px 0;
+
+  @include respond-to(tablet) {
+    font-size: 36px;
+    letter-spacing: -0.6px;
+    line-height: 38px;
+    margin: 12px 0;
+  }
+
+  @include respond-to(desktop) {
+    font-size: 40px;
+    letter-spacing: -1.2px;
+    line-height: 44px;
+    margin: 16px 0;
+  }
+
+  &.light {
+    font-weight: 300;
+  }
+}
+
+h2 {
+  color: $color-charcoal-gray;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+  line-height: 30px;
+  margin: 12px 0;
+
+  @include respond-to(tablet) {
+    font-size: 30px;
+    letter-spacing: -0.5px;
+    line-height: 32px;
+    margin: 12px 0;
+  }
+
+  @include respond-to(desktop) {
+    font-size: 34px;
+    letter-spacing: -0.8px;
+    line-height: 36px;
+    margin: 16px 0;
+  }
+}
+
+h3 {
+  color: $color-charcoal-gray;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+  line-height: 28px;
+  margin: 8px 0;
+}
+
+h4 {
+  color: $color-charcoal-gray;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  line-height: 20px;
+  margin: 4px 0;
+
+  &.bold {
+    font-weight: 700;
+  }
+}
+
+h5 {
+  color: $color-charcoal-gray;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  margin: 4px 0;
+  text-transform: uppercase;
+}
+
+.as-h1 {
+  color: $color-charcoal-gray;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -1.2px;
+  line-height: 32px;
+  margin: 8px 0;
+
+  @include respond-to(tablet) {
+    font-size: 36px;
+    letter-spacing: -0.6px;
+    line-height: 38px;
+    margin: 12px 0;
+  }
+
+  @include respond-to(desktop) {
+    font-size: 40px;
+    letter-spacing: -1.2px;
+    line-height: 44px;
+    margin: 16px 0;
+  }
+}

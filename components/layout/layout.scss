@@ -1,0 +1,831 @@
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+  margin: 0;
+  overflow-x: hidden;
+
+  > .columnar {
+    &+.columnar {
+      margin: 48px auto 0;
+    }
+  }
+}
+
+html {
+  height: 100%;
+}
+
+.breadcrumbs {
+  color: $color-white;
+  display: none;
+  font-weight: 300;
+  grid-column: col-start / span 4;
+  width: 100%;
+  max-width: 1024px;
+
+  @include respond-to(tablet) {
+    display: flex;
+    grid-column: col-start / span 12;
+    margin: 70px auto 0;
+  }
+
+  a, a:active, span {
+    color: $color-white;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+
+    &:first-child {
+      margin: 0 10px 0 0;
+    }
+
+    &:last-child {
+      margin: 0 0 0 10px;
+    }
+  }
+}
+
+.columnar {
+  display: grid;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: $mobile-grid-padding;
+  position: relative;
+
+  .no-collapse {
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to(tablet) {
+      display: grid;
+    }
+  }
+
+  &+.squiggles {
+    margin: 85px 0 0;
+
+    @include respond-to(tablet) {
+      display: grid;
+      margin: 48px 0 0;
+    }
+
+    @include respond-to(desktop) {
+      display: grid;
+      margin: 146px 0 0;
+    }
+  }
+
+  @include respond-to(tablet) {
+    grid-gap: 0 $grid-gap;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    padding: $tablet-grid-padding;
+  }
+
+  @include respond-to(desktop) {
+    padding: $desktop-grid-padding;
+  }
+
+  .columns-one-two {
+    grid-column: col-start / span 4;
+  
+    @include respond-to(tablet) {
+      grid-column: col-start / span 2;
+    }
+  
+    @include respond-to(desktop) {
+      grid-column: col-start / span 2;
+    }
+  }
+  
+  .columns-one-three {
+    grid-column: col-start / span 4;
+  
+    @include respond-to(tablet) {
+      grid-column: col-start / span 3;
+    }
+  
+    @include respond-to(desktop) {
+      grid-column: col-start / span 3;
+    }
+  }
+  
+  .columns-four-three {
+    grid-column: col-start / span 4;
+  
+    @include respond-to(tablet) {
+      grid-column: col-start 4 / span 3;
+    }
+  
+    @include respond-to(desktop) {
+      grid-column: col-start 4 / span 3;
+    }
+  }
+
+  .columns-four-six {
+    grid-column: col-start / span 4;
+  
+    @include respond-to(tablet) {
+      grid-column: col-start 4 / span 6;
+    }
+  
+    @include respond-to(desktop) {
+      grid-column: col-start 4 / span 6;
+    }
+  }
+  
+  .columns-five-three {
+    grid-column: col-start / span 4;
+  
+    @include respond-to(tablet) {
+      grid-column: col-start 5 / span 3;
+    }
+  
+    @include respond-to(desktop) {
+      grid-column: col-start 5 / span 3;
+    }
+  }
+  
+  .columns-seven-three {
+    grid-column: col-start / span 4;
+  
+    @include respond-to(tablet) {
+      grid-column: col-start 7 / span 3;
+    }
+  
+    @include respond-to(desktop) {
+      grid-column: col-start 7 / span 3;
+    }
+  }
+  
+  .columns-ten-three {
+    grid-column: col-start / span 4;
+  
+    @include respond-to(tablet) {
+      grid-column: col-start 10 / span 3;
+    }
+  
+    @include respond-to(desktop) {
+      grid-column: col-start 10 / span 3;
+    }
+  }
+  
+  .columns-one-four {
+    grid-column: col-start / span 4;
+  
+    @include respond-to(tablet) {
+      grid-column: col-start 1 / span 4;
+    }
+  
+    @include respond-to(desktop) {
+      grid-column: col-start 1 / span 4;
+    }
+  }
+  
+  .columns-five-four {
+    grid-column: col-start / span 4;
+  
+    @include respond-to(tablet) {
+      grid-column: col-start 5 / span 4;
+    }
+  
+    @include respond-to(desktop) {
+      grid-column: col-start 5 / span 4;
+    }
+  }
+  
+  .columns-three {
+    grid-column: col-start / span 4;
+  
+    @include respond-to(tablet) {
+      grid-column: col-start / span 3;
+    }
+  
+    @include respond-to(desktop) {
+      grid-column: col-start / span 3;
+    }
+  }
+  
+  .columns-three-two {
+    grid-column: col-start / span 4;
+  
+    @include respond-to(tablet) {
+      grid-column: col-start 3 / span 2;
+    }
+  
+    @include respond-to(desktop) {
+      grid-column: col-start 3 / span 2;
+    }
+  }
+  
+  
+  .columns-two-four {
+    grid-column: col-start / span 4;
+  
+    @include respond-to(tablet) {
+      grid-column: col-start 2 / span 4;
+    }
+  
+    @include respond-to(desktop) {
+      grid-column: col-start 2 / span 4;
+    }
+  }
+  
+  .columns-eight-four {
+    grid-column: col-start / span 4;
+  
+    @include respond-to(tablet) {
+      grid-column: col-start 8 / span 4;
+    }
+  
+    @include respond-to(desktop) {
+      grid-column: col-start 8 / span 4;
+    }
+  }
+  
+  .columns-nine-four {
+    grid-column: col-start / span 4;
+  
+    @include respond-to(tablet) {
+      grid-column: col-start 9 / span 4;
+    }
+  
+    @include respond-to(desktop) {
+      grid-column: col-start 9 / span 4;
+    }
+  }
+  
+  .columns-four {
+    grid-column: col-start / span 4;
+  }
+  
+  .columns-six {
+    grid-column: col-start / span 4;
+  
+    @include respond-to(tablet) {
+      grid-column: col-start / span 6;
+    }
+  
+    @include respond-to(desktop) {
+      grid-column: col-start / span 6;
+    }
+  
+    & > img {
+      height: auto;
+      width: 100%;
+    }
+  
+    & > svg {
+      height: auto;
+      width: 100%;
+    }
+  }
+  
+  .columns-four-three {
+    grid-column: col-start / span 4;
+  
+    @include respond-to(tablet) {
+      grid-column: col-start 4 / span 3;
+    }
+  
+    @include respond-to(desktop) {
+      grid-column: col-start 4 / span 3;
+    }
+  }
+  
+  .columns-eight-five {
+    grid-column: col-start / span 4;
+  
+    @include respond-to(tablet) {
+      grid-column: col-start 8 / span 5;
+    }
+  
+    @include respond-to(desktop) {
+      grid-column: col-start 8 / span 5;
+    }
+  }
+  
+  .columns-seven-six {
+    grid-column: col-start / span 4;
+  
+    @include respond-to(tablet) {
+      grid-column: col-start 7 / span 6;
+    }
+  
+    @include respond-to(desktop) {
+      grid-column: col-start 7 / span 6;
+    }
+  }
+  
+  .columns-twelve {
+    grid-column: col-start / span 4;
+  
+    @include respond-to(tablet) {
+      grid-column: col-start / span 12;
+    }
+  
+    @include respond-to(desktop) {
+      grid-column: col-start / span 12;
+    }
+  }
+}
+
+.dev-resources {
+  margin: 96px 0 0;
+
+  li {
+    a, a:active, a:visited, a:hover {
+      color: $color-mineral;
+      text-decoration: none;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+
+  &.column {
+    flex-direction: column;
+  }
+
+  &.align-items-center {
+    align-items: center;
+  }
+}
+
+.greatest-musician {
+  fill: #f1a026;
+}
+
+.hero-image {
+  margin: 33px 0 0;
+
+  @include respond-to(tablet) {
+    margin: inherit;
+  }
+}
+
+ul.large-list {
+  font-size: 18px;
+  letter-spacing: -0.1px;
+  line-height: 26px;
+  margin: 49px 0 0;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+
+    &+ li {
+      margin: 14px 0 0;
+    }
+  }
+}
+
+.mobile-only {
+  display: inline-block;
+
+  @include respond-to(tablet) {
+    display: none;
+  }
+
+  @include respond-to(tablet) {
+    display: none;
+  }
+}
+
+.mobile-order-one {
+  order: 1;
+
+  @include respond-to(tablet) {
+    order: 0;
+  }
+}
+
+.mobile-order-two {
+  order: 2;
+  
+  @include respond-to(tablet) {
+    order: 0;
+  }
+}
+
+.no-tablet {
+  @include respond-to(tablet) {
+    display: none;
+  }
+}
+
+.no-desktop {
+  @include respond-to(desktop) {
+    display: none;
+  }
+}
+
+.row-one {
+  grid-row: 1;
+}
+
+.row-two {
+  grid-row: 2;
+}
+
+.squiggles {
+  background: url('/assets/Squiggles.jpg');
+  position: relative;
+  padding: 161px 0 188px;
+
+  @include respond-to(tablet) {
+    padding: 234px 0 326px;
+  }
+
+  @include respond-to(desktop) {
+    padding: 256px 0 356px;
+  }
+
+  .bottom-mask {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+
+  .top-mask {
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  h2 {
+    margin: 0 0 8px;
+
+    @include respond-to(tablet) {
+      margin: 0 0 16px;
+    }
+
+    @include respond-to(desktop) {
+      margin: 0 0 8px;
+    }
+  }
+
+  p {
+    margin: 0 0 65px;
+
+    @include respond-to(tablet) {
+      margin: 0 0 62px;
+    }
+
+    @include respond-to(desktop) {
+      margin: 0 0 86px;
+    }
+  }
+
+  .columns-one-three {
+    @include respond-to(tablet) {
+      grid-column: col-start / span 4;
+    }
+
+    @include respond-to(desktop) {
+      grid-column: col-start  / span 3;
+    }
+  }
+
+  .columns-four-three {
+    @include respond-to(tablet) {
+      grid-column: col-start 5 / span 4;
+    }
+
+    @include respond-to(desktop) {
+      grid-column: col-start 4  / span 3;
+    }
+  }
+
+  .columns-seven-three {
+    @include respond-to(tablet) {
+      grid-column: col-start 9 / span 4;
+    }
+
+    @include respond-to(desktop) {
+      grid-column: col-start 7 / span 3;
+    }
+  }
+
+  .columns-ten-three {
+    @include respond-to(tablet) {
+      grid-column: col-start 5 / span 4;
+      margin: $grid-gap 0 0;
+    }
+
+    @include respond-to(desktop) {
+      grid-column: col-start 10 / span 3;
+    }
+  }
+}
+
+.step {
+
+  &+.step {
+    margin: 64px 0 0;
+
+    @include respond-to(tablet) { 
+      margin: inherit;
+    }
+  }
+
+  img {
+    height: 60px;
+    margin: 0 auto 21px;
+  }
+
+  div {
+    margin: 13px 0 17px;
+  }
+
+  h4 {
+    font-weight: 700;
+  }
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.tabs {
+  min-height: 100px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin-top: -108px;
+  width: 100%;
+
+  @include respond-to(tablet) {
+    margin-top: -182px;
+  }
+
+  .hero {
+    position: relative;
+
+    &> svg {
+      display: inline-block;
+    }
+
+    &+.columnar {
+      margin: 69px auto 0;
+    }
+
+    h1 {
+      color: $color-white;
+      font-weight: 300;
+      grid-column: col-start / span 4;
+      margin: 41px 0 31px;
+  
+      @include respond-to(tablet) {
+        grid-column: col-start / span 12;
+        margin: 100px 0 8px;
+      }
+    }
+
+    p {
+      color: $color-white;
+    }
+
+    .link-button {
+      margin: 47px 0 0;
+
+      @include respond-to(tablet) {
+        margin: 24px 0 0;
+      }
+    }
+  }
+
+  .data-algebra {
+
+    .hero {
+      background: url('https://cdn.permission.io/apps/permissionbase/assets/green-polygon-1440.png') no-repeat;
+      background-position: center bottom;
+      background-size: cover;
+      padding: 128px 0 200px 0;
+
+      &+.columnar {
+        margin: 48px auto 0;
+      }
+    }
+  }
+
+  .devportal {
+
+    .hero {
+      background: url('/assets/GreenPolygonTexture.jpg') no-repeat;
+      background-size: cover;
+      padding: 108px 0 173px;
+
+      @include respond-to(desktop) {
+        padding: 128px 0 200px;
+      }
+
+      @include respond-to(largedesktop) {
+        padding: 128px 0 300px;
+      }
+
+      svg {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+
+  .getstarted {
+    .hero {
+      background: url('https://cdn.permission.io/apps/permissionbase/assets/bullseye-dark-1440.png') no-repeat;
+      background-position: top center;
+      background-size: cover;
+      padding: 108px 0 260px;
+
+      @include respond-to(desktop) {
+        padding: 128px 0 260px;
+      }
+    }
+  }
+
+  .usecases {
+    .hero {
+      background: url('/assets/GreenPolygonTexture.jpg') no-repeat;
+      background-position: top center;
+      background-size: cover;
+      padding: 108px 0 0;
+
+      @include respond-to(desktop) {
+        padding: 128px 0 260px;
+      }
+    }
+  }
+}
+
+.tablet-columns-seven-six {
+  
+  @include respond-to(tablet) {
+    grid-column: col-start 7 / span 6 !important;
+  }
+}
+
+.tabs > * {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.vertical-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-overlay {
+  bottom: 0;
+  left: 0;
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 3;
+
+  &.expanded {
+    display: block;
+  }
+}
+
+.dev-newsletter {
+  margin: -152px auto 0;
+
+  @include respond-to(tablet) {
+    margin: -230px auto 0;
+  }
+
+  @include respond-to(desktop) {
+    margin: -264px auto 0;
+  }
+
+  .blurb {
+    display: none;
+    margin: 0 auto 0;
+    width: 538px;
+    
+    @include respond-to(tablet) {
+      display: flex;
+    }
+
+    a, a:active, a:hover, a:visited {
+      color: $color-charcoal-gray;
+      display: block;
+      font-weight: 700;
+
+      img {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
+      }
+    }
+
+    > img {
+      height: 100px;
+      width: 127px;
+    }
+  }
+
+  .text-input {
+    margin: 45px auto 37px;
+
+    @include respond-to(tablet) {
+      
+    }
+  }
+}
+
+.apps-that-scale {
+
+  h1 {
+    margin: 0px;
+
+    @include respond-to(tablet) {
+      margin: 0px;
+    }
+
+    @include respond-to(desktop) {
+      margin: 0px;
+    }
+  }
+
+  p {
+    margin: 16px 0 29px;
+
+    @include respond-to(tablet) {
+      margin: 5px 0 29px;
+    }
+
+    @include respond-to(desktop) {
+      margin: 5px 0 29px;
+    }
+  }
+}
+
+.data-algebra-ebook {
+  margin: 32px auto 0;
+
+  @include respond-to(tablet) {
+    margin: 89px auto 0;
+  }
+
+  @include respond-to(desktop) {
+    margin: 108px auto 151px;
+  }
+
+  h1 {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.39px;
+    margin: 16px 0;
+
+    @include respond-to(tablet) {
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: -0.52px;
+      margin: 0 0 21px;
+    }
+  
+    @include respond-to(desktop) {
+      font-size: 33px;
+      font-weight: 200;
+      line-height: 36px;
+      letter-spacing: -0.8px;
+      margin: 0 auto 0;
+    }
+  }
+
+  .link-button {
+    margin: 14px 0 72px;
+    width: 236px;
+
+    @include respond-to(tablet) {
+      margin: 48px auto 107px;
+      width: 200px;
+    }
+
+    @include respond-to(desktop) {
+      margin: 48px auto 0;
+    }
+  }
+}
+
+

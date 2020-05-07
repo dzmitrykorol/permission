@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 63 (101010) - https://sketch.com -->
+    <title>039D9992-B44D-416D-B428-57BC78F89C4A</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="Design-System" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Utility-Icons" transform="translate(-199.000000, -1194.000000)">
+            <g id="Iconography-/-Symbols-/-Error-Copy-2" transform="translate(199.000000, 1194.000000)">
+                <g id="Iconography-/-Symbols-/-Alert">
+                    <circle id="Oval-3" fill="#D50F0F" cx="7" cy="7" r="7"></circle>
+                    <path d="M7.01295887,10.7773648 C6.69360982,10.7904565 6.40030843,10.5994632 6.27906345,10.2994634 C6.15781847,9.99946367 6.23453912,9.65456549 6.47103301,9.43646299 C6.77502623,9.15110199 7.24428263,9.15110199 7.54827588,9.43646299 C7.69489954,9.57932032 7.77777778,9.7766438 7.77777778,9.98288047 C7.77777778,10.1891171 7.69489954,10.3864406 7.54827588,10.5292979 C7.41130266,10.6834906 7.21752498,10.7732876 7.01295887,10.7773648 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <rect id="Rectangle-8" fill="#FFFFFF" x="6.25" y="3.39638414" width="1.5" height="4.66666667"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

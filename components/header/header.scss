@@ -1,0 +1,55 @@
+header {
+  height: 54px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 5;
+
+  @include respond-to(tablet) {
+    height: 112px;
+  }
+
+  .log-in.marketing, .log-in.marketing:active {
+    border-color: $color-white;
+    color: $color-light-mineral;
+    background: $color-white;
+    display: none;
+    font-weight: 400;
+
+    @include respond-to(tablet) {
+      display: inline-block;
+      grid-column: col-start 10 / span 1;
+      width: 101px;
+    }
+
+    @include respond-to(desktop) {
+      grid-column: col-start 11 / span 1;
+      margin: 0 20px 0 28px;
+    }
+  }
+
+  .sign-up.marketing.knockout {
+    background-color: $color-transparent;
+    border-color: $color-white;
+    color: $color-white;
+    display: none;
+    font-weight: 400;
+    margin: 0;
+
+    &:active,&:focus, &:hover {
+      color: $color-mineral;
+      background-color: $color-off-white;
+    }
+
+    @include respond-to(tablet) {
+      display: inline-block;
+      grid-column: col-start 11 / span 1;
+      width: 101px;
+    }
+
+    @include respond-to(desktop) {
+      grid-column: col-start 12 / span 1;
+    }
+  }
+}

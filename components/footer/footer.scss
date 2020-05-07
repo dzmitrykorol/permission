@@ -1,0 +1,184 @@
+footer {
+  background: url('https://cdn.permission.io/apps/permissionbase/assets/footer-background-1440.png') no-repeat;
+  background-size: cover;
+  border-top: $color-bright-blue 6px solid;
+
+  h2 {
+    color: $color-white;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 20px;
+    margin: 0 0 10px;
+
+    @include respond-to(tablet) {
+      margin: 0 0 30px;
+    }
+  }
+
+  a, a:active, a:visited {
+    color: $color-white;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 16px;
+    text-decoration: none;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  .columnar {
+    .columns-eight-five {
+      h2:first-child {
+        margin-bottom: 0;
+        margin-top: 34px;
+        
+        @include respond-to(tablet) {
+          margin: 0 0 30px;
+        }
+      }
+
+      @include respond-to(tablet) {
+        margin-bottom: 12px;
+      }
+    }
+
+    .columns-four-three {
+      grid-column: col-start 3/ span 2;
+      
+      @include respond-to(tablet) {
+        grid-column: col-start 4 / span 3;
+      }
+    }
+
+    .columns-three {
+      grid-column: col-start / span 2;
+
+      @include respond-to(tablet) {
+        grid-column: col-start / span 3;
+      }
+    }
+
+    .columns-twelve {
+      text-align: center;
+
+      @include respond-to(tablet) {
+        text-align: left;
+      }
+    }
+  }
+
+  .copyright {
+    color: $color-white;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 41px 0 30px;
+
+    @include respond-to(tablet) {
+      margin: 80px 0 54px;
+    }
+
+    .divider {
+      display: none;
+
+      @include respond-to(tablet) {
+        display: inline-block;
+      }
+    }
+
+    .trademark {
+      display: block;
+
+      @include respond-to(tablet) {
+        display: inline-block;
+      }
+    }
+  }
+
+  .permission-logo {
+    margin: 33px auto 28px;
+    width: 167px;
+
+    @include respond-to(tablet) {
+      margin: 50px 0 55px;
+    }
+  }
+
+  .social-icons {
+    align-items: flex-end;
+    display: flex;
+    margin: 11px 0 0;
+
+    @include respond-to(desktop) {
+      margin: -8px 0 0;
+    }
+
+    a {
+      display: inline-block;
+      margin: 0 24px 0 0;
+      @include respond-to(tablet) {
+
+      }
+    
+      @include respond-to(desktop) {
+        margin: 0 44px 0 0;
+      }
+
+      &:last-child {
+        @include respond-to(desktop) {
+          margin: 0;
+        }
+      }
+    }
+
+    img {
+      fill: $color-white;
+      max-width: 18px;
+    }
+  }
+
+  .text-input {
+    margin: 21px 0 47px;
+    width: 100%;
+
+    @include respond-to(tablet) {
+      margin: 0 0 48px;
+    }
+
+    input {
+      background-color: $color-white;
+      padding: 14px 115px 14px 20px;
+    }
+
+    label {
+      top: 16px;
+    }
+
+    &.with-button {
+
+      button {
+        position: absolute;
+        top: 5px;
+        width: 110px;
+
+        &:hover {
+          background: $email-capture-button-hover-background;
+        }
+      }
+    }
+  }
+
+  .news-updates {
+    @include respond-to(tablet) {
+      grid-column: col-start 7 / span 6;
+    }
+  }
+}

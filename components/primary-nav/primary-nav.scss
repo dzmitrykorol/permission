@@ -1,0 +1,365 @@
+.primary-nav {
+  align-items: center;
+  display: flex;
+  height: 54px;
+  width: 100%;
+
+  @include respond-to(tablet) {
+    height: 112px;
+  }
+
+  &>nav {
+    &> ul {
+      &> li {
+        @include respond-to(desktop) {
+          color: $color-white;
+        }
+    
+        &> a {
+          color: $color-white;
+          display: inline-block;
+          font-size: 18px;
+          font-weight: 700;
+          height: 20px;
+          line-height: 26px;
+          margin: 0 0 7px;
+          text-decoration: none;
+  
+          @include respond-to(desktop) {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            margin: 0 0 0 28px;
+          }
+  
+          &:last-child {
+            @include respond-to(desktop) {
+              margin: 0;
+            }
+          }
+    
+          &:first-child {
+            @include respond-to(desktop) {
+              margin: 0 0 0 28px;
+            }
+          }
+        }
+
+        &> a:active {
+          @include respond-to(desktop) {
+            color: $color-white;
+          }
+        }
+
+        &> a:hover {
+          @include respond-to(desktop) {
+            text-decoration: underline;
+          }
+        }
+
+        &> a:visited {
+          @include respond-to(desktop) {
+            color: $color-white;
+          }
+        }
+
+        &.mobile-only {
+          display: inline-block;
+        
+          @include respond-to(tablet) {
+            display: none;
+          }
+        
+          @include respond-to(tablet) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  li {
+    box-sizing: border-box;
+    list-style: none;
+
+    &.submenu {
+      align-items: flex-end;
+      margin: 0 0 0 28px;
+
+      @include respond-to(desktop) {
+        align-items: normal;
+      }
+
+      [data-menu] {
+        &.expanded {
+          top: 40px;
+        }
+      }
+
+      > div {
+        color: $color-white;
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 26px;
+        margin: 0 0 4px;
+
+        @include respond-to(desktop) {
+          color: $color-white;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 20px;
+          margin: 0;
+        }
+
+        &:hover {
+          @include respond-to(desktop) {
+            text-decoration: underline;
+          }
+        }
+
+        &.no-desktop {
+          @include respond-to(desktop) {
+            display: none;
+          }
+        }
+
+        img, svg {
+          display: none;
+
+          @include respond-to(desktop) {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  li a, li a:active {
+    color: $color-white;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 26px;
+    text-decoration: none;
+
+    @include respond-to(desktop) {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      margin: 0;
+    }
+  }
+
+  nav {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, [col-start] 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 0 24px;
+    height: 54px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 16px;
+
+    @include respond-to(tablet) {
+      grid-template-columns: repeat(12, [col-start] 1fr);
+      height: 112px;
+      padding: 0 32px;
+    }
+
+    @include respond-to(desktop) {
+      display: flex;
+      font-size: 14px;
+      max-width: 1024px;
+      padding: 0 44px;
+    }
+
+    @include respond-to(largedesktop) {
+      max-width: 1112px;
+    }
+  
+    >ul {
+      display: none;
+      margin: 0;
+    
+      @include respond-to(desktop) {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+      }
+  
+      &.expanded {
+        align-items: flex-end;
+        background: $primary-nav-menu-background;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        padding: 16px 16px 38px 25px;
+        position: absolute;
+        right: 0;
+        top: 54px;
+        z-index: 5;
+  
+        @include respond-to(tablet) {
+          top: 112px;
+        }
+      }
+    }
+  }
+
+  &> ul {
+    padding: 16px 16px 24px 25px;
+
+    @include respond-to(desktop) {
+      padding: 0;
+    }
+  }
+
+  ul {
+    @include respond-to(desktop) {
+      grid-column: col-start 3 / span 8;
+      justify-content: flex-end;
+      padding: 0;
+    }
+  }
+
+  .hamburger {
+    grid-column: col-start 4 / span 1;
+    justify-content: flex-end;
+    flex-grow: 1;
+
+    @include respond-to(tablet) {
+      grid-column: col-start 12 / span 1;
+    }
+
+    .icon-large-close {
+      display: none;
+      margin: 8px 5px 12px 0;
+
+      &.expanded {
+        display: inline-block;
+      }
+
+      .fill-group {
+        fill: $color-white;
+      }
+    }
+
+    &.expanded {
+      .icon-hamburger {
+        display: none;
+      }
+    }
+  }
+
+  .icon-hamburger {
+    display: inline-block;
+    margin: 12px 0 12px;
+
+    @include respond-to(desktop) {
+      display: none;
+    }
+
+    .hamburger-1 {
+      fill: $color-white;
+    }
+
+    .hamburger-2 {
+      fill: $color-white;
+    }
+
+    .hamburger-3 {
+      fill: $color-white;
+    }
+
+    &.expanded {
+      display: none;
+    }
+  }
+
+  .submenu[data-formenu="languages"] {
+
+    @include respond-to(desktop) {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+    }
+
+    &> svg {
+      display: none;
+      margin: 2px 0 0 6px;
+
+      @include respond-to(desktop) {
+        display: inline-block;
+      }
+    }
+
+    &>img {
+      display: none;
+
+      @include respond-to(desktop) {
+        display: inline-block;
+      }
+    }
+
+    ul {
+      a {
+        display: flex;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 26px;
+
+        @include respond-to(desktop) {
+          font-size: 14px;
+          line-height: 20px;
+          margin: -2px 0 0;
+        }
+      }
+
+      img {
+        display: none;
+        height: 17px;
+        margin: 2px 15px 0 0;
+        width: 25px;
+
+        @include respond-to(desktop) {
+          display: inline-block;
+        }
+      }
+
+      li {
+        align-items: center;
+        display: flex;
+      }
+    }
+
+    .current-language {
+      height: 17px;
+      width: 26px;
+    }
+  }
+
+  .logo {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    grid-column: col-start / span 2;
+
+    @include respond-to(tablet) {
+      grid-column: col-start / span 4;
+    }
+
+    @include respond-to(desktop) {
+      grid-column: col-start / span 2;
+    }
+
+    img {
+      height: 26px;
+
+      @include respond-to(tablet) {
+        height: 35px;
+      }
+    }
+  }
+}

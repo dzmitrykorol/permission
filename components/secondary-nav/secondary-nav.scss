@@ -1,0 +1,248 @@
+.secondary-nav {
+  background-color: rgba(255, 255, 255, 0.71);
+  height: 54px;
+  margin: 54px 0 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+
+  @include respond-to(tablet) {
+    margin: 112px 0 0;
+  }
+
+  @include respond-to(desktop) {
+    height: 70px;
+  }
+
+  &.fully-charged {
+    background-color: $color-off-white;
+  }
+
+  a {
+    color: $color-mineral;
+    line-height: 20px;
+  
+    @include respond-to(desktop) {
+      color: $color-white;
+      display: inline-block;
+      font-size: 14px;
+      text-decoration: none;
+    }
+  }
+
+  nav {
+    display: grid;
+    grid-template-columns: repeat(8, [col-start] 1fr);
+    grid-gap: $grid-gap;
+    height: 54px;
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: $mobile-grid-padding;
+    width: 100%;
+
+    @include respond-to(tablet) {
+      grid-template-columns: repeat(12, [col-start] 1fr);
+      padding: $tablet-grid-padding;
+    }
+  
+    @include respond-to(desktop) {
+      height: 70px;
+      padding: $desktop-grid-padding;
+    }
+
+    @include respond-to(desktop) {
+      font-size: 14px;
+    }
+  
+    >ul {
+      display: none;
+      margin: 0;
+    
+      @include respond-to(desktop) {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+      }
+  
+      &.expanded {
+        align-items: flex-end;
+        background: $color-off-white;
+        box-sizing: border-box;
+        color: $color-mineral;
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        padding: 16px 16px 24px 25px;
+        position: absolute;
+        right: 0;
+        top: 54px;
+        z-index: 5;
+  
+        @include respond-to(tablet) {
+          top: 112px;
+        }
+      }
+    }
+
+    li {
+      align-items: stretch;
+      list-style-type: none;
+
+      a {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        text-decoration: none;
+  
+        @include respond-to(desktop) {
+          color: $color-light-mineral;
+          font-weight: 500;
+          height: 70px;
+          line-height: 70px;
+          margin: 0 0 0 28px;
+        }
+
+        &.active {
+          border-bottom: 0;
+    
+          @include respond-to(desktop) {
+            border-bottom: 10px solid $color-bright-blue;
+          }
+        }
+      }
+
+      a:active {
+        text-decoration: none;
+  
+        @include respond-to(desktop) {
+          color: $color-light-mineral;
+        }
+      }
+
+      a:hover {
+        text-decoration: none;
+        border-bottom: 0;
+  
+        @include respond-to(desktop) {
+          border-bottom: 10px solid $color-bright-blue;
+          color: $color-light-mineral;
+        }
+      }
+
+      a:visited {
+        text-decoration: none;
+  
+        @include respond-to(desktop) {
+          color: $color-light-mineral;
+        }
+      }
+    }
+
+    ul {
+      flex-direction: column;
+      left: 0;
+      padding: 54px 0 0;
+      position: absolute;
+
+      @include respond-to(desktop) {
+        display: flex;
+        grid-column: col-start 3 / span 9;
+        padding: 0;
+        position: relative;
+        flex-direction: row;
+        top: auto;
+      }
+
+      &.expanded {
+        align-items: flex-start;
+        padding: 70px 25px 20px 16px;
+        top: 0;
+        z-index: auto;
+      }
+      &.secondary-nav-blog {
+        grid-column: col-start 1 / span 12;
+        a {
+          margin: 0 28px 0 0px;
+        }
+      }
+    }
+  }
+
+  .devportal-link {
+    align-items: center;
+    display: flex;
+    grid-column: col-start 2 / span 2;
+    z-index: 4;
+
+    @include respond-to(desktop) {
+      grid-column: col-start / span 2;
+    }
+  
+    a, a:active, a:visited, a:hover {
+      background-color: $color-white;
+      border-color: $color-white;
+      border-radius: 18px;
+      box-shadow: none;
+      color: $color-light-mineral;
+      font-size: 20px;
+      font-weight: 700;
+      height: auto;
+      padding: 4px 14px 4px 16px;
+      text-decoration: none;
+
+      @include respond-to(desktop) {
+        line-height: 30px;
+        padding: 4px 14px 4px 15px;
+      }
+  
+      span {
+        font-style: italic;
+      }
+    }
+  }
+
+  .secondary-hamburger {
+    display: inline-block;
+    height: 100%;
+    z-index: 1;
+
+    grid-column: col-start / span 1;
+    
+    @include respond-to(desktop) {
+      display: none;
+    }
+
+    .icon-large-close {
+      display: none;
+      margin: 17px 19px 16px 16px;
+
+      .fill-group {
+        fill: $color-black;
+      }
+    }
+
+    .icon-secondary-hamburger {
+      margin: 17px 14px 16px 16px;
+    }
+
+    &.expanded {
+
+      &~ .devportal-link {
+        a, a:active, a:visited, a:hover {
+          background-color: $color-off-white;
+          color: $color-charcoal-gray;
+        }
+      }
+
+      .icon-large-close {
+        display: inline-block;
+      }
+
+      .icon-secondary-hamburger {
+        display: none;
+      }
+    }
+  }
+}
