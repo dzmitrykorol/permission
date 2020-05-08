@@ -75,6 +75,7 @@ class Plugin
         require_once __DIR__.'/widgets/BlogSinglePage.php';
         require_once __DIR__.'/widgets/BlogHeader.php';
         require_once __DIR__.'/widgets/BlogFooter.php';
+        require_once __DIR__.'/widgets/Homepage.php';
     }
 
     /**
@@ -91,11 +92,12 @@ class Plugin
         $this->include_widgets_files();
 
         // Register Widgets
-        \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Blog());
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Homepage());
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new BlogCategory());
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new BlogSinglePage());
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new BlogHeader());
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new BlogFooter());
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Homepage());
     }
 
     /**
