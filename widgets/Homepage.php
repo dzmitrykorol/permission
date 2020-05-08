@@ -207,7 +207,7 @@ class Homepage extends Widget_Base
                 </div>
                 <ul class="secondary-nav-blog" data-menu="secondary" data-for-tabs="secondary">
                     <li><a href="#category-0"
-                           data-tab-selector="category-0">TEST</a>
+                           data-tab-selector="category-0">!</a>
                     </li>
                 </ul>
             </nav>
