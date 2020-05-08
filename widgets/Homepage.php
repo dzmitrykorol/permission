@@ -176,42 +176,126 @@ class Homepage extends Widget_Base
     protected function render()
     {
         ?>
-        <link href="/wp-content/plugins/elementor-custom-widgets/base.css" rel="stylesheet">
-        <div class="secondary-nav">
-            <nav>
-                <div class="secondary-hamburger" data-formenu="secondary">
-                    <svg class="icon-large-close" width="29px" height="29px" viewBox="0 0 29 29" version="1.1"
-                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g class="fill-group" transform="translate(-756.000000, -951.000000)" fill-rule="nonzero">
-                                <g transform="translate(756.000000, 951.000000)">
-                                    <polygon
-                                            points="28.8 1.836 26.964 0 14.4 12.564 1.836 0 0 1.836 12.564 14.4 0 26.964 1.836 28.8 14.4 16.236 26.964 28.8 28.8 26.964 16.236 14.4"></polygon>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                    <svg class="icon-secondary-hamburger" width="34px" height="21px" viewBox="0 0 34 21">
-                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g transform="translate(-638.000000, -953.000000)" fill="#0C0C0C">
-                                <g transform="translate(638.000000, 953.000000)">
-                                    <g>
-                                        <rect x="0" y="2.84217094e-14" width="34" height="3" rx="1"></rect>
-                                        <rect x="0" y="9" width="25" height="3" rx="1"></rect>
-                                        <rect x="0" y="18" width="31" height="3" rx="1"></rect>
-                                    </g>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
+        <link href="/wp-content/plugins/elementor-custom-widgets/base.scss" rel="stylesheet">
+        <section class="homepage-wrapper">
+            <div class="video-hero">
+                <div class="hero-player-overlay">
+                    <video autoplay="autoplay" loop="loop" muted="muted">
+                        <source src="<?php echo $path; ?>/assets/permission_stockLoop.mp4" type="video/mp4">
+                    </video>
+                    <div class="hero-player-content">
+                        <div class="hero-player-content-overlay">
+                            <div class="floating-text">
+                                <div class="play-icon">
+                                    ▷
+                                </div>
+                                <h2>Permission’s blockchain and cryptocurrency enable you to<br/><span style="font-weight: 600;">own, control</span> and <span style="font-weight: 600;">profit</span> from your time and personal information.</h2>
+                                <div class="buttons">
+                                    <a href="https://shopping.stageabout.wpengine.com" role="button" target="_blank"click="">Join Us Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <ul class="secondary-nav-blog" data-menu="secondary" data-for-tabs="secondary">
-                    <li><a href="#category-0"
-                           data-tab-selector="category-0">!</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+                <iframe id="hero-player" src="https://player.vimeo.com/video/366780942" style="width: 100vw;height: 56.25vw;" frameborder="0" webkit-playsinline="true"
+                        playsinline="true" allow="autoplay">
+                </iframe>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://player.vimeo.com/api/player.js"></script>
+        <script>
+            var bindEvent = document['addEventListener'] ? 'addEventListener' : 'attachEvent';
+            var videoHero;
+            var heroOverlay;
+            var heroContent;
+            var player;
+            var isPermissionMobile = false;
+            if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                isPermissionMobile = true;
+            }
+
+            function setupHero() {
+                player = new Vimeo.Player(document.querySelector('#hero-player'));
+
+                videoHero = document.querySelector('.video-hero');
+
+                heroOverlay = document.querySelector('.hero-player-overlay');
+                heroContent = document.querySelector('.hero-player-content');
+                heroContent[bindEvent]('click', handleClick.bind(this));
+                player.on('ended', () => {
+                    heroOverlay.style.display = '';
+                    heroContent.classList.remove('fadeout');
+                });
+            }
+
+            function handleFullscreen() {
+                heroContent.classList.remove('fadeout');
+            }
+
+            function handleClick(evt) {
+
+                var btnCheck = evt.target.getAttribute('role');
+
+                if(btnCheck && btnCheck === 'button') {
+                    return;
+                }
+
+                player.getPaused().then((paused) => {
+                    if (!paused) {
+                        stopVideo();
+                        // heroContent.classList.remove('fadeout');
+                    } else {
+                        heroContent.classList.add('fadeout');
+
+                        if (isPermissionMobile) {
+                            videoHero.classList.add('slideup');
+                        }
+                        playVideo();
+                        setTimeout(()=> {
+                            heroOverlay.style.display = 'none';
+                        }, 2050);
+                    }
+                });
+            }
+
+            function playVideo() {
+                player.play();
+            }
+
+            function stopVideo() {
+                player.pause();
+            }
+
+            if (document.readyState === "complete" ||
+                (document.readyState !== "loading" && !document.documentElement.doScroll)) {
+                setupHero();
+            } else {
+                document.addEventListener("DOMContentLoaded", setupHero);
+            }
+        </script>
         <?php
     }
 
