@@ -198,6 +198,12 @@ class Homepage extends Widget_Base
                                         <div class="buttons">
                                             <a href="https://shopping.stageabout.wpengine.com" role="button" target="_blank"click="">Join Us Now</a>
                                         </div>
+                                        <div class="social-icons">
+                                            <a href="#"><img src="<?php echo $path; ?>assets/icons/TelegramLogo.svg">Telegram Chat</a>
+                                            <a href="#"><img src="<?php echo $path; ?>assets/icons/TelegramLogo.svg">Telegram Announcement</a>
+                                            <a href="#"><img src="<?php echo $path; ?>assets/icons/TwitterLogo.svg">Twitter</a>
+                                            <a href="#"><img src="<?php echo $path; ?>assets/icons/MediumLogo.svg">Medium</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -218,26 +224,26 @@ class Homepage extends Widget_Base
             </div>
             <div class="columnar tabs-home">
                 <ul class="tabs__caption">
-                    <li class="active">Первая вкладка</li>
-                    <li>Вторая вкладка</li>
+                    <li class="active">For Members</li>
+                    <li>For Brands</li>
                 </ul>
                 <div class="columns-six">
                     <div class="tabs__content  active">
-                        <p>Локаята принимает во внимание онтологический закон исключённого третьего, открывая новые горизонты. Идеи гедонизма занимают центральное место в утилитаризме Милля и Бентама, однако гегельянство поразительно. Отношение к современности амбивалентно
-                            творит интеллект, изменяя привычную реальность.</p>
-                        <p>Апостериори, созерцание понимает под собой позитивизм, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире. Закон исключённого третьего, следовательно, абстрактен. Катарсис рефлектирует
-                            трагический знак, открывая новые горизонты.</p>
+                        <div class="name">For Members</div>
+                        <p class="content">Be part of a consumer-focused community that values transparency and trust</p>
+                        <p class="content">Permission your data to brands and service providers and be paid for data you choose to share while shopping, being entertained, and other online engagement</p>
+                        <p class="content">Opt-in to interact with brands on an unobtrusive basis and receive content that is personalized and relevant</p>
+                        <p class="content">Know that your data is secure, anonymized, and never (ever) sold to third parties</p>
                     </div>
                     <div class="tabs__content">
-                        <p>Закон внешнего мира, как принято считать, реально рассматривается знак, отрицая очевидное. Гегельянство творит катарсис, хотя в официозе принято обратное. Апперцепция подчеркивает смысл жизни, ломая рамки привычных представлений. Представляется логичным,
-                            что адживика откровенна.</p>
-                        <p>Априори, закон внешнего мира принимает во внимание естественный гедонизм, ломая рамки привычных представлений. Концепция реально творит гедонизм, учитывая опасность, которую представляли собой писания Дюринга для не окрепшего еще немецкого рабочего
-                            движения.</p>
-                        <p>Созерцание осмысляет трансцендентальный бабувизм, хотя в официозе принято обратное. Бабувизм абстрактен. Знак, следовательно, понимает под собой субъективный язык образов, ломая рамки привычных представлений. Деонтология непредвзято подчеркивает даосизм,
-                            при этом буквы А, В, I, О символизируют соответственно общеутвердительное, общеотрицательное, частноутвердительное и частноотрицательное суждения.</p>
+                        <div class="name">For Brands</div>
+                        <p class="content">
+                            Value exchange advertising achieves 1:1 engagement and a holistic view of members’ needs and desires in real time.</p>
+                        <p class="content">The ability to identify and reward members based on their permissioned data leads to brand loyalty and increased ROI.</p>
+                        <p class="content">Permission blockchain provides accountability and transparency, eliminating ad spend waste.</p>
                     </div>
                     <div class="buttons">
-                        <a href="https://shopping.stageabout.wpengine.com" role="button" target="_blank"click="">Join Us Now</a>
+                        <a href="https://shopping.stageabout.wpengine.com" role="button" target="_blank"click="">Start Earning Now</a>
                     </div>
                 </div>
                 <div class="columns-six-eight">
