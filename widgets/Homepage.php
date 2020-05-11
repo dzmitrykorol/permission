@@ -175,23 +175,30 @@ class Homepage extends Widget_Base
 
     protected function render()
     {
+        $path = '/wp-content/plugins/elementor-custom-widgets/';
+
+
+
         ?>
-        <link href="/wp-content/plugins/elementor-custom-widgets/base.scss" rel="stylesheet">
-        <section class="homepage-wrapper">
+        <link href="/wp-content/plugins/elementor-custom-widgets/base.css" rel="stylesheet">
+        <section class="s1">
             <div class="video-hero">
                 <div class="hero-player-overlay">
                     <video autoplay="autoplay" loop="loop" muted="muted">
-                        <source src="<?php echo $path; ?>/assets/permission_stockLoop.mp4" type="video/mp4">
+                        <source src="<?php echo $path; ?>assets/permission_stockLoop.mp4" type="video/mp4">
                     </video>
                     <div class="hero-player-content">
                         <div class="hero-player-content-overlay">
-                            <div class="floating-text">
-                                <div class="play-icon">
-                                    ▷
-                                </div>
-                                <h2>Permission’s blockchain and cryptocurrency enable you to<br/><span style="font-weight: 600;">own, control</span> and <span style="font-weight: 600;">profit</span> from your time and personal information.</h2>
-                                <div class="buttons">
-                                    <a href="https://shopping.stageabout.wpengine.com" role="button" target="_blank"click="">Join Us Now</a>
+                            <div class="columnar">
+                                <div class="columns-twelve">
+                                    <div class="floating-text">
+                                        <div class="play-icon"><img src="<?php echo $path; ?>assets/icons/Play_Icon.svg">
+                                        </div>
+                                        <h2>Permission’s blockchain and cryptocurrency enable you to<br/><span style="font-weight: 600;">own, control</span> and <span style="font-weight: 600;">profit</span> from your time and personal information.</h2>
+                                        <div class="buttons">
+                                            <a href="https://shopping.stageabout.wpengine.com" role="button" target="_blank"click="">Join Us Now</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -202,7 +209,86 @@ class Homepage extends Widget_Base
                 </iframe>
             </div>
         </section>
+        <section class="s2">
+            <div class="columnar">
+                <div class="columns-twelve">
+                    <div class="title">Think of Permission as your digital “agent.”</div>
+                    <div class="sub-title">We make it easy for you to receive value for your time and data while engaging with the web as you normally do.</div>
+                </div>
+            </div>
+            <div class="columnar tabs-home">
+                <ul class="tabs__caption">
+                    <li class="active">Первая вкладка</li>
+                    <li>Вторая вкладка</li>
+                </ul>
+                <div class="columns-six">
+                    <div class="tabs__content  active">
+                        <p>Локаята принимает во внимание онтологический закон исключённого третьего, открывая новые горизонты. Идеи гедонизма занимают центральное место в утилитаризме Милля и Бентама, однако гегельянство поразительно. Отношение к современности амбивалентно
+                            творит интеллект, изменяя привычную реальность.</p>
+                        <p>Апостериори, созерцание понимает под собой позитивизм, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире. Закон исключённого третьего, следовательно, абстрактен. Катарсис рефлектирует
+                            трагический знак, открывая новые горизонты.</p>
+                    </div>
+                    <div class="tabs__content">
+                        <p>Закон внешнего мира, как принято считать, реально рассматривается знак, отрицая очевидное. Гегельянство творит катарсис, хотя в официозе принято обратное. Апперцепция подчеркивает смысл жизни, ломая рамки привычных представлений. Представляется логичным,
+                            что адживика откровенна.</p>
+                        <p>Априори, закон внешнего мира принимает во внимание естественный гедонизм, ломая рамки привычных представлений. Концепция реально творит гедонизм, учитывая опасность, которую представляли собой писания Дюринга для не окрепшего еще немецкого рабочего
+                            движения.</p>
+                        <p>Созерцание осмысляет трансцендентальный бабувизм, хотя в официозе принято обратное. Бабувизм абстрактен. Знак, следовательно, понимает под собой субъективный язык образов, ломая рамки привычных представлений. Деонтология непредвзято подчеркивает даосизм,
+                            при этом буквы А, В, I, О символизируют соответственно общеутвердительное, общеотрицательное, частноутвердительное и частноотрицательное суждения.</p>
+                    </div>
+                    <div class="buttons">
+                        <a href="https://shopping.stageabout.wpengine.com" role="button" target="_blank"click="">Join Us Now</a>
+                    </div>
+                </div>
+                <div class="columns-six-eight">
+                    <img src="https://permission.io/wp-content/uploads/2019/11/heroCatalogue.png">
+                </div>
+            </div>
+        </section>
+        <section class="s3">
+            <div class="video-block">
+                <div class="permission-secondary-video" style="position:relative;">
+                    <iframe id="perm-sec-video" src="https://player.vimeo.com/video/366780942" width="640" height="360" frameborder="0" allow="autoplay;"></iframe>
+                    <div class="overlay" style="position: absolute; left: 0;top:0;bottom:0;right:0;background:url('/wp-content/uploads/2019/11/chrl.png') no-repeat;background-size: cover;background-position: center">
 
+                        <div class="play-icon" style="opacity:0.5;margin: 0;">▷</div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-block">
+
+            </div>
+        </section>
+        <section class="s4">
+            <div class="columnar">
+                <div class="columns-twelve">
+                    <div class="title">The Staus Quo</div>
+                    <div class="sub-title">Merchants pay centralized third-party platforms to show you their products, interrupting you and exploiting your data in the process.  Tech giants yield mind-boggling profits while you gain zero financial benefit from your time and information.</div>
+                </div>
+                <div class="columnar">
+                    <div class="columns-five">
+                        <div class="title-color">60%</div>
+                        <div class="text">of millennials have installed ad blockers to escape chronic interruptions</div>
+                        <div class="title-color">87%</div>
+                        <div class="text">of consumers would opt out of having their personal information sold to third parties</div>
+                        <div class="title-color">8x</div>
+                        <div class="text">attention has escalated by a factor of 8 in the past 2 decades</div>
+                        <div class="title-color">50B</div>
+                        <div class="text">stimated global loss in 2020 due to bots and  click fraud</div>
+                    </div>
+                    <div class="columns-six-seven">
+                        <img src="hhttps://permission.io/wp-content/uploads/2019/11/ad_revenue_piechart.svg">
+                    </div>
+                </div>
+                <div class="columnar">
+                    <div class="columns-twelve">
+                        <div class="text-bottom">
+                            Google, Amazon, and Facebook dominate the web and take nearly 70% of all ad dollars, while shrinking your choices and suffocating merchants with declining ROI and a lack of transparency about whether their ad dollars are spent on real people.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
 
@@ -296,6 +382,71 @@ class Homepage extends Widget_Base
                 document.addEventListener("DOMContentLoaded", setupHero);
             }
         </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script>
+            (function($) {
+                $(function() {
+                    $("ul.tabs__caption").on("click", "li:not(.active)", function() {
+                        $(this)
+                            .addClass("active")
+                            .siblings()
+                            .removeClass("active")
+                            .closest("div.tabs-home")
+                            .find("div.tabs__content")
+                            .removeClass("active")
+                            .eq($(this).index())
+                            .addClass("active");
+                    });
+                });
+            })(jQuery);
+
+        </script>
+
+        <script>
+            (function() {
+                var player = new Vimeo.Player(document.querySelector('#perm-sec-video'));
+
+                var overlay = document.querySelector('.permission-secondary-video .overlay');
+
+                function handleClick(evt) {
+                    evt.target.style.display = 'none';
+                    player.play();
+                };
+
+                overlay[bindEvent]('click', handleClick.bind(this));
+            })()
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <?php
     }
 
