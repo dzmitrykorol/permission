@@ -8,7 +8,6 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
 /**
  * Main Elementor Hello World Class
  *

@@ -3,7 +3,6 @@
 namespace ElementorWidgetExtender;
 
 use Elementor\Repeater;
-use Elementor\Utils;
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 
@@ -219,16 +218,9 @@ class Blog extends Widget_Base
             'sort_order' => 'ASC',
             'sort_column' => 'date',
             'hierarchical' => 0,
-//            'exclude'      => '',
-//            'include'      => '',
-//            'meta_key'     => '',
-//            'meta_value'   => '',
-//            'authors'      => '',
 //            'child_of'     => [5782, 5699, 5785, 5786, 5787, 5788, 5789],
             'parent' => [5782, 5699, 5785, 5786, 5787, 5788, 5789],
-//            'exclude_tree' => '',
             'number' => 3,
-//            'offset'       => 0,
             'post_type' => 'page',
             'post_status' => 'publish',
         ]);
@@ -694,173 +686,7 @@ class Blog extends Widget_Base
                                 </div>
                                 <?php break;
                         }
-                        ?>
-
-                    <?php } ?>
-<!--                    <div class="columns-four">-->
-<!--                        <div class="blog-card card">-->
-<!--                            <div class="blog-card-thumb"><img src="--><?php //echo $path; ?><!--assets/img-e.png"></div>-->
-<!--                            <div class="blog-card-desc">-->
-<!--                                <div class="blog-card-cat">-->
-<!--                                    Category 1-->
-<!--                                </div>-->
-<!--                                <div class="blog-card-excerpt">-->
-<!--                                    Messari adds Permission to it’s Disclosure Registry, joining the ranks of-->
-<!--                                    world-renowned projects…-->
-<!--                                </div>-->
-<!--                                <a href="#" class="blog-card-link">-->
-<!--                                    Read More-->
-<!--                                    <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="columns-five-four">-->
-<!--                        <div class="blog-card card">-->
-<!--                            <div class="blog-card-thumb"><img src="--><?php //echo $path; ?><!--assets/img-e.png"></div>-->
-<!--                            <div class="blog-card-desc">-->
-<!--                                <div class="blog-card-cat">-->
-<!--                                    Category 1-->
-<!--                                </div>-->
-<!--                                <div class="blog-card-excerpt">-->
-<!--                                    Messari adds Permission to it’s Disclosure Registry, joining the ranks of-->
-<!--                                    world-renowned projects…-->
-<!--                                </div>-->
-<!--                                <a href="#" class="blog-card-link">-->
-<!--                                    Read More-->
-<!--                                    <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="columns-nine-four">-->
-<!--                        <div class="blog-card card">-->
-<!--                            <div class="blog-card-thumb"><img src="--><?php //echo $path; ?><!--assets/img-e.png"></div>-->
-<!--                            <div class="blog-card-desc">-->
-<!--                                <div class="blog-card-cat">-->
-<!--                                    Category 1-->
-<!--                                </div>-->
-<!--                                <div class="blog-card-excerpt">-->
-<!--                                    Messari adds Permission to it’s Disclosure Registry, joining the ranks of-->
-<!--                                    world-renowned projects…-->
-<!--                                </div>-->
-<!--                                <a href="#" class="blog-card-link">-->
-<!--                                    Read More-->
-<!--                                    <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!---->
-<!--                    <div class="columns-four">-->
-<!--                        <div class="blog-card card">-->
-<!--                            <div class="blog-card-thumb"><img src="--><?php //echo $path; ?><!--assets/img-e.png"></div>-->
-<!--                            <div class="blog-card-desc">-->
-<!--                                <div class="blog-card-cat">-->
-<!--                                    Category 1-->
-<!--                                </div>-->
-<!--                                <div class="blog-card-excerpt">-->
-<!--                                    Messari adds Permission to it’s Disclosure Registry, joining the ranks of-->
-<!--                                    world-renowned projects…-->
-<!--                                </div>-->
-<!--                                <a href="#" class="blog-card-link">-->
-<!--                                    Read More-->
-<!--                                    <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="columns-five-four">-->
-<!--                        <div class="blog-card card">-->
-<!--                            <div class="blog-card-thumb"><img src="--><?php //echo $path; ?><!--assets/img-e.png"></div>-->
-<!--                            <div class="blog-card-desc">-->
-<!--                                <div class="blog-card-cat">-->
-<!--                                    Category 1-->
-<!--                                </div>-->
-<!--                                <div class="blog-card-excerpt">-->
-<!--                                    Messari adds Permission to it’s Disclosure Registry, joining the ranks of-->
-<!--                                    world-renowned projects…-->
-<!--                                </div>-->
-<!--                                <a href="#" class="blog-card-link">-->
-<!--                                    Read More-->
-<!--                                    <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="columns-nine-four">-->
-<!--                        <div class="blog-card card">-->
-<!--                            <div class="blog-card-thumb"><img src="--><?php //echo $path; ?><!--assets/img-e.png"></div>-->
-<!--                            <div class="blog-card-desc">-->
-<!--                                <div class="blog-card-cat">-->
-<!--                                    Category 1-->
-<!--                                </div>-->
-<!--                                <div class="blog-card-excerpt">-->
-<!--                                    Messari adds Permission to it’s Disclosure Registry, joining the ranks of-->
-<!--                                    world-renowned projects…-->
-<!--                                </div>-->
-<!--                                <a href="#" class="blog-card-link">-->
-<!--                                    Read More-->
-<!--                                    <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!---->
-<!--                    <div class="columns-four">-->
-<!--                        <div class="blog-card card">-->
-<!--                            <div class="blog-card-thumb"><img src="--><?php //echo $path; ?><!--assets/img-e.png"></div>-->
-<!--                            <div class="blog-card-desc">-->
-<!--                                <div class="blog-card-cat">-->
-<!--                                    Category 1-->
-<!--                                </div>-->
-<!--                                <div class="blog-card-excerpt">-->
-<!--                                    Messari adds Permission to it’s Disclosure Registry, joining the ranks of-->
-<!--                                    world-renowned projects…-->
-<!--                                </div>-->
-<!--                                <a href="#" class="blog-card-link">-->
-<!--                                    Read More-->
-<!--                                    <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="columns-five-four">-->
-<!--                        <div class="blog-card card">-->
-<!--                            <div class="blog-card-thumb"><img src="--><?php //echo $path; ?><!--assets/img-e.png"></div>-->
-<!--                            <div class="blog-card-desc">-->
-<!--                                <div class="blog-card-cat">-->
-<!--                                    Category 1-->
-<!--                                </div>-->
-<!--                                <div class="blog-card-excerpt">-->
-<!--                                    Messari adds Permission to it’s Disclosure Registry, joining the ranks of-->
-<!--                                    world-renowned projects…-->
-<!--                                </div>-->
-<!--                                <a href="#" class="blog-card-link">-->
-<!--                                    Read More-->
-<!--                                    <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="columns-nine-four">-->
-<!--                        <div class="blog-card card">-->
-<!--                            <div class="blog-card-thumb"><img src="--><?php //echo $path; ?><!--assets/img-e.png"></div>-->
-<!--                            <div class="blog-card-desc">-->
-<!--                                <div class="blog-card-cat">-->
-<!--                                    Category 1-->
-<!--                                </div>-->
-<!--                                <div class="blog-card-excerpt">-->
-<!--                                    Messari adds Permission to it’s Disclosure Registry, joining the ranks of-->
-<!--                                    world-renowned projects…-->
-<!--                                </div>-->
-<!--                                <a href="#" class="blog-card-link">-->
-<!--                                    Read More-->
-<!--                                    <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    } ?>
 
                 </div>
 
@@ -881,10 +707,10 @@ class Blog extends Widget_Base
                                 /
                                 <a href="/blog">Blog</a>
                                 /
-                                <span><?php echo $value->cat_name; ?></span>
+                                <span><?php echo $value->post_title; ?></span>
                             </div>
                             <div class="columns-twelve">
-                                <h1><?php echo $value->cat_name; ?></h1>
+                                <h1><?php echo $value->post_title; ?></h1>
                             </div>
 
                         </div>
@@ -892,7 +718,7 @@ class Blog extends Widget_Base
                     <div class="columnar category-item first">
                         <div class="columns-four">
                             <div class="blog-card card">
-                                <div class="blog-card-thumb"><img src="assets/img-e.png"></div>
+                                <div class="blog-card-thumb"><img class="test" src="assets/img-e.png"></div>
                                 <div class="blog-card-desc">
                                     <div class="blog-card-cat">
                                         Category 1

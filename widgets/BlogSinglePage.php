@@ -3,6 +3,7 @@
 namespace ElementorWidgetExtender;
 
 use Elementor\Repeater;
+use Elementor\Settings;
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 
@@ -90,7 +91,6 @@ class BlogSinglePage extends Widget_Base
 //        return [ 'elementor-hello-world' ];
 //    }
 
-
     /**
      * Register the widget controls.
      *
@@ -102,63 +102,97 @@ class BlogSinglePage extends Widget_Base
      */
     protected function _register_controls()
     {
-
-        // repeater for footer starts
+        // Top post's part starts
         $this->start_controls_section(
-            'section_tabs',
+            'section_top',
             [
-                'label' => __('Tab categories', 'elementor'),
-            ]
-        );
-
-        // repeater for clinic name and phones ends
-        $repeater = new Repeater();
-
-        $repeater->add_control(
-            'cat_name',
-            [
-                'label' => __('Enter text..', 'elementor'),
-                'type' => Controls_Manager::TEXT,
-                'label_block' => false,
-            ]
-        );
-
-        $repeater->add_control(
-            'cat_url',
-            [
-                'label' => __('Enter text..', 'elementor'),
-                'type' => Controls_Manager::URL,
-                'label_block' => false,
+                'label' => __('Top part of article', 'elementor'),
             ]
         );
 
         $this->add_control(
-            'cat_all',
+            'page_title',
             [
-                'label' => __('Nav Menu tabs', 'elementor'),
-                'type' => Controls_Manager::REPEATER,
-                'fields' => $repeater->get_controls(),
-                'default' => [
-                    [
-                        'cat_name' => __('Category 1', 'elementor'),
-                        'cat_url' => __('#', 'elementor'),
-                    ],
-                    [
-                        'cat_name' => __('Category 2', 'elementor'),
-                        'cat_url' => __('#', 'elementor'),
-                    ],
-                    [
-                        'cat_name' => __('Category 3', 'elementor'),
-                        'cat_url' => __('#', 'elementor'),
-                    ],
-                ],
-                'title_field' => 'Location section',
+                'label' => 'Type page title',
+                'type' => \Elementor\Controls_Manager::TEXT,
             ]
         );
-        $this->end_controls_section();
-        // repeater for clinic name and phones ends
+
+        $this->add_control(
+            'page_subtitle',
+            [
+                'label' => 'Type page sub title',
+                'type' => \Elementor\Controls_Manager::TEXT,
+            ]
+        );
+
+        $this->add_control(
+            'blog_content_top',
+            [
+                'label' => __('Top article part', 'elementor'),
+                'default' => __('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac ornare odio, non 
+                ultricies leo. Mauris turpis erat, tristique eget dui eget, egestas consequat mi. Integer convallis, 
+                justo ut fermentum fermentum, erat purus pulvinar massa, ac viverra massa libero at nibh. Cras ac mi at
+                 nulla rutrum accumsan a nec tortor.', 'elementor'),
+                'placeholder' => __('Tab Content', 'elementor'),
+                'type' => Controls_Manager::WYSIWYG,
+                'show_label' => false,
+            ]
+        );
+
+        $this->add_control(
+            'blog_content_middle',
+            [
+                'label' => __('Middle article part', 'elementor'),
+                'default' => __('<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac ornare odio, non 
+                ultricies leo. Mauris turpis erat, tristique eget dui eget, egestas consequat mi. Integer convallis, 
+                justo ut fermentum fermentum, erat purus pulvinar massa, ac viverra massa libero at nibh. Cras ac mi at
+                 nulla rutrum accumsan a nec tortor.</p>', 'elementor'),
+                'placeholder' => __('Tab Content', 'elementor'),
+                'type' => Controls_Manager::WYSIWYG,
+                'show_label' => false,
+            ]
+        );
+
+        $this->add_control(
+            'blog_content_bottom',
+            [
+                'label' => __('Bottom article part', 'elementor'),
+                'default' => __('<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac ornare odio, non 
+                ultricies leo. Mauris turpis erat, tristique eget dui eget, egestas consequat mi. Integer convallis, 
+                justo ut fermentum fermentum, erat purus pulvinar massa, ac viverra massa libero at nibh. Cras ac mi at
+                 nulla rutrum accumsan a nec tortor.</p>', 'elementor'),
+                'placeholder' => __('Tab Content', 'elementor'),
+                'type' => Controls_Manager::WYSIWYG,
+                'show_label' => false,
+            ]
+        );
 
         $this->end_controls_section();
+        // Top post's part ends
+
+        // Middle post's part starts
+        $this->start_controls_section(
+            'section_middle',
+            [
+                'label' => __('Middle part of article', 'elementor'),
+            ]
+        );
+
+
+        $this->add_control(
+            'the_quote',
+            [
+                'label' => 'Type page sub title',
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
+                'default' => __('“We’re seeing some really bullish bitcoin price action today along with other ...',
+                    'plugin-domain'),
+            ]
+        );
+
+        $this->end_controls_section();
+        // Midddle post's part ends
+
     }
 
 
@@ -174,23 +208,14 @@ class BlogSinglePage extends Widget_Base
 
     protected function render()
     {
+        global $post;
+        global $wp;
+        $page = get_post($post->ID);
+//        dump($page);
         $path = '/wp-content/plugins/elementor-custom-widgets/';
         $settings = $this->get_settings_for_display();
+//        dump($settings);
         $this->add_inline_editing_attributes('paragraphText', 'none');
-
-        $posts = get_posts(array(
-            'numberposts' => 5,
-            'category_name' => 'blog',
-            'orderby' => 'date',
-            'order' => 'DESC',
-            'include' => array(),
-            'exclude' => array(),
-            'meta_key' => '',
-            'meta_value' => '',
-            'post_type' => 'post',
-            'post_status' => 'publish',
-            'suppress_filters' => true,
-        ));
 
         ?>
 
@@ -202,10 +227,8 @@ class BlogSinglePage extends Widget_Base
                 <div class="columnar">
                     <div class="columns-twelve">
                         <a href="#" class="article-category">Cryptocurrency</a>
-                        <h1>Cryptocurrency value rises over $14 billion in 24 hours as bitcoin rallies 10%</h1>
-                        <div class="subtitle-article">Bitcoin was up over 10% from 24 hours previously trading at
-                            $6,569.17 at around 11:57 a.m. Singapore time.
-                        </div>
+                        <h1><?php echo $page->post_title; ?></h1>
+                        <div class="subtitle-article"><?php echo $settings['page_subtitle']; ?></div>
                     </div>
                 </div>
 
@@ -215,63 +238,67 @@ class BlogSinglePage extends Widget_Base
                         <div class="photo"><img src="<?php echo $path; ?>assets/icons/drawkit-folder-man-colour.svg">
                         </div>
                         <div class="text-wrap">
-                            <div class="text">Permission</div>
+                            <div class="text"><?php echo get_the_author_meta('nicename'); ?></div>
                             <a href="#">@permissionIO</a>
                         </div>
                     </div>
+
                     <div class="share-social-icons columns-four-nine">
                         <div class="share-text">share</div>
-                        <a href="#" class="share-icons"><img src="<?php echo $path; ?>assets/icons/tw-icon.svg"></a>
-                        <a href="#" class="share-icons"><img src="<?php echo $path; ?>assets/icons/fa-icon.svg"></a>
-                        <a href="#" class="share-icons"><img
-                                    src="<?php echo $path; ?>assets/icons/LinkedInLogo.svg"></a>
-                        <a href="#" class="share-icons"><img src="<?php echo $path; ?>assets/icons/mail-ic.svg"></a>
+                        <a rel="nofollow" class="share-icons" href="#" data-count="twi"
+                           onclick="window.open('//twitter.com/intent/tweet?text=<?php the_title(); ?>&amp;url=<?php
+                           echo home_url($wp->request); ?>','_blank', 'scrollbars=0, resizable=1, menubar=0, left=100,' +
+                                   ' top=100, width=550, ' +'height=440, toolbar=0, status=0');return false"
+                           title="Add to Twitter" target="_blank"><img src="<?php echo $path; ?>assets/icons/tw-icon.svg">
+                        </a>
+                        <a rel="nofollow" class="share-icons" href="#" data-count="fb"
+                           onclick="window.open('//www.facebook.com/sharer.php?m2w&amp;s=100&amp;p[url]=<?php
+                           echo home_url($wp->request); ?>&amp;[title]=<?php the_title(); ?>&amp;p[summary]=&amp;p[images]'+
+                                   '[0]=undefined', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=100, top=100, ' +
+                                   'width=550, height=440, toolbar=0, status=0');return false"
+                           title="Share in Facebook" target="_blank"><img src="<?php echo $path; ?>assets/icons/fa-icon.svg">
+                        </a>
+                        <a rel="nofollow" class="share-icons" href="#" data-count="lnkd"
+                           onclick="window.open('//www.linkedin.com/shareArticle?mini=true&amp;url=<?php
+                           echo home_url($wp->request); ?>&amp;title=<?php the_title(); ?>', '_blank', 'scrollbars=0, ' +
+                                   'resizable=1, menubar=0, left=100, top=100, width=600, height=400, toolbar=0, status=0');
+                                   return false" title="Add to Linkedin" target="_blank">
+                            <img src="<?php echo $path; ?>assets/icons/LinkedInLogo.svg">
+                        </a>
+                        <!--<a href="#" class="share-icons"><img src="--><?php //echo $path; ?><!--assets/icons/mail-ic.svg"></a>-->
                     </div>
 
                 </div>
 
                 <div class="columnar article-img">
                     <div class="columns-twelve">
-                        <img src="<?php echo $path; ?>assets/img-e.png">
+                        <img src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
                         <p>Source</p>
                     </div>
                 </div>
 
                 <div class="columnar article-date">
                     <div class="columns-eight">
-                        <p>PUBLISHED TUE, MAR 24 2020 / 12:05 AM EDT</p>
+                        <?php
+                        $date = $page->post_date;
+                        $unixTimestamp = strtotime($date);
+                        $dayOfWeek = date("l", $unixTimestamp);
+                        ?>
+                        <p>PUBLISHED
+                            <?php echo strtoupper($dayOfWeek);
+                            echo ' '.get_the_date('', $page->ID);
+                            echo ' / '.get_post_time('i:h A T', true, $page->ID);
+                            ?></p>
                     </div>
                 </div>
                 <div class="columnar article-content">
                     <div class="columns-eight">
-                        <p><a href="#">Cryptocurrency prices rallied</a> on Tuesday even as equity markets continue to
-                            come under pressure due to coronavirus fears weighing on investors’ sentiment. </p>
-                        <p>Bitcoin was up over 10% from 24 hours previously, trading at $6,569.17 at around 11:57 a.m.
-                            Singapore time, according to data from Coindesk.</p>
-                        <p>Ethereum was up over 7% while XRP saw a more than 5% jump in its price. </p>
-                        <p>The market capitalization — or entire value of the cryptocurrency market — rose over $14
-                            billion in 24 hours at 11:47 a.m. Singapore time to reach $182.62 billion., according to
-                            data from Coinmarketcap.com. </p>
+                        <p><?php echo $settings['blog_content_top']; ?></p>
                         <div class="wp-block-considerable-quote left">
-                            <div class="quote">“We’re seeing some really bullish bitcoin price action today along with
-                                other asset classes after the Fed announced unprecedented measures yesterday to shore up
-                                the economy,”
-                            </div>
+                            <div class="quote"><?php echo $settings['the_quote']; ?></div>
                         </div>
-                        <p>Cryptocurrency prices rallied on Tuesday even as equity markets continue to come under
-                            pressure due to coronavirus fears weighing on investors’ sentiment. </p>
-                        <p>Bitcoin was up over 10% from 24 hours previously, trading at $6,569.17 at around 11:57 a.m.
-                            Singapore time, according to data from Coindesk.</p>
-                        <p>Ethereum was up over 7% while XRP saw a more than 5% jump in its price. </p>
-                        <p><a href="#">Stocks in Europe</a> and the U.S. closed lower again on Monday with
-                            cyptocurrencies bucking the trend. In Asia, stocks were broadly higher in Tuesday morning
-                            trade after the U.S. Federal Reserve announced an open-ended asset purchase program on
-                            Monday to support markets as the number of coronavirus cases globally continue to rise. </p>
-                        <p>Cryptocurrency prices rallied on Tuesday even as equity markets continue to come under
-                            pressure due to coronavirus fears weighing on investors’ sentiment. </p>
-                        <p>Bitcoin was up over 10% from 24 hours previously, trading at $6,569.17 at around 11:57 a.m.
-                            Singapore time, according to data from Coindesk.</p>
-                        <p><a href="#">Ethereum</a> was up over 7% while XRP saw a more than 5% jump in its price. </p>
+
+                        <?php echo $settings['blog_content_middle']; ?>
 
                         <div class="wp-block-article">
                             <div class="article-card-thumb"><img src="<?php echo $path; ?>assets/bullseye-dark.png">
@@ -287,44 +314,51 @@ class BlogSinglePage extends Widget_Base
                                 </a>
                             </div>
                         </div>
-                        <p>Cryptocurrency prices rallied on Tuesday even as equity markets continue to come under
-                            pressure due to coronavirus fears weighing on investors’ sentiment. </p>
-                        <p><a href="#">Bitcoin</a> was up over 10% from 24 hours previously, trading at $6,569.17 at
-                            around 11:57 a.m. Singapore time, according to data from Coindesk.</p>
-                        <p>Ethereum was up over 7% while XRP saw a more than 5% jump in its price. </p>
-                        <p>Stocks in Europe and the U.S. closed lower again on Monday with cyptocurrencies bucking the
-                            trend. In Asia, stocks were broadly higher in Tuesday morning trade after the U.S. Federal
-                            Reserve announced an open-ended asset purchase program on Monday to support markets as the
-                            number of coronavirus cases globally continue to rise. </p>
-                        <p><a href="#">Cryptocurrency prices</a> rallied on Tuesday even as equity markets continue to
-                            come under pressure due to coronavirus fears weighing on investors’ sentiment. </p>
-                        <p>Bitcoin was up over 10% from 24 hours previously, trading at $6,569.17 at around 11:57 a.m.
-                            Singapore time, according to data from Coindesk.</p>
-                        <p>Ethereum was up over 7% while XRP saw a more than 5% jump in its price. </p>
+
+                        <?php echo $settings['blog_content_bottom']; ?>
+
                         <div class="tags">TAGS: <a href="#">Cryptocurrency,</a> <a href="#">Bitcoin,</a> <a href="#">Asia,</a>
                             <a href="#">Markets</a></div>
                         <div class="share-social-icons">
                             <div class="share-text">share</div>
-                            <a href="#" class="share-icons"><img src="<?php echo $path; ?>assets/icons/tw-icon.svg"></a>
-                            <a href="#" class="share-icons"><img src="<?php echo $path; ?>assets/icons/fa-icon.svg"></a>
-                            <a href="#" class="share-icons"><img
-                                        src="<?php echo $path; ?>assets/icons/LinkedInLogo.svg"></a>
-                            <a href="#" class="share-icons"><img src="<?php echo $path; ?>assets/icons/mail-ic.svg"></a>
+                            <a rel="nofollow" class="share-icons" href="#" data-count="twi"
+                               onclick="window.open('//twitter.com/intent/tweet?text=<?php the_title(); ?>&amp;url=<?php
+                               echo home_url($wp->request); ?>','_blank', 'scrollbars=0, resizable=1, menubar=0, left=100,' +
+                                       ' top=100, width=550, ' +'height=440, toolbar=0, status=0');return false"
+                               title="Add to Twitter" target="_blank"><img src="<?php echo $path; ?>assets/icons/tw-icon.svg">
+                            </a>
+                            <a rel="nofollow" class="share-icons" href="#" data-count="fb"
+                               onclick="window.open('//www.facebook.com/sharer.php?m2w&amp;s=100&amp;p[url]=<?php
+                               echo home_url($wp->request); ?>&amp;[title]=<?php the_title(); ?>&amp;p[summary]=&amp;p[images]'+
+                                       '[0]=undefined', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=100, top=100, ' +
+                                       'width=550, height=440, toolbar=0, status=0');return false"
+                               title="Share in Facebook" target="_blank"><img src="<?php echo $path; ?>assets/icons/fa-icon.svg">
+                            </a>
+                            <a rel="nofollow" class="share-icons" href="#" data-count="lnkd"
+                               onclick="window.open('//www.linkedin.com/shareArticle?mini=true&amp;url=<?php
+                               echo home_url($wp->request); ?>&amp;title=<?php the_title(); ?>', '_blank', 'scrollbars=0, ' +
+                                       'resizable=1, menubar=0, left=100, top=100, width=600, height=400, toolbar=0, status=0');
+                               return false" title="Add to Linkedin" target="_blank">
+                                <img src="<?php echo $path; ?>assets/icons/LinkedInLogo.svg">
+                            </a>
+<!--                            <a href="#" class="share-icons"><img src="--><?php //echo $path; ?><!--assets/icons/mail-ic.svg"></a>-->
                         </div>
                     </div>
                 </div>
 
 
+                <?php
+                $prev_page = get_previous_post();
+                $next_page = get_next_post();
+                ?>
                 <div class="columnar article-nav">
                     <div class="columns-four-two">
                         <div class="text">Previous Post</div>
-                        <a href="">Bitcoin was up over 10% from 24 hours previously trading at $6,569.17 at around 11:57
-                            a.m. Singapore time.</a>
+                        <a href="<?php echo get_page_link($prev_page->ID); ?>"><?php echo $prev_page->post_title; ?></a>
                     </div>
                     <div class="columns-four-eight">
                         <div class="text">Next Post</div>
-                        <a href="">Bitcoin was up over 10% from 24 hours previously trading at $6,569.17 at around 11:57
-                            a.m. Singapore time.</a>
+                        <a href="<?php echo get_page_link($next_page->ID); ?>"><?php echo $next_page->post_title; ?></a>
                     </div>
                 </div>
 
@@ -362,8 +396,7 @@ class BlogSinglePage extends Widget_Base
                             <a href="#">
                                 <img src="<?php echo $path; ?>assets/icons/play.svg">
                             </a>
-                            <p>Bitcoin was up over 10% from 24 hours previously trading at $6,569.17 at around 11:57
-                                a.m. Singapore time.</p>
+                            <p><?php echo $page->post_title; ?></p>
                         </div>
                     </div>
                 </div>
@@ -374,249 +407,408 @@ class BlogSinglePage extends Widget_Base
                         <h2>More articles about Permission</h2>
                     </div>
                     <div class="columns-ten-three">
-                        <a href="#" class="all-articles">
+                        <a href="/blog" class="all-articles">
                             All Articles
                             <img src="<?php echo $path; ?>/assets/icons/chevron-right-big.svg">
                         </a>
                     </div>
-                    <div class="columns-four">
-                        <div class="blog-card card">
-                            <div class="blog-card-thumb"></div>
-                            <div class="blog-card-desc">
-                                <div class="blog-card-cat">
-                                    Category 1
+                    <?php
+                    $allPages = get_pages([
+                        'sort_order' => 'ASC',
+                        'sort_column' => 'date',
+                        'hierarchical' => 0,
+                        'parent' => [5782, 5699, 5785, 5786, 5787, 5788, 5789],
+                        'number' => 8,
+                        'post_type' => 'page',
+                        'post_status' => 'publish',
+                    ]);
+                    foreach ($allPages as $key => $page) {
+                        $parts = parse_url($page->guid);
+                        parse_str($parts['query'], $query);
+                        $id = $query['page_id'];
+                        switch ($key) {
+                            case 0 : ?>
+                                <div class="columns-four">
+                                    <div class="blog-card card">
+                                        <div class="blog-card-thumb"><img
+                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
+                                        </div>
+                                        <div class="blog-card-desc">
+                                            <div class="blog-card-cat">
+                                                <?php echo get_the_title($page->post_parent); ?>
+                                            </div>
+                                            <div class="blog-card-excerpt">
+                                                <?php echo $page->post_title; ?>
+                                            </div>
+                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link test">
+                                                Read More
+                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="blog-card-excerpt">
-                                    Messari adds Permission to it’s Disclosure Registry, joining the ranks of
-                                    world-renowned projects…
+                                <?php break;
+                            case 1 : ?>
+                                <div class="columns-five-four">
+                                    <div class="blog-card card">
+                                        <div class="blog-card-thumb"><img
+                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
+                                        </div>
+                                        <div class="blog-card-desc">
+                                            <div class="blog-card-cat">
+                                                <?php echo get_the_title($page->post_parent); ?>
+                                            </div>
+                                            <div class="blog-card-excerpt">
+                                                <?php echo $page->post_title; ?>
+                                            </div>
+                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link">
+                                                Read More
+                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <a href="#" class="blog-card-link">
-                                    Read More
-                                    <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="columns-five-four">
-                        <div class="blog-card card">
-                            <div class="blog-card-thumb"></div>
-                            <div class="blog-card-desc">
-                                <div class="blog-card-cat">
-                                    Category 1
+                                <?php break;
+                            case 2 : ?>
+                                <div class="columns-nine-four">
+                                    <div class="blog-card card">
+                                        <div class="blog-card-thumb"><img
+                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
+                                        </div>
+                                        <div class="blog-card-desc">
+                                            <div class="blog-card-cat">
+                                                <?php echo get_the_title($page->post_parent); ?>
+                                            </div>
+                                            <div class="blog-card-excerpt">
+                                                <?php echo $page->post_title; ?>
+                                            </div>
+                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link">
+                                                Read More
+                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="blog-card-excerpt">
-                                    Messari adds Permission to it’s Disclosure Registry, joining the ranks of
-                                    world-renowned projects…
+                                <?php break;
+                            case 3 : ?>
+                                <div class="columns-four">
+                                    <div class="blog-card card">
+                                        <div class="blog-card-thumb"><img
+                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
+                                        </div>
+                                        <div class="blog-card-desc">
+                                            <div class="blog-card-cat">
+                                                <?php echo get_the_title($page->post_parent); ?>
+                                            </div>
+                                            <div class="blog-card-excerpt">
+                                                <?php echo $page->post_title; ?>
+                                            </div>
+                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link test">
+                                                Read More
+                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <a href="#" class="blog-card-link">
-                                    Read More
-                                    <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="columns-nine-four">
-                        <div class="blog-card card">
-                            <div class="blog-card-thumb"></div>
-                            <div class="blog-card-desc">
-                                <div class="blog-card-cat">
-                                    Category 1
+                                <?php break;
+                            case 4 : ?>
+                                <div class="columns-five-four">
+                                    <div class="blog-card card">
+                                        <div class="blog-card-thumb"><img
+                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
+                                        </div>
+                                        <div class="blog-card-desc">
+                                            <div class="blog-card-cat">
+                                                <?php echo get_the_title($page->post_parent); ?>
+                                            </div>
+                                            <div class="blog-card-excerpt">
+                                                <?php echo $page->post_title; ?>
+                                            </div>
+                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link">
+                                                Read More
+                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="blog-card-excerpt">
-                                    Messari adds Permission to it’s Disclosure Registry, joining the ranks of
-                                    world-renowned projects…
+                                <?php break;
+                            case 5 : ?>
+                                <div class="columns-nine-four">
+                                    <div class="blog-card card">
+                                        <div class="blog-card-thumb"><img
+                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
+                                        </div>
+                                        <div class="blog-card-desc">
+                                            <div class="blog-card-cat">
+                                                <?php echo get_the_title($page->post_parent); ?>
+                                            </div>
+                                            <div class="blog-card-excerpt">
+                                                <?php echo $page->post_title; ?>
+                                            </div>
+                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link">
+                                                Read More
+                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <a href="#" class="blog-card-link">
-                                    Read More
-                                    <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="columns-four">
-                        <div class="blog-card card">
-                            <div class="blog-card-thumb"></div>
-                            <div class="blog-card-desc">
-                                <div class="blog-card-cat">
-                                    Category 1
+                                <?php break;
+
+                            case 6 : ?>
+                                <div class="columns-four">
+                                    <div class="blog-card card">
+                                        <div class="blog-card-thumb"><img
+                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
+                                        </div>
+                                        <div class="blog-card-desc">
+                                            <div class="blog-card-cat">
+                                                <?php echo get_the_title($page->post_parent); ?>
+                                            </div>
+                                            <div class="blog-card-excerpt">
+                                                <?php echo $page->post_title; ?>
+                                            </div>
+                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link test">
+                                                Read More
+                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="blog-card-excerpt">
-                                    Messari adds Permission to it’s Disclosure Registry, joining the ranks of
-                                    world-renowned projects…
+                                <?php break;
+
+                            case 7 : ?>
+                                <div class="columns-five-four">
+                                    <div class="blog-card card">
+                                        <div class="blog-card-thumb"><img
+                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
+                                        </div>
+                                        <div class="blog-card-desc">
+                                            <div class="blog-card-cat">
+                                                <?php echo get_the_title($page->post_parent); ?>
+                                            </div>
+                                            <div class="blog-card-excerpt">
+                                                <?php echo $page->post_title; ?>
+                                            </div>
+                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link">
+                                                Read More
+                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <a href="#" class="blog-card-link">
-                                    Read More
-                                    <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="columns-five-four">
-                        <div class="blog-card card">
-                            <div class="blog-card-thumb"></div>
-                            <div class="blog-card-desc">
-                                <div class="blog-card-cat">
-                                    Category 1
+                                <?php break;
+
+                            case 8 : ?>
+                                <div class="columns-nine-four">
+                                    <div class="blog-card card">
+                                        <div class="blog-card-thumb"><img
+                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
+                                        </div>
+                                        <div class="blog-card-desc">
+                                            <div class="blog-card-cat">
+                                                <?php echo get_the_title($page->post_parent); ?>
+                                            </div>
+                                            <div class="blog-card-excerpt">
+                                                <?php echo $page->post_title; ?>
+                                            </div>
+                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link">
+                                                Read More
+                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="blog-card-excerpt">
-                                    Messari adds Permission to it’s Disclosure Registry, joining the ranks of
-                                    world-renowned projects…
-                                </div>
-                                <a href="#" class="blog-card-link">
-                                    Read More
-                                    <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="columns-nine-four">
-                        <div class="blog-card card">
-                            <div class="blog-card-thumb"></div>
-                            <div class="blog-card-desc">
-                                <div class="blog-card-cat">
-                                    Category 1
-                                </div>
-                                <div class="blog-card-excerpt">
-                                    Messari adds Permission to it’s Disclosure Registry, joining the ranks of
-                                    world-renowned projects…
-                                </div>
-                                <a href="#" class="blog-card-link">
-                                    Read More
-                                    <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                                <?php break;
+                        }
+                    } ?>
                 </div>
                 <div class="columnar category-item">
                     <div class="columns-seven">
                         <h2>Permission Updates</h2>
                     </div>
                     <div class="columns-ten-three">
-                        <a href="#" class="all-articles">
+                        <a href="/blog/permission-marketing" class="all-articles">
                             All Articles
                             <img src="<?php echo $path; ?>/assets/icons/chevron-right-big.svg">
                         </a>
                     </div>
-                    <div class="columns-four">
-                        <div class="blog-card card">
-                            <div class="blog-card-thumb"></div>
-                            <div class="blog-card-desc">
-                                <div class="blog-card-cat">
-                                    Category 1
+                    <?php
+                    $permissionPages = get_pages([
+                        'sort_order' => 'ASC',
+                        'sort_column' => 'date',
+                        'hierarchical' => 0,
+//                        'child_of'     => 5788,
+                        'parent' => 5788,
+                        'number' => 3,
+                        'post_type' => 'page',
+                        'post_status' => 'publish',
+                    ]);
+                    foreach ($permissionPages as $key => $page) {
+                        $parts = parse_url($page->guid);
+                        parse_str($parts['query'], $query);
+                        $id = $query['page_id'];
+                        switch ($key) {
+                            case 0 : ?>
+                                <div class="columns-four">
+                                    <div class="blog-card card">
+                                        <div class="blog-card-thumb"><img
+                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
+                                        </div>
+                                        <div class="blog-card-desc">
+                                            <div class="blog-card-cat">
+                                                <?php echo get_the_title($page->post_parent); ?>
+                                            </div>
+                                            <div class="blog-card-excerpt">
+                                                <?php echo $page->post_title; ?>
+                                            </div>
+                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link test">
+                                                Read More
+                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="blog-card-excerpt">
-                                    Messari adds Permission to it’s Disclosure Registry, joining the ranks of
-                                    world-renowned projects…
+                                <?php break;
+                            case 1 : ?>
+                                <div class="columns-five-four">
+                                    <div class="blog-card card">
+                                        <div class="blog-card-thumb"><img
+                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
+                                        </div>
+                                        <div class="blog-card-desc">
+                                            <div class="blog-card-cat">
+                                                <?php echo get_the_title($page->post_parent); ?>
+                                            </div>
+                                            <div class="blog-card-excerpt">
+                                                <?php echo $page->post_title; ?>
+                                            </div>
+                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link">
+                                                Read More
+                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <a href="#" class="blog-card-link">
-                                    Read More
-                                    <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="columns-five-four">
-                        <div class="blog-card card">
-                            <div class="blog-card-thumb"></div>
-                            <div class="blog-card-desc">
-                                <div class="blog-card-cat">
-                                    Category 1
+                                <?php break;
+                            case 2 : ?>
+                                <div class="columns-nine-four">
+                                    <div class="blog-card card">
+                                        <div class="blog-card-thumb"><img
+                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
+                                        </div>
+                                        <div class="blog-card-desc">
+                                            <div class="blog-card-cat">
+                                                <?php echo get_the_title($page->post_parent); ?>
+                                            </div>
+                                            <div class="blog-card-excerpt">
+                                                <?php echo $page->post_title; ?>
+                                            </div>
+                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link">
+                                                Read More
+                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="blog-card-excerpt">
-                                    Messari adds Permission to it’s Disclosure Registry, joining the ranks of
-                                    world-renowned projects…
-                                </div>
-                                <a href="#" class="blog-card-link">
-                                    Read More
-                                    <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="columns-nine-four">
-                        <div class="blog-card card">
-                            <div class="blog-card-thumb"></div>
-                            <div class="blog-card-desc">
-                                <div class="blog-card-cat">
-                                    Category 1
-                                </div>
-                                <div class="blog-card-excerpt">
-                                    Messari adds Permission to it’s Disclosure Registry, joining the ranks of
-                                    world-renowned projects…
-                                </div>
-                                <a href="#" class="blog-card-link">
-                                    Read More
-                                    <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                                <?php break;
+                        }
+                        ?>
+
+                    <?php } ?>
                 </div>
                 <div class="columnar category-item">
                     <div class="columns-seven">
                         <h2>All Articles</h2>
                     </div>
                     <div class="columns-ten-three">
-                        <a href="#" class="all-articles">
+                        <a href="/blog" class="all-articles">
                             All Articles
                             <img src="<?php echo $path; ?>/assets/icons/chevron-right-big.svg">
                         </a>
                     </div>
-                    <div class="columns-four">
-                        <div class="blog-card card">
-                            <div class="blog-card-thumb"></div>
-                            <div class="blog-card-desc">
-                                <div class="blog-card-cat">
-                                    Category 1
+                    <?php
+                    $permissionPages = get_pages([
+                        'sort_order' => 'ASC',
+                        'sort_column' => 'date',
+                        'hierarchical' => 0,
+//                        'child_of'     => 5788,
+                        'parent' => 5788,
+                        'number' => 3,
+                        'post_type' => 'page',
+                        'post_status' => 'publish',
+                    ]);
+                    foreach ($permissionPages as $key => $page) {
+                        $parts = parse_url($page->guid);
+                        parse_str($parts['query'], $query);
+                        $id = $query['page_id'];
+                        switch ($key) {
+                            case 0 : ?>
+                                <div class="columns-four">
+                                    <div class="blog-card card">
+                                        <div class="blog-card-thumb"><img
+                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
+                                        </div>
+                                        <div class="blog-card-desc">
+                                            <div class="blog-card-cat">
+                                                <?php echo get_the_title($page->post_parent); ?>
+                                            </div>
+                                            <div class="blog-card-excerpt">
+                                                <?php echo $page->post_title; ?>
+                                            </div>
+                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link test">
+                                                Read More
+                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="blog-card-excerpt">
-                                    Messari adds Permission to it’s Disclosure Registry, joining the ranks of
-                                    world-renowned projects…
+                                <?php break;
+                            case 1 : ?>
+                                <div class="columns-five-four">
+                                    <div class="blog-card card">
+                                        <div class="blog-card-thumb"><img
+                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
+                                        </div>
+                                        <div class="blog-card-desc">
+                                            <div class="blog-card-cat">
+                                                <?php echo get_the_title($page->post_parent); ?>
+                                            </div>
+                                            <div class="blog-card-excerpt">
+                                                <?php echo $page->post_title; ?>
+                                            </div>
+                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link">
+                                                Read More
+                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <a href="#" class="blog-card-link">
-                                    Read More
-                                    <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="columns-five-four">
-                        <div class="blog-card card">
-                            <div class="blog-card-thumb"></div>
-                            <div class="blog-card-desc">
-                                <div class="blog-card-cat">
-                                    Category 1
+                                <?php break;
+                            case 2 : ?>
+                                <div class="columns-nine-four">
+                                    <div class="blog-card card">
+                                        <div class="blog-card-thumb"><img
+                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
+                                        </div>
+                                        <div class="blog-card-desc">
+                                            <div class="blog-card-cat">
+                                                <?php echo get_the_title($page->post_parent); ?>
+                                            </div>
+                                            <div class="blog-card-excerpt">
+                                                <?php echo $page->post_title; ?>
+                                            </div>
+                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link">
+                                                Read More
+                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="blog-card-excerpt">
-                                    Messari adds Permission to it’s Disclosure Registry, joining the ranks of
-                                    world-renowned projects…
-                                </div>
-                                <a href="#" class="blog-card-link">
-                                    Read More
-                                    <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="columns-nine-four">
-                        <div class="blog-card card">
-                            <div class="blog-card-thumb"></div>
-                            <div class="blog-card-desc">
-                                <div class="blog-card-cat">
-                                    Category 1
-                                </div>
-                                <div class="blog-card-excerpt">
-                                    Messari adds Permission to it’s Disclosure Registry, joining the ranks of
-                                    world-renowned projects…
-                                </div>
-                                <a href="#" class="blog-card-link">
-                                    Read More
-                                    <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                                <?php break;
+                        }
+                        ?>
+
+                    <?php } ?>
                 </div>
             </div>
 
