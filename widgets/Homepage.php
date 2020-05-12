@@ -194,7 +194,7 @@ class Homepage extends Widget_Base
                                     <div class="floating-text">
                                         <div class="play-icon"><img src="<?php echo $path; ?>assets/icons/Play_Icon.svg">
                                         </div>
-                                        <h2>Permission’s blockchain and cryptocurrency enable you to<br/><span style="font-weight: 600;">own, control</span> and <span style="font-weight: 600;">profit</span> from your time and personal information.</h2>
+                                        <h2>Permission’s blockchain and cryptocurrency enable you to <span">own, control</span> and <span>profit</span> from your time and personal information.</h2>
                                         <div class="buttons">
                                             <a href="https://shopping.stageabout.wpengine.com" role="button" target="_blank"click="">Join Us Now</a>
                                         </div>
@@ -215,6 +215,20 @@ class Homepage extends Widget_Base
                 </iframe>
             </div>
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <section class="s2">
             <div class="columnar">
                 <div class="columns-twelve">
@@ -223,7 +237,7 @@ class Homepage extends Widget_Base
                 </div>
             </div>
             <div class="columnar tabs-home">
-                <ul class="tabs__caption">
+                <ul class="tabs__caption columns-twelve">
                     <li class="active">For Members</li>
                     <li>For Brands</li>
                 </ul>
@@ -246,54 +260,40 @@ class Homepage extends Widget_Base
                         <a href="https://shopping.stageabout.wpengine.com" role="button" target="_blank"click="">Start Earning Now</a>
                     </div>
                 </div>
-                <div class="columns-six-eight">
+                <div class="columns-four-eight">
                     <img src="https://permission.io/wp-content/uploads/2019/11/heroCatalogue.png">
                 </div>
             </div>
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <section class="s3">
             <div class="video-block">
-                <div class="permission-secondary-video" style="position:relative;">
+                <div class="permission-secondary-video">
                     <iframe id="perm-sec-video" src="https://player.vimeo.com/video/366780942" width="640" height="360" frameborder="0" allow="autoplay;"></iframe>
-                    <div class="overlay" style="position: absolute; left: 0;top:0;bottom:0;right:0;background:url('/wp-content/uploads/2019/11/chrl.png') no-repeat;background-size: cover;background-position: center">
-
-                        <div class="play-icon" style="opacity:0.5;margin: 0;">▷</div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-block">
-
-            </div>
-        </section>
-        <section class="s4">
-            <div class="columnar">
-                <div class="columns-twelve">
-                    <div class="title">The Staus Quo</div>
-                    <div class="sub-title">Merchants pay centralized third-party platforms to show you their products, interrupting you and exploiting your data in the process.  Tech giants yield mind-boggling profits while you gain zero financial benefit from your time and information.</div>
-                </div>
-                <div class="columnar">
-                    <div class="columns-five">
-                        <div class="title-color">60%</div>
-                        <div class="text">of millennials have installed ad blockers to escape chronic interruptions</div>
-                        <div class="title-color">87%</div>
-                        <div class="text">of consumers would opt out of having their personal information sold to third parties</div>
-                        <div class="title-color">8x</div>
-                        <div class="text">attention has escalated by a factor of 8 in the past 2 decades</div>
-                        <div class="title-color">50B</div>
-                        <div class="text">stimated global loss in 2020 due to bots and  click fraud</div>
-                    </div>
-                    <div class="columns-six-seven">
-                        <img src="hhttps://permission.io/wp-content/uploads/2019/11/ad_revenue_piechart.svg">
-                    </div>
-                </div>
-                <div class="columnar">
-                    <div class="columns-twelve">
-                        <div class="text-bottom">
-                            Google, Amazon, and Facebook dominate the web and take nearly 70% of all ad dollars, while shrinking your choices and suffocating merchants with declining ROI and a lack of transparency about whether their ad dollars are spent on real people.
+                    <div class="overlay">
+                        <div class="play-icon">
+                            <img src="<?php echo $path; ?>assets/icons/Play_Icon.svg">
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="text-block">
+                <div class="text">Permission is leading the Web Toward a New Engagement Model</div>
+            </div>
         </section>
 
 
@@ -302,6 +302,81 @@ class Homepage extends Widget_Base
 
 
 
+
+
+
+        <section class="s4">
+            <div class="columnar">
+                <div class="columns-twelve">
+                    <div class="title">The Staus Quo</div>
+                    <div class="sub-title">Merchants pay centralized third-party platforms to show you their products, interrupting you and exploiting your data in the process.  Tech giants yield mind-boggling profits while <span>you gain zero financial benefit from your time and information.</span></div>
+                </div>
+            </div>
+            <div class="columnar content-wrapper">
+                <div class="columns-five">
+                    <div class="title-color color-blue">60%</div>
+                    <div class="text">of millennials have installed ad blockers to escape chronic interruptions</div>
+                    <div class="title-color">87%</div>
+                    <div class="text">of consumers would opt out of having their personal information sold to third parties</div>
+                    <div class="title-color color-orange">8x</div>
+                    <div class="text">attention has escalated by a factor of 8 in the past 2 decades</div>
+                    <div class="title-color color-blue">50B</div>
+                    <div class="text">stimated global loss in 2020 due to bots and click fraud</div>
+                </div>
+                <div class="columns-six-seven">
+                    <img src="<?php echo $path; ?>assets/ad_revenue_piechart.svg">
+                </div>
+            </div>
+            <div class="columnar">
+                <div class="columns-twelve">
+                    <div class="text-bottom">
+                        Google, Amazon, and Facebook dominate the web and take nearly 70% of all ad dollars, while <span>shrinking your choices</span> and suffocating merchants with declining ROI and a lack of transparency about whether their ad dollars are spent on real people.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <section class="s5">
+            <div class="columnar">
+                <div class="columns-six img-block">
+                    <div class="img-wrap"><img src="<?php echo $path; ?>assets/Illustration.png"></div>
+                    <div class="text">Own Your Data™</div>
+                </div>
+                <div class="content-block columns-five-eight">
+                    <div class="text">Permission.io is changing the status quo with <span>ASK</span>,™ <span>the Standard Currency for Permission</span></div>
+                    <div class="img-wrap"><img src="<?php echo $path; ?>assets/icons/s5-ask.svg"></div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="s6">
+            <div class="columnar">
+                <div class="columns-twelve">
+                    <div class="title"><span>ASK</span> fuels an ecosystem for sellers and buyers to engage on a permission basis</div>
+                </div>
+            </div>
+            <div class="columnar content-wrapper">
+                <div class="columns-five-two">
+                    <img src="<?php echo $path; ?>assets/handphone.png">
+                </div>
+                <div class="columns-four-eight">
+                    <div class="sub-title">Join Us</div>
+                    <div class="text">Empowers consumers to <span>profit from their time and data</span> without giving up control</div>
+                    <div class="text">Enables businesses to earn <span>trust</span> and <span>loyalty</span> by asking permission and rewarding customers for their engagement, leading to <span>long-term relationships</span> and <span>increased ROI</span></div>
+                    <div class="buttons">
+                        <a href="https://shopping.stageabout.wpengine.com" role="button" target="_blank"click="">Start Earning Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
 
