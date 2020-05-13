@@ -566,6 +566,21 @@ class Homepage extends Widget_Base
         </section>
 
         <section class="s11">
+            <div class="columnar">
+                <div class="columns-twelve">
+                    <div class="title-block">Permission.io Roadmap</div>
+                </div>
+            </div>
+            <div class="columnar">
+                <div class="columns-twelve time-line-wrap">
+                    <div class="time-line-block top"></div>
+                    <div class="time-line-block bottom"></div>
+                    <div class="time-line-block top"></div>
+                    <div class="time-line-block bottom"></div>
+                    <div class="time-line-block top"></div>
+                    <div class="time-line-block bottom"></div>
+                </div>
+            </div>
         </section>
 
         <!--Блог обновленная верстка-->
@@ -587,6 +602,10 @@ class Homepage extends Widget_Base
 
 
                     <div class="blog-col-wrap columns-twelve">
+
+
+
+
                         <div class="columns-blog">
                             <div class="blog-card card">
                                 <div class="blog-card-thumb"></div>

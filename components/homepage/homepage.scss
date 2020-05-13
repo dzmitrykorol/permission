@@ -860,3 +860,32 @@ and (max-device-width : 667px) {
     }
   }
 }
+.s11{
+  padding: 84px 0 159px;
+  background-image: url("./assets/timeline-bg.png");
+  background-size: cover;
+  text-align: center;
+  .title-block{
+    color: #0C0C0C;
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: -1.2px;
+    line-height: 44px;
+    text-align: center;
+    padding-bottom: 96px;
+  }
+  .time-line-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    .time-line-block{
+      width: 33.3%;
+      height: 400px;
+      background-color: red;
+      border: 1px solid black;
+    }
+    .top{
+      background-color: #0b2e13;
+    }
+  }
+}
