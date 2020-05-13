@@ -379,6 +379,195 @@ class Homepage extends Widget_Base
         </section>
 
 
+
+
+        <section class="s7">
+            <div class="columnar">
+                <div class="home-col-wrap columns-twelve">
+                    <div class="card card-home">
+                        <div class="img-wrap"><img src="<?php echo $path; ?>assets/icons/card3.svg"></div>
+                        <div class="title">Revolutionizing Rewards</div>
+                        <div class="text"><span>ASK</span> is a currency that can be earned, traded and spent at the time and location of your choice.  Its utility extends beyond the ordinary rewards program.  Businesses can instantly tap into the power of permission by using ASK to engage and reward customers.</div>
+                    </div>
+                    <div class="card card-home">
+                        <div class="img-wrap"><img src="<?php echo $path; ?>assets/icons/card2.svg"></div>
+                        <div class="title">A use case for <span>ASK</span></div>
+                        <div class="text">Our flagship app where users opt-in to register their personal interests and other key data, and embark on various shopping and entertainment journeys. Users earn ASK for engaging with videos, surveys, and other content that addresses their needs and desires. Users can spend ASK and other leading currencies on the Permission platform.</div>
+                    </div>
+                    <div class="card card-home">
+                        <div class="img-wrap"><img src="<?php echo $path; ?>assets/icons/card1.svg"></div>
+                        <div class="title">An optimized ecosystem</div>
+                        <div class="text">Permission’s SDK will allow devs to build apps that enable businesses to become permission marketers and meet consumers’ increasing (and rightful!) demand for rewards.  The growth of permission-based applications will incentivize the currency’s growth and enhance its compounding effect. </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="s8">
+            <div class="columnar">
+                <div class="title columns-twelve">See What Developers Are Creating</div>
+                <div class="buttons columns-twelve">
+                    <a href="#" role="button" target="_blank"click="">Read the Documentation</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="s9">
+            <div class="permission-team">
+
+
+
+                <div class="team-blurb">
+                    <h3>Exceptional Leaders</h3>
+                    <p>
+                        Serial entrepreneurs in tech, media, and finance, as well as PhDs and
+                        Engineering leaders from
+                        Fortune 500 companies
+                    </p>
+                    <div class="navigation">
+                        <span class="previous">&lt;</span>
+                        <span class="next">&gt;</span>
+                    </div>
+                </div>
+
+
+
+
+                <div class="team-container">
+                    <figure>
+                        <img src="https://about.permission.io/wp-content/uploads/2019/08/charlie.png">
+                        <figcaption>
+                            <h4>CHARLES H. SILVER</h4>
+                            <span>CEO</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://about.permission.io/wp-content/uploads/2019/08/stephen.png">
+                        <figcaption>
+                            <h4>STEVEN WILKINSON CISSP, CBP</h4>
+                            <span>CISO</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="http://stageabout.local/wp-content/uploads/2020/04/Hunter-Jensen.png">
+                        <figcaption>
+                            <h4>HUNTER JENSEN</h4>
+                            <span>CTO</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="http://stageabout.local/wp-content/uploads/2020/04/bobby-v5.png">
+                        <figcaption>
+                            <h4>BOBBY PETERSEN</h4>
+                            <span>VP OF MARKETING</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://about.stageabout.wpengine.com/wp-content/uploads/2019/08/Matt.png">
+                        <figcaption>
+                            <h4>MATT ERHART</h4>
+                            <span>VP OF FINANCE &amp; COMPLIANCE</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://about.stageabout.wpengine.com/wp-content/uploads/2019/08/therese.png">
+                        <figcaption>
+                            <h4>THERESE FAHY</h4>
+                            <span>HR &amp; CONTROLLER</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://about.stageabout.wpengine.com/wp-content/uploads/2019/08/gary1.png">
+                        <figcaption>
+                            <h4>GARY J. SHERMAN Ph.D</h4>
+                            <span>FOUNDING MATHEMATICIAN</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="http://stageabout.local/wp-content/uploads/2020/04/Jennifer-Silver.png">
+                        <figcaption>
+                            <h4>JENNY SILVER</h4>
+                            <span>VP OF COMMUNICATIONS</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://about.stageabout.wpengine.com/wp-content/uploads/2019/08/daniel_hiltbrand.png">
+                        <figcaption>
+                            <h4>DANIEL HILTBRAND</h4>
+                            <span>DEVELOPMENT ENGINEER</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="http://stageabout.local/wp-content/uploads/2020/04/Robert-Morris.png">
+                        <figcaption>
+                            <h4>ROBERT MORRIS</h4>
+                            <span>MARKETING MANAGER</span>
+                        </figcaption>
+                    </figure>
+                    <h3>Our Advisors</h3>
+                    <figure>
+                        <img src="/wp-content/uploads/2019/08/robin.png">
+                        <figcaption>
+                            <h4>ROBIN BLOOR, PHD</h4>
+                            <span>FOUNDER OF BLOOR RESEARCH</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/wp-content/uploads/2019/08/Richard-1.png">
+                        <figcaption>
+                            <h4>RICHARD LI</h4>
+                            <span>GENERAL PARTNER AT<br /> ALPHABLOCK.COM</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/wp-content/uploads/2019/08/Andrew-1.png">
+                        <figcaption>
+                            <h4>ANDREW ESSEX</h4>
+                            <span>FORMER CEO OF DROGA5</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/wp-content/uploads/2019/08/Eric-1.png" data-src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
+                        <figcaption>
+                            <h4>ERIC ERVIN</h4>
+                            <span>CEO OF BLOCKFORCE CAPITAL</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/wp-content/uploads/2019/08/Ichiro.png">
+                        <figcaption>
+                            <h4>ICHIRO MINAMIKAWA</h4>
+                            <span>CEO OF COINTED JAPAN,<br /> FOUNDER AT BLOCKCHAIN TOKYO</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/wp-content/uploads/2019/08/Rob.png">
+                        <figcaption>
+                            <h4>ROB GREGORY</h4>
+                            <span>CEO OF POST-INTERRUPTIVE,<br /> FORMER PRESIDENT OF WHOSAY</span>
+                        </figcaption>
+                    </figure>
+                    <div class="spacer"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="s10">
+            <div class="columnar">
+                <div class="columns-twelve logos-wrap">
+                    <div class="logo"><img src="https://permission.io/wp-content/uploads/2019/11/forbes_tech_council_logo.png"></div>
+                    <div class="logo"><img src="https://permission.io/wp-content/uploads/2019/10/tribeca_logo.png"></div>
+                    <div class="logo"><img src="https://permission.io/wp-content/uploads/2019/10/maxim_logo.png"></div>
+                    <div class="logo"><img src="https://permission.io/wp-content/uploads/2019/10/rollingstone_logo.png"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="s11">
+        </section>
+
         <!--Блог обновленная верстка-->
         <!--
 
@@ -622,7 +811,31 @@ class Homepage extends Widget_Base
 
 
 
+        <script>
+            var scrollAmount = 256;
+            (function () {
+                var vpWidth = window.innerWidth;
 
+                if (innerWidth < 1000) {
+                    scrollAmount = innerWidth;
+                }
+
+                const bindEvent = (document.addEventListener) ? 'addEventListener' : 'attachEvent';
+                const container = document.querySelector('.permission-team .team-container');
+                const navigation = document.querySelector('.permission-team .navigation');
+
+
+                function handleClick(evt) {
+                    if (evt.target.classList.contains('next')) {
+                        container.scrollLeft = container.scrollLeft + scrollAmount;
+                    } else {
+                        container.scrollLeft = container.scrollLeft - scrollAmount;
+                    }
+
+                }
+                navigation[bindEvent]('click', handleClick.bind(this));
+            })();
+        </script>
 
 
 
