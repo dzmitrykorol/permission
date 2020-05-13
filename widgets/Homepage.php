@@ -382,6 +382,126 @@ class Homepage extends Widget_Base
 
 
 
+        <div class="" data-tabs="secondary">
+            <div data-tab="blog" class="blog active">
+                <div class="columnar category-item">
+                    <div class="columns-seven">
+                        <h2>Articles Written About Permission</h2>
+                    </div>
+                    <div class="columns-ten-three">
+                        <a href="#" class="all-articles">
+                            All Articles
+                            <img src="<?php echo $path;?>/assets/icons/chevron-right-big.svg">
+                        </a>
+                    </div>
+
+
+
+                    <div class="blog-col-wrap columns-twelve">
+                        <div class="columns-blog">
+                            <div class="blog-card card">
+                                <div class="blog-card-thumb"></div>
+                                <div class="blog-card-desc">
+                                    <div class="blog-card-cat">
+                                        Category 1
+                                    </div>
+                                    <div class="blog-card-excerpt">
+                                        Messari adds Permission to it’s Disclosure Registry, joining the ranks of world-renowned projects…
+                                    </div>
+                                    <a href="#" class="blog-card-link">
+                                        Read More
+                                        <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="columns-blog">
+                            <div class="blog-card card">
+                                <div class="blog-card-thumb"></div>
+                                <div class="blog-card-desc">
+                                    <div class="blog-card-cat">
+                                        Category 1
+                                    </div>
+                                    <div class="blog-card-excerpt">
+                                        Messari adds Permission to it’s Disclosure Registry, joining the ranks of world-renowned projects…
+                                    </div>
+                                    <a href="#" class="blog-card-link">
+                                        Read More
+                                        <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="columns-blog">
+                            <div class="blog-card card">
+                                <div class="blog-card-thumb"></div>
+                                <div class="blog-card-desc">
+                                    <div class="blog-card-cat">
+                                        Category 1
+                                    </div>
+                                    <div class="blog-card-excerpt">
+                                        Messari adds Permission to it’s Disclosure Registry, joining the ranks of world-renowned projects…
+                                    </div>
+                                    <a href="#" class="blog-card-link">
+                                        Read More
+                                        <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="columns-blog">
+                            <div class="blog-card card">
+                                <div class="blog-card-thumb"></div>
+                                <div class="blog-card-desc">
+                                    <div class="blog-card-cat">
+                                        Category 1
+                                    </div>
+                                    <div class="blog-card-excerpt">
+                                        Messari adds Permission to it’s Disclosure Registry, joining the ranks of world-renowned projects…
+                                    </div>
+                                    <a href="#" class="blog-card-link">
+                                        Read More
+                                        <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="columns-blog">
+                            <div class="blog-card card">
+                                <div class="blog-card-thumb"></div>
+                                <div class="blog-card-desc">
+                                    <div class="blog-card-cat">
+                                        Category 1
+                                    </div>
+                                    <div class="blog-card-excerpt">
+                                        Messari adds Permission to it’s Disclosure Registry, joining the ranks of world-renowned projects…
+                                    </div>
+                                    <a href="#" class="blog-card-link">
+                                        Read More
+                                        <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
 
 
 
