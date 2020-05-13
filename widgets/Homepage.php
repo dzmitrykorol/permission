@@ -379,8 +379,8 @@ class Homepage extends Widget_Base
         </section>
 
 
-
-
+        <!--Блог обновленная верстка-->
+        <!--
 
         <div class="" data-tabs="secondary">
             <div data-tab="blog" class="blog active">
@@ -500,7 +500,7 @@ class Homepage extends Widget_Base
             </div>
         </div>
 
-
+        -->
 
 
 
