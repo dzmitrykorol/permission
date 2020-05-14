@@ -571,18 +571,126 @@ class Homepage extends Widget_Base
                     <div class="title-block">Permission.io Roadmap</div>
                 </div>
             </div>
-            <div class="columnar">
-                <div class="columns-twelve time-line-wrap">
-                    <div class="time-line-block top"></div>
-                    <div class="time-line-block bottom"></div>
-                    <div class="time-line-block top"></div>
-                    <div class="time-line-block bottom"></div>
-                    <div class="time-line-block top"></div>
-                    <div class="time-line-block bottom"></div>
+            <div class="time-line">
+                <div class="columnar">
+                    <div class="columns-twelve time-line-wrap">
+                        <div class="time-line-block item-order-1">
+                            <div class="dot"></div>
+                            <div class="title">Q3 2019</div>
+                            <div class="text-wrap">
+                                <p>Affiliate Programs Partnerships</p>
+                                <p>Ecommerce Platform Partnerships</p>
+                                <p>Merchant Portal</p>
+                                <p>3rd Party Permission nodes</p>
+                            </div>
+                        </div>
+                        <div class="time-line-block item-order-4">
+                            <div class="dot"></div>
+                            <div class="title">Q4 2019</div>
+                            <div class="text-wrap">
+                                <p>Integration with ID Management Systems</p>
+                                <p>Enhanced Persnal Datasets</p>
+                                <p>Shop with ASK on Permission Platform</p>
+                                <p>Permission Blockchain Governance Policy and System</p>
+                            </div>
+                        </div>
+                        <div class="time-line-block item-order-2">
+                            <div class="dot"></div>
+                            <div class="title">Q1 2020</div>
+                            <div class="text-wrap">
+                                <p>SDK release</p>
+                                <p>Reporting & Analytics</p>
+                                <p>Targeted Personal Dataset Query</p>
+                                <p>Developer Website and Community Outreach</p>
+                            </div>
+                        </div>
+                        <div class="time-line-block item-order-5">
+                            <div class="dot"></div>
+                            <div class="title">Q2 2020</div>
+                            <div class="text-wrap">
+                                <p>IOS App Release</p>
+                                <p>Android App release</p>
+                                <p>Web App release</p>
+                                <p>Integration with Decentralized Identity Systems</p>
+                            </div>
+                        </div>
+                        <div class="time-line-block item-order-3">
+                            <div class="dot"></div>
+                            <div class="title">Q3/Q4 2020</div>
+                            <div class="text-wrap">
+                                <p>Decentralized Blockchain</p>
+                                <p>Keyword Bidding System</p>
+                                <p>Permission Blockchain Governance</p>
+                                <p>Member, Merchant and Advertiser Reputation</p>
+                            </div>
+                        </div>
+                        <div class="time-line-block item-order-6">
+                            <div class="dot"></div>
+                            <div class="title">Q4 2020</div>
+                            <div class="text-wrap">
+                                <p>Developer API</p>
+                                <p>Two-Sided Marketplace</p>
+                                <p>Permission Browser Plugin</p>
+                                <p>Data Query Optimization</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <img class="img-time-line" src="<?php echo $path; ?>assets/time-line.svg">
         </section>
 
+
+        <section class="s12">
+            <div class="columnar">
+                <div class="columns-twelve">
+                    <div class="title-block">In The Newsp</div>
+                </div>
+            </div>
+            <div class="columnar">
+                <div class="home-col-wrap columns-twelve">
+                    <div class="card card-home">
+                        <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/Fortune.jpg"></div>
+                        <div class="text">Messari adds Permission to it’s Disclosure Registry, joining the ranks of world-renowned projects…</div>
+                        <a href="#" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
+                    </div>
+                    <div class="card card-home">
+                        <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/Medium.jpg"></div>
+                        <div class="text">Messari adds Permission to it’s Disclosure Registry, joining the ranks of world-renowned projects…</div>
+                        <a href="#" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
+                    </div>
+                    <div class="card card-home">
+                        <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/Forbes.jpg"></div>
+                        <div class="text">Messari adds Permission to it’s Disclosure Registry, joining the ranks of world-renowned projects…</div>
+                        <a href="#" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
+                    </div>
+                    <div class="card card-home">
+                        <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/BlockTribune.jpg"></div>
+                        <div class="text">Messari adds Permission to it’s Disclosure Registry, joining the ranks of world-renowned projects…</div>
+                        <a href="#" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
+                    </div>
+                    <div class="card card-home">
+                        <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/BusinessWire.jpg"></div>
+                        <div class="text">Messari adds Permission to it’s Disclosure Registry, joining the ranks of world-renowned projects…</div>
+                        <a href="#" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
+                    </div>
+                    <div class="card card-home">
+                        <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/BitcoinExchange.jpg"></div>
+                        <div class="text">Messari adds Permission to it’s Disclosure Registry, joining the ranks of world-renowned projects…</div>
+                        <a href="#" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columnar">
+                <div class="columns-twelve">
+                    <div class="buttons">
+                        <a href="#" role="button" target="_blank"click="">All News</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
         <!--Блог обновленная верстка-->
         <!--
 
