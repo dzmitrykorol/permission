@@ -193,6 +193,29 @@ class BlogSinglePage extends Widget_Base
         $this->end_controls_section();
         // Midddle post's part ends
 
+
+        // Bottom post's part starts
+        $this->start_controls_section(
+            'section_bottom',
+            [
+                'label' => __('Bottom part of article', 'elementor'),
+            ]
+        );
+
+
+        $this->add_control(
+            'tags',
+            [
+                'label' => 'Type tags, use comma as separator',
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
+                'default' => __('Cryptocurrency, Bitcoin, Asia, Markets',
+                    'plugin-domain'),
+            ]
+        );
+
+        $this->end_controls_section();
+        // Bottom post's part ends
+
     }
 
 
@@ -211,12 +234,11 @@ class BlogSinglePage extends Widget_Base
         global $post;
         global $wp;
         $page = get_post($post->ID);
-//        dump($page);
         $path = '/wp-content/plugins/elementor-custom-widgets/';
         $settings = $this->get_settings_for_display();
-//        dump($settings);
         $this->add_inline_editing_attributes('paragraphText', 'none');
 
+        $pageList = get_pages("child_of=".$post->post_parent."&parent=".$post->post_parent."&sort_column=menu_order&sort_order=asc");
         ?>
 
         <div class="tabs tabs-article" data-tabs="secondary">
@@ -226,7 +248,9 @@ class BlogSinglePage extends Widget_Base
 
                 <div class="columnar">
                     <div class="columns-twelve">
-                        <a href="#" class="article-category">Cryptocurrency</a>
+                        <a href="<?php echo '/blog'; ?>" class="article-category">
+                            <?php echo get_the_title($page->post_parent); ?>
+                        </a>
                         <h1><?php echo $page->post_title; ?></h1>
                         <div class="subtitle-article"><?php echo $settings['page_subtitle']; ?></div>
                     </div>
@@ -298,27 +322,57 @@ class BlogSinglePage extends Widget_Base
                             <div class="quote"><?php echo $settings['the_quote']; ?></div>
                         </div>
 
-                        <?php echo $settings['blog_content_middle']; ?>
+                        <?php
+                        echo $settings['blog_content_middle'];
+                        $pages = [];
+                        foreach ($pageList as $page) {
+                            $pages[] = $page->ID;
+                        }
+                        $randPageIndex = array_rand($pages, 1);
+                        $randPage = $pages[$randPageIndex];
+                        $marker = true;
+                        $count = count($pages);
 
-                        <div class="wp-block-article">
-                            <div class="article-card-thumb"><img src="<?php echo $path; ?>assets/bullseye-dark.png">
-                            </div>
-                            <div class="blog-card-desc">
-                                <div class="blog-card-excerpt">
-                                    Messari adds Permission to it’s Disclosure Registry, joining the ranks of
-                                    world-renowned projects…
+                        if ($randPage === $post->ID && $count > 1) {
+                            while ($marker) {
+                                $randPageIndex = array_rand($pages, 1);
+                                $randPage = $pages[$randPageIndex];
+                                if ($randPage !== $post->ID) {
+                                    $marker = false;
+                                }
+                            }
+                        }
+                        if ($count > 1) { ?>
+                            <div class="wp-block-article">
+                                <div class="article-card-thumb"><img
+                                            src="<?php echo get_the_post_thumbnail_url($randPage, 'large'); ?>">
                                 </div>
-                                <a href="#" class="blog-card-link">
-                                    Read More
-                                    <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                </a>
+                                <div class="blog-card-desc">
+                                    <div class="blog-card-excerpt single-page">
+                                        <?php echo get_the_title($randPage); ?>
+                                    </div>
+                                    <a href="<?php echo get_page_link($randPage); ?>" class="blog-card-link">
+                                        Read More
+                                        <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                    </a>
+                                </div>
                             </div>
-                        </div>
+                        <?php } ?>
 
                         <?php echo $settings['blog_content_bottom']; ?>
 
-                        <div class="tags">TAGS: <a href="#">Cryptocurrency,</a> <a href="#">Bitcoin,</a> <a href="#">Asia,</a>
-                            <a href="#">Markets</a></div>
+                        <div class="tags">TAGS:
+                            <?php
+                            $tags = explode(',', $settings['tags']);
+                            $lastElement = end($tags);
+                            foreach ($tags as $tag) { ?>
+                                <a href="#"><?php echo $tag.','; ?></a>
+                                <?php if ($tag === $lastElement) { ?>
+                                    <a href="#"><?php echo $tag; ?></a>
+                                <?php }
+                            }
+                            ?>
+                        </div>
                         <div class="share-social-icons">
                             <div class="share-text">share</div>
                             <a rel="nofollow" class="share-icons" href="#" data-count="twi"
@@ -348,58 +402,65 @@ class BlogSinglePage extends Widget_Base
 
 
                 <?php
-                $prev_page = get_previous_post();
-                $next_page = get_next_post();
+                $current = array_search($post->ID, $pages, false);
+                $prevID = $pages[$current - 1];
+                $nextID = $pages[$current + 1];
+
                 ?>
                 <div class="columnar article-nav">
                     <div class="columns-four-two">
                         <div class="text">Previous Post</div>
-                        <a href="<?php echo get_page_link($prev_page->ID); ?>"><?php echo $prev_page->post_title; ?></a>
+                        <a href="<?php echo get_page_link($prevID); ?>"><?php echo get_the_title($prevID); ?></a>
                     </div>
                     <div class="columns-four-eight">
                         <div class="text">Next Post</div>
-                        <a href="<?php echo get_page_link($next_page->ID); ?>"><?php echo $next_page->post_title; ?></a>
+                        <a href="<?php echo get_page_link($nextID); ?>"><?php echo get_the_title($nextID); ?></a>
                     </div>
                 </div>
 
 
-                <div class="columnar">
-                    <div class="card blog-newsletter article-newsletter columns-twelve">
-                        <div class="">
-                            <h2 class="centered-text">
-                                Get our newsletter in your inbox Monday through Friday.
-                            </h2>
-                        </div>
-                        <div class="blog-newsletter-email">
-                            <div class="text-input marketing with-button">
-                                <input type="text" class="small-copy" placeholder="Email Address">
-                                <label>Email Address</label>
-                                <button class="salmon marketing">Submit</button>
+                <?php
+                // hide temporarily by check on no-existing var
+                $empty = '';
+
+                if ($empty) { ?>
+                    <div class="columnar">
+                        <div class="card blog-newsletter article-newsletter columns-twelve">
+                            <div class="">
+                                <h2 class="centered-text">
+                                    Get our newsletter in your inbox Monday through Friday.
+                                </h2>
+                            </div>
+                            <div class="blog-newsletter-email">
+                                <div class="text-input marketing with-button">
+                                    <input type="text" class="small-copy" placeholder="Email Address">
+                                    <label>Email Address</label>
+                                    <button class="salmon marketing">Submit</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-
-                <div class="article-video">
-                    <div class="columnar">
-                        <div class="columns-seven">
-                            <h2>Watch This</h2>
-                        </div>
-                        <div class="columns-ten-three">
-                            <a href="#" class="all-articles">
-                                All Videos
-                                <img src="<?php echo $path; ?>/assets/icons/chevron-right-big.svg">
-                            </a>
-                        </div>
-                        <div class="columns-twelve video-block">
-                            <a href="#">
-                                <img src="<?php echo $path; ?>assets/icons/play.svg">
-                            </a>
-                            <p><?php echo $page->post_title; ?></p>
+                    <div class="article-video">
+                        <div class="columnar">
+                            <div class="columns-seven">
+                                <h2>Watch This</h2>
+                            </div>
+                            <div class="columns-ten-three">
+                                <a href="#" class="all-articles">
+                                    All Videos
+                                    <img src="<?php echo $path; ?>/assets/icons/chevron-right-big.svg">
+                                </a>
+                            </div>
+                            <div class="columns-twelve video-block">
+                                <a href="#">
+                                    <img src="<?php echo $path; ?>assets/icons/play.svg">
+                                </a>
+                                <p><?php echo $page->post_title; ?></p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                <?php } ?>
 
 
                 <div class="columnar category-item">

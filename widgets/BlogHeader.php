@@ -179,13 +179,14 @@ class BlogHeader extends Widget_Base {
             <div class="primary-nav">
                 <nav>
                     <div class="logo">
-                        <img src="<?php echo $path; ?>/assets/logo-permission.svg">
+                        <a href="/"><img src="<?php echo $path; ?>/assets/logo-permission.svg"></a>
                     </div>
                     <ul data-menu="primary">
                         <li class="mobile-only"><a href="https://my.permission.io" target="_blank">Log In</a></li>
                         <li class="mobile-only"><a href="https://my.permission.io/signup" target="_blank">Sign Up</a></li>
                         <li><a href="/">Developers</a></li>
                         <li><a href="https://permission.io/shop-with-ask" target="_blank">Shop with ASK</a></li>
+                        <li><a href="/blog">Blog</a></li>
                         <li><a href="https://permission.gitlab.io/blockchain/testnet.html" target="_blank">Docs</a></li>
                         <li class="submenu" data-formenu="about"><div>About<svg width="11px" height="9px" viewBox="0 0 11 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

@@ -199,24 +199,41 @@ class BlogFooter extends Widget_Base {
                         <li><a href="https://permission.io/faqs" target="_blank">FAQs</a></li>
                     </ul>
                 </div>
+                <?php
+                // hide temporarily by check on no-existing var
+                $empty = '' ?>
+
+
                 <div class="columns-eight-five news-updates">
-                    <h2>Get News and Updates</h2>
-                    <div class="text-input marketing with-button">
-                        <input type="text" class="small-copy" placeholder="Email Address">
-                        <label>Email Address</label>
-                        <button class="bright-blue marketing">Submit</button>
-                    </div>
+                    <?php
+                    if ($empty) { ?>
+                        <h2>Get News and Updates</h2>
+                        <div class="text-input marketing with-button">
+                            <input type="text" class="small-copy" placeholder="Email Address">
+                            <label>Email Address</label>
+                            <button class="bright-blue marketing">Submit</button>
+                        </div>
+                    <?php } ?>
                     <h2>Connect</h2>
                     <div class="social-icons">
-                        <a href="https://twitter.com/permissionIO" target="_blank"><img src="https://cdn.permission.io/apps/permissionbase/assets/logos/twitter.svg"></a>
-                        <a href="https://www.facebook.com/PermissionIO" target="_blank"><img src="https://cdn.permission.io/apps/permissionbase/assets/logos/facebook.svg"></a>
-                        <a href="https://medium.com/permissionio" class="medium" target="_blank"><img src="https://cdn.permission.io/apps/permissionbase/assets/logos/medium.svg"></a>
-                        <a href="https://www.reddit.com/r/PermissionIO" target="_blank"><img src="https://cdn.permission.io/apps/permissionbase/assets/logos/telegram.svg"></a>
-                        <a href="https://www.reddit.com/r/PermissionIO" target="_blank"><img src="https://cdn.permission.io/apps/permissionbase/assets/logos/reddit.svg"></a>
-                        <a href="https://www.linkedin.com/company/permission-io/" target="_blank"><img src="https://cdn.permission.io/apps/permissionbase/assets/logos/linkedin.svg"></a>
-                        <a href="https://permission.gitlab.io/" target="_blank"><img src="https://cdn.permission.io/apps/permissionbase/assets/logos/gitlab.svg"></a>
+                        <a href="https://twitter.com/permissionIO" target="_blank"><img
+                                    src="https://cdn.permission.io/apps/permissionbase/assets/logos/twitter.svg"></a>
+                        <a href="https://www.facebook.com/PermissionIO" target="_blank"><img
+                                    src="https://cdn.permission.io/apps/permissionbase/assets/logos/facebook.svg"></a>
+                        <a href="https://medium.com/permissionio" class="medium" target="_blank"><img
+                                    src="https://cdn.permission.io/apps/permissionbase/assets/logos/medium.svg"></a>
+                        <a href="https://www.reddit.com/r/PermissionIO" target="_blank"><img
+                                    src="https://cdn.permission.io/apps/permissionbase/assets/logos/telegram.svg"></a>
+                        <a href="https://www.reddit.com/r/PermissionIO" target="_blank"><img
+                                    src="https://cdn.permission.io/apps/permissionbase/assets/logos/reddit.svg"></a>
+                        <a href="https://www.linkedin.com/company/permission-io/" target="_blank"><img
+                                    src="https://cdn.permission.io/apps/permissionbase/assets/logos/linkedin.svg"></a>
+                        <a href="https://permission.gitlab.io/" target="_blank"><img
+                                    src="https://cdn.permission.io/apps/permissionbase/assets/logos/gitlab.svg"></a>
                     </div>
                 </div>
+
+
             </div>
             <div class="columnar">
                 <div class="columns-twelve copyright">
