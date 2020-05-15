@@ -75,6 +75,7 @@ class Plugin
         require_once __DIR__.'/widgets/BlogPermissionUpdatesPage.php';
         require_once __DIR__.'/widgets/BlogSinglePage.php';
         require_once __DIR__.'/widgets/BlogTotallyAllArticlesPage.php';
+        require_once __DIR__.'/widgets/BlogTags.php';
         require_once __DIR__.'/widgets/BlogHeader.php';
         require_once __DIR__.'/widgets/BlogFooter.php';
         require_once __DIR__.'/widgets/Homepage.php';
@@ -98,6 +99,7 @@ class Plugin
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new BlogAllArticlesPage());
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new BlogPermissionUpdatesPage());
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new BlogSinglePage());
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new BlogTags());
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new BlogTotallyAllArticlesPage());
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new BlogHeader());
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new BlogFooter());

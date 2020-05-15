@@ -289,7 +289,6 @@ class BlogSinglePage extends Widget_Base
                                    return false" title="Add to Linkedin" target="_blank">
                             <img src="<?php echo $path; ?>assets/icons/LinkedInLogo.svg">
                         </a>
-                        <!--<a href="#" class="share-icons"><img src="--><?php //echo $path; ?><!--assets/icons/mail-ic.svg"></a>-->
                     </div>
 
                 </div>
