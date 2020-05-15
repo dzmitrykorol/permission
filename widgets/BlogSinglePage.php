@@ -192,30 +192,6 @@ class BlogSinglePage extends Widget_Base
 
         $this->end_controls_section();
         // Midddle post's part ends
-
-
-        // Bottom post's part starts
-        $this->start_controls_section(
-            'section_bottom',
-            [
-                'label' => __('Bottom part of article', 'elementor'),
-            ]
-        );
-
-
-        $this->add_control(
-            'tags',
-            [
-                'label' => 'Type tags, use comma as separator',
-                'type' => \Elementor\Controls_Manager::TEXTAREA,
-                'default' => __('Cryptocurrency, Bitcoin, Asia, Markets',
-                    'plugin-domain'),
-            ]
-        );
-
-        $this->end_controls_section();
-        // Bottom post's part ends
-
     }
 
 
@@ -360,15 +336,24 @@ class BlogSinglePage extends Widget_Base
 
                         <?php echo $settings['blog_content_bottom']; ?>
 
+                        <?php
+                        $tags = get_post_meta($post->ID, 'tags', true);
+                        $allTags = explode(', ', $tags);
+                        $lastElement = end($allTags);
+                        ?>
                         <div class="tags">TAGS:
                             <?php
-                            $tags = explode(',', $settings['tags']);
-                            $lastElement = end($tags);
-                            foreach ($tags as $tag) { ?>
-                                <a href="#"><?php echo $tag.','; ?></a>
-                                <?php if ($tag === $lastElement) { ?>
-                                    <a href="#"><?php echo $tag; ?></a>
-                                <?php }
+                            if (!empty($tags)) {
+                                foreach ($allTags as $tag) { ?>
+                                    <?php
+                                    if ($tag === $lastElement) { ?>
+                                        <a href="/blog/tag/?tag=<?php echo strtolower($tag); ?>"><?php echo $tag; ?></a>
+                                    <?php } else { ?>
+                                        <a href="/blog/tag/?tag=<?php echo strtolower($tag); ?>"><?php echo $tag.','; ?></a>
+                                    <?php }
+                                }
+                            } else {
+                                echo 'tags are not added yet';
                             }
                             ?>
                         </div>

@@ -80,6 +80,13 @@ function handleMenuOverlayClick() {
     });
 }
 
+function RemoveLastDirectoryPartOf(the_url)
+{
+    var the_arr = the_url.split('/');
+    the_arr.pop();
+    return( the_arr.join('/') );
+}
+
 function handleTabClick(hash, tabset) {
 
     var tabsContainer = document.querySelector('[data-tabs="' + tabset + '"]');
@@ -87,6 +94,10 @@ function handleTabClick(hash, tabset) {
 
     var oldActiveTabs = tabsContainer.querySelectorAll('.active');
     var oldActiveTabLinks = tabLinksContainer.querySelectorAll('.active');
+    console.log(hash);
+    // history.replaceState({}, 'some title', '/');
+    // history.pushState(null, "", location.href.split("?").pop());
+    // history.pushState(null, "", location.href.split("/")[0]+'#'+hash);
 
     if(oldActiveTabs) {
         Array.from(oldActiveTabs).forEach(function (item) {

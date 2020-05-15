@@ -197,7 +197,7 @@ class BlogTags extends Widget_Base
                     <?php
                     $pageCategories = get_pages([
                         'parent' => 5690,
-                        'exclude' => [5922, 5928, 5931],
+                        'exclude' => [5922, 5928, 5931, 5947],
                     ]);
 
                     foreach ($pageCategories as $key => $value) { ?>
@@ -216,25 +216,18 @@ class BlogTags extends Widget_Base
                         <div class="breadcrumbs columns-twelve">
                             <a href="/">Home</a>
                             /
-                            <span>Blog</span>
+                            <span>Tags</span>
                         </div>
                         <div class="columns-twelve">
-                            <h1>Blog</h1>
+                            <?php
+                            $tag = $_GET['tag'];
+                            ?>
+                            <h1>Articles by tag: <?php echo $tag; ?></h1>
                         </div>
 
                     </div>
                 </div>
                 <div class="columnar category-item first">
-                    <div class="columns-seven">
-                        <h2>Articles Written About Permission</h2>
-                    </div>
-                    <div class="columns-ten-three">
-                        <a href="/blog/articles-written-about-permission/" class="all-articles">
-                            All Articles
-                            <img src="<?php echo $path; ?>/assets/icons/chevron-right-big.svg">
-                        </a>
-                    </div>
-
                     <div class="blog-col-wrap columns-twelve">
 
                         <?php
@@ -243,7 +236,7 @@ class BlogTags extends Widget_Base
                             'sort_column' => 'date',
                             'hierarchical' => 0,
                             'parent' => [5782, 5699, 5785, 5786, 5787, 5788, 5789],
-                            'number' => 3,
+                            'number' => 18,
                             'post_type' => 'page',
                             'post_status' => 'publish',
                         ]);
@@ -252,190 +245,22 @@ class BlogTags extends Widget_Base
                             $parts = parse_url($page->guid);
                             parse_str($parts['query'], $query);
                             $id = $query['page_id'];
-                            ?>
-                            <div class="columns-blog">
-                                <div class="blog-card card">
-                                    <div class="blog-card-thumb"><img
-                                                src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
-                                    </div>
-                                    <div class="blog-card-desc">
-                                        <div class="blog-card-cat">
-                                            <?php echo get_the_title($page->post_parent); ?>
-                                        </div>
-                                        <div class="blog-card-excerpt">
-                                            <?php echo $page->post_title; ?>
-                                        </div>
-                                        <a href="<?php echo get_page_link($id); ?>" class="blog-card-link test">
-                                            Read More
-                                            <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php } ?>
-                    </div>
-                </div>
-
-                <div class="columnar category-item">
-                    <div class="columns-seven">
-                        <h2>Permission Updates</h2>
-                    </div>
-                    <div class="columns-ten-three">
-                        <a href="/blog/permission-updates/" class="all-articles">
-                            All Articles
-                            <img src="<?php echo $path; ?>/assets/icons/chevron-right-big.svg">
-                        </a>
-                    </div>
-
-                    <div class="blog-col-wrap columns-twelve">
-
-
-                        <?php
-                        $permissionPages = get_pages([
-                            'sort_order' => 'ASC',
-                            'sort_column' => 'date',
-                            'hierarchical' => 0,
-//                        'child_of'     => 5788,
-                            'parent' => 5788,
-                            'number' => 3,
-                            'post_type' => 'page',
-                            'post_status' => 'publish',
-                        ]);
-                        foreach ($permissionPages as $page) {
-                            $parts = parse_url($page->guid);
-                            parse_str($parts['query'], $query);
-                            $id = $query['page_id']; ?>
-                            <div class="columns-blog">
-                                <div class="blog-card card">
-                                    <div class="blog-card-thumb"><img
-                                                src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
-                                    </div>
-                                    <div class="blog-card-desc">
-                                        <div class="blog-card-cat">
-                                            <?php echo get_the_title($page->post_parent); ?>
-                                        </div>
-                                        <div class="blog-card-excerpt">
-                                            <?php echo $page->post_title; ?>
-                                        </div>
-                                        <a href="<?php echo get_page_link($id); ?>" class="blog-card-link test">
-                                            Read More
-                                            <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php } ?>
-                    </div>
-                </div>
-
-                <div class="columnar category-item" id="load_more">
-                    <div class="columns-seven">
-                        <h2>All Articles</h2>
-                    </div>
-                    <div class="columns-ten-three">
-                        <a href="/blog/all-articles" class="all-articles">
-                            All Articles
-                            <img src="<?php echo $path; ?>/assets/icons/chevron-right-big.svg">
-                        </a>
-                    </div>
-
-                    <div class="blog-col-wrap columns-twelve">
-                        <?php
-                        $allPages = get_pages([
-                            'sort_order' => 'ASC',
-                            'sort_column' => 'date',
-                            'hierarchical' => 0,
-                            'parent' => [5782, 5699, 5785, 5786, 5787, 5788, 5789],
-                            'number' => 6,
-                            'post_type' => 'page',
-                            'post_status' => 'publish',
-                        ]);
-
-                        foreach ($allPages as $key => $page) {
-                            $parts = parse_url($page->guid);
-                            parse_str($parts['query'], $query);
-                            $id = $query['page_id']; ?>
-                            <div class="columns-blog">
-                                <div class="blog-card card">
-                                    <div class="blog-card-thumb"><img
-                                                src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
-                                    </div>
-                                    <div class="blog-card-desc">
-                                        <div class="blog-card-cat">
-                                            <?php echo get_the_title($page->post_parent); ?>
-                                        </div>
-                                        <div class="blog-card-excerpt">
-                                            <?php echo $page->post_title; ?>
-                                        </div>
-                                        <a href="<?php echo get_page_link($id); ?>" class="blog-card-link test">
-                                            Read More
-                                            <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php } ?>
-                    </div>
-
-                </div>
-
-                <?php
-                // hide temporarily by check on no-existing var
-                $empty = '';
-
-                if ($empty) { ?>
-                    <div class="columnar">
-                        <div class="columns-twelve vertical-middle">
-                            <a href="#" class="link-button marketing perm-blue">Load More Articles</a>
-                        </div>
-                    </div>
-                <?php } ?>
-
-            </div>
-            <?php
-            foreach ($pageCategories as $key => $pageCategory) {
-                $categoryPages = get_pages(
-                    [
-                        'child_of' => $pageCategory->ID,
-                    ]
-                );
-                ?>
-                <div data-tab="category-<?php echo $key + 1 ?>" class="category">
-                    <div class="hero">
-                        <div class="columnar">
-                            <div class="breadcrumbs columns-twelve">
-                                <a href="/">Home</a>
-                                /
-                                <a href="/blog">Blog</a>
-                                /
-                                <span><?php echo $pageCategory->post_title; ?></span>
-                            </div>
-                            <div class="columns-twelve">
-                                <h1><?php echo $pageCategory->post_title; ?></h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="columnar category-item first">
-                        <div class="blog-col-wrap columns-twelve">
-                            <?php
-                            // get pages of category
-                            foreach ($categoryPages as $categoryPage) {
-                                $pageId = $categoryPage->ID;
-                                ?>
+                            $tagsLine = get_post_meta($id, 'tags', true);
+                            $tags = explode(', ', $tagsLine);
+                            if (in_array($tag, $tags, false)) { ?>
                                 <div class="columns-blog">
                                     <div class="blog-card card">
-                                        <div class="blog-card-thumb">
-                                            <img src="<?php echo get_the_post_thumbnail_url($categoryPage->ID,
-                                                'large'); ?>">
+                                        <div class="blog-card-thumb"><img
+                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
                                         </div>
                                         <div class="blog-card-desc">
                                             <div class="blog-card-cat">
-                                                <?php echo get_the_title($categoryPage->post_parent); ?>
+                                                <?php echo get_the_title($page->post_parent); ?>
                                             </div>
                                             <div class="blog-card-excerpt">
-                                                <?php echo $categoryPage->post_title; ?>
+                                                <?php echo $page->post_title; ?>
                                             </div>
-                                            <a href="<?php echo get_page_link($pageId); ?>" class="blog-card-link">
+                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link test">
                                                 Read More
                                                 <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
                                             </a>
@@ -443,48 +268,10 @@ class BlogTags extends Widget_Base
                                     </div>
                                 </div>
                             <?php } ?>
-                        </div>
+                        <?php } ?>
                     </div>
-
-                    <?php
-                    // hide temporarily by check on no-existing var
-                    $empty = '';
-
-                    if ($empty) { ?>
-                    <div class="columnar">
-                            <div class="card blog-newsletter columns-twelve">
-                                <div class="">
-                                    <h2 class="centered-text">
-                                        Get our newsletter in your inbox Monday through Friday.
-                                    </h2>
-                                </div>
-                                <div class="blog-newsletter-email">
-                                    <div class="text-input marketing with-button">
-                                        <input type="text" class="small-copy" placeholder="Email Address">
-                                        <label>Email Address</label>
-                                        <button class="salmon marketing">Submit</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    <div class="columnar">
-                        <div class="columns-twelve">
-                            <div class="pagination">
-                                <a href="#" class="active">1</a>
-                                <a href="#">2</a>
-                                <a href="#">3</a>
-                                <a href="#">
-                                    <img src="<?php echo $path; ?>/assets/icons/chevron-down.svg" alt="chevron">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <?php } ?>
-
-
                 </div>
-            <?php } ?>
+            </div>
         </div>
 
         <?php

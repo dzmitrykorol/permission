@@ -213,7 +213,7 @@ class Blog extends Widget_Base
                     <?php
                     $pageCategories = get_pages([
                         'parent' => 5690,
-                        'exclude' => [5922, 5928, 5931],
+                        'exclude' => [5922, 5928, 5931, 5947],
                     ]);
 
                     foreach ($pageCategories as $key => $value) { ?>
