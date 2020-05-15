@@ -689,8 +689,95 @@ class Homepage extends Widget_Base
                     </div>
                 </div>
             </div>
+        </section>
+
+
+
+
+
+
+        <section class="s13">
+            <div class="columnar">
+                <div class="columns-twelve">
+                    <div class="title-block">On The Air</div>
+                </div>
+            </div>
+            <div class="columnar">
+                <div class="home-col-wrap columns-twelve">
+
+                    <div class="card card-home card-soundcloud">
+                        <div class="img-wrap"></div>
+                            <iframe width="100%" height="260" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/464133330&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                             <div class="text-wrap">
+                                <div class="podcast"><img src="<?php echo $path; ?>assets/podcast.png"></div>
+                                <div class="text">CEO Charles Silver talks the Permission Marketplace, Ask, and more...</div>
+                            </div>
+                    </div>
+
+
+                    <div class="card card-home card-soundcloud">
+                        <div class="img-wrap"></div>
+                        <iframe width="100%" height="260" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/464133330&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                        <div class="text-wrap">
+                            <div class="podcast"><img src="<?php echo $path; ?>assets/podcast.png"></div>
+                            <div class="text">CEO Charles Silver talks the Permission Marketplace, Ask, and more...</div>
+                        </div>
+                    </div>
+
+
+                    <div class="columns-blog">
+                        <div class="blog-card card blog-home">
+                            <div class="blog-card-thumb"><img src="https://stageabout.wpengine.com/wp-content/uploads/2020/04/1_V5BBxrLPOhb03UvUF0rxlQ-1024x868.jpeg">
+                            </div>
+                            <div class="blog-card-desc">
+                                <div class="blog-card-cat">
+                                    Data Privacy                                        </div>
+                                <div class="blog-card-excerpt">
+                                    Solving the “Data Rights” Problem: It’s about Compensation                                        </div>
+                                <a href="https://stageabout.wpengine.com/blog/data-privacy/solving-the-data-rights-problem-its-about-compensation/" class="blog-card-link test">
+                                    Read More
+                                    <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="s14">
+            <div class="columnar">
+                <div class="columns-twelve">
+                    <div class="title-block">Our Partners</div>
+                </div>
+            </div>
+
+            <div class="columnar">
+                <div class="columns-twelve logos-wrap">
+                    <div class="logo"><img src="https://permission.io/wp-content/uploads/2019/10/fabrk-logo.png"></div>
+                    <div class="logo"><img src="https://permission.io/wp-content/uploads/2019/10/messari-logo-1.png"></div>
+                    <div class="logo"><img src="https://permission.io/wp-content/uploads/2019/10/fenwick-logo-1.png"></div>
+                    <div class="logo"><img src="https://permission.io/wp-content/uploads/2019/10/trezor-logo-2.png"></div>
+                    <div class="logo"><img src="https://permission.io/wp-content/uploads/2020/01/partner_mycryptocheckout.png"></div>
+                    <div class="logo"><img src="https://permission.io/wp-content/uploads/2020/04/dd-bw1.png"></div>
+                    <div class="logo"><img src="https://permission.io/wp-content/uploads/2020/04/Rocktree-bw1.png"></div>
+                </div>
+            </div>
+
 
         </section>
+
+
+
+
+
+
+
+
+
+
         <!--Блог обновленная верстка-->
         <!--
 
