@@ -237,7 +237,7 @@ class BlogFooter extends Widget_Base {
             </div>
             <div class="columnar">
                 <div class="columns-twelve copyright">
-                    Copyright Ⓒ 2019 Permission.io <span class="divider">| </span><span class="trademark">Permission® is a registered trademark of Permission.io</span>
+                    Copyright Ⓒ <?php echo date('Y'); ?> Permission.io <span class="divider">| </span><span class="trademark">Permission® is a registered trademark of Permission.io</span>
                 </div>
             </div>
         </footer>

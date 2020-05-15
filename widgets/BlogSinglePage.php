@@ -248,7 +248,7 @@ class BlogSinglePage extends Widget_Base
 
                 <div class="columnar">
                     <div class="columns-twelve">
-                        <a href="<?php echo '/blog'; ?>" class="article-category">
+                        <a href="<?php echo getTabLinkByCategoryId($page->post_parent); ?>" class="article-category">
                             <?php echo get_the_title($page->post_parent); ?>
                         </a>
                         <h1><?php echo $page->post_title; ?></h1>
@@ -296,7 +296,7 @@ class BlogSinglePage extends Widget_Base
 
                 <div class="columnar article-img">
                     <div class="columns-twelve">
-                        <img src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
+                        <img style="width: 100%" src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
                         <p>Source</p>
                     </div>
                 </div>
