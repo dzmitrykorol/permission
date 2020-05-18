@@ -271,9 +271,64 @@ class BlogTags extends Widget_Base
                         <?php } ?>
                     </div>
                 </div>
-            </div>
-        </div>
 
+            </div>
+            <?php
+            foreach ($pageCategories as $key => $pageCategory) {
+                $categoryPages = get_pages(
+                    [
+                        'child_of' => $pageCategory->ID,
+                    ]
+                );
+                ?>
+                <div data-tab="category-<?php echo $key + 1 ?>" class="category">
+                    <div class="hero">
+                        <div class="columnar">
+                            <div class="breadcrumbs columns-twelve">
+                                <a href="/">Home</a>
+                                /
+                                <a href="/blog">Blog</a>
+                                /
+                                <span><?php echo $pageCategory->post_title; ?></span>
+                            </div>
+                            <div class="columns-twelve">
+                                <h1><?php echo $pageCategory->post_title; ?></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columnar category-item first">
+                        <div class="blog-col-wrap columns-twelve">
+                            <?php
+                            // get pages of category
+                            foreach ($categoryPages as $categoryPage) {
+                                $pageId = $categoryPage->ID;
+                                ?>
+                                <div class="columns-blog">
+                                    <div class="blog-card card">
+                                        <div class="blog-card-thumb">
+                                            <img src="<?php echo get_the_post_thumbnail_url($categoryPage->ID,
+                                                'large'); ?>">
+                                        </div>
+                                        <div class="blog-card-desc">
+                                            <div class="blog-card-cat">
+                                                <?php echo get_the_title($categoryPage->post_parent); ?>
+                                            </div>
+                                            <div class="blog-card-excerpt">
+                                                <?php echo $categoryPage->post_title; ?>
+                                            </div>
+                                            <a href="<?php echo get_page_link($pageId); ?>" class="blog-card-link">
+                                                Read More
+                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
         <?php
     }
 
