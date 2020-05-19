@@ -234,12 +234,21 @@ class BlogSinglePage extends Widget_Base
 
                 <div class="columnar article-share">
 
+                    <?php
+                    ;
+                    ?>
                     <div class="share-social-info columns-four-one">
-                        <div class="photo"><img src="<?php echo $path; ?>assets/icons/drawkit-folder-man-colour.svg">
+                        <div class="photo">
+                            <?php
+                            $twitter = get_the_author_meta('twitter', $page->post_author);
+                            $avatar = get_avatar($page->post_author);
+                            echo $avatar;
+                            ?>
                         </div>
                         <div class="text-wrap">
                             <div class="text"><?php echo get_the_author_meta('nicename'); ?></div>
-                            <a href="#">@permissionIO</a>
+                            <a target="_blank"
+                               href="https://twitter.com/<?php echo $twitter; ?>">@<?php echo $twitter; ?></a>
                         </div>
                     </div>
 
@@ -264,6 +273,20 @@ class BlogSinglePage extends Widget_Base
                                    'resizable=1, menubar=0, left=100, top=100, width=600, height=400, toolbar=0, status=0');
                                    return false" title="Add to Linkedin" target="_blank">
                             <img src="<?php echo $path; ?>assets/icons/LinkedInLogo.svg">
+                        </a>
+                        <a rel="nofollow" class="share-icons" href="#" data-count="red"
+                           onclick="window.open('//www.reddit.com/submit?url=<?php
+                           echo home_url($wp->request); ?>&amp;title=<?php the_title(); ?>', '_blank', 'scrollbars=0, ' +
+                                   'resizable=1, menubar=0, left=100, top=100, width=600, height=400, toolbar=0, status=0');
+                                   return false" title="Share with Reddit" target="_blank">
+                            <img src="<?php echo $path; ?>assets/icons/reddit.svg">
+                        </a>
+                        <a rel="nofollow" class="share-icons" href="#" data-count="tlgr"
+                           onclick="window.open('//telegram.me/share/url?url=<?php
+                           echo home_url($wp->request); ?>&amp;title=<?php the_title(); ?>', '_blank', 'scrollbars=0, ' +
+                                   'resizable=1, menubar=0, left=100, top=100, width=600, height=400, toolbar=0, status=0');
+                                   return false" title="Share with Telegram" target="_blank">
+                            <img src="<?php echo $path; ?>assets/icons/telegram.svg">
                         </a>
                     </div>
 
@@ -379,7 +402,20 @@ class BlogSinglePage extends Widget_Base
                                return false" title="Add to Linkedin" target="_blank">
                                 <img src="<?php echo $path; ?>assets/icons/LinkedInLogo.svg">
                             </a>
-<!--                            <a href="#" class="share-icons"><img src="--><?php //echo $path; ?><!--assets/icons/mail-ic.svg"></a>-->
+                            <a rel="nofollow" class="share-icons" href="#" data-count="red"
+                               onclick="window.open('//www.reddit.com/submit?url=<?php
+                               echo home_url($wp->request); ?>&amp;title=<?php the_title(); ?>', '_blank', 'scrollbars=0, ' +
+                                       'resizable=1, menubar=0, left=100, top=100, width=600, height=400, toolbar=0, status=0');
+                                       return false" title="Share with Reddit" target="_blank">
+                                <img src="<?php echo $path; ?>assets/icons/reddit.svg">
+                            </a>
+                            <a rel="nofollow" class="share-icons" href="#" data-count="tlgr"
+                               onclick="window.open('//telegram.me/share/url?url=<?php
+                               echo home_url($wp->request); ?>&amp;title=<?php the_title(); ?>', '_blank', 'scrollbars=0, ' +
+                                       'resizable=1, menubar=0, left=100, top=100, width=600, height=400, toolbar=0, status=0');
+                                       return false" title="Share in Telegram" target="_blank">
+                                <img src="<?php echo $path; ?>assets/icons/telegram.svg">
+                            </a>
                         </div>
                     </div>
                 </div>
