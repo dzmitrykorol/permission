@@ -181,10 +181,11 @@ class Homepage extends Widget_Base
 
         ?>
         <link href="/wp-content/plugins/elementor-custom-widgets/base.css" rel="stylesheet">
+        <div class="homepage">
         <section class="s1">
             <div class="video-hero">
                 <div class="hero-player-overlay">
-                    <video autoplay="autoplay" loop="loop" muted="muted">
+                    <video autoplay="autoplay" loop="loop" muted="muted" width="1920">
                         <source src="<?php echo $path; ?>assets/permission_stockLoop.mp4" type="video/mp4">
                     </video>
                     <div class="hero-player-content">
@@ -768,7 +769,7 @@ class Homepage extends Widget_Base
 
 
         </section>
-
+        </div>
 
 
 

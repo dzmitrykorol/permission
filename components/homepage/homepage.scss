@@ -22,11 +22,37 @@ $breakpoints: (
         + "Please make sure it is defined in `$breakpoints` map.";
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.columnar {
+  grid-template-columns: repeat(4, [col-start] 1fr);
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(12, [col-start] 1fr);
+  }
+  @include respond-to(desktop) {
+    grid-template-columns: repeat(12, [col-start] 1fr);
+  }
+}
+
+
+
+
 .s1{
   .video-hero {
     background: #000000;
     display: flex;
     position:relative;
+    height: 784px;
     @include respond-to(tablet) {
       height: 950px;
     }
@@ -41,6 +67,7 @@ $breakpoints: (
       right:0;
       top:0;
       z-index:2;
+      height: 784px;
       @include respond-to(tablet) {
         height: 950px;
       }
@@ -50,8 +77,11 @@ $breakpoints: (
       video {
         opacity: 0.5;
         width: 100vw;
+        height: 784px;
+        object-fit: cover;
         @include respond-to(tablet) {
           height: 950px;
+          object-fit: cover;
         }
         @include respond-to(desktop) {
           height: auto;
@@ -85,10 +115,10 @@ $breakpoints: (
             h2{
               color: #FFFFFF;
               font-family: Poppins;
-              font-size: 33px;
+              font-size: 30px;
               font-weight: 300;
               letter-spacing: -0.99px;
-              line-height: 44px;
+              line-height: 32px;
               text-align: center;
               @include respond-to(tablet) {
                 font-size: 33px;
@@ -111,7 +141,7 @@ $breakpoints: (
             }
             .play-icon {
               text-align: center;
-              margin-bottom: 20px;
+              margin-bottom: 54px;
               @include respond-to(tablet) {
                 margin-bottom: 20px;
               }
@@ -140,18 +170,24 @@ $breakpoints: (
                 box-sizing: border-box;
                 display: inline-block;
                 text-decoration: none;
-                text-transform: uppercase;
                 z-index:3;
                 height: 38px;
                 width: 200px;
                 padding-top: 9px;
-                margin-top: 47px;
+                margin-top: 25px;
+                @include respond-to(tablet) {
+                  margin-top: 47px;
+                }
+                @include respond-to(desktop) {
+                  margin-top: 47px;
+                }
               }
             }
             .social-icons{
               display: flex;
+              flex-wrap: wrap;
               justify-content: center;
-              margin: 96px 0 31px;
+              margin: 24px 0 10px;
               @include respond-to(tablet) {
                 fisplay: flex;
                 justify-content: center;
@@ -169,10 +205,37 @@ $breakpoints: (
                 font-size: 12px;
                 letter-spacing: 0.3px;
                 line-height: 16px;
-                margin-right: 73px;
+                margin-right: 0px;
                 text-decoration: none;
+                margin-bottom: 19px;
+                width: 100%;
+                justify-content: center;
                 &:last-child{
                   margin-right: 0;
+                }
+                @include respond-to(tablet) {
+                  display: flex;
+                  color: #FFFFFF;
+                  font-family: Poppins;
+                  font-size: 12px;
+                  letter-spacing: 0.3px;
+                  line-height: 16px;
+                  margin-right: 73px;
+                  text-decoration: none;
+                  margin-bottom: 0px;
+                  width: auto;
+                }
+                @include respond-to(desktop) {
+                  display: flex;
+                  color: #FFFFFF;
+                  font-family: Poppins;
+                  font-size: 12px;
+                  letter-spacing: 0.3px;
+                  line-height: 16px;
+                  margin-right: 73px;
+                  text-decoration: none;
+                  margin-bottom: 0px;
+                  width: auto;
                 }
                 img{
                   padding-right: 12px;
@@ -261,10 +324,10 @@ $breakpoints: (
       .title{
         color: #0C0C0C;
         font-family: Poppins;
-        font-size: 33px;
+        font-size: 30px;
         font-weight: 300;
-        letter-spacing: -0.8px;
-        line-height: 36px;
+        letter-spacing: -0.6px;
+        line-height: 30px;
         text-align: center;
         @include respond-to(tablet) {
           color: #0C0C0C;
@@ -288,11 +351,11 @@ $breakpoints: (
       .sub-title{
         color: #0D0D0D;
         font-family: Poppins;
-        font-size: 21px;
-        letter-spacing: -0.2px;
-        line-height: 31px;
+        font-size: 18px;
+        letter-spacing: -0.1px;
+        line-height: 26px;
         text-align: center;
-        padding: 14px 12px 32px;
+        padding: 29px 0px 24px;
         font-weight: 400;
         @include respond-to(tablet) {
           color: #0D0D0D;
@@ -324,17 +387,21 @@ $breakpoints: (
       list-style: none;
       position: relative;
       justify-content: center;
-      width: 390px;
+      width: 100%;
       margin: auto;
-      margin-bottom: 32px;
+      margin-bottom: 50px;
       border: 1px solid #07AFF2;
       border-radius: 4px;
       order: 1;
       @include respond-to(tablet) {
         order: 1;
+        width: 390px;
+        margin-bottom: 32px;
       }
       @include respond-to(desktop) {
         order: 1;
+        width: 390px;
+        margin-bottom: 32px;
       }
       li{
         color: #07AFF2;
@@ -361,7 +428,7 @@ $breakpoints: (
       }
     }
     .columns-six{
-      grid-column: col-start 2 / span 10;
+      grid-column: col-start 1 / span 4;
       order: 3;
       @include respond-to(tablet) {
         grid-column: col-start 2 / span 10;
@@ -376,22 +443,62 @@ $breakpoints: (
         .name{
           color: #0D0D0D;
           font-family: Poppins;
-          font-size: 21px;
-          letter-spacing: -0.2px;
-          line-height: 31px;
+          font-size: 18px;
+          letter-spacing: -0.1px;
+          line-height: 26px;
           padding-bottom: 32px;
           font-weight: 400;
+          @include respond-to(tablet) {
+            color: #0D0D0D;
+            font-family: Poppins;
+            font-size: 21px;
+            letter-spacing: -0.2px;
+            line-height: 31px;
+            padding-bottom: 32px;
+            font-weight: 400;
+          }
+          @include respond-to(desktop) {
+            color: #0D0D0D;
+            font-family: Poppins;
+            font-size: 21px;
+            letter-spacing: -0.2px;
+            line-height: 31px;
+            padding-bottom: 32px;
+            font-weight: 400;
+          }
         }
         .content{
           color: #0D0D0D;
           font-family: Poppins;
-          font-size: 18px;
-          letter-spacing: -0.1px;
-          line-height: 26px;
+          font-size: 17px;
+          letter-spacing: 0;
+          line-height: 25px;
           padding-left: 24px;
           position: relative;
           padding-bottom: 40px;
           font-weight: 400;
+          @include respond-to(tablet) {
+            color: #0D0D0D;
+            font-family: Poppins;
+            font-size: 18px;
+            letter-spacing: -0.1px;
+            line-height: 26px;
+            padding-left: 24px;
+            position: relative;
+            padding-bottom: 40px;
+            font-weight: 400;
+          }
+          @include respond-to(desktop) {
+            color: #0D0D0D;
+            font-family: Poppins;
+            font-size: 18px;
+            letter-spacing: -0.1px;
+            line-height: 26px;
+            padding-left: 24px;
+            position: relative;
+            padding-bottom: 40px;
+            font-weight: 400;
+          }
           &:last-child{
             padding-bottom: 0px;
           }
@@ -426,7 +533,6 @@ $breakpoints: (
           box-sizing: border-box;
           display: inline-block;
           text-decoration: none;
-          text-transform: uppercase;
           z-index:3;
           height: 38px;
           width: 200px;
@@ -435,7 +541,7 @@ $breakpoints: (
       }
     }
     .columns-four-eight{
-      grid-column: col-start 4/ span 7;
+      grid-column: col-start 1/ span 4;
       order: 2;
       margin: 10px 0 31px;
       @include respond-to(tablet) {
@@ -524,6 +630,7 @@ $breakpoints: (
       letter-spacing: -0.3px;
       line-height: 28px;
       font-weight: 400;
+      padding: 0 16px;
       @include respond-to(tablet) {
         max-width: 575px;
       }
@@ -537,7 +644,7 @@ $breakpoints: (
 
 
 .s4{
-  margin: 32px 0 55px;
+  margin: 34px 0 30px;
   @include respond-to(tablet) {
     margin: 32px 0 55px;
   }
@@ -549,10 +656,10 @@ $breakpoints: (
       .title{
         color: #0C0C0C;
         font-family: Poppins;
-        font-size: 33px;
+        font-size: 30px;
         font-weight: 300;
-        letter-spacing: -0.8px;
-        line-height: 36px;
+        letter-spacing: -0.6px;
+        line-height: 32px;
         text-align: center;
         @include respond-to(tablet) {
           color: #0C0C0C;
@@ -574,12 +681,12 @@ $breakpoints: (
         }
       }
       .sub-title{
-        font-size: 20px;
+        font-size: 18px;
         letter-spacing: -0.1px;
-        line-height: 30px;
+        line-height: 26px;
         text-align: center;
         ffont-weight: 400;
-        padding: 14px 12px 32px;
+        padding: 25px 0px 32px;
         @include respond-to(tablet) {
           font-size: 20px;
           letter-spacing: -0.1px;
@@ -605,9 +712,15 @@ $breakpoints: (
     }
   }
   .content-wrapper{
-    padding-bottom: 66px;
+    padding-bottom: 12px;
+    @include respond-to(tablet) {
+      padding-bottom: 66px;
+    }
+    @include respond-to(desktop) {
+      padding-bottom: 66px;
+    }
     .columns-five{
-      grid-column: col-start 2/ span 10;
+      grid-column: col-start 1/ span 4;
       order: 2;
       @include respond-to(tablet) {
         grid-column: col-start 2/ span 10;
@@ -619,12 +732,30 @@ $breakpoints: (
       }
       .title-color{
         font-family: Poppins;
-        font-size: 40px;
+        font-size: 30px;
         font-weight: 300;
-        letter-spacing: -1.2px;
-        line-height: 44px;
+        letter-spacing: -0.6px;
+        line-height: 32px;
         padding: 22px 0 10px;
         color: #0C0C0C;
+        @include respond-to(tablet) {
+          font-family: Poppins;
+          font-size: 40px;
+          font-weight: 300;
+          letter-spacing: -1.2px;
+          line-height: 44px;
+          padding: 22px 0 10px;
+          color: #0C0C0C;
+        }
+        @include respond-to(desktop) {
+          font-family: Poppins;
+          font-size: 40px;
+          font-weight: 300;
+          letter-spacing: -1.2px;
+          line-height: 44px;
+          padding: 22px 0 10px;
+          color: #0C0C0C;
+        }
       }
       .color-blue{
         color: #00B5FB;
@@ -635,15 +766,33 @@ $breakpoints: (
       .text{
         color: #0D0D0D;
         font-family: Poppins;
-        font-size: 18px;
-        letter-spacing: -0.1px;
-        line-height: 26px;
+        font-size: 17px;
+        letter-spacing: 0;
+        line-height: 25px;
         padding-bottom: 17px;
         font-weight: 400;
+        @include respond-to(tablet) {
+          color: #0D0D0D;
+          font-family: Poppins;
+          font-size: 18px;
+          letter-spacing: -0.1px;
+          line-height: 26px;
+          padding-bottom: 17px;
+          font-weight: 400;
+        }
+        @include respond-to(desktop) {
+          color: #0D0D0D;
+          font-family: Poppins;
+          font-size: 18px;
+          letter-spacing: -0.1px;
+          line-height: 26px;
+          padding-bottom: 17px;
+          font-weight: 400;
+        }
       }
     }
     .columns-six-seven{
-      grid-column: col-start 3/ span 8;
+      grid-column: col-start 1/ span 4;
       margin-bottom: 36px;
       order: 1;
       @include respond-to(tablet) {
@@ -677,7 +826,7 @@ $breakpoints: (
 .s5{
   background-color: #06AFF2;
   padding-top: 53px;
-  padding-bottom: 80px;
+  padding-bottom: 50px;
   @include respond-to(tablet) {
     background-color: #06AFF2;
     padding-top: 53px;
@@ -689,7 +838,7 @@ $breakpoints: (
     padding-bottom: 0;
   }
   .img-block{
-    grid-column: col-start 2 / span 10;
+    grid-column: col-start 1 / span 4;
     @include respond-to(tablet) {
       grid-column: col-start 2 / span 10;
     }
@@ -699,12 +848,12 @@ $breakpoints: (
     .text{
       color: #FFFFFF;
       font-family: Poppins;
-      font-size: 33px;
       font-weight: 300;
-      letter-spacing: -0.8px;
-      line-height: 36px;
-      padding-top: 27px;
-      padding-bottom: 80px;
+      font-size: 26px;
+      letter-spacing: -0.39px;
+      line-height: 30px;
+      padding-top: 43px;
+      padding-bottom: 44px;
       text-align: center;
       @include respond-to(tablet) {
         color: #FFFFFF;
@@ -741,7 +890,7 @@ $breakpoints: (
   }
   .columns-five-eight{
     text-align: right;
-    grid-column: col-start 2/ span 10;
+    grid-column: col-start 1/ span 4;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -763,11 +912,12 @@ $breakpoints: (
       margin-right: 0px;
       color: #FFFFFF;
       font-family: Poppins;
-      font-size: 33px;
+      font-size: 30px;
       font-weight: 400;
-      line-height: 36px;
+      line-height: 32px;
       text-align: center;
-      padding-bottom: 49px;
+      letter-spacing: -0.6px;
+      padding-bottom: 34px;
       @include respond-to(tablet) {
         margin-right: 0px;
         color: #FFFFFF;
@@ -808,7 +958,7 @@ $breakpoints: (
   }
 }
 .s6{
-  padding-top: 52px;
+  padding-top: 41px;
   padding-bottom: 46px;
   @include respond-to(tablet) {
     padding-top: 52px;
@@ -821,10 +971,10 @@ $breakpoints: (
   .title{
     color: #0C0C0C;
     font-family: Poppins;
-    font-size: 33px;
+    font-size: 30px;
     font-weight: 300;
-    letter-spacing: -0.8px;
-    line-height: 36px;
+    letter-spacing: -0.6px;
+    line-height: 32px;
     text-align: center;
     padding-bottom: 44px;
     @include respond-to(tablet) {
@@ -853,8 +1003,8 @@ $breakpoints: (
   }
   .content-wrapper{
     .columns-five-two{
-      grid-column: col-start 4/ span 6;
-      margin-bottom: 32px;
+      grid-column: col-start 1/ span 4;
+      margin-bottom: 26px;
       @include respond-to(tablet) {
         grid-column: col-start 4/ span 6;
         margin-bottom: 32px;
@@ -865,24 +1015,24 @@ $breakpoints: (
       }
     }
     .columns-four-eight{
-      grid-column: col-start 2/ span 10;
+      grid-column: col-start 1/ span 4;
       margin-bottom: 32px;
       @include respond-to(tablet) {
         grid-column: col-start 2/ span 10;
         margin-bottom: 32px;
       }
       @include respond-to(desktop) {
-        grid-column: col-start 2/ span 5;
+        grid-column: col-start 8/ span 4;
         margin-bottom: 0px;
       }
       .sub-title{
         color: #0C0C0C;
         font-family: Poppins;
-        font-size: 30px;
-        letter-spacing: -0.52px;
-        line-height: 32px;
+        font-size: 26px;
+        letter-spacing: -0.39px;
+        line-height: 30px;
         font-weight: 300;
-        margin-bottom: 34px;
+        margin-bottom: 15px;
       }
       @include respond-to(tablet) {
         color: #0C0C0C;
@@ -906,8 +1056,8 @@ $breakpoints: (
         color: #0D0D0D;
         font-family: Poppins;
         font-size: 17px;
-        letter-spacing: -0.1px;
-        line-height: 26px;
+        letter-spacing: 0;
+        line-height: 25px;
         font-weight: 400;
         padding-bottom: 44px;
         padding-left: 32px;
@@ -963,7 +1113,6 @@ $breakpoints: (
           box-sizing: border-box;
           display: inline-block;
           text-decoration: none;
-          text-transform: uppercase;
           z-index:3;
           height: 38px;
           width: 200px;
@@ -1018,12 +1167,35 @@ $breakpoints: (
         width: 100%;
         color: #0D0D0D;
         font-family: Poppins;
-        font-size: 18px;
         font-weight: 400;
-        letter-spacing: -0.1px;
-        line-height: 26px;
+        font-size: 17px;
+        letter-spacing: 0;
+        line-height: 25px;
         text-align: center;
         margin: 20px 0 15px;
+        @include respond-to(tablet) {
+          width: 100%;
+          color: #0D0D0D;
+          font-family: Poppins;
+          font-size: 18px;
+          font-weight: 400;
+          letter-spacing: -0.1px;
+          line-height: 26px;
+          text-align: center;
+          margin: 20px 0 15px;
+        }
+
+        @include respond-to(desktop) {
+          width: 100%;
+          color: #0D0D0D;
+          font-family: Poppins;
+          font-size: 18px;
+          font-weight: 400;
+          letter-spacing: -0.1px;
+          line-height: 26px;
+          text-align: center;
+          margin: 20px 0 15px;
+        }
         span{
           font-weight: 700;
         }
@@ -1032,11 +1204,32 @@ $breakpoints: (
         width: 100%;
         color: #0D0D0D;
         font-family: Poppins;
-        font-size: 16px;
+        font-size: 15px;
         letter-spacing: 0;
         line-height: 24px;
         text-align: center;
         font-weight: 400;
+        @include respond-to(tablet) {
+          width: 100%;
+          color: #0D0D0D;
+          font-family: Poppins;
+          font-size: 16px;
+          letter-spacing: 0;
+          line-height: 24px;
+          text-align: center;
+          font-weight: 400;
+        }
+
+        @include respond-to(desktop) {
+          width: 100%;
+          color: #0D0D0D;
+          font-family: Poppins;
+          font-size: 16px;
+          letter-spacing: 0;
+          line-height: 24px;
+          text-align: center;
+          font-weight: 400;
+        }
         span{
           font-weight: 700;
         }
@@ -1045,19 +1238,51 @@ $breakpoints: (
   }
 }
 .s8{
-  padding: 100px 0 66px;
+  padding: 54px 0 46px;
   background-image: url("./assets/green-cropped.png");
   background-size: cover;
   text-align: center;
+  @include respond-to(tablet) {
+    padding: 100px 0 66px;
+    background-image: url("./assets/green-cropped.png");
+    background-size: cover;
+    text-align: center;
+  }
+  @include respond-to(desktop) {
+    padding: 100px 0 66px;
+    background-image: url("./assets/green-cropped.png");
+    background-size: cover;
+    text-align: center;
+  }
   .title{
     font-family: Poppins;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 300;
-    letter-spacing: -1.2px;
-    line-height: 44px;
+    letter-spacing: -0.6px;
+    line-height: 32px;
     text-align: center;
     color: #ffffff;
-    padding-bottom: 35px;
+    padding-bottom: 18px;
+    @include respond-to(tablet) {
+      font-family: Poppins;
+      font-size: 40px;
+      font-weight: 300;
+      letter-spacing: -1.2px;
+      line-height: 44px;
+      text-align: center;
+      color: #ffffff;
+      padding-bottom: 35px;
+    }
+    @include respond-to(desktop) {
+      font-family: Poppins;
+      font-size: 40px;
+      font-weight: 300;
+      letter-spacing: -1.2px;
+      line-height: 44px;
+      text-align: center;
+      color: #ffffff;
+      padding-bottom: 35px;
+    }
   }
   .buttons {
     a {
@@ -1075,7 +1300,6 @@ $breakpoints: (
       box-sizing: border-box;
       display: inline-block;
       text-decoration: none;
-      text-transform: uppercase;
       z-index:3;
       height: 38px;
       width: 230px;
@@ -1098,7 +1322,7 @@ $breakpoints: (
 
 
 .s9{
-  padding: 47px 0 40px;
+  padding: 38px 0 54px;
   @include respond-to(tablet) {
     padding: 47px 0 40px;
   }
@@ -1108,15 +1332,27 @@ $breakpoints: (
   }
   .permission-team {
     display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding-bottom: 50px;
+    @include respond-to(tablet) {
+      flex-wrap: nowrap;
+      padding-bottom: 0px;
+    }
+
+    @include respond-to(desktop) {
+      flex-wrap: nowrap;
+      padding-bottom: 0px;
+    }
     .team-blurb {
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
       flex-shrink: 0;
       justify-content: flex-start;
-      padding: 0 0 0 41px;
-      width: 267px;
-      margin-right: 47px;
+      padding: 0 16px 0 16px;
+      width: 100%;
+      margin-right: 0;
       @include respond-to(tablet) {
         box-sizing: border-box;
         display: flex;
@@ -1141,11 +1377,11 @@ $breakpoints: (
       h3{
         color: #0C0C0C;
         font-family: Poppins;
-        font-size: 40px;
+        font-size: 30px;
         font-weight: 300;
-        letter-spacing: -1.2px;
-        line-height: 44px;
-        padding-bottom: 30px;
+        letter-spacing: -0.6px;
+        line-height: 32px;
+        padding-bottom: 19px;
         @include respond-to(tablet) {
           color: #0C0C0C;
           font-family: Poppins;
@@ -1169,11 +1405,11 @@ $breakpoints: (
       p{
         color: #0D0D0D;
         font-family: Poppins;
-        font-size: 16px;
+        font-size: 15px;
         letter-spacing: 0;
         line-height: 24px;
         font-weight: 400;
-        padding-bottom: 32px;
+        padding-bottom: 43px;
         @include respond-to(tablet) {
           color: #0D0D0D;
           font-family: Poppins;
@@ -1196,6 +1432,15 @@ $breakpoints: (
       }
       .navigation{
         display: flex;
+        position: absolute;
+        bottom: 0;
+        @include respond-to(tablet) {
+          position: static;
+        }
+
+        @include respond-to(desktop) {
+          position: static;
+        }
         span{
           border: #379fc6 1px solid;
           border-radius: 0.1865rem;
@@ -1221,11 +1466,17 @@ $breakpoints: (
       display: flex;
       flex-grow: 1;
       overflow: hidden;
-      padding:  0;
+      padding:  0 16px;
+      @include respond-to(tablet) {
+        padding: 0;
+      }
+      @include respond-to(desktop) {
+        padding: 0;
+      }
       figure {
         flex-grow: 0;
         flex-shrink: 0;
-        margin: 0 69px 0 0;
+        margin: 0 19px 0 0;
         text-align: center;
         @include respond-to(tablet) {
           flex-grow: 0;
@@ -1243,8 +1494,8 @@ $breakpoints: (
         img {
           border: 1px solid #f4c38b;
           border-radius: 50%;
-          height: 300px;
-          width: 300px;
+          height: 153px;
+          width: 153px;
           @include respond-to(tablet) {
             fborder: 1px solid #f4c38b;
             border-radius: 50%;
@@ -1264,13 +1515,13 @@ $breakpoints: (
           h4{
             color: #000000;
             font-family: Poppins;
-            font-size: 20px;
+            font-size: 14px;
             font-weight: 500;
             letter-spacing: 0;
-            line-height: 30px;
+            line-height: 20px;
             text-align: center;
-            margin: 47px 0 0px;
-            max-width: 240px;
+            margin: 12px 0 0px;
+            max-width: 153px;
             @include respond-to(tablet) {
               color: #000000;
               font-family: Poppins;
@@ -1298,12 +1549,12 @@ $breakpoints: (
           span{
             color: #000000;
             font-family: Poppins;
-            font-size: 20px;
+            font-size: 14px;
             font-weight: 200;
             letter-spacing: 0;
-            line-height: 30px;
+            line-height: 20px;
             text-align: center;
-            max-width: 240px;
+            max-width: 153px;
             display: block;
             @include respond-to(tablet) {
               color: #000000;
@@ -1337,41 +1588,11 @@ $breakpoints: (
     }
   }
 }
-@media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px) {
-  .permission-team {
-    flex-direction: column;
-  }
-
-  .permission-team figure {
-    margin: 1.625rem 0 0 !important;
-    width: 100%;
-  }
-  .permission-team .team-blurb {
-    padding: 0 2em;
-    width: 100%;
-  }
-
-  .permission-team .team-blurb p {
-    margin-block-end: 2rem;
-  }
-
-  .permission-team .navigation {
-    justify-content: space-between;
-  }
-
-  .permission-team .team-container {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-}
 
 
 .s10{
   border-top: 1px solid #f2f2f2;
-  padding: 79px 0 12px;
+  padding: 26px 0 12px;
   @include respond-to(tablet) {
     border-top: 1px solid #f2f2f2;
     padding: 79px 0 12px;
@@ -1396,7 +1617,7 @@ and (max-device-width : 667px) {
       justify-content: space-around;
     }
     .logo{
-      width: 30%;
+      width: auto;
       margin-bottom: 50px;
       @include respond-to(tablet) {
         width: 30%;
@@ -1415,7 +1636,7 @@ and (max-device-width : 667px) {
   }
 }
 .s11{
-  padding: 84px 0 93px;
+  padding: 46px 0 117px;
   background-image: url("./assets/timeline-bg.png");
   background-size: cover;
   text-align: center;
@@ -1438,39 +1659,109 @@ and (max-device-width : 667px) {
   .title-block{
     color: #0C0C0C;
     font-family: Poppins;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 300;
-    letter-spacing: -1.2px;
-    line-height: 44px;
+    letter-spacing: -0.6px;
+    line-height: 32px;
     text-align: center;
-    padding-bottom: 96px;
+    padding-bottom: 43px;
+    @include respond-to(tablet) {
+      color: #0C0C0C;
+      font-family: Poppins;
+      font-size: 40px;
+      font-weight: 300;
+      letter-spacing: -1.2px;
+      line-height: 44px;
+      text-align: center;
+      padding-bottom: 96px;
+    }
+    @include respond-to(desktop) {
+      color: #0C0C0C;
+      font-family: Poppins;
+      font-size: 40px;
+      font-weight: 300;
+      letter-spacing: -1.2px;
+      line-height: 44px;
+      text-align: center;
+      padding-bottom: 96px;
+    }
   }
   .time-line{
     position: relative;
     &::before{
       content: '';
       position: absolute;
-      left: 0;
-      right: 0;
-      height: 10px;
+      left: 23px;
+      right: auto;
+      width: 10px;
+      height: 85%;
       background-color: #ffffff;
-      top: 46%;
+      top: 0;
+      @include respond-to(tablet) {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 10px;
+        background-color: #ffffff;
+        top: 46%;
+        width: 100%;
+      }
+      @include respond-to(desktop) {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 10px;
+        background-color: #ffffff;
+        top: 46%;
+        width: 100%;
+      }
     }
     .time-line-wrap{
       display: flex;
       flex-wrap: wrap;
       text-align: left;
       .time-line-block{
-        width: 33.3%;
+        width: 100%;
         position: relative;
-        padding: 0 56px 0 21px;
+        padding: 0 0px 0 54px;
+        @include respond-to(tablet) {
+          width: 33.3%;
+          position: relative;
+          padding: 0 56px 0 21px;
+        }
+        @include respond-to(desktop) {
+          width: 33.3%;
+          position: relative;
+          padding: 0 56px 0 21px;
+        }
         .dot{
           position: absolute;
-          width: 30px;
-          height: 30px;
+          width: 24px;
+          height: 24px;
           border-radius: 50%;
           background-color: #06AFF2;
           left: 0;
+          top: 0;
+          @include respond-to(tablet) {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #06AFF2;
+            left: 0;
+            top: auto;
+          }
+          @include respond-to(desktop) {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #06AFF2;
+            left: 0;
+            top: auto;
+          }
         }
         .title{
           color: #0D0D0D;
@@ -1483,7 +1774,7 @@ and (max-device-width : 667px) {
         }
         .text-wrap{
           p{
-            width: 208px;
+            width: 100%;
             color: #0D0D0D;
             font-family: Poppins;
             font-size: 16px;
@@ -1492,6 +1783,28 @@ and (max-device-width : 667px) {
             font-weight: 400;
             padding-bottom: 12px;
             position: relative;
+            @include respond-to(tablet) {
+              width: 208px;
+              color: #0D0D0D;
+              font-family: Poppins;
+              font-size: 16px;
+              letter-spacing: 0;
+              line-height: 24px;
+              font-weight: 400;
+              padding-bottom: 12px;
+              position: relative;
+            }
+            @include respond-to(desktop) {
+              width: 208px;
+              color: #0D0D0D;
+              font-family: Poppins;
+              font-size: 16px;
+              letter-spacing: 0;
+              line-height: 24px;
+              font-weight: 400;
+              padding-bottom: 12px;
+              position: relative;
+            }
             &::before{
               content: '';
               position: absolute;
@@ -1506,91 +1819,139 @@ and (max-device-width : 667px) {
       }
       .item-order-1{
         order: 1;
-        padding-bottom: 78px;
+        padding-bottom: 34px;
+        @include respond-to(tablet) {
+          order: 1;
+          padding-bottom: 78px;
+        }
+        @include respond-to(desktop) {
+          order: 1;
+          padding-bottom: 78px;
+        }
         .dot{
           bottom: -15px;
         }
       }
       .item-order-2{
-        order: 2;
-        padding-bottom: 78px;
+        order: 3;
+        padding-bottom: 34px;
+        @include respond-to(tablet) {
+          order: 2;
+          padding-bottom: 78px;
+        }
+        @include respond-to(desktop) {
+          order: 2;
+          padding-bottom: 78px;
+        }
         .dot{
           bottom: -15px;
         }
       }
       .item-order-3{
-        order: 3;
-        padding-bottom: 78px;
+        order: 5;
+        padding-bottom: 34px;
+        @include respond-to(tablet) {
+          order: 3;
+          padding-bottom: 78px;
+        }
+        @include respond-to(desktop) {
+          order: 3;
+          padding-bottom: 78px;
+        }
         .dot{
           bottom: -15px;
         }
       }
       .item-order-4{
-        order: 4;
+        order: 2;
         margin-left: 0px;
-        padding-top: 78px;
+        padding-top: 0px;
+        padding-bottom: 34px;
         @include respond-to(tablet) {
           order: 4;
           margin-left: 0px;
           padding-top: 78px;
+          padding-bottom: 0px;
         }
 
         @include respond-to(desktop) {
           order: 4;
           margin-left: 130px;
           padding-top: 78px;
+          padding-bottom: 0px;
         }
         .dot{
-          top: -15px;
-          left: 45px;
+          top: 0px;
+          left: 0px;
           @include respond-to(tablet) {
             left: 45px;
+            top: -15px;
           }
 
           @include respond-to(desktop) {
             left: 0;
+            top: -15px;
           }
         }
       }
       .item-order-5{
-        order: 5;
-        padding-top: 78px;
+        order: 4;
+        padding-top: 0px;
+        padding-bottom: 34px;
+        @include respond-to(tablet) {
+          order: 5;
+          padding-top: 78px;
+          padding-bottom: 0px;
+        }
+
+        @include respond-to(desktop) {
+          order: 5;
+          padding-top: 78px;
+          padding-bottom: 0px;
+        }
         .dot{
-          top: -15px;
-          left: 45px;
+          top: 0px;
+          left: 0px;
           @include respond-to(tablet) {
             left: 45px;
+            top: -15px;
           }
 
           @include respond-to(desktop) {
             left: 0;
+            top: -15px;
           }
         }
       }
       .item-order-6{
         order: 6;
         margin-right: 0px;
-        padding-top: 78px;
+        padding-top: 0px;
+        padding-bottom: 34px;
         @include respond-to(tablet) {
           order: 6;
           margin-right: 0px;
           padding-top: 78px;
+          padding-bottom: 0px;
         }
 
         @include respond-to(desktop) {
           order: 6;
           margin-right: -130px;
           padding-top: 78px;
+          padding-bottom: 0px;
         }
         .dot{
-          top: -15px;
-          left: 45px;
+          top: 0px;
+          left: 0px;
           @include respond-to(tablet) {
             left: 45px;
+            top: -15px;
           }
 
           @include respond-to(desktop) {
             left: 0;
+            top: -15px;
           }
         }
       }
@@ -1599,8 +1960,8 @@ and (max-device-width : 667px) {
   .img-time-line {
     position: absolute;
     right: 0;
-    bottom: -130px;
-    max-width: 653px;
+    bottom: -50px;
+    max-width: 279px;
     @include respond-to(tablet) {
       position: absolute;
       right: 0;
@@ -1617,16 +1978,23 @@ and (max-device-width : 667px) {
   }
 }
 .s12{
-  padding: 186px 0 66px;
+  padding: 113px 0 50px;
+  @include respond-to(tablet) {
+    padding: 186px 0 66px;
+  }
+
+  @include respond-to(desktop) {
+    padding: 186px 0 66px;
+  }
   .title-block{
     color: #0C0C0C;
     font-family: Poppins;
-    font-size: 33px;
+    font-size: 30px;
     font-weight: 300;
-    letter-spacing: -1.2px;
-    line-height: 40px;
+    letter-spacing: -0.6px;
+    line-height: 32px;
     text-align: center;
-    padding-bottom: 44px;
+    padding-bottom: 34px;
     @include respond-to(tablet) {
       color: #0C0C0C;
       font-family: Poppins;
@@ -1653,13 +2021,15 @@ and (max-device-width : 667px) {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-column-gap: inherit;
-    grid-row-gap: 44px;
+    grid-row-gap: 38px;
     @include respond-to(tablet) {
       grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 44px;
     }
 
     @include respond-to(desktop) {
       grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 44px;
     }
     .card-home{
       padding: 24px 24px 16px;
@@ -1722,12 +2092,18 @@ and (max-device-width : 667px) {
       box-sizing: border-box;
       display: inline-block;
       text-decoration: none;
-      text-transform: uppercase;
       z-index:3;
       height: 38px;
       width: 200px;
       padding-top: 9px;
-      margin-top: 91px;
+      margin-top: 50px;
+      @include respond-to(tablet) {
+        margin-top: 91px;
+      }
+
+      @include respond-to(desktop) {
+        margin-top: 91px;
+      }
     }
   }
 }
@@ -1735,18 +2111,25 @@ and (max-device-width : 667px) {
 
 
 .s13{
-  padding: 61px 0 95px;
+  padding: 29px 0 60px;
   background-image: url("./assets/email-pattern.jpg");
   background-size: cover;
+  @include respond-to(tablet) {
+    padding: 61px 0 95px;
+  }
+
+  @include respond-to(desktop) {
+    padding: 61px 0 95px;
+  }
   .title-block{
     color: #FFFFFF;
     font-family: Poppins;
-    font-size: 30px;
+    font-size: 26px;
+    letter-spacing: -0.39px;
+    line-height: 30px;
     font-weight: 300;
-    letter-spacing: -0.8px;
-    line-height: 36px;
     text-align: center;
-    padding-bottom: 45px;
+    padding-bottom: 25px;
     @include respond-to(tablet) {
       color: #FFFFFF;
       font-family: Poppins;
@@ -1773,17 +2156,20 @@ and (max-device-width : 667px) {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-column-gap: inherit;
-    grid-row-gap: 44px;
+    grid-row-gap: 31px;
     @include respond-to(tablet) {
       grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 44px;
     }
 
     @include respond-to(desktop) {
       grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 44px;
     }
     .card-soundcloud{
       display: block;
       padding: 0;
+      margin: 0;
       .text-wrap{
         padding: 24px 24px 32px;
         .text{
@@ -1881,7 +2267,7 @@ and (max-device-width : 667px) {
 
 
 .s14{
-  padding: 52px 0 50px;
+  padding: 35px 0 50px;
   @include respond-to(tablet) {
     padding: 52px 0 52px;
   }
@@ -1891,12 +2277,12 @@ and (max-device-width : 667px) {
   .title-block{
     color: #0C0C0C;
     font-family: Poppins;
-    font-size: 30px;
     font-weight: 300;
-    letter-spacing: -0.8px;
-    line-height: 36px;
+    font-size: 26px;
+    letter-spacing: -0.39px;
+    line-height: 30px;
     text-align: center;
-    padding-bottom: 43px;
+    padding-bottom: 14px;
     @include respond-to(tablet) {
       color: #0C0C0C;
       font-family: Poppins;
@@ -1923,7 +2309,7 @@ and (max-device-width : 667px) {
     justify-content: center;
     flex-wrap: wrap;
     .logo{
-      width: 25%;
+      width: 50%;
       margin-bottom: 31px;
       @include respond-to(tablet) {
         width: 25%;
@@ -1935,7 +2321,31 @@ and (max-device-width : 667px) {
       }
       img {
         max-height: 100px;
+        margin: auto;
       }
     }
+  }
+}
+
+@media all and (max-width : 1260px) and  (min-width : 1004px){
+  .s11 .time-line .time-line-wrap .item-order-4 {
+    margin-left: 90px;
+  }
+  .s5 .columns-five-eight {
+    grid-column: col-start 7/ span 6;
+  }
+  .s5 .columns-five-eight .text {
+    margin-right: 0;
+  }
+  .s1 .video-hero .hero-player-overlay .hero-player-content .hero-player-content-overlay .floating-text .social-icons {
+    margin: 50px 0 31px;
+  }
+  .s1 .video-hero .hero-player-overlay .hero-player-content .hero-player-content-overlay .floating-text h2 {
+    margin-top: 31px;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: -1.2px;
+    line-height: 44px;
+    text-align: center;
   }
 }
