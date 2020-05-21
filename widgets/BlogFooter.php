@@ -169,8 +169,6 @@ class BlogFooter extends Widget_Base {
 
     protected function render() {
         $path = '/wp-content/plugins/elementor-custom-widgets/';
-        $settings = $this->get_settings_for_display();
-        $this->add_inline_editing_attributes( 'paragraphText', 'none' );
         ?>
         <footer>
             <div class="columnar">
@@ -256,52 +254,82 @@ class BlogFooter extends Widget_Base {
      * @access protected
      */
     protected function _content_template() {
+        $path = '/wp-content/plugins/elementor-custom-widgets/';
         ?>
 
         <#
-        view.addInlineEditingAttributes( 'promopart', 'none' );
-        view.addInlineEditingAttributes( 'form_id', 'none' );
-        view.addInlineEditingAttributes( 'use_video', 'none' );
-        view.addInlineEditingAttributes( 'background_image', 'none' );
-        view.addInlineEditingAttributes( 'background_video', 'none' );
-        view.addInlineEditingAttributes( 'leadText', 'none' );
-        view.addInlineEditingAttributes( 'paragraphtext', 'none' );
-        view.addInlineEditingAttributes( 'leadbutton', 'none' );
         #>
+        <footer>
+            <div class="columnar">
+                <div class="columns-twelve">
+                    <img src="<?php echo $path; ?>/assets/logo-permission.svg" class="permission-logo">
+                </div>
+            </div>
+            <div class="columnar no-collapse">
+                <div class="columns-three">
+                    <h2>Product</h2>
+                    <ul>
+                        <li><a href="https://shopping.permission.io" target="_blank">Marketplace BETA</a></li>
+                        <li><a href="https://permission.io/shop-with-ask" target="_blank">Shop With ASK</a></li>
+                        <li><a href="https://permission.io/privacy-policy" target="_blank">Privacy Policy</a></li>
+                        <li><a href="https://permission.io/tos" target="_blank">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="columns-four-three">
+                    <h2>Resources</h2>
+                    <ul>
+                        <li><a href="https://permission.io/permission-foundation-technical-whitepaper_012920/" target="_blank">Whitepaper</a></li>
+                        <li><a href="https://permission.io/technology" target="_blank">Technology</a></li>
+                        <li><a href="https://permission.io/team" target="_blank">An Exceptional Team</a></li>
+                        <li><a href="https://permission.io/careers" target="_blank">Careers</a></li>
+                        <li><a href="https://permission.io/news" target="_blank">In The News</a></li>
+                        <li><a href="https://permission.io/faqs" target="_blank">FAQs</a></li>
+                    </ul>
+                </div>
+                <?php
+                // hide temporarily by check on no-existing var
+                $empty = '' ?>
 
-        <section class="sec-home-img <# if (settings.use_video === 'yes') { #>style=height:unset<# } #>">
-            <# if (settings.use_video === 'yes') { #>
-            <div class="fullscreen-bg">
-                <video loop muted autoplay poster="{{{ settings.background_image.url }}}" class="fullscreen-bg__video">
-                    <source src="{{{ settings.background_video }}}" type="video/mp4">
-                </video>
-            </div>
-            <div class="container hide">
-                <div class="row wrapper">
-                    <div class="row wrapper">
-                        <div class="col-6 promopart">
-                            {{{ settings.promopart }}}
+
+                <div class="columns-eight-five news-updates">
+                    <?php
+                    if ($empty) { ?>
+                        <h2>Get News and Updates</h2>
+                        <div class="text-input marketing with-button">
+                            <input type="text" class="small-copy" placeholder="Email Address">
+                            <label>Email Address</label>
+                            <button class="bright-blue marketing">Submit</button>
                         </div>
-                        <div class="col-6 leadform">
-                            Here will be placed your form after save and refresh the page
-                        </div>
+                    <?php } ?>
+                    <h2>Connect</h2>
+                    <div class="social-icons">
+                        <a href="https://twitter.com/permissionIO" target="_blank"><img
+                                    src="https://cdn.permission.io/apps/permissionbase/assets/logos/twitter.svg"></a>
+                        <a href="https://www.facebook.com/PermissionIO" target="_blank"><img
+                                    src="https://cdn.permission.io/apps/permissionbase/assets/logos/facebook.svg"></a>
+                        <a href="https://medium.com/permissionio" class="medium" target="_blank"><img
+                                    src="https://cdn.permission.io/apps/permissionbase/assets/logos/medium.svg"></a>
+                        <a href="https://www.reddit.com/r/PermissionIO" target="_blank"><img
+                                    src="https://cdn.permission.io/apps/permissionbase/assets/logos/telegram.svg"></a>
+                        <a href="https://www.reddit.com/r/PermissionIO" target="_blank"><img
+                                    src="https://cdn.permission.io/apps/permissionbase/assets/logos/reddit.svg"></a>
+                        <a href="https://www.linkedin.com/company/permission-io/" target="_blank"><img
+                                    src="https://cdn.permission.io/apps/permissionbase/assets/logos/linkedin.svg"></a>
+                        <a href="https://permission.gitlab.io/" target="_blank"><img
+                                    src="https://cdn.permission.io/apps/permissionbase/assets/logos/gitlab.svg"></a>
                     </div>
                 </div>
+
+
             </div>
-            <# } else { #>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="title-home">
-                            <h1 class="title"><span {{{ view.getRenderAttributeString('leadText') }}}>{{{ settings.leadText }}}</span></h1>
-                            <h2 class="sub-title"><span {{{ view.getRenderAttributeString('paragraphtext') }}}>{{{ settings.paragraphtext }}}</span></h2>
-                            <button {{{ view.getRenderAttributeString('leadbutton') }}}>{{{ settings.leadbutton }}}</button>
-                        </div>
-                    </div>
+            <div class="columnar">
+                <div class="columns-twelve copyright" style="text-align: center;font-size: 14px;">
+                    Copyright Ⓒ <?php echo date('Y'); ?> Permission.io <span class="divider">| </span><span class="trademark">Permission® is a registered trademark of Permission.io</span>
                 </div>
             </div>
-            <# }#>
-        </section>
+        </footer>
+        <script src="<?php echo $path; ?>/assets/js/permissionbase.js" type="text/javascript"></script>
+        </body>
         <?php
     }
 }

@@ -77,21 +77,6 @@ class BlogSinglePage extends Widget_Base
     }
 
     /**
-     * Retrieve the list of scripts the widget depended on.
-     *
-     * Used to set scripts dependencies required to run the widget.
-     *
-     * @since 1.0.0
-     *
-     * @access public
-     *
-     * @return array Widget scripts dependencies.
-     */
-//    public function get_script_depends() {
-//        return [ 'elementor-hello-world' ];
-//    }
-
-    /**
      * Register the widget controls.
      *
      * Adds different input fields to allow the user to change and customize the widget settings.
@@ -102,6 +87,10 @@ class BlogSinglePage extends Widget_Base
      */
     protected function _register_controls()
     {
+        global $post;
+        $page = get_post($post->ID);
+        $pageTitle = $page->post_title;
+
         // Top post's part starts
         $this->start_controls_section(
             'section_top',
@@ -115,6 +104,8 @@ class BlogSinglePage extends Widget_Base
             [
                 'label' => 'Type page title',
                 'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => $pageTitle,
+//                'default' => 'TEXT TITLE',
             ]
         );
 
@@ -208,7 +199,6 @@ class BlogSinglePage extends Widget_Base
     protected function render()
     {
         global $post;
-        global $wp;
         $page = get_post($post->ID);
         $path = '/wp-content/plugins/elementor-custom-widgets/';
         $settings = $this->get_settings_for_display();
@@ -233,10 +223,6 @@ class BlogSinglePage extends Widget_Base
                 </div>
 
                 <div class="columnar article-share">
-
-                    <?php
-                    ;
-                    ?>
                     <div class="share-social-info columns-four-one">
                         <div class="photo">
                             <?php
@@ -253,43 +239,8 @@ class BlogSinglePage extends Widget_Base
                     </div>
 
                     <div class="share-social-icons columns-four-nine">
-                        <div class="share-text">share</div>
-                        <a rel="nofollow" class="share-icons" href="#" data-count="twi"
-                           onclick="window.open('//twitter.com/intent/tweet?text=<?php the_title(); ?>&amp;url=<?php
-                           echo home_url($wp->request); ?>','_blank', 'scrollbars=0, resizable=1, menubar=0, left=100,' +
-                                   ' top=100, width=550, ' +'height=440, toolbar=0, status=0');return false"
-                           title="Add to Twitter" target="_blank"><img src="<?php echo $path; ?>assets/icons/tw-icon.svg">
-                        </a>
-                        <a rel="nofollow" class="share-icons" href="#" data-count="fb"
-                           onclick="window.open('//www.facebook.com/sharer.php?m2w&amp;s=100&amp;p[url]=<?php
-                           echo home_url($wp->request); ?>&amp;[title]=<?php the_title(); ?>&amp;p[summary]=&amp;p[images]'+
-                                   '[0]=undefined', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=100, top=100, ' +
-                                   'width=550, height=440, toolbar=0, status=0');return false"
-                           title="Share in Facebook" target="_blank"><img src="<?php echo $path; ?>assets/icons/fa-icon.svg">
-                        </a>
-                        <a rel="nofollow" class="share-icons" href="#" data-count="lnkd"
-                           onclick="window.open('//www.linkedin.com/shareArticle?mini=true&amp;url=<?php
-                           echo home_url($wp->request); ?>&amp;title=<?php the_title(); ?>', '_blank', 'scrollbars=0, ' +
-                                   'resizable=1, menubar=0, left=100, top=100, width=600, height=400, toolbar=0, status=0');
-                                   return false" title="Add to Linkedin" target="_blank">
-                            <img src="<?php echo $path; ?>assets/icons/LinkedInLogo.svg">
-                        </a>
-                        <a rel="nofollow" class="share-icons" href="#" data-count="red"
-                           onclick="window.open('//www.reddit.com/submit?url=<?php
-                           echo home_url($wp->request); ?>&amp;title=<?php the_title(); ?>', '_blank', 'scrollbars=0, ' +
-                                   'resizable=1, menubar=0, left=100, top=100, width=600, height=400, toolbar=0, status=0');
-                                   return false" title="Share with Reddit" target="_blank">
-                            <img src="<?php echo $path; ?>assets/icons/reddit.svg">
-                        </a>
-                        <a rel="nofollow" class="share-icons" href="#" data-count="tlgr"
-                           onclick="window.open('//telegram.me/share/url?url=<?php
-                           echo home_url($wp->request); ?>&amp;title=<?php the_title(); ?>', '_blank', 'scrollbars=0, ' +
-                                   'resizable=1, menubar=0, left=100, top=100, width=600, height=400, toolbar=0, status=0');
-                                   return false" title="Share with Telegram" target="_blank">
-                            <img src="<?php echo $path; ?>assets/icons/telegram.svg">
-                        </a>
+                        <?php include plugin_dir_path( __FILE__ ) . 'share-social-icons-section.php'; ?>
                     </div>
-
                 </div>
 
                 <div class="columnar article-img">
@@ -381,41 +332,7 @@ class BlogSinglePage extends Widget_Base
                             ?>
                         </div>
                         <div class="share-social-icons">
-                            <div class="share-text">share</div>
-                            <a rel="nofollow" class="share-icons" href="#" data-count="twi"
-                               onclick="window.open('//twitter.com/intent/tweet?text=<?php the_title(); ?>&amp;url=<?php
-                               echo home_url($wp->request); ?>','_blank', 'scrollbars=0, resizable=1, menubar=0, left=100,' +
-                                       ' top=100, width=550, ' +'height=440, toolbar=0, status=0');return false"
-                               title="Add to Twitter" target="_blank"><img src="<?php echo $path; ?>assets/icons/tw-icon.svg">
-                            </a>
-                            <a rel="nofollow" class="share-icons" href="#" data-count="fb"
-                               onclick="window.open('//www.facebook.com/sharer.php?m2w&amp;s=100&amp;p[url]=<?php
-                               echo home_url($wp->request); ?>&amp;[title]=<?php the_title(); ?>&amp;p[summary]=&amp;p[images]'+
-                                       '[0]=undefined', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=100, top=100, ' +
-                                       'width=550, height=440, toolbar=0, status=0');return false"
-                               title="Share in Facebook" target="_blank"><img src="<?php echo $path; ?>assets/icons/fa-icon.svg">
-                            </a>
-                            <a rel="nofollow" class="share-icons" href="#" data-count="lnkd"
-                               onclick="window.open('//www.linkedin.com/shareArticle?mini=true&amp;url=<?php
-                               echo home_url($wp->request); ?>&amp;title=<?php the_title(); ?>', '_blank', 'scrollbars=0, ' +
-                                       'resizable=1, menubar=0, left=100, top=100, width=600, height=400, toolbar=0, status=0');
-                               return false" title="Add to Linkedin" target="_blank">
-                                <img src="<?php echo $path; ?>assets/icons/LinkedInLogo.svg">
-                            </a>
-                            <a rel="nofollow" class="share-icons" href="#" data-count="red"
-                               onclick="window.open('//www.reddit.com/submit?url=<?php
-                               echo home_url($wp->request); ?>&amp;title=<?php the_title(); ?>', '_blank', 'scrollbars=0, ' +
-                                       'resizable=1, menubar=0, left=100, top=100, width=600, height=400, toolbar=0, status=0');
-                                       return false" title="Share with Reddit" target="_blank">
-                                <img src="<?php echo $path; ?>assets/icons/reddit.svg">
-                            </a>
-                            <a rel="nofollow" class="share-icons" href="#" data-count="tlgr"
-                               onclick="window.open('//telegram.me/share/url?url=<?php
-                               echo home_url($wp->request); ?>&amp;title=<?php the_title(); ?>', '_blank', 'scrollbars=0, ' +
-                                       'resizable=1, menubar=0, left=100, top=100, width=600, height=400, toolbar=0, status=0');
-                                       return false" title="Share in Telegram" target="_blank">
-                                <img src="<?php echo $path; ?>assets/icons/telegram.svg">
-                            </a>
+                            <?php include plugin_dir_path( __FILE__ ) . 'share-social-icons-section.php'; ?>
                         </div>
                     </div>
                 </div>
@@ -480,420 +397,12 @@ class BlogSinglePage extends Widget_Base
                             </div>
                         </div>
                     </div>
-                <?php } ?>
+                <?php }
 
+                include plugin_dir_path( __FILE__ ) . 'articles-blocks.php';
+                ?>
 
-                <div class="columnar category-item">
-                    <div class="columns-seven">
-                        <h2>More articles about Permission</h2>
-                    </div>
-                    <div class="columns-ten-three">
-                        <a href="/blog" class="all-articles">
-                            All Articles
-                            <img src="<?php echo $path; ?>/assets/icons/chevron-right-big.svg">
-                        </a>
-                    </div>
-                    <?php
-                    $allPages = get_pages([
-                        'sort_order' => 'ASC',
-                        'sort_column' => 'date',
-                        'hierarchical' => 0,
-                        'parent' => [5782, 5699, 5785, 5786, 5787, 5788, 5789],
-                        'number' => 8,
-                        'post_type' => 'page',
-                        'post_status' => 'publish',
-                    ]);
-                    foreach ($allPages as $key => $page) {
-                        $parts = parse_url($page->guid);
-                        parse_str($parts['query'], $query);
-                        $id = $query['page_id'];
-                        switch ($key) {
-                            case 0 : ?>
-                                <div class="columns-four">
-                                    <div class="blog-card card">
-                                        <div class="blog-card-thumb"><img
-                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
-                                        </div>
-                                        <div class="blog-card-desc">
-                                            <div class="blog-card-cat">
-                                                <?php echo get_the_title($page->post_parent); ?>
-                                            </div>
-                                            <div class="blog-card-excerpt">
-                                                <?php echo $page->post_title; ?>
-                                            </div>
-                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link test">
-                                                Read More
-                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php break;
-                            case 1 : ?>
-                                <div class="columns-five-four">
-                                    <div class="blog-card card">
-                                        <div class="blog-card-thumb"><img
-                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
-                                        </div>
-                                        <div class="blog-card-desc">
-                                            <div class="blog-card-cat">
-                                                <?php echo get_the_title($page->post_parent); ?>
-                                            </div>
-                                            <div class="blog-card-excerpt">
-                                                <?php echo $page->post_title; ?>
-                                            </div>
-                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link">
-                                                Read More
-                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php break;
-                            case 2 : ?>
-                                <div class="columns-nine-four">
-                                    <div class="blog-card card">
-                                        <div class="blog-card-thumb"><img
-                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
-                                        </div>
-                                        <div class="blog-card-desc">
-                                            <div class="blog-card-cat">
-                                                <?php echo get_the_title($page->post_parent); ?>
-                                            </div>
-                                            <div class="blog-card-excerpt">
-                                                <?php echo $page->post_title; ?>
-                                            </div>
-                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link">
-                                                Read More
-                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php break;
-                            case 3 : ?>
-                                <div class="columns-four">
-                                    <div class="blog-card card">
-                                        <div class="blog-card-thumb"><img
-                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
-                                        </div>
-                                        <div class="blog-card-desc">
-                                            <div class="blog-card-cat">
-                                                <?php echo get_the_title($page->post_parent); ?>
-                                            </div>
-                                            <div class="blog-card-excerpt">
-                                                <?php echo $page->post_title; ?>
-                                            </div>
-                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link test">
-                                                Read More
-                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php break;
-                            case 4 : ?>
-                                <div class="columns-five-four">
-                                    <div class="blog-card card">
-                                        <div class="blog-card-thumb"><img
-                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
-                                        </div>
-                                        <div class="blog-card-desc">
-                                            <div class="blog-card-cat">
-                                                <?php echo get_the_title($page->post_parent); ?>
-                                            </div>
-                                            <div class="blog-card-excerpt">
-                                                <?php echo $page->post_title; ?>
-                                            </div>
-                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link">
-                                                Read More
-                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php break;
-                            case 5 : ?>
-                                <div class="columns-nine-four">
-                                    <div class="blog-card card">
-                                        <div class="blog-card-thumb"><img
-                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
-                                        </div>
-                                        <div class="blog-card-desc">
-                                            <div class="blog-card-cat">
-                                                <?php echo get_the_title($page->post_parent); ?>
-                                            </div>
-                                            <div class="blog-card-excerpt">
-                                                <?php echo $page->post_title; ?>
-                                            </div>
-                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link">
-                                                Read More
-                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php break;
-
-                            case 6 : ?>
-                                <div class="columns-four">
-                                    <div class="blog-card card">
-                                        <div class="blog-card-thumb"><img
-                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
-                                        </div>
-                                        <div class="blog-card-desc">
-                                            <div class="blog-card-cat">
-                                                <?php echo get_the_title($page->post_parent); ?>
-                                            </div>
-                                            <div class="blog-card-excerpt">
-                                                <?php echo $page->post_title; ?>
-                                            </div>
-                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link test">
-                                                Read More
-                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php break;
-
-                            case 7 : ?>
-                                <div class="columns-five-four">
-                                    <div class="blog-card card">
-                                        <div class="blog-card-thumb"><img
-                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
-                                        </div>
-                                        <div class="blog-card-desc">
-                                            <div class="blog-card-cat">
-                                                <?php echo get_the_title($page->post_parent); ?>
-                                            </div>
-                                            <div class="blog-card-excerpt">
-                                                <?php echo $page->post_title; ?>
-                                            </div>
-                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link">
-                                                Read More
-                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php break;
-
-                            case 8 : ?>
-                                <div class="columns-nine-four">
-                                    <div class="blog-card card">
-                                        <div class="blog-card-thumb"><img
-                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
-                                        </div>
-                                        <div class="blog-card-desc">
-                                            <div class="blog-card-cat">
-                                                <?php echo get_the_title($page->post_parent); ?>
-                                            </div>
-                                            <div class="blog-card-excerpt">
-                                                <?php echo $page->post_title; ?>
-                                            </div>
-                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link">
-                                                Read More
-                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php break;
-                        }
-                    } ?>
-                </div>
-                <div class="columnar category-item">
-                    <div class="columns-seven">
-                        <h2>Permission Updates</h2>
-                    </div>
-                    <div class="columns-ten-three">
-                        <a href="/blog/permission-marketing" class="all-articles">
-                            All Articles
-                            <img src="<?php echo $path; ?>/assets/icons/chevron-right-big.svg">
-                        </a>
-                    </div>
-                    <?php
-                    $permissionPages = get_pages([
-                        'sort_order' => 'ASC',
-                        'sort_column' => 'date',
-                        'hierarchical' => 0,
-//                        'child_of'     => 5788,
-                        'parent' => 5788,
-                        'number' => 3,
-                        'post_type' => 'page',
-                        'post_status' => 'publish',
-                    ]);
-                    foreach ($permissionPages as $key => $page) {
-                        $parts = parse_url($page->guid);
-                        parse_str($parts['query'], $query);
-                        $id = $query['page_id'];
-                        switch ($key) {
-                            case 0 : ?>
-                                <div class="columns-four">
-                                    <div class="blog-card card">
-                                        <div class="blog-card-thumb"><img
-                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
-                                        </div>
-                                        <div class="blog-card-desc">
-                                            <div class="blog-card-cat">
-                                                <?php echo get_the_title($page->post_parent); ?>
-                                            </div>
-                                            <div class="blog-card-excerpt">
-                                                <?php echo $page->post_title; ?>
-                                            </div>
-                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link test">
-                                                Read More
-                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php break;
-                            case 1 : ?>
-                                <div class="columns-five-four">
-                                    <div class="blog-card card">
-                                        <div class="blog-card-thumb"><img
-                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
-                                        </div>
-                                        <div class="blog-card-desc">
-                                            <div class="blog-card-cat">
-                                                <?php echo get_the_title($page->post_parent); ?>
-                                            </div>
-                                            <div class="blog-card-excerpt">
-                                                <?php echo $page->post_title; ?>
-                                            </div>
-                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link">
-                                                Read More
-                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php break;
-                            case 2 : ?>
-                                <div class="columns-nine-four">
-                                    <div class="blog-card card">
-                                        <div class="blog-card-thumb"><img
-                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
-                                        </div>
-                                        <div class="blog-card-desc">
-                                            <div class="blog-card-cat">
-                                                <?php echo get_the_title($page->post_parent); ?>
-                                            </div>
-                                            <div class="blog-card-excerpt">
-                                                <?php echo $page->post_title; ?>
-                                            </div>
-                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link">
-                                                Read More
-                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php break;
-                        }
-                        ?>
-
-                    <?php } ?>
-                </div>
-                <div class="columnar category-item">
-                    <div class="columns-seven">
-                        <h2>All Articles</h2>
-                    </div>
-                    <div class="columns-ten-three">
-                        <a href="/blog" class="all-articles">
-                            All Articles
-                            <img src="<?php echo $path; ?>/assets/icons/chevron-right-big.svg">
-                        </a>
-                    </div>
-                    <?php
-                    $permissionPages = get_pages([
-                        'sort_order' => 'ASC',
-                        'sort_column' => 'date',
-                        'hierarchical' => 0,
-//                        'child_of'     => 5788,
-                        'parent' => 5788,
-                        'number' => 3,
-                        'post_type' => 'page',
-                        'post_status' => 'publish',
-                    ]);
-                    foreach ($permissionPages as $key => $page) {
-                        $parts = parse_url($page->guid);
-                        parse_str($parts['query'], $query);
-                        $id = $query['page_id'];
-                        switch ($key) {
-                            case 0 : ?>
-                                <div class="columns-four">
-                                    <div class="blog-card card">
-                                        <div class="blog-card-thumb"><img
-                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
-                                        </div>
-                                        <div class="blog-card-desc">
-                                            <div class="blog-card-cat">
-                                                <?php echo get_the_title($page->post_parent); ?>
-                                            </div>
-                                            <div class="blog-card-excerpt">
-                                                <?php echo $page->post_title; ?>
-                                            </div>
-                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link test">
-                                                Read More
-                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php break;
-                            case 1 : ?>
-                                <div class="columns-five-four">
-                                    <div class="blog-card card">
-                                        <div class="blog-card-thumb"><img
-                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
-                                        </div>
-                                        <div class="blog-card-desc">
-                                            <div class="blog-card-cat">
-                                                <?php echo get_the_title($page->post_parent); ?>
-                                            </div>
-                                            <div class="blog-card-excerpt">
-                                                <?php echo $page->post_title; ?>
-                                            </div>
-                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link">
-                                                Read More
-                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php break;
-                            case 2 : ?>
-                                <div class="columns-nine-four">
-                                    <div class="blog-card card">
-                                        <div class="blog-card-thumb"><img
-                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
-                                        </div>
-                                        <div class="blog-card-desc">
-                                            <div class="blog-card-cat">
-                                                <?php echo get_the_title($page->post_parent); ?>
-                                            </div>
-                                            <div class="blog-card-excerpt">
-                                                <?php echo $page->post_title; ?>
-                                            </div>
-                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link">
-                                                Read More
-                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php break;
-                        }
-                        ?>
-
-                    <?php } ?>
-                </div>
             </div>
-
-
         </div>
         <?php
     }
@@ -910,54 +419,91 @@ class BlogSinglePage extends Widget_Base
     protected function _content_template()
     {
         ?>
-
         <#
-        view.addInlineEditingAttributes( 'promopart', 'none' );
-        view.addInlineEditingAttributes( 'form_id', 'none' );
-        view.addInlineEditingAttributes( 'use_video', 'none' );
-        view.addInlineEditingAttributes( 'background_image', 'none' );
-        view.addInlineEditingAttributes( 'background_video', 'none' );
-        view.addInlineEditingAttributes( 'leadText', 'none' );
-        view.addInlineEditingAttributes( 'paragraphtext', 'none' );
-        view.addInlineEditingAttributes( 'leadbutton', 'none' );
+        view.addInlineEditingAttributes( 'blog_content_top', 'none' );
+        view.addInlineEditingAttributes( 'blog_content_middle', 'none' );
+        view.addInlineEditingAttributes( 'blog_content_bottom', 'none' );
+        console.log(settings);
         #>
+        <div class="tabs tabs-article" data-tabs="secondary">
+            <div data-tab="blog" class="blog active">
+                <div class="hero">
+                </div>
 
-        <section class="sec-home-img <# if (settings.use_video === 'yes') { #>style=height:unset<# } #>">
-            <# if (settings.use_video === 'yes') { #>
-            <div class="fullscreen-bg">
-                <video loop muted autoplay poster="{{{ settings.background_image.url }}}" class="fullscreen-bg__video">
-                    <source src="{{{ settings.background_video }}}" type="video/mp4">
-                </video>
-            </div>
-            <div class="container hide">
-                <div class="row wrapper">
-                    <div class="row wrapper">
-                        <div class="col-6 promopart">
-                            {{{ settings.promopart }}}
+                <div class="columnar">
+                    <div class="columns-twelve">
+                        <a href="#" class="article-category">Cryptocurrency</a>
+                        <h1>{{{ settings.page_title }}}</h1>
+                        <div class="subtitle-article">{{{ settings.page_subtitle }}}</div>
+                    </div>
+                </div>
+
+                <div class="columnar article-share">
+
+                    <div class="share-social-info columns-four-one">
+                        <div class="photo"><img src="/wp-content/plugins/elementor-custom-widgets/assets/icons/drawkit-folder-man-colour.svg"></div>
+                        <div class="text-wrap">
+                            <div class="text">Permission</div>
+                            <a href="#">@permissionIO</a>
                         </div>
-                        <div class="col-6 leadform">
-                            Here will be placed your form after save and refresh the page
+                    </div>
+                    <div class="share-social-icons columns-four-nine">
+                        <div class="share-text">share</div>
+                        <a href="#" class="share-icons"><img src="/wp-content/plugins/elementor-custom-widgets/assets/icons/tw-icon.svg"></a>
+                        <a href="#" class="share-icons"><img src="/wp-content/plugins/elementor-custom-widgets/assets/icons/fa-icon.svg"></a>
+                        <a href="#" class="share-icons"><img src="/wp-content/plugins/elementor-custom-widgets/assets/icons/LinkedInLogo.svg"></a>
+                        <a href="#" class="share-icons"><img src="/wp-content/plugins/elementor-custom-widgets/assets/icons/reddit.svg"></a>
+                        <a href="#" class="share-icons"><img src="/wp-content/plugins/elementor-custom-widgets/assets/icons/telegram.svg"></a>
+                    </div>
+
+                </div>
+
+                <div class="columnar article-img">
+                    <div class="columns-twelve">
+                        <img src="/wp-content/plugins/elementor-custom-widgets/assets/img-e.png">
+                        <p>Source</p>
+                    </div>
+                </div>
+
+                <div class="columnar article-date">
+                    <div class="columns-eight">
+                        <p>PUBLISHED </p>
+                    </div>
+                </div>
+                <div class="columnar article-content">
+                    <div class="columns-eight">
+                        <p>{{{ settings.blog_content_top }}}</p>
+                        <div class="wp-block-considerable-quote left">
+                            <div class="quote">{{{ settings.the_quote }}}</div>
+                        </div>
+
+                        {{{ settings.blog_content_middle }}}
+
+                        {{{ settings.blog_content_bottom }}}
+                        <div class="tags">TAGS: List of tags</div>
+                        <div class="share-social-icons">
+                            <div class="share-text">share</div>
+                            <a href="#" class="share-icons"><img src="/wp-content/plugins/elementor-custom-widgets/assets/icons/tw-icon.svg"></a>
+                            <a href="#" class="share-icons"><img src="/wp-content/plugins/elementor-custom-widgets/assets/icons/fa-icon.svg"></a>
+                            <a href="#" class="share-icons"><img src="/wp-content/plugins/elementor-custom-widgets/assets/icons/LinkedInLogo.svg"></a>
+                            <a href="#" class="share-icons"><img src="/wp-content/plugins/elementor-custom-widgets/assets/icons/reddit.svg"></a>
+                            <a href="#" class="share-icons"><img src="/wp-content/plugins/elementor-custom-widgets/assets/icons/telegram.svg"></a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <# } else { #>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="title-home">
-                            <h1 class="title"><span {{{ view.getRenderAttributeString('leadText') }}}>{{{
-                                settings.leadText }}}</span></h1>
-                            <h2 class="sub-title"><span {{{ view.getRenderAttributeString('paragraphtext') }}}>{{{
-                                settings.paragraphtext }}}</span></h2>
-                            <button {{{ view.getRenderAttributeString(
-                            'leadbutton') }}}>{{{ settings.leadbutton }}}</button>
-                        </div>
+
+                <div class="columnar article-nav">
+                    <div class="columns-four-two">
+                        <div class="text">Previous Post</div>
+                        <a href="">Previous post title</a>
+                    </div>
+                    <div class="columns-four-eight">
+                        <div class="text">Next Post</div>
+                        <a href="">Next post title</a>
                     </div>
                 </div>
             </div>
-            <# }#>
-        </section>
+        </div>
         <?php
     }
 }
