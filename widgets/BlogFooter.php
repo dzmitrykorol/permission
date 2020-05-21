@@ -195,6 +195,7 @@ class BlogFooter extends Widget_Base {
                         <li><a href="https://permission.io/careers" target="_blank">Careers</a></li>
                         <li><a href="https://permission.io/news" target="_blank">In The News</a></li>
                         <li><a href="https://permission.io/faqs" target="_blank">FAQs</a></li>
+                        <li><a href="https://support.permission.io" target="_blank">Support</a></li>
                     </ul>
                 </div>
                 <?php
@@ -284,6 +285,7 @@ class BlogFooter extends Widget_Base {
                         <li><a href="https://permission.io/careers" target="_blank">Careers</a></li>
                         <li><a href="https://permission.io/news" target="_blank">In The News</a></li>
                         <li><a href="https://permission.io/faqs" target="_blank">FAQs</a></li>
+                        <li><a href="https://support.permission.io" target="_blank">Support</a></li>
                     </ul>
                 </div>
                 <?php

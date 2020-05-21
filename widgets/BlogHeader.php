@@ -169,8 +169,18 @@ class BlogHeader extends Widget_Base {
 
     protected function render() {
         $path = '/wp-content/plugins/elementor-custom-widgets/';
+
+        $url = $_SERVER['REQUEST_URI'];
         ?>
         <link href="/wp-content/plugins/elementor-custom-widgets/base.css" rel="stylesheet">
+        <?php
+        if (strpos($url,'blog') !== false) { ?>
+            <style>
+                .elementor-section.elementor-section-boxed>.elementor-container {
+                    max-width: unset;
+                }
+            </style>
+        <?php } ?>
         <body class="body-blog">
         <div class="menu-overlay"></div>
         <header>
@@ -267,6 +277,11 @@ class BlogHeader extends Widget_Base {
         <#
         #>
         <link href="/wp-content/plugins/elementor-custom-widgets/base.css" rel="stylesheet">
+        <style>
+            .elementor-section.elementor-section-boxed>.elementor-container {
+                max-width: unset;
+            }
+        </style>
         <body class="body-blog">
     <div class="menu-overlay"></div>
     <header>

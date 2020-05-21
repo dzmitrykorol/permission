@@ -18,7 +18,7 @@ $path = '/wp-content/plugins/elementor-custom-widgets/';
             'sort_order' => 'ASC',
             'sort_column' => 'date',
             'hierarchical' => 0,
-            'parent' => [5782, 5699, 5785, 5786, 5787, 5788, 5789],
+            'parent' => [7095, 7092, 7096, 7097, 7098, 7099, 7115],
             'number' => 3,
             'post_type' => 'page',
             'post_status' => 'publish',
@@ -41,7 +41,8 @@ $path = '/wp-content/plugins/elementor-custom-widgets/';
                         <div class="blog-card-excerpt">
                             <?php echo $page->post_title; ?>
                         </div>
-                        <a href="<?php echo get_page_link($id); ?>" class="blog-card-link test">
+                        <a href="<?php echo get_page_link($page->ID);
+                        ?>" class="blog-card-link test">
                             Read More
                             <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
                         </a>
@@ -71,8 +72,7 @@ $path = '/wp-content/plugins/elementor-custom-widgets/';
             'sort_order' => 'ASC',
             'sort_column' => 'date',
             'hierarchical' => 0,
-//                        'child_of'     => 5788,
-            'parent' => 5788,
+            'parent' => 7099,
             'number' => 3,
             'post_type' => 'page',
             'post_status' => 'publish',
@@ -93,7 +93,7 @@ $path = '/wp-content/plugins/elementor-custom-widgets/';
                         <div class="blog-card-excerpt">
                             <?php echo $page->post_title; ?>
                         </div>
-                        <a href="<?php echo get_page_link($id); ?>" class="blog-card-link test">
+                        <a href="<?php echo get_page_link($page->ID); ?>" class="blog-card-link test">
                             Read More
                             <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
                         </a>
@@ -120,7 +120,7 @@ $path = '/wp-content/plugins/elementor-custom-widgets/';
             'sort_order' => 'ASC',
             'sort_column' => 'date',
             'hierarchical' => 0,
-            'parent' => [5782, 5699, 5785, 5786, 5787, 5788, 5789],
+            'parent' => [7095, 7092, 7096, 7097, 7098, 7099, 7115],
             'number' => 6,
             'post_type' => 'page',
             'post_status' => 'publish',
@@ -142,7 +142,7 @@ $path = '/wp-content/plugins/elementor-custom-widgets/';
                         <div class="blog-card-excerpt">
                             <?php echo $page->post_title; ?>
                         </div>
-                        <a href="<?php echo get_page_link($id); ?>" class="blog-card-link test">
+                        <a href="<?php echo get_page_link($page->ID); ?>" class="blog-card-link test">
                             Read More
                             <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
                         </a>

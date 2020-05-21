@@ -212,8 +212,8 @@ class Blog extends Widget_Base
                 <ul class="secondary-nav-blog" data-menu="secondary" data-for-tabs="secondary">
                     <?php
                     $pageCategories = get_pages([
-                        'parent' => 5690,
-                        'exclude' => [5922, 5928, 5931, 5947],
+                        'parent' => 7091,
+                        'exclude' => [7114, 7115, 7116, 7118],
                     ]);
 
                     foreach ($pageCategories as $key => $value) { ?>

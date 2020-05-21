@@ -196,8 +196,8 @@ class BlogTags extends Widget_Base
                 <ul class="secondary-nav-blog" data-menu="secondary" data-for-tabs="secondary">
                     <?php
                     $pageCategories = get_pages([
-                        'parent' => 5690,
-                        'exclude' => [5922, 5928, 5931, 5947],
+                        'parent' => 7091,
+                        'exclude' => [7114, 7115, 7116, 7118],
                     ]);
 
                     foreach ($pageCategories as $key => $value) { ?>
@@ -220,9 +220,9 @@ class BlogTags extends Widget_Base
                         </div>
                         <div class="columns-twelve">
                             <?php
-                            $tag = $_GET['tag'];
+                            $searchTag = $_GET['tag'];
                             ?>
-                            <h1>Articles by tag: <?php echo $tag; ?></h1>
+                            <h1>Articles by tag: <?php echo $searchTag; ?></h1>
                         </div>
 
                     </div>
@@ -235,7 +235,7 @@ class BlogTags extends Widget_Base
                             'sort_order' => 'ASC',
                             'sort_column' => 'date',
                             'hierarchical' => 0,
-                            'parent' => [5782, 5699, 5785, 5786, 5787, 5788, 5789],
+                            'parent' => [7095, 7092, 7096, 7097, 7098, 7099, 7115],
                             'number' => 18,
                             'post_type' => 'page',
                             'post_status' => 'publish',
@@ -245,9 +245,13 @@ class BlogTags extends Widget_Base
                             $parts = parse_url($page->guid);
                             parse_str($parts['query'], $query);
                             $id = $query['page_id'];
-                            $tagsLine = get_post_meta($id, 'tags', true);
+                            $tagsLine = get_post_meta($page->ID, 'tags', true);
                             $tags = explode(', ', $tagsLine);
-                            if (in_array($tag, $tags, false)) { ?>
+                            $lowerTags = [];
+                            foreach ($tags as $tag) {
+                                $lowerTags[] = strtolower($tag);
+                            }
+                            if (in_array($searchTag, $lowerTags, false)) { ?>
                                 <div class="columns-blog">
                                     <div class="blog-card card">
                                         <div class="blog-card-thumb"><img
@@ -260,7 +264,7 @@ class BlogTags extends Widget_Base
                                             <div class="blog-card-excerpt">
                                                 <?php echo $page->post_title; ?>
                                             </div>
-                                            <a href="<?php echo get_page_link($id); ?>" class="blog-card-link test">
+                                            <a href="<?php echo get_page_link($page->ID); ?>" class="blog-card-link test">
                                                 Read More
                                                 <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
                                             </a>
