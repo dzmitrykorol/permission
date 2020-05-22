@@ -200,6 +200,7 @@
           }
           @include respond-to(desktop) {
             padding: 11px 24px 22px;
+            min-height: 189px;
           }
         }
         .blog-card-thumb{
@@ -1192,3 +1193,15 @@
  }
 }
 
+.blog-col-wrap.columns-twelve {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: inherit;
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include respond-to(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

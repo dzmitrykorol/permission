@@ -1,0 +1,108 @@
+$breakpoints: (
+        'tablet'  : 767px,
+        'desktop' : 1004px,
+        'nav-collapse' : 1038px,
+        'largedesktop': 1420px
+);
+@mixin respond-to($breakpoint) {
+  // Retrieves the value from the key
+  $value: map-get($breakpoints, $breakpoint);
+
+  // If the key exists in the map
+  @if $value != null {
+    // Prints a media query based on the value
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+
+    // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+
+
+.columnar {
+  grid-template-columns: repeat(4, [col-start] 1fr);
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(12, [col-start] 1fr);
+  }
+  @include respond-to(desktop) {
+    grid-template-columns: repeat(12, [col-start] 1fr);
+  }
+}
+
+.ch1{
+  height: 950px;
+  background-image: url("./assets/chinalanding/hero.png");
+  background-position: top;
+  background-size: cover;
+  @include respond-to(tablet) {
+    height: 950px;
+  }
+  @include respond-to(desktop) {
+    height: 613px;
+  }
+  .text-wrap{
+    padding-top: 198px;
+    text-align: center;
+    h2{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 40px;
+      line-height: 44px;
+      text-align: center;
+      letter-spacing: -1.2px;
+      color: #FFFFFF;
+      margin: 0;
+      padding-bottom: 24px;
+    }
+    .text{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 27px;
+      line-height: 35px;
+      text-align: center;
+      letter-spacing: -0.257143px;
+
+      color: #FFFFFF;
+
+    }
+    .buttons {
+      text-align: center;
+
+      a {
+        color: #FFFFFF;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 20px;
+        text-align: center;
+        border-radius: 18px;
+        background-color: #07AFF2;
+        box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+        cursor: pointer;
+        box-sizing: border-box;
+        display: inline-block;
+        text-decoration: none;
+        z-index: 3;
+        height: 38px;
+        width: 200px;
+        padding-top: 9px;
+        margin-top: 25px;
+        @include respond-to(tablet) {
+          margin-top: 47px;
+        }
+        @include respond-to(desktop) {
+          margin-top: 47px;
+        }
+      }
+    }
+  }
+}

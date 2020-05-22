@@ -1,0 +1,2351 @@
+$breakpoints: (
+        'tablet'  : 767px,
+        'desktop' : 1004px,
+        'nav-collapse' : 1038px,
+        'largedesktop': 1420px
+);
+@mixin respond-to($breakpoint) {
+  // Retrieves the value from the key
+  $value: map-get($breakpoints, $breakpoint);
+
+  // If the key exists in the map
+  @if $value != null {
+    // Prints a media query based on the value
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+
+    // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.columnar {
+  grid-template-columns: repeat(4, [col-start] 1fr);
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(12, [col-start] 1fr);
+  }
+  @include respond-to(desktop) {
+    grid-template-columns: repeat(12, [col-start] 1fr);
+  }
+}
+
+
+
+
+.s1{
+  .video-hero {
+    background: #000000;
+    display: flex;
+    position:relative;
+    height: 784px;
+    @include respond-to(tablet) {
+      height: 950px;
+    }
+    @include respond-to(desktop) {
+      height: auto;
+    }
+    .hero-player-overlay {
+      background: #000000;
+      bottom:0;
+      left:0;
+      position:absolute;
+      right:0;
+      top:0;
+      z-index:2;
+      height: 784px;
+      @include respond-to(tablet) {
+        height: 950px;
+      }
+      @include respond-to(desktop) {
+        height: auto;
+      }
+      video {
+        opacity: 0.5;
+        width: 100vw;
+        height: 784px;
+        object-fit: cover;
+        @include respond-to(tablet) {
+          height: 950px;
+          object-fit: cover;
+        }
+        @include respond-to(desktop) {
+          height: auto;
+        }
+      }
+      .hero-player-content {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 1;
+        .hero-player-content-overlay {
+          background: rgba(62,143,174,0.5);
+          bottom: 0;
+          box-sizing: border-box;
+          display: flex;
+          justify-content: center;
+          left: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+          .floating-text{
+            flex-direction: column;
+            display: flex;
+            height: 100%;
+            justify-content: flex-end;
+            h2{
+              color: #FFFFFF;
+              font-family: Poppins;
+              font-size: 30px;
+              font-weight: 300;
+              letter-spacing: -0.99px;
+              line-height: 32px;
+              text-align: center;
+              @include respond-to(tablet) {
+                font-size: 33px;
+                font-weight: 300;
+                letter-spacing: -0.99px;
+                line-height: 44px;
+                text-align: center;
+              }
+              @include respond-to(desktop) {
+                margin-top: 31px;
+                font-size: 40px;
+                font-weight: 300;
+                letter-spacing: -1.2px;
+                line-height: 44px;
+                text-align: center;
+              }
+              span{
+                font-weight: 700;
+              }
+            }
+            .play-icon {
+              text-align: center;
+              margin-bottom: 54px;
+              @include respond-to(tablet) {
+                margin-bottom: 20px;
+              }
+              @include respond-to(desktop) {
+                margin-bottom: 20px;
+              }
+              img{
+                margin: 0 auto;
+                cursor: pointer;
+              }
+            }
+            .buttons {
+              text-align: center;
+              a {
+                color: #FFFFFF;
+                font-family: Poppins;
+                font-size: 14px;
+                font-weight: bold;
+                letter-spacing: 0;
+                line-height: 20px;
+                text-align: center;
+                border-radius: 18px;
+                background-color: #07AFF2;
+                box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24);
+                cursor: pointer;
+                box-sizing: border-box;
+                display: inline-block;
+                text-decoration: none;
+                z-index:3;
+                height: 38px;
+                width: 200px;
+                padding-top: 9px;
+                margin-top: 25px;
+                @include respond-to(tablet) {
+                  margin-top: 47px;
+                }
+                @include respond-to(desktop) {
+                  margin-top: 47px;
+                }
+              }
+            }
+            .social-icons{
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              margin: 24px 0 10px;
+              @include respond-to(tablet) {
+                fisplay: flex;
+                justify-content: center;
+                margin: 96px 0 31px;
+              }
+              @include respond-to(desktop) {
+                isplay: flex;
+                justify-content: center;
+                margin: 152px 0 31px;
+              }
+              a {
+                display: flex;
+                color: #FFFFFF;
+                font-family: Poppins;
+                font-size: 12px;
+                letter-spacing: 0.3px;
+                line-height: 16px;
+                margin-right: 0px;
+                text-decoration: none;
+                margin-bottom: 19px;
+                width: 100%;
+                justify-content: center;
+                &:last-child{
+                  margin-right: 0;
+                }
+                @include respond-to(tablet) {
+                  display: flex;
+                  color: #FFFFFF;
+                  font-family: Poppins;
+                  font-size: 12px;
+                  letter-spacing: 0.3px;
+                  line-height: 16px;
+                  margin-right: 73px;
+                  text-decoration: none;
+                  margin-bottom: 0px;
+                  width: auto;
+                }
+                @include respond-to(desktop) {
+                  display: flex;
+                  color: #FFFFFF;
+                  font-family: Poppins;
+                  font-size: 12px;
+                  letter-spacing: 0.3px;
+                  line-height: 16px;
+                  margin-right: 73px;
+                  text-decoration: none;
+                  margin-bottom: 0px;
+                  width: auto;
+                }
+                img{
+                  padding-right: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.hero-player-content.fadein {
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+  -webkit-animation-fill-mode: forwards;
+}
+.hero-player-content.fadeout {
+  -webkit-animation: fadeout 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadeout 2s; /* Firefox < 16 */
+  -ms-animation: fadeout 2s; /* Internet Explorer */
+  -o-animation: fadeout 2s; /* Opera < 12.1 */
+  animation: fadeout 2s;
+  -webkit-animation-fill-mode: forwards;
+}
+.video-hero.slideup {
+  -webkit-animation: blackboxslideup 1s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: blackboxslideup 1s; /* Firefox < 16 */
+  -ms-animation: blackboxslideup 1s; /* Internet Explorer */
+  -o-animation: blackboxslideup 1s; /* Opera < 12.1 */
+  animation: blackboxslideup 1s;
+  -webkit-animation-fill-mode: forwards;
+}
+@keyframes fadein {
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blackboxslideup {
+  0% {
+    height: 115vw;
+  }
+
+  100% {
+    height: 56.25vw;
+  }
+}
+@keyframes blackboxslidedown {
+  0% {
+    height: 56.25vw;
+  }
+  100% {
+    height: 115vw;
+  }
+}
+
+.s2{
+  margin: 33px 0 52px;
+  @include respond-to(tablet) {
+    margin: 33px 0 52px;
+  }
+  @include respond-to(desktop) {
+    margin: 62px 0 33px;
+  }
+  .columnar{
+    .columns-twelve{
+      .title{
+        color: #0C0C0C;
+        font-family: Poppins;
+        font-size: 30px;
+        font-weight: 300;
+        letter-spacing: -0.6px;
+        line-height: 30px;
+        text-align: center;
+        @include respond-to(tablet) {
+          color: #0C0C0C;
+          font-family: Poppins;
+          font-size: 33px;
+          font-weight: 300;
+          letter-spacing: -0.8px;
+          line-height: 36px;
+          text-align: center;
+        }
+        @include respond-to(desktop) {
+          color: #0C0C0C;
+          font-family: Poppins;
+          font-size: 40px;
+          font-weight: 300;
+          letter-spacing: -1.2px;
+          line-height: 44px;
+          text-align: center;
+        }
+      }
+      .sub-title{
+        color: #0D0D0D;
+        font-family: Poppins;
+        font-size: 18px;
+        letter-spacing: -0.1px;
+        line-height: 26px;
+        text-align: center;
+        padding: 29px 0px 24px;
+        font-weight: 400;
+        @include respond-to(tablet) {
+          color: #0D0D0D;
+          font-family: Poppins;
+          font-size: 20px;
+          letter-spacing: -0.1px;
+          line-height: 30px;
+          text-align: center;
+          font-weight: 400;
+          padding: 12px 12px 31px;
+        }
+        @include respond-to(desktop) {
+          color: #0D0D0D;
+          font-family: Poppins;
+          font-size: 21px;
+          letter-spacing: -0.2px;
+          line-height: 31px;
+          text-align: center;
+          padding: 14px 12px 32px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .tabs-home{
+    .tabs__caption{
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      position: relative;
+      justify-content: center;
+      width: 100%;
+      margin: auto;
+      margin-bottom: 50px;
+      border: 1px solid #07AFF2;
+      border-radius: 4px;
+      order: 1;
+      @include respond-to(tablet) {
+        order: 1;
+        width: 390px;
+        margin-bottom: 32px;
+      }
+      @include respond-to(desktop) {
+        order: 1;
+        width: 390px;
+        margin-bottom: 32px;
+      }
+      li{
+        color: #07AFF2;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 20px;
+        text-align: center;
+        width: 50%;
+        height: 38px;
+        padding-top: 8px;
+        &:not(.active) {
+          cursor: pointer;
+        }
+        /*&:not(.active):hover {
+          background: #07AFF2;
+          color: #ffffff;
+        }*/
+      }
+      .active{
+        background: #07AFF2;
+        color: #ffffff;
+      }
+    }
+    .columns-six{
+      grid-column: col-start 1 / span 4;
+      order: 3;
+      @include respond-to(tablet) {
+        grid-column: col-start 2 / span 10;
+        order: 3;
+      }
+      @include respond-to(desktop) {
+        grid-column: col-start  / span 6;
+        order: 2;
+      }
+      .tabs__content{
+        display: none;
+        .name{
+          color: #0D0D0D;
+          font-family: Poppins;
+          font-size: 18px;
+          letter-spacing: -0.1px;
+          line-height: 26px;
+          padding-bottom: 32px;
+          font-weight: 400;
+          @include respond-to(tablet) {
+            color: #0D0D0D;
+            font-family: Poppins;
+            font-size: 21px;
+            letter-spacing: -0.2px;
+            line-height: 31px;
+            padding-bottom: 32px;
+            font-weight: 400;
+          }
+          @include respond-to(desktop) {
+            color: #0D0D0D;
+            font-family: Poppins;
+            font-size: 21px;
+            letter-spacing: -0.2px;
+            line-height: 31px;
+            padding-bottom: 32px;
+            font-weight: 400;
+          }
+        }
+        .content{
+          color: #0D0D0D;
+          font-family: Poppins;
+          font-size: 17px;
+          letter-spacing: 0;
+          line-height: 25px;
+          padding-left: 24px;
+          position: relative;
+          padding-bottom: 40px;
+          font-weight: 400;
+          @include respond-to(tablet) {
+            color: #0D0D0D;
+            font-family: Poppins;
+            font-size: 18px;
+            letter-spacing: -0.1px;
+            line-height: 26px;
+            padding-left: 24px;
+            position: relative;
+            padding-bottom: 40px;
+            font-weight: 400;
+          }
+          @include respond-to(desktop) {
+            color: #0D0D0D;
+            font-family: Poppins;
+            font-size: 18px;
+            letter-spacing: -0.1px;
+            line-height: 26px;
+            padding-left: 24px;
+            position: relative;
+            padding-bottom: 40px;
+            font-weight: 400;
+          }
+          &:last-child{
+            padding-bottom: 0px;
+          }
+          &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 15px;
+            height: 11px;
+            background-image: url("./assets/icons/CheckMark.svg");
+          }
+        }
+      }
+      .tabs__content.active {
+        display: block;
+        margin-bottom: 33px;
+      }
+      .buttons {
+        a {
+          color: #FFFFFF;
+          font-family: Poppins;
+          font-size: 14px;
+          font-weight: bold;
+          letter-spacing: 0;
+          line-height: 20px;
+          text-align: center;
+          border-radius: 18px;
+          background-color: #FF5F58;
+          box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24);
+          cursor: pointer;
+          box-sizing: border-box;
+          display: inline-block;
+          text-decoration: none;
+          z-index:3;
+          height: 38px;
+          width: 200px;
+          padding-top: 9px;
+        }
+      }
+    }
+    .columns-four-eight{
+      grid-column: col-start 1/ span 4;
+      order: 2;
+      margin: 10px 0 31px;
+      @include respond-to(tablet) {
+        grid-column: col-start 4/ span 7;
+        order: 2;
+        margin: 10px 0 31px;
+      }
+      @include respond-to(desktop) {
+        grid-column: col-start 8/ span 5;
+        order: 3;
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+
+
+.s3{
+  display: flex;
+  flex-wrap: wrap;
+  .video-block{
+    width: 100%;
+    order: 2;
+    @include respond-to(tablet) {
+      width: 100%;
+      order: 2;
+    }
+    @include respond-to(desktop) {
+      width: 50%;
+      order: 1;
+    }
+    .permission-secondary-video{
+      position:relative;
+      .overlay{
+        position: absolute;
+        left: 0;
+        top:0;
+        bottom:0;
+        right:0;
+        background:url('/wp-content/uploads/2019/11/chrl.png') no-repeat;
+        background-size: cover;
+        background-position: center;
+        .play-icon{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-right: -50%;
+          transform: translate(-50%, -50%);
+          cursor: pointer;
+          img{
+            width: 64px;
+            height: 54px;
+          }
+        }
+      }
+    }
+  }
+  .text-block{
+    width: 100%;
+    order: 1;
+    background-color: #F2F2F2;
+    position: relative;
+    height: 217px;
+    @include respond-to(tablet) {
+      width: 100%;
+      order: 1;
+      height: 217px;
+    }
+    @include respond-to(desktop) {
+      width: 50%;
+      order: 2;
+      height: auto;
+    }
+    .text{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      max-width: 376px;
+      color: #0C0C0C;
+      font-family: Poppins;
+      font-size: 24px;
+      letter-spacing: -0.3px;
+      line-height: 28px;
+      font-weight: 400;
+      padding: 0 16px;
+      @include respond-to(tablet) {
+        max-width: 575px;
+      }
+      @include respond-to(desktop) {
+        max-width: 376px;
+      }
+    }
+  }
+}
+
+
+
+.s4{
+  margin: 34px 0 30px;
+  @include respond-to(tablet) {
+    margin: 32px 0 55px;
+  }
+  @include respond-to(desktop) {
+    margin: 62px 0 66px;
+  }
+  .columnar{
+    .columns-twelve{
+      .title{
+        color: #0C0C0C;
+        font-family: Poppins;
+        font-size: 30px;
+        font-weight: 300;
+        letter-spacing: -0.6px;
+        line-height: 32px;
+        text-align: center;
+        @include respond-to(tablet) {
+          color: #0C0C0C;
+          font-family: Poppins;
+          font-size: 33px;
+          font-weight: 300;
+          letter-spacing: -0.8px;
+          line-height: 36px;
+          text-align: center;
+        }
+        @include respond-to(desktop) {
+          color: #0C0C0C;
+          font-family: Poppins;
+          font-size: 40px;
+          font-weight: 300;
+          letter-spacing: -1.2px;
+          line-height: 44px;
+          text-align: center;
+        }
+      }
+      .sub-title{
+        font-size: 18px;
+        letter-spacing: -0.1px;
+        line-height: 26px;
+        text-align: center;
+        ffont-weight: 400;
+        padding: 25px 0px 32px;
+        @include respond-to(tablet) {
+          font-size: 20px;
+          letter-spacing: -0.1px;
+          line-height: 30px;
+          text-align: center;
+          font-weight: 400;
+          padding: 14px 12px 32px;
+        }
+        @include respond-to(desktop) {
+          color: #0D0D0D;
+          font-family: Poppins;
+          font-size: 21px;
+          letter-spacing: -0.2px;
+          line-height: 31px;
+          text-align: center;
+          padding: 14px 12px 32px;
+          font-weight: 400;
+        }
+        span{
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .content-wrapper{
+    padding-bottom: 12px;
+    @include respond-to(tablet) {
+      padding-bottom: 66px;
+    }
+    @include respond-to(desktop) {
+      padding-bottom: 66px;
+    }
+    .columns-five{
+      grid-column: col-start 1/ span 4;
+      order: 2;
+      @include respond-to(tablet) {
+        grid-column: col-start 2/ span 10;
+        order: 2;
+      }
+      @include respond-to(desktop) {
+        grid-column: col-start/ span 5;
+        order: 1;
+      }
+      .title-color{
+        font-family: Poppins;
+        font-size: 30px;
+        font-weight: 300;
+        letter-spacing: -0.6px;
+        line-height: 32px;
+        padding: 22px 0 10px;
+        color: #0C0C0C;
+        @include respond-to(tablet) {
+          font-family: Poppins;
+          font-size: 40px;
+          font-weight: 300;
+          letter-spacing: -1.2px;
+          line-height: 44px;
+          padding: 22px 0 10px;
+          color: #0C0C0C;
+        }
+        @include respond-to(desktop) {
+          font-family: Poppins;
+          font-size: 40px;
+          font-weight: 300;
+          letter-spacing: -1.2px;
+          line-height: 44px;
+          padding: 22px 0 10px;
+          color: #0C0C0C;
+        }
+      }
+      .color-blue{
+        color: #00B5FB;
+      }
+      .color-orange{
+        color: #FC8000;;
+      }
+      .text{
+        color: #0D0D0D;
+        font-family: Poppins;
+        font-size: 17px;
+        letter-spacing: 0;
+        line-height: 25px;
+        padding-bottom: 17px;
+        font-weight: 400;
+        @include respond-to(tablet) {
+          color: #0D0D0D;
+          font-family: Poppins;
+          font-size: 18px;
+          letter-spacing: -0.1px;
+          line-height: 26px;
+          padding-bottom: 17px;
+          font-weight: 400;
+        }
+        @include respond-to(desktop) {
+          color: #0D0D0D;
+          font-family: Poppins;
+          font-size: 18px;
+          letter-spacing: -0.1px;
+          line-height: 26px;
+          padding-bottom: 17px;
+          font-weight: 400;
+        }
+      }
+    }
+    .columns-six-seven{
+      grid-column: col-start 1/ span 4;
+      margin-bottom: 36px;
+      order: 1;
+      @include respond-to(tablet) {
+        grid-column: col-start 3/ span 8;
+        margin-bottom: 36px;
+        order: 1;
+      }
+      @include respond-to(desktop) {
+        grid-column: col-start 7/ span 6;
+        margin-bottom: 0px;
+        order: 2;
+      }
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .text-bottom{
+    color: #0D0D0D;
+    font-family: Poppins;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 20px;
+    text-align: center;
+    font-weight: 400;
+    span{
+      font-weight: 700;
+    }
+  }
+}
+.s5{
+  background-color: #06AFF2;
+  padding-top: 53px;
+  padding-bottom: 50px;
+  @include respond-to(tablet) {
+    background-color: #06AFF2;
+    padding-top: 53px;
+    padding-bottom: 80px;
+  }
+  @include respond-to(desktop) {
+    background-color: #06AFF2;
+    padding-top: 53px;
+    padding-bottom: 0;
+  }
+  .img-block{
+    grid-column: col-start 1 / span 4;
+    @include respond-to(tablet) {
+      grid-column: col-start 2 / span 10;
+    }
+    @include respond-to(desktop) {
+      grid-column: col-start / span 6;
+    }
+    .text{
+      color: #FFFFFF;
+      font-family: Poppins;
+      font-weight: 300;
+      font-size: 26px;
+      letter-spacing: -0.39px;
+      line-height: 30px;
+      padding-top: 43px;
+      padding-bottom: 44px;
+      text-align: center;
+      @include respond-to(tablet) {
+        color: #FFFFFF;
+        font-family: Poppins;
+        font-size: 30px;
+        font-weight: 300;
+        letter-spacing: -0.8px;
+        line-height: 36px;
+        padding-top: 27px;
+        padding-bottom: 80px;
+        text-align: center;
+      }
+      @include respond-to(desktop) {
+        color: #FFFFFF;
+        font-family: Poppins;
+        font-size: 33px;
+        font-weight: 300;
+        letter-spacing: -0.8px;
+        line-height: 36px;
+        padding-top: 27px;
+        padding-bottom: 33px;
+        text-align: left;
+      }
+    }
+    .img-wrap{
+      margin-left: 0px;
+      @include respond-to(tablet) {
+        margin-left: 0px;
+      }
+      @include respond-to(desktop) {
+        margin-left: -130px;
+      }
+    }
+  }
+  .columns-five-eight{
+    text-align: right;
+    grid-column: col-start 1/ span 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    @include respond-to(tablet) {
+      text-align: right;
+      grid-column: col-start 2/ span 10;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    @include respond-to(desktop) {
+      text-align: right;
+      grid-column: col-start 8/ span 5;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .text {
+      margin-right: 0px;
+      color: #FFFFFF;
+      font-family: Poppins;
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 32px;
+      text-align: center;
+      letter-spacing: -0.6px;
+      padding-bottom: 34px;
+      @include respond-to(tablet) {
+        margin-right: 0px;
+        color: #FFFFFF;
+        font-family: Poppins;
+        font-size: 33px;
+        font-weight: 400;
+        line-height: 36px;
+        text-align: center;
+        padding-bottom: 49px;
+      }
+      @include respond-to(desktop) {
+        margin-right: -130px;
+        color: #FFFFFF;
+        font-family: Poppins;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 55px;
+        text-align: right;
+        padding-bottom: 0px;
+      }
+      span{
+        font-weight: 700;
+        letter-spacing: -1.2px;
+      }
+    }
+    .img-wrap {
+      display: flex;
+      justify-content: center;
+      @include respond-to(tablet) {
+        display: flex;
+        justify-content: center;
+      }
+      @include respond-to(desktop) {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+.s6{
+  padding-top: 41px;
+  padding-bottom: 46px;
+  @include respond-to(tablet) {
+    padding-top: 52px;
+    padding-bottom: 46px;
+  }
+  @include respond-to(desktop) {
+    padding-top: 73px;
+    padding-bottom: 100px;
+  }
+  .title{
+    color: #0C0C0C;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: -0.6px;
+    line-height: 32px;
+    text-align: center;
+    padding-bottom: 44px;
+    @include respond-to(tablet) {
+      color: #0C0C0C;
+      font-family: Poppins;
+      font-size: 33px;
+      font-weight: 300;
+      letter-spacing: -0.8px;
+      line-height: 36px;
+      text-align: center;
+      padding-bottom: 44px;
+    }
+    @include respond-to(desktop) {
+      color: #0C0C0C;
+      font-family: Poppins;
+      font-size: 40px;
+      font-weight: 300;
+      letter-spacing: -1.2px;
+      line-height: 44px;
+      text-align: center;
+      padding-bottom: 75px;
+    }
+    span{
+      font-weight: 700;
+    }
+  }
+  .content-wrapper{
+    .columns-five-two{
+      grid-column: col-start 1/ span 4;
+      margin-bottom: 26px;
+      @include respond-to(tablet) {
+        grid-column: col-start 4/ span 6;
+        margin-bottom: 32px;
+      }
+      @include respond-to(desktop) {
+        grid-column: col-start 2/ span 5;
+        margin-bottom: 0px;
+      }
+    }
+    .columns-four-eight{
+      grid-column: col-start 1/ span 4;
+      margin-bottom: 32px;
+      @include respond-to(tablet) {
+        grid-column: col-start 2/ span 10;
+        margin-bottom: 32px;
+      }
+      @include respond-to(desktop) {
+        grid-column: col-start 8/ span 4;
+        margin-bottom: 0px;
+      }
+      .sub-title{
+        color: #0C0C0C;
+        font-family: Poppins;
+        font-size: 26px;
+        letter-spacing: -0.39px;
+        line-height: 30px;
+        font-weight: 300;
+        margin-bottom: 15px;
+      }
+      @include respond-to(tablet) {
+        color: #0C0C0C;
+        font-family: Poppins;
+        font-size: 30px;
+        letter-spacing: -0.52px;
+        line-height: 32px;
+        font-weight: 300;
+        margin-bottom: 34px;
+      }
+      @include respond-to(desktop) {
+        color: #0C0C0C;
+        font-family: Poppins;
+        font-size: 33px;
+        font-weight: 300;
+        letter-spacing: -0.8px;
+        line-height: 36px;
+        margin-bottom: 34px;
+      }
+      .text{
+        color: #0D0D0D;
+        font-family: Poppins;
+        font-size: 17px;
+        letter-spacing: 0;
+        line-height: 25px;
+        font-weight: 400;
+        padding-bottom: 44px;
+        padding-left: 32px;
+        position: relative;
+        @include respond-to(tablet) {
+          color: #0D0D0D;
+          font-family: Poppins;
+          font-size: 17px;
+          letter-spacing: -0.1px;
+          line-height: 26px;
+          font-weight: 400;
+          padding-bottom: 44px;
+          padding-left: 32px;
+          position: relative;
+        }
+        @include respond-to(desktop) {
+          color: #0D0D0D;
+          font-family: Poppins;
+          font-size: 18px;
+          letter-spacing: -0.1px;
+          line-height: 26px;
+          font-weight: 400;
+          padding-bottom: 44px;
+          padding-left: 32px;
+          position: relative;
+        }
+        &::before{
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 8px;
+          width: 15px;
+          height: 11px;
+          background-image: url("./assets/icons/CheckMark.svg");
+        }
+        span{
+          font-weight: 700;
+        }
+      }
+      .buttons {
+        a {
+          color: #FFFFFF;
+          font-family: Poppins;
+          font-size: 14px;
+          font-weight: bold;
+          letter-spacing: 0;
+          line-height: 20px;
+          text-align: center;
+          border-radius: 18px;
+          background-color: #FF5F58;
+          box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24);
+          cursor: pointer;
+          box-sizing: border-box;
+          display: inline-block;
+          text-decoration: none;
+          z-index:3;
+          height: 38px;
+          width: 200px;
+          padding-top: 9px;
+          margin-top: 11px;
+        }
+      }
+    }
+  }
+}
+
+
+.s7{
+  padding: 48px 0;
+  background-image: url("./assets/texture-home.png");
+  background-size: cover;
+  @include respond-to(tablet) {
+    padding: 48px 0;
+    background-image: url("./assets/texture-home.png");
+    background-size: cover;
+  }
+  @include respond-to(desktop) {
+    padding: 73px 0;
+    background-image: url("./assets/texture-home.png");
+    background-size: cover;
+  }
+  .home-col-wrap {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: inherit;
+    grid-row-gap: 32px;
+    @include respond-to(tablet) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include respond-to(desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .card-home{
+      padding: 24px 24px 22px;
+      display: block;
+      .img-wrap {
+        width: 100%;
+        min-height: 65px;
+        margin: auto;
+        display: flex;
+        img{
+          margin: auto;
+        }
+      }
+      .title{
+        width: 100%;
+        color: #0D0D0D;
+        font-family: Poppins;
+        font-weight: 400;
+        font-size: 17px;
+        letter-spacing: 0;
+        line-height: 25px;
+        text-align: center;
+        margin: 20px 0 15px;
+        @include respond-to(tablet) {
+          width: 100%;
+          color: #0D0D0D;
+          font-family: Poppins;
+          font-size: 18px;
+          font-weight: 400;
+          letter-spacing: -0.1px;
+          line-height: 26px;
+          text-align: center;
+          margin: 20px 0 15px;
+        }
+
+        @include respond-to(desktop) {
+          width: 100%;
+          color: #0D0D0D;
+          font-family: Poppins;
+          font-size: 18px;
+          font-weight: 400;
+          letter-spacing: -0.1px;
+          line-height: 26px;
+          text-align: center;
+          margin: 20px 0 15px;
+        }
+        span{
+          font-weight: 700;
+        }
+      }
+      .text{
+        width: 100%;
+        color: #0D0D0D;
+        font-family: Poppins;
+        font-size: 15px;
+        letter-spacing: 0;
+        line-height: 24px;
+        text-align: center;
+        font-weight: 400;
+        @include respond-to(tablet) {
+          width: 100%;
+          color: #0D0D0D;
+          font-family: Poppins;
+          font-size: 16px;
+          letter-spacing: 0;
+          line-height: 24px;
+          text-align: center;
+          font-weight: 400;
+        }
+
+        @include respond-to(desktop) {
+          width: 100%;
+          color: #0D0D0D;
+          font-family: Poppins;
+          font-size: 16px;
+          letter-spacing: 0;
+          line-height: 24px;
+          text-align: center;
+          font-weight: 400;
+        }
+        span{
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+.s8{
+  padding: 54px 0 46px;
+  background-image: url("./assets/green-cropped.png");
+  background-size: cover;
+  text-align: center;
+  @include respond-to(tablet) {
+    padding: 100px 0 66px;
+    background-image: url("./assets/green-cropped.png");
+    background-size: cover;
+    text-align: center;
+  }
+  @include respond-to(desktop) {
+    padding: 100px 0 66px;
+    background-image: url("./assets/green-cropped.png");
+    background-size: cover;
+    text-align: center;
+  }
+  .title{
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: -0.6px;
+    line-height: 32px;
+    text-align: center;
+    color: #ffffff;
+    padding-bottom: 18px;
+    @include respond-to(tablet) {
+      font-family: Poppins;
+      font-size: 40px;
+      font-weight: 300;
+      letter-spacing: -1.2px;
+      line-height: 44px;
+      text-align: center;
+      color: #ffffff;
+      padding-bottom: 35px;
+    }
+    @include respond-to(desktop) {
+      font-family: Poppins;
+      font-size: 40px;
+      font-weight: 300;
+      letter-spacing: -1.2px;
+      line-height: 44px;
+      text-align: center;
+      color: #ffffff;
+      padding-bottom: 35px;
+    }
+  }
+  .buttons {
+    a {
+      color: #FFFFFF;
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 20px;
+      text-align: center;
+      border-radius: 18px;
+      background-color: #FF5F58;
+      box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24);
+      cursor: pointer;
+      box-sizing: border-box;
+      display: inline-block;
+      text-decoration: none;
+      z-index:3;
+      height: 38px;
+      width: 230px;
+      padding-top: 9px;
+      margin-top: 11px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.s9{
+  padding: 38px 0 54px;
+  @include respond-to(tablet) {
+    padding: 47px 0 40px;
+  }
+
+  @include respond-to(desktop) {
+    padding: 95px 0 60px;
+  }
+  .permission-team {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding-bottom: 50px;
+    @include respond-to(tablet) {
+      flex-wrap: nowrap;
+      padding-bottom: 0px;
+    }
+
+    @include respond-to(desktop) {
+      flex-wrap: nowrap;
+      padding-bottom: 0px;
+    }
+    .team-blurb {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      justify-content: flex-start;
+      padding: 0 16px 0 16px;
+      width: 100%;
+      margin-right: 0;
+      @include respond-to(tablet) {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        justify-content: flex-start;
+        padding: 0 0 0 41px;
+        width: 267px;
+        margin-right: 47px;
+      }
+
+      @include respond-to(desktop) {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        justify-content: flex-start;
+        padding: 0 0 0 41px;
+        width: 267px;
+        margin-right: 104px;
+      }
+      h3{
+        color: #0C0C0C;
+        font-family: Poppins;
+        font-size: 30px;
+        font-weight: 300;
+        letter-spacing: -0.6px;
+        line-height: 32px;
+        padding-bottom: 19px;
+        @include respond-to(tablet) {
+          color: #0C0C0C;
+          font-family: Poppins;
+          font-size: 40px;
+          font-weight: 300;
+          letter-spacing: -1.2px;
+          line-height: 44px;
+          padding-bottom: 30px;
+        }
+
+        @include respond-to(desktop) {
+          color: #0C0C0C;
+          font-family: Poppins;
+          font-size: 40px;
+          font-weight: 300;
+          letter-spacing: -1.2px;
+          line-height: 44px;
+          padding-bottom: 30px;
+        }
+      }
+      p{
+        color: #0D0D0D;
+        font-family: Poppins;
+        font-size: 15px;
+        letter-spacing: 0;
+        line-height: 24px;
+        font-weight: 400;
+        padding-bottom: 43px;
+        @include respond-to(tablet) {
+          color: #0D0D0D;
+          font-family: Poppins;
+          font-size: 16px;
+          letter-spacing: 0;
+          line-height: 24px;
+          font-weight: 400;
+          padding-bottom: 32px;
+        }
+
+        @include respond-to(desktop) {
+          color: #0D0D0D;
+          font-family: Poppins;
+          font-size: 16px;
+          letter-spacing: 0;
+          line-height: 24px;
+          font-weight: 400;
+          padding-bottom: 32px;
+        }
+      }
+      .navigation{
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        @include respond-to(tablet) {
+          position: static;
+        }
+
+        @include respond-to(desktop) {
+          position: static;
+        }
+        span{
+          border: #379fc6 1px solid;
+          border-radius: 0.1865rem;
+          box-sizing: border-box;
+          cursor: pointer;
+          display: inline-block;
+          font-size: 1.3125rem;
+          line-height: 3.125rem;
+          text-align: center;
+          width: 3.125rem;
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          &:nth-child(1) {
+            margin: 0 10px 0 0;
+          }
+        }
+      }
+    }
+    .team-container {
+      display: flex;
+      flex-grow: 1;
+      overflow: hidden;
+      padding:  0 16px;
+      @include respond-to(tablet) {
+        padding: 0;
+      }
+      @include respond-to(desktop) {
+        padding: 0;
+      }
+      figure {
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin: 0 19px 0 0;
+        text-align: center;
+        @include respond-to(tablet) {
+          flex-grow: 0;
+          flex-shrink: 0;
+          margin: 0 69px 0 0;
+          text-align: center;
+        }
+
+        @include respond-to(desktop) {
+          flex-grow: 0;
+          flex-shrink: 0;
+          margin: 0 86px 0 0;
+          text-align: center;
+        }
+        img {
+          border: 1px solid #f4c38b;
+          border-radius: 50%;
+          height: 153px;
+          width: 153px;
+          @include respond-to(tablet) {
+            fborder: 1px solid #f4c38b;
+            border-radius: 50%;
+            height: 240px;
+            width: 240px;
+          }
+
+          @include respond-to(desktop) {
+            border: 1px solid #f4c38b;
+            border-radius: 50%;
+            height: 300px;
+            width: 300px;
+          }
+        }
+        figcaption{
+          text-align: center;
+          h4{
+            color: #000000;
+            font-family: Poppins;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 20px;
+            text-align: center;
+            margin: 12px 0 0px;
+            max-width: 153px;
+            @include respond-to(tablet) {
+              color: #000000;
+              font-family: Poppins;
+              font-size: 20px;
+              font-weight: 500;
+              letter-spacing: 0;
+              line-height: 30px;
+              text-align: center;
+              margin: 47px 0 0px;
+              max-width: 240px;
+            }
+
+            @include respond-to(desktop) {
+              color: #000000;
+              font-family: Poppins;
+              font-size: 25px;
+              font-weight: 500;
+              letter-spacing: 0;
+              line-height: 38px;
+              text-align: center;
+              margin: 59px 0 15px;
+              max-width: 300px;
+            }
+          }
+          span{
+            color: #000000;
+            font-family: Poppins;
+            font-size: 14px;
+            font-weight: 200;
+            letter-spacing: 0;
+            line-height: 20px;
+            text-align: center;
+            max-width: 153px;
+            display: block;
+            @include respond-to(tablet) {
+              color: #000000;
+              font-family: Poppins;
+              font-size: 20px;
+              font-weight: 200;
+              letter-spacing: 0;
+              line-height: 30px;
+              text-align: center;
+              max-width: 240px;
+              display: block;
+            }
+
+            @include respond-to(desktop) {
+              color: #000000;
+              font-family: Poppins;
+              font-size: 25px;
+              font-weight: 200;
+              letter-spacing: 0;
+              line-height: 38px;
+              text-align: center;
+              max-width: 300px;
+              display: block;
+            }
+          }
+        }
+      }
+      .spacer {
+        min-width: 8rem;
+      }
+    }
+  }
+}
+
+
+.s10{
+  border-top: 1px solid #f2f2f2;
+  padding: 26px 0 12px;
+  @include respond-to(tablet) {
+    border-top: 1px solid #f2f2f2;
+    padding: 79px 0 12px;
+  }
+
+  @include respond-to(desktop) {
+    border-top: 1px solid #f2f2f2;
+    padding: 79px 0 82px;
+  }
+  .logos-wrap{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    @include respond-to(tablet) {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    @include respond-to(desktop) {
+      display: flex;
+      justify-content: space-around;
+    }
+    .logo{
+      width: auto;
+      margin-bottom: 50px;
+      @include respond-to(tablet) {
+        width: 30%;
+        margin-bottom: 50px;
+      }
+
+      @include respond-to(desktop) {
+        width: 25%;
+        margin-bottom: 0;
+      }
+      img{
+        max-height: 48px;
+        object-fit: contain;
+      }
+    }
+  }
+}
+.s11{
+  padding: 46px 0 117px;
+  background-image: url("./assets/timeline-bg.png");
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  @include respond-to(tablet) {
+    padding: 84px 0 93px;
+    background-image: url("./assets/timeline-bg.png");
+    background-size: cover;
+    text-align: center;
+    position: relative;
+  }
+
+  @include respond-to(desktop) {
+    padding: 84px 0 159px;
+    background-image: url("./assets/timeline-bg.png");
+    background-size: cover;
+    text-align: center;
+    position: relative;
+  }
+  .title-block{
+    color: #0C0C0C;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: -0.6px;
+    line-height: 32px;
+    text-align: center;
+    padding-bottom: 43px;
+    @include respond-to(tablet) {
+      color: #0C0C0C;
+      font-family: Poppins;
+      font-size: 40px;
+      font-weight: 300;
+      letter-spacing: -1.2px;
+      line-height: 44px;
+      text-align: center;
+      padding-bottom: 96px;
+    }
+    @include respond-to(desktop) {
+      color: #0C0C0C;
+      font-family: Poppins;
+      font-size: 40px;
+      font-weight: 300;
+      letter-spacing: -1.2px;
+      line-height: 44px;
+      text-align: center;
+      padding-bottom: 96px;
+    }
+  }
+  .time-line{
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      left: 23px;
+      right: auto;
+      width: 10px;
+      height: 85%;
+      background-color: #ffffff;
+      top: 0;
+      @include respond-to(tablet) {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 10px;
+        background-color: #ffffff;
+        top: 46%;
+        width: 100%;
+      }
+      @include respond-to(desktop) {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 10px;
+        background-color: #ffffff;
+        top: 46%;
+        width: 100%;
+      }
+    }
+    .time-line-wrap{
+      display: flex;
+      flex-wrap: wrap;
+      text-align: left;
+      .time-line-block{
+        width: 100%;
+        position: relative;
+        padding: 0 0px 0 54px;
+        @include respond-to(tablet) {
+          width: 33.3%;
+          position: relative;
+          padding: 0 56px 0 21px;
+        }
+        @include respond-to(desktop) {
+          width: 33.3%;
+          position: relative;
+          padding: 0 56px 0 21px;
+        }
+        .dot{
+          position: absolute;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          background-color: #06AFF2;
+          left: 0;
+          top: 0;
+          @include respond-to(tablet) {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #06AFF2;
+            left: 0;
+            top: auto;
+          }
+          @include respond-to(desktop) {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #06AFF2;
+            left: 0;
+            top: auto;
+          }
+        }
+        .title{
+          color: #0D0D0D;
+          font-family: Poppins;
+          font-size: 21px;
+          font-weight: bold;
+          letter-spacing: -0.2px;
+          line-height: 26px;
+          padding-bottom: 14px;
+        }
+        .text-wrap{
+          p{
+            width: 100%;
+            color: #0D0D0D;
+            font-family: Poppins;
+            font-size: 16px;
+            letter-spacing: 0;
+            line-height: 24px;
+            font-weight: 400;
+            padding-bottom: 12px;
+            position: relative;
+            @include respond-to(tablet) {
+              width: 208px;
+              color: #0D0D0D;
+              font-family: Poppins;
+              font-size: 16px;
+              letter-spacing: 0;
+              line-height: 24px;
+              font-weight: 400;
+              padding-bottom: 12px;
+              position: relative;
+            }
+            @include respond-to(desktop) {
+              width: 208px;
+              color: #0D0D0D;
+              font-family: Poppins;
+              font-size: 16px;
+              letter-spacing: 0;
+              line-height: 24px;
+              font-weight: 400;
+              padding-bottom: 12px;
+              position: relative;
+            }
+            &::before{
+              content: '';
+              position: absolute;
+              left: -21px;
+              top: 8px;
+              width: 15px;
+              height: 11px;
+              background-image: url("./assets/icons/CheckMark.svg");
+            }
+          }
+        }
+      }
+      .item-order-1{
+        order: 1;
+        padding-bottom: 34px;
+        @include respond-to(tablet) {
+          order: 1;
+          padding-bottom: 78px;
+        }
+        @include respond-to(desktop) {
+          order: 1;
+          padding-bottom: 78px;
+        }
+        .dot{
+          bottom: -15px;
+        }
+      }
+      .item-order-2{
+        order: 3;
+        padding-bottom: 34px;
+        @include respond-to(tablet) {
+          order: 2;
+          padding-bottom: 78px;
+        }
+        @include respond-to(desktop) {
+          order: 2;
+          padding-bottom: 78px;
+        }
+        .dot{
+          bottom: -15px;
+        }
+      }
+      .item-order-3{
+        order: 5;
+        padding-bottom: 34px;
+        @include respond-to(tablet) {
+          order: 3;
+          padding-bottom: 78px;
+        }
+        @include respond-to(desktop) {
+          order: 3;
+          padding-bottom: 78px;
+        }
+        .dot{
+          bottom: -15px;
+        }
+      }
+      .item-order-4{
+        order: 2;
+        margin-left: 0px;
+        padding-top: 0px;
+        padding-bottom: 34px;
+        @include respond-to(tablet) {
+          order: 4;
+          margin-left: 0px;
+          padding-top: 78px;
+          padding-bottom: 0px;
+        }
+
+        @include respond-to(desktop) {
+          order: 4;
+          margin-left: 130px;
+          padding-top: 78px;
+          padding-bottom: 0px;
+        }
+        .dot{
+          top: 0px;
+          left: 0px;
+          @include respond-to(tablet) {
+            left: 45px;
+            top: -15px;
+          }
+
+          @include respond-to(desktop) {
+            left: 0;
+            top: -15px;
+          }
+        }
+      }
+      .item-order-5{
+        order: 4;
+        padding-top: 0px;
+        padding-bottom: 34px;
+        @include respond-to(tablet) {
+          order: 5;
+          padding-top: 78px;
+          padding-bottom: 0px;
+        }
+
+        @include respond-to(desktop) {
+          order: 5;
+          padding-top: 78px;
+          padding-bottom: 0px;
+        }
+        .dot{
+          top: 0px;
+          left: 0px;
+          @include respond-to(tablet) {
+            left: 45px;
+            top: -15px;
+          }
+
+          @include respond-to(desktop) {
+            left: 0;
+            top: -15px;
+          }
+        }
+      }
+      .item-order-6{
+        order: 6;
+        margin-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 34px;
+        @include respond-to(tablet) {
+          order: 6;
+          margin-right: 0px;
+          padding-top: 78px;
+          padding-bottom: 0px;
+        }
+
+        @include respond-to(desktop) {
+          order: 6;
+          margin-right: -130px;
+          padding-top: 78px;
+          padding-bottom: 0px;
+        }
+        .dot{
+          top: 0px;
+          left: 0px;
+          @include respond-to(tablet) {
+            left: 45px;
+            top: -15px;
+          }
+
+          @include respond-to(desktop) {
+            left: 0;
+            top: -15px;
+          }
+        }
+      }
+    }
+  }
+  .img-time-line {
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    max-width: 279px;
+    @include respond-to(tablet) {
+      position: absolute;
+      right: 0;
+      bottom: -130px;
+      max-width: 653px;
+    }
+
+    @include respond-to(desktop) {
+      position: absolute;
+      right: 0;
+      bottom: -160px;
+      max-width: 100%;
+    }
+  }
+}
+.s12{
+  padding: 113px 0 50px;
+  @include respond-to(tablet) {
+    padding: 186px 0 66px;
+  }
+
+  @include respond-to(desktop) {
+    padding: 186px 0 66px;
+  }
+  .title-block{
+    color: #0C0C0C;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: -0.6px;
+    line-height: 32px;
+    text-align: center;
+    padding-bottom: 34px;
+    @include respond-to(tablet) {
+      color: #0C0C0C;
+      font-family: Poppins;
+      font-size: 33px;
+      font-weight: 300;
+      letter-spacing: -1.2px;
+      line-height: 40px;
+      text-align: center;
+      padding-bottom: 44px;
+    }
+
+    @include respond-to(desktop) {
+      color: #0C0C0C;
+      font-family: Poppins;
+      font-size: 40px;
+      font-weight: 300;
+      letter-spacing: -1.2px;
+      line-height: 44px;
+      text-align: center;
+      padding-bottom: 44px;
+    }
+  }
+  .home-col-wrap {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: inherit;
+    grid-row-gap: 38px;
+    @include respond-to(tablet) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 44px;
+    }
+
+    @include respond-to(desktop) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 44px;
+    }
+    .card-home{
+      padding: 24px 24px 16px;
+      display: block;
+      &:hover{
+        box-shadow: 0 13px 36px 7px rgba(0,0,0,0.12);
+        transition: 0.5s;
+      }
+      .img-wrap {
+        width: 100%;
+        max-height: 50px;
+        margin-bottom: 19px;
+        img{
+          max-height: 50px;
+          object-fit: contain;
+        }
+      }
+      .text{
+        width: 100%;
+        color: #0D0D0D;
+        font-family: Poppins;
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: 24px;
+        font-weight: 400;
+      }
+      .blog-card-link {
+        display: flex;
+        color: #0D0D0D;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 20px;
+        margin-top: 16px;
+        &:hover{
+          text-decoration: none;
+        }
+        img{
+          margin-left: 4px;
+          margin-top: 1px;
+        }
+      }
+    }
+  }
+  .buttons {
+    text-align: center;
+    a {
+      color: #FFFFFF;
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 20px;
+      text-align: center;
+      border-radius: 18px;
+      background-color: #07AFF2;
+      box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24);
+      cursor: pointer;
+      box-sizing: border-box;
+      display: inline-block;
+      text-decoration: none;
+      z-index:3;
+      height: 38px;
+      width: 200px;
+      padding-top: 9px;
+      margin-top: 50px;
+      @include respond-to(tablet) {
+        margin-top: 91px;
+      }
+
+      @include respond-to(desktop) {
+        margin-top: 91px;
+      }
+    }
+  }
+}
+
+
+
+.s13{
+  padding: 29px 0 60px;
+  background-image: url("./assets/email-pattern.jpg");
+  background-size: cover;
+  @include respond-to(tablet) {
+    padding: 61px 0 95px;
+  }
+
+  @include respond-to(desktop) {
+    padding: 61px 0 95px;
+  }
+  .title-block{
+    color: #FFFFFF;
+    font-family: Poppins;
+    font-size: 26px;
+    letter-spacing: -0.39px;
+    line-height: 30px;
+    font-weight: 300;
+    text-align: center;
+    padding-bottom: 25px;
+    @include respond-to(tablet) {
+      color: #FFFFFF;
+      font-family: Poppins;
+      font-size: 30px;
+      font-weight: 300;
+      letter-spacing: -0.8px;
+      line-height: 36px;
+      text-align: center;
+      padding-bottom: 45px;
+    }
+
+    @include respond-to(desktop) {
+      color: #FFFFFF;
+      font-family: Poppins;
+      font-size: 33px;
+      font-weight: 300;
+      letter-spacing: -0.8px;
+      line-height: 36px;
+      text-align: center;
+      padding-bottom: 45px;
+    }
+  }
+  .home-col-wrap {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: inherit;
+    grid-row-gap: 31px;
+    @include respond-to(tablet) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 44px;
+    }
+
+    @include respond-to(desktop) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 44px;
+    }
+    .card-soundcloud{
+      display: block;
+      padding: 0;
+      margin: 0;
+      .text-wrap{
+        padding: 24px 24px 32px;
+        .text{
+          width: 100%;
+          color: #0D0D0D;
+          font-family: Poppins;
+          font-size: 16px;
+          letter-spacing: 0;
+          line-height: 24px;
+          font-weight: 400;
+        }
+        .podcast{
+          padding-bottom: 15px;
+        }
+      }
+    }
+    .columns-blog{
+      .blog-home {
+        padding: 0;
+        height: 100%;
+        .blog-card-desc{
+          padding: 18px 24px 15px;
+          .blog-card-cat{
+            color: #757575;
+            font-size: 14px;
+            letter-spacing: 0;
+            line-height: 20px;
+          }
+          .blog-card-excerpt{
+            color: #0D0D0D;
+            font-family: Poppins;
+            font-size: 16px;
+            letter-spacing: 0;
+            line-height: 24px;
+            margin-top: 15px;
+          }
+          a{
+            display: flex;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 20px;
+            margin: 5px 0 0;
+            text-align: left;
+            text-decoration: none;
+            color: #0D0D0D;
+            letter-spacing: 0;
+            img{
+              display: inline-block;
+              margin: auto 0px auto 5px;
+              height: 100%;
+            }
+          }
+          @include respond-to(tablet) {
+            padding: 7px 16px 13px;
+          }
+          @include respond-to(desktop) {
+            padding: 11px 24px 22px;
+            min-height: 189px;
+          }
+        }
+        .blog-card-thumb{
+          height: 260px;
+          border-radius: 22px 22px 0 0;
+          @include respond-to(tablet) {
+            height: 260px;
+            border-radius: 22px 22px 0 0;
+          }
+          @include respond-to(desktop) {
+            height: 260px;
+            border-radius: 22px 22px 0 0;
+          }
+          img{
+            height: 260px;
+            border-radius: 22px 22px 0 0;
+            object-fit: cover;
+            width: 100%;
+            @include respond-to(tablet) {
+              height: 260px;
+              border-radius: 22px 22px 0 0;
+              object-fit: cover;
+              width: 100%;
+            }
+            @include respond-to(desktop) {
+              height: 260px;
+              border-radius: 22px 22px 0 0;
+              object-fit: cover;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.s14{
+  padding: 35px 0 50px;
+  @include respond-to(tablet) {
+    padding: 52px 0 52px;
+  }
+  @include respond-to(desktop) {
+    padding: 91px 0 66px;
+  }
+  .title-block{
+    color: #0C0C0C;
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 26px;
+    letter-spacing: -0.39px;
+    line-height: 30px;
+    text-align: center;
+    padding-bottom: 14px;
+    @include respond-to(tablet) {
+      color: #0C0C0C;
+      font-family: Poppins;
+      font-size: 30px;
+      font-weight: 300;
+      letter-spacing: -0.8px;
+      line-height: 36px;
+      text-align: center;
+      padding-bottom: 43px;
+    }
+    @include respond-to(desktop) {
+      color: #0C0C0C;
+      font-family: Poppins;
+      font-size: 33px;
+      font-weight: 300;
+      letter-spacing: -0.8px;
+      line-height: 36px;
+      text-align: center;
+      padding-bottom: 43px;
+    }
+  }
+  .logos-wrap{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .logo{
+      width: 50%;
+      margin-bottom: 31px;
+      @include respond-to(tablet) {
+        width: 25%;
+        margin-bottom: 31px;
+      }
+      @include respond-to(desktop) {
+        width: 20%;
+        margin-bottom: 31px;
+      }
+      img {
+        max-height: 100px;
+        margin: auto;
+      }
+    }
+  }
+}
+
+@media all and (max-width : 1260px) and  (min-width : 1004px){
+  .s11 .time-line .time-line-wrap .item-order-4 {
+    margin-left: 90px;
+  }
+  .s5 .columns-five-eight {
+    grid-column: col-start 7/ span 6;
+  }
+  .s5 .columns-five-eight .text {
+    margin-right: 0;
+  }
+  .s1 .video-hero .hero-player-overlay .hero-player-content .hero-player-content-overlay .floating-text .social-icons {
+    margin: 50px 0 31px;
+  }
+  .s1 .video-hero .hero-player-overlay .hero-player-content .hero-player-content-overlay .floating-text h2 {
+    margin-top: 31px;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: -1.2px;
+    line-height: 44px;
+    text-align: center;
+  }
+}
