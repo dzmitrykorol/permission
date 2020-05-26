@@ -11,7 +11,7 @@ if (!defined('ABSPATH')) {
 }
 
 
-class Blog extends Widget_Base
+class BlogTags extends Widget_Base
 {
 
     /**
@@ -25,7 +25,7 @@ class Blog extends Widget_Base
      */
     public function get_name()
     {
-        return 'blog';
+        return 'blog-tags';
     }
 
     /**
@@ -39,7 +39,7 @@ class Blog extends Widget_Base
      */
     public function get_title()
     {
-        return __('[D.Korol] Blog Widget', 'elementor-header-bullet');
+        return __('[D.Korol] Blog Tags Widget', 'elementor-header-bullet');
     }
 
     /**
@@ -74,22 +74,6 @@ class Blog extends Widget_Base
     {
         return ['general'];
     }
-
-    /**
-     * Retrieve the list of scripts the widget depended on.
-     *
-     * Used to set scripts dependencies required to run the widget.
-     *
-     * @since 1.0.0
-     *
-     * @access public
-     *
-     * @return array Widget scripts dependencies.
-     */
-//    public function get_script_depends() {
-//        return [ 'elementor-hello-world' ];
-//    }
-
 
     /**
      * Register the widget controls.
@@ -232,28 +216,65 @@ class Blog extends Widget_Base
                         <div class="breadcrumbs columns-twelve">
                             <a href="/">Home</a>
                             /
-                            <span>Blog</span>
+                            <span>Tags</span>
                         </div>
                         <div class="columns-twelve">
-                            <h1>Blog</h1>
+                            <?php
+                            $searchTag = $_GET['tag'];
+                            ?>
+                            <h1>Articles by tag: <?php echo $searchTag; ?></h1>
                         </div>
 
                     </div>
                 </div>
+                <div class="columnar category-item first">
+                    <div class="blog-col-wrap columns-twelve">
 
-                <?php
-                include plugin_dir_path( __FILE__ ) . 'articles-blocks.php';
+                        <?php
+                        $pages = get_pages([
+                            'sort_order' => 'ASC',
+                            'sort_column' => 'date',
+                            'hierarchical' => 0,
+                            'parent' => [7095, 7092, 7096, 7097, 7098, 7099, 7115],
+                            'number' => 18,
+                            'post_type' => 'page',
+                            'post_status' => 'publish',
+                        ]);
 
-                // hide temporarily by check on no-existing var
-                $empty = '';
-
-                if ($empty) { ?>
-                    <div class="columnar">
-                        <div class="columns-twelve vertical-middle">
-                            <a href="#" class="link-button marketing perm-blue">Load More Articles</a>
-                        </div>
+                        foreach ($pages as $page) {
+                            $parts = parse_url($page->guid);
+                            parse_str($parts['query'], $query);
+                            $id = $query['page_id'];
+                            $tagsLine = get_post_meta($page->ID, 'tags', true);
+                            $tags = explode(', ', $tagsLine);
+                            $lowerTags = [];
+                            foreach ($tags as $tag) {
+                                $lowerTags[] = strtolower($tag);
+                            }
+                            if (in_array($searchTag, $lowerTags, false)) { ?>
+                                <div class="columns-blog">
+                                    <div class="blog-card card">
+                                        <div class="blog-card-thumb"><img
+                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
+                                        </div>
+                                        <div class="blog-card-desc">
+                                            <div class="blog-card-cat">
+                                                <?php echo get_the_title($page->post_parent); ?>
+                                            </div>
+                                            <div class="blog-card-excerpt">
+                                                <?php echo $page->post_title; ?>
+                                            </div>
+                                            <a href="<?php echo get_page_link($page->ID); ?>" class="blog-card-link test">
+                                                Read More
+                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        <?php } ?>
                     </div>
-                <?php } ?>
+                </div>
 
             </div>
             <?php
@@ -309,48 +330,9 @@ class Blog extends Widget_Base
                             <?php } ?>
                         </div>
                     </div>
-
-                    <?php
-                    // hide temporarily by check on no-existing var
-                    $empty = '';
-
-                    if ($empty) { ?>
-                    <div class="columnar">
-                            <div class="card blog-newsletter columns-twelve">
-                                <div class="">
-                                    <h2 class="centered-text">
-                                        Get our newsletter in your inbox Monday through Friday.
-                                    </h2>
-                                </div>
-                                <div class="blog-newsletter-email">
-                                    <div class="text-input marketing with-button">
-                                        <input type="text" class="small-copy" placeholder="Email Address">
-                                        <label>Email Address</label>
-                                        <button class="salmon marketing">Submit</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    <div class="columnar">
-                        <div class="columns-twelve">
-                            <div class="pagination">
-                                <a href="#" class="active">1</a>
-                                <a href="#">2</a>
-                                <a href="#">3</a>
-                                <a href="#">
-                                    <img src="<?php echo $path; ?>/assets/icons/chevron-down.svg" alt="chevron">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <?php } ?>
-
-
                 </div>
             <?php } ?>
         </div>
-
         <?php
     }
 

@@ -11,7 +11,7 @@ if (!defined('ABSPATH')) {
 }
 
 
-class Blog extends Widget_Base
+class BlogTotallyAllArticlesPage extends Widget_Base
 {
 
     /**
@@ -25,7 +25,7 @@ class Blog extends Widget_Base
      */
     public function get_name()
     {
-        return 'blog';
+        return 'blog-totally-all-articles-page';
     }
 
     /**
@@ -39,7 +39,7 @@ class Blog extends Widget_Base
      */
     public function get_title()
     {
-        return __('[D.Korol] Blog Widget', 'elementor-header-bullet');
+        return __('[D.Korol] Blog Totally All Articles Page Widget', 'elementor-header-bullet');
     }
 
     /**
@@ -217,8 +217,8 @@ class Blog extends Widget_Base
                     ]);
 
                     foreach ($pageCategories as $key => $value) { ?>
-                        <li><a href="#category-<?php echo $key + 1 ?>" class="tab-selector"
-                               data-tab-selector="category-<?php echo $key + 1 ?>"><?php echo $value->post_title; ?></a>
+                        <li><a href="#category-<?php echo $key+1 ?>" class="tab-selector"
+                               data-tab-selector="category-<?php echo $key+1 ?>"><?php echo $value->post_title; ?></a>
                         </li>
                     <?php } ?>
                 </ul>
@@ -232,28 +232,58 @@ class Blog extends Widget_Base
                         <div class="breadcrumbs columns-twelve">
                             <a href="/">Home</a>
                             /
-                            <span>Blog</span>
+                            <a href="/blog"><span>Blog</span></a>
+                            /
+                            <span>All Articles</span>
                         </div>
                         <div class="columns-twelve">
-                            <h1>Blog</h1>
+                            <h1>All Articles</h1>
                         </div>
 
                     </div>
                 </div>
+                <div class="columnar category-item first">
 
-                <?php
-                include plugin_dir_path( __FILE__ ) . 'articles-blocks.php';
+                    <div class="blog-col-wrap columns-twelve">
 
-                // hide temporarily by check on no-existing var
-                $empty = '';
+                        <?php
+                        $pages = get_pages([
+                            'sort_order' => 'ASC',
+                            'sort_column' => 'date',
+                            'hierarchical' => 0,
+                            'parent' => [7095, 7092, 7096, 7097, 7098, 7099, 7115],
+//                            'number' => 3,
+                            'post_type' => 'page',
+                            'post_status' => 'publish',
+                        ]);
 
-                if ($empty) { ?>
-                    <div class="columnar">
-                        <div class="columns-twelve vertical-middle">
-                            <a href="#" class="link-button marketing perm-blue">Load More Articles</a>
-                        </div>
+                        foreach ($pages as $page) {
+                            $parts = parse_url($page->guid);
+                            parse_str($parts['query'], $query);
+                            $id = $query['page_id'];
+                            ?>
+                            <div class="columns-blog">
+                                <div class="blog-card card">
+                                    <div class="blog-card-thumb"><img
+                                                src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
+                                    </div>
+                                    <div class="blog-card-desc">
+                                        <div class="blog-card-cat">
+                                            <?php echo get_the_title($page->post_parent); ?>
+                                        </div>
+                                        <div class="blog-card-excerpt">
+                                            <?php echo $page->post_title; ?>
+                                        </div>
+                                        <a href="<?php echo get_page_link($id); ?>" class="blog-card-link test">
+                                            Read More
+                                            <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
                     </div>
-                <?php } ?>
+                </div>
 
             </div>
             <?php
@@ -264,7 +294,7 @@ class Blog extends Widget_Base
                     ]
                 );
                 ?>
-                <div data-tab="category-<?php echo $key + 1 ?>" class="category">
+                <div data-tab="category-<?php echo $key+1 ?>" class="category">
                     <div class="hero">
                         <div class="columnar">
                             <div class="breadcrumbs columns-twelve">
@@ -289,8 +319,7 @@ class Blog extends Widget_Base
                                 <div class="columns-blog">
                                     <div class="blog-card card">
                                         <div class="blog-card-thumb">
-                                            <img src="<?php echo get_the_post_thumbnail_url($categoryPage->ID,
-                                                'large'); ?>">
+                                            <img src="<?php echo get_the_post_thumbnail_url($categoryPage->ID, 'large'); ?>">
                                         </div>
                                         <div class="blog-card-desc">
                                             <div class="blog-card-cat">
@@ -315,7 +344,7 @@ class Blog extends Widget_Base
                     $empty = '';
 
                     if ($empty) { ?>
-                    <div class="columnar">
+                        <div class="columnar">
                             <div class="card blog-newsletter columns-twelve">
                                 <div class="">
                                     <h2 class="centered-text">
@@ -332,20 +361,19 @@ class Blog extends Widget_Base
                             </div>
                         </div>
 
-                    <div class="columnar">
-                        <div class="columns-twelve">
-                            <div class="pagination">
-                                <a href="#" class="active">1</a>
-                                <a href="#">2</a>
-                                <a href="#">3</a>
-                                <a href="#">
-                                    <img src="<?php echo $path; ?>/assets/icons/chevron-down.svg" alt="chevron">
-                                </a>
+                        <div class="columnar">
+                            <div class="columns-twelve">
+                                <div class="pagination">
+                                    <a href="#" class="active">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">
+                                        <img src="<?php echo $path; ?>/assets/icons/chevron-down.svg" alt="chevron">
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     <?php } ?>
-
 
                 </div>
             <?php } ?>
