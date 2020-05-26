@@ -46,6 +46,9 @@ $breakpoints: (
   @include respond-to(desktop) {
     height: 613px;
   }
+  @include respond-to(largedesktop) {
+    height: 750px;
+  }
   .text-wrap{
     padding-top: 150px;
     text-align: center;
@@ -56,6 +59,9 @@ $breakpoints: (
     @include respond-to(desktop) {
       padding-top: 198px;
       text-align: center;
+    }
+    @include respond-to(largedesktop) {
+      padding-top: 368px;
     }
     h2{
       font-family: Poppins;
