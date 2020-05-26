@@ -411,14 +411,14 @@
     padding: 28px 23px 37px 19px;
     max-width: 1024px;
     margin: 31px 0 -30px;
-      @include respond-to(tablet) {
-        margin: 67px 0 6px;
-        padding: 49px 59px 72px 61px;
-      }
-      @include respond-to(desktop) {
-        margin: 74px 0 11px;
-        padding: 72px 72px 26px 72px;
-      }
+    @include respond-to(tablet) {
+      margin: 67px 0 6px;
+      padding: 49px 59px 72px 61px;
+    }
+    @include respond-to(desktop) {
+      margin: 74px 0 11px;
+      padding: 72px 72px 26px 72px;
+    }
     h2 {
       font-size: 24px;
       letter-spacing: -0.3px;
@@ -705,7 +705,7 @@
       margin-top: 9px;
       padding: 0 32px;
       @include respond-to(tablet) {
-      padding: 0 32px;
+        padding: 0 32px;
       }
       @include respond-to(desktop) {
         padding: 0px;
@@ -813,39 +813,39 @@
       width: 119px;
       z-index: -1;
     }
-      .quote{
+    .quote{
+      color: #0D0D0D;
+      font-family: Poppins;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: -0.2px;
+      line-height: 26px;
+      border-top: 5px solid #07AFF2;
+      margin-left: 33px;
+      padding-top: 19px;
+      @include respond-to(tablet) {
         color: #0D0D0D;
         font-family: Poppins;
-        font-size: 18px;
+        font-size: 21px;
         font-weight: bold;
         letter-spacing: -0.2px;
         line-height: 26px;
         border-top: 5px solid #07AFF2;
         margin-left: 33px;
         padding-top: 19px;
-        @include respond-to(tablet) {
-          color: #0D0D0D;
-          font-family: Poppins;
-          font-size: 21px;
-          font-weight: bold;
-          letter-spacing: -0.2px;
-          line-height: 26px;
-          border-top: 5px solid #07AFF2;
-          margin-left: 33px;
-          padding-top: 19px;
-        }
+      }
 
-        @include respond-to(desktop) {
-          color: #0D0D0D;
-          font-family: Poppins;
-          font-size: 21px;
-          font-weight: bold;
-          letter-spacing: -0.2px;
-          line-height: 26px;
-          border-top: 5px solid #07AFF2;
-          margin-left: 33px;
-          padding-top: 19px;
-        }
+      @include respond-to(desktop) {
+        color: #0D0D0D;
+        font-family: Poppins;
+        font-size: 21px;
+        font-weight: bold;
+        letter-spacing: -0.2px;
+        line-height: 26px;
+        border-top: 5px solid #07AFF2;
+        margin-left: 33px;
+        padding-top: 19px;
+      }
     }
   }
   .wp-block-article {
@@ -1188,9 +1188,9 @@
 }
 
 .elementor-column-wrap {
- &.elementor-element-populated {
-   padding: 0 !important;
- }
+  &.elementor-element-populated {
+    padding: 0 !important;
+  }
 }
 
 .blog-col-wrap.columns-twelve {
