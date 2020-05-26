@@ -36,71 +36,1244 @@ $breakpoints: (
 }
 
 .ch1{
-  height: 950px;
+  height: 494px;
   background-image: url("./assets/chinalanding/hero.png");
   background-position: top;
   background-size: cover;
   @include respond-to(tablet) {
-    height: 950px;
+    height: 603px;
   }
   @include respond-to(desktop) {
     height: 613px;
   }
+  @include respond-to(largedesktop) {
+    height: 750px;
+  }
   .text-wrap{
-    padding-top: 198px;
+    padding-top: 150px;
     text-align: center;
+    @include respond-to(tablet) {
+      padding-top: 198px;
+      text-align: center;
+    }
+    @include respond-to(desktop) {
+      padding-top: 198px;
+      text-align: center;
+    }
+    @include respond-to(largedesktop) {
+      padding-top: 368px;
+    }
     h2{
       font-family: Poppins;
-      font-style: normal;
+      font-size: 30px;
       font-weight: 300;
-      font-size: 40px;
-      line-height: 44px;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.07;
+      letter-spacing: -0.6px;
       text-align: center;
-      letter-spacing: -1.2px;
-      color: #FFFFFF;
-      margin: 0;
-      padding-bottom: 24px;
+      color: #ffffff;
+      padding-bottom: 31px;
+      @include respond-to(tablet) {
+        font-size: 33px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.09;
+        letter-spacing: -0.8px;
+        text-align: center;
+        color: #ffffff;
+        padding-bottom: 31px;
+      }
+      @include respond-to(desktop) {
+        font-size: 40px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.1;
+        letter-spacing: -1.2px;
+        text-align: center;
+        color: #ffffff;
+        margin: 0;
+        padding-bottom: 24px;
+      }
     }
     .text{
       font-family: Poppins;
-      font-style: normal;
+      font-size: 18px;
       font-weight: normal;
-      font-size: 27px;
-      line-height: 35px;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.7;
+      letter-spacing: -0.1px;
       text-align: center;
-      letter-spacing: -0.257143px;
-
-      color: #FFFFFF;
-
+      color: #ffffff;
+      span{
+        font-weight: 700;
+      }
+      @include respond-to(tablet) {
+        font-size: 20px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 32px;
+        letter-spacing: -0.26px;
+        text-align: center;
+        color: #ffffff;
+      }
+      @include respond-to(desktop) {
+        font-size: 27px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 36px;
+        letter-spacing: -0.26px;
+        text-align: center;
+        color: #ffffff;
+      }
     }
     .buttons {
       text-align: center;
 
       a {
-        color: #FFFFFF;
-        font-family: Poppins;
-        font-size: 14px;
-        font-weight: bold;
-        letter-spacing: 0;
-        line-height: 20px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
         text-align: center;
-        border-radius: 18px;
-        background-color: #07AFF2;
-        box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+        color: #ffffff;
+        font-family: Poppins;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: normal;
         cursor: pointer;
         box-sizing: border-box;
         display: inline-block;
         text-decoration: none;
         z-index: 3;
-        height: 38px;
-        width: 200px;
-        padding-top: 9px;
+        padding-top: 13px;
         margin-top: 25px;
+        width: 220px;
+        height: 58px;
+        border-radius: 29px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+        background-color: #07aff2;
         @include respond-to(tablet) {
           margin-top: 47px;
         }
         @include respond-to(desktop) {
           margin-top: 47px;
+        }
+      }
+    }
+  }
+}
+.ch2{
+  padding: 31px 16px 24px;
+  background-color: #f2f2f2;
+  .info-wrap{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .logo-ali{
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      padding-bottom: 20px;
+      margin-right: 0px;
+      @include respond-to(tablet) {
+        width: 100%;
+        justify-content: center;
+        padding-bottom: 20px;
+        margin-right: 0px;
+      }
+      @include respond-to(desktop) {
+        width: auto;
+        justify-content: center;
+        padding-bottom: 0px;
+        margin-right: 10px;
+      }
+      img{
+        margin: auto 0;
+      }
+    }
+    .text{
+      font-family: Poppins;
+      font-size: 18px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.48;
+      letter-spacing: -0.2px;
+      color: #042430;
+      margin: auto 0;
+      padding-bottom: 0;
+      width: 100%;
+      text-align: center;
+      @include respond-to(tablet) {
+        font-size: 21px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.48;
+        letter-spacing: -0.2px;
+        color: #042430;
+        margin: auto 0;
+        padding-bottom: 20px;
+        width: 100%;
+        text-align: center;
+      }
+      @include respond-to(desktop) {
+        font-size: 21px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.48;
+        letter-spacing: -0.2px;
+        color: #042430;
+        margin: auto 0;
+        padding-bottom: 0;
+        width: auto;
+      }
+    }
+    .logo-wrap{
+      display: flex;
+      margin-left: 0px;
+      @include respond-to(tablet) {
+        margin-left: 0px;
+      }
+      @include respond-to(desktop) {
+        margin-left: 20px;
+      }
+      .logo{
+        margin: auto 10px;
+        @include respond-to(tablet) {
+          margin: auto 5px;
+        }
+        @include respond-to(desktop) {
+          margin: auto 5px;
+        }
+      }
+    }
+  }
+}
+
+
+
+.ch3{
+  padding: 53px 0 43px;
+  @include respond-to(tablet) {
+    padding: 71px 0 43px;
+  }
+  @include respond-to(desktop) {
+    padding: 71px 0 43px;
+  }
+  .title{
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: -0.99px;
+    text-align: center;
+    color: #0c0c0c;
+    padding-bottom: 50px;
+    @include respond-to(tablet) {
+      font-family: Poppins;
+      font-size: 33px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.33;
+      letter-spacing: -0.99px;
+      text-align: center;
+      color: #0c0c0c;
+      padding-bottom: 50px;
+    }
+    @include respond-to(desktop) {
+      font-family: Poppins;
+      font-size: 40px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.1;
+      letter-spacing: -1.2px;
+      text-align: center;
+      color: #0c0c0c;
+      padding-bottom: 50px;
+    }
+  }
+  .logo-wrap{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include respond-to(tablet) {
+      flex-wrap: nowrap;
+    }
+    @include respond-to(desktop) {
+      flex-wrap: nowrap;
+    }
+    .logo{
+      margin: auto;
+      width: 25%;
+      @include respond-to(tablet) {
+        margin: auto 20px;
+        width: auto;
+
+      }
+      @include respond-to(desktop) {
+        margin: auto 20px;
+        width: auto;
+
+      }
+      img{
+        margin: auto;
+        padding: 0 10px 10px;
+        @include respond-to(tablet) {
+          margin: auto;
+          padding: 0;
+
+        }
+        @include respond-to(desktop) {
+          margin: auto;
+          padding: 0;
+
+        }
+      }
+    }
+  }
+  .text{
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: 1.4;
+    letter-spacing: -0.25px;
+    text-align: center;
+    color: #747474;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    @include respond-to(tablet) {
+      font-family: Poppins;
+      font-size: 20px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: italic;
+      line-height: 1.4;
+      letter-spacing: -0.25px;
+      text-align: center;
+      color: #747474;
+      padding-top: 60px;
+      padding-bottom: 20px;
+    }
+    @include respond-to(desktop) {
+      font-family: Poppins;
+      font-size: 24px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: italic;
+      line-height: 1.17;
+      letter-spacing: -0.3px;
+      text-align: center;
+      color: #747474;
+      padding-top: 60px;
+      padding-bottom: 20px;
+    }
+  }
+  .buttons {
+    text-align: center;
+
+    a {
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.43;
+      letter-spacing: normal;
+      text-align: center;
+      color: #ffffff;
+      cursor: pointer;
+      box-sizing: border-box;
+      display: inline-block;
+      text-decoration: none;
+      z-index: 3;
+      padding-top: 9px;
+      margin-top: 60px;
+      width: 200px;
+      height: 38px;
+      border-radius: 18px;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+      background-color: #ff5f58;
+      @include respond-to(tablet) {
+        margin-top: 47px;
+      }
+      @include respond-to(desktop) {
+        margin-top: 47px;
+      }
+    }
+  }
+}
+
+
+
+
+.ch4{
+  padding: 90px 0 70px;
+  background-image: url("./assets/chinalanding/bg1.png");
+  background-size: cover;
+  background-position: top;
+  .logo{
+    display: flex;
+    img{
+      margin: auto;
+    }
+  }
+  .title{
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: -1.2px;
+    text-align: center;
+    color: #0c0c0c;
+    padding-top: 10px;
+    padding-bottom: 32px;
+    @include respond-to(tablet) {
+      padding-bottom: 52px;
+      font-size: 40px;
+    }
+
+    @include respond-to(desktop) {
+      padding-bottom: 32px;
+      font-size: 40px;
+    }
+    span{
+      font-weight: bold;
+    }
+  }
+  .items-wrap{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: inherit;
+    grid-row-gap: 32px;
+    @include respond-to(tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include respond-to(desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .card-item{
+      .number{
+        font-family: Poppins;
+        font-size: 40px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.1;
+        letter-spacing: -1.2px;
+        text-align: center;
+        color: #0c0c0c;
+        margin-bottom: 15px;
+        @include respond-to(tablet) {
+          font-family: Poppins;
+          font-size: 40px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.1;
+          letter-spacing: -1.2px;
+          text-align: center;
+          color: #0c0c0c;
+          margin-bottom: 15px;
+        }
+
+        @include respond-to(desktop) {
+          font-family: Poppins;
+          font-size: 40px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.1;
+          letter-spacing: -1.2px;
+          text-align: center;
+          color: #0c0c0c;
+          margin-bottom: 25px;
+        }
+      }
+      .card-title{
+        font-family: Poppins;
+        font-family: Poppins;
+        font-size: 32px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.88;
+        letter-spacing: -0.4px;
+        text-align: center;
+        color: #000000;
+        margin-bottom: 42px;
+        @include respond-to(tablet) {
+          font-family: Poppins;
+          font-family: Poppins;
+          font-size: 32px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 0.88;
+          letter-spacing: -0.4px;
+          text-align: center;
+          color: #000000;
+          margin-bottom: 42px;
+        }
+
+        @include respond-to(desktop) {
+          font-family: Poppins;
+          font-size: 39px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 0.72;
+          letter-spacing: -0.49px;
+          text-align: center;
+          color: #000000;
+          margin-bottom: 42px;
+        }
+      }
+      .img-wrap{
+        position: relative;
+        display: flex;
+        height: 230px;
+        margin-bottom: 15px;
+        @include respond-to(tablet) {
+          position: relative;
+          display: flex;
+          height: 230px;
+          margin-bottom: 15px;
+        }
+
+        @include respond-to(desktop) {
+          position: relative;
+          display: flex;
+          height: 339px;
+          margin-bottom: 15px;
+        }
+        img{
+          margin: auto;
+          z-index: 2;
+          height: 230px;
+          @include respond-to(tablet) {
+            height: 230px;
+          }
+
+          @include respond-to(desktop) {
+            height: 339px;
+          }
+        }
+        .circle{
+          width: 145px;
+          height: 145px;
+          object-fit: contain;
+          background-image: linear-gradient(to left, #2f73a7, #07aff2);
+          background-color: white;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-right: -50%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+          @include respond-to(tablet) {
+            width: 145px;
+            height: 145px;
+          }
+
+          @include respond-to(desktop) {
+            width: 204px;
+            height: 204px;
+          }
+        }
+      }
+      .text{
+        font-family: Poppins;
+        font-size: 17px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.91;
+        letter-spacing: -0.69px;
+        text-align: center;
+        color: #0c0c0c;
+        @include respond-to(tablet) {
+          font-family: Poppins;
+          font-size: 14px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.91;
+          letter-spacing: -0.69px;
+          text-align: center;
+          color: #0c0c0c;
+        }
+
+        @include respond-to(desktop) {
+          font-family: Poppins;
+          font-size: 19px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.91;
+          letter-spacing: -0.69px;
+          text-align: center;
+          color: #0c0c0c;
+        }
+        span{
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+.ch5{
+  padding: 51px 0 71px;
+  background-color: #267b9b;
+  background-image: url("./assets/chinalanding/cir.png");
+  background-size: cover;
+  background-position: center;
+  @include respond-to(tablet) {
+    padding: 67px 0 96px;
+  }
+
+  @include respond-to(desktop) {
+    padding: 116px 0 160px;
+  }
+  .title{
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: -0.99px;
+    text-align: center;
+    color: #ffffff;
+    padding-bottom: 20px;
+    @include respond-to(tablet) {
+      font-family: Poppins;
+      font-size: 33px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.33;
+      letter-spacing: -0.99px;
+      text-align: center;
+      color: #ffffff;
+      padding-bottom: 20px;
+    }
+
+    @include respond-to(desktop) {
+      font-family: Poppins;
+      font-size: 40px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.1;
+      letter-spacing: -1.2px;
+      text-align: center;
+      color: #ffffff;
+      padding-bottom: 20px;
+    }
+  }
+  .sub-title{
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: -0.25px;
+    text-align: center;
+    color: #ffffff;
+    padding-bottom: 60px;
+    @include respond-to(tablet) {
+      font-family: Poppins;
+      font-size: 20px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.4;
+      letter-spacing: -0.25px;
+      text-align: center;
+      color: #ffffff;
+      padding-bottom: 60px;
+    }
+
+    @include respond-to(desktop) {
+      font-family: Poppins;
+      font-size: 24px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.17;
+      letter-spacing: -0.3px;
+      text-align: center;
+      color: #ffffff;
+      padding-bottom: 60px;
+    }
+  }
+  .items-wrap{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: inherit;
+    grid-row-gap: 32px;
+    @include respond-to(tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include respond-to(desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .card-item{
+      padding: 21px;
+      display: block;
+      .card-title{
+        font-family: Poppins;
+        font-size: 21px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.48;
+        letter-spacing: -0.2px;
+        text-align: center;
+        color: #0d0d0d;
+        padding: 5px 0 14px;
+      }
+      .img-wrap{
+        display: flex;
+        height: 78px;
+        @include respond-to(tablet) {
+          height: 78px;
+        }
+        @include respond-to(desktop) {
+          height: 112px;
+        }
+        img{
+          margin: auto;
+          height: 78px;
+          object-fit: contain;
+          @include respond-to(tablet) {
+            height: 78px;
+          }
+          @include respond-to(desktop) {
+            height: 112px;
+          }
+        }
+      }
+      .text{
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: center;
+        color: #0d0d0d;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+.ch6{
+  padding: 56px 0 65px;
+  @include respond-to(tablet) {
+    padding: 85px 0 65px;
+  }
+  @include respond-to(desktop) {
+    padding: 85px 0 65px;
+  }
+  .title{
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: -1.2px;
+    text-align: center;
+    color: #0c0c0c;
+    padding-bottom: 30px;
+    @include respond-to(tablet) {
+      font-family: Poppins;
+      font-size: 40px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.1;
+      letter-spacing: -1.2px;
+      text-align: center;
+      color: #0c0c0c;
+      padding-bottom: 30px;
+    }
+    @include respond-to(desktop) {
+      font-family: Poppins;
+      font-size: 40px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.1;
+      letter-spacing: -1.2px;
+      text-align: center;
+      color: #0c0c0c;
+      padding-bottom: 30px;
+    }
+    span{
+      font-weight: bold;
+    }
+  }
+  .sub-title{
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: -0.3px;
+    text-align: center;
+    color: #0c0c0c;
+    padding-bottom: 40px;
+    @include respond-to(tablet) {
+      font-family: Poppins;
+      font-size: 24px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.17;
+      letter-spacing: -0.3px;
+      text-align: center;
+      color: #0c0c0c;
+      padding-bottom: 40px;
+    }
+
+    @include respond-to(desktop) {
+      font-family: Poppins;
+      font-size: 24px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.17;
+      letter-spacing: -0.3px;
+      text-align: center;
+      color: #0c0c0c;
+      padding-bottom: 40px;
+    }
+  }
+  .items-wrap{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    @include respond-to(tablet) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: inherit;
+    }
+
+    @include respond-to(desktop) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: inherit;
+    }
+    .card-item{
+      .card-title{
+        font-family: Poppins;
+        font-size: 12px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.48;
+        letter-spacing: -0.2px;
+        text-align: left;
+        color: #0d0d0d;
+        padding: 5px 0 0px;
+        opacity: .7;
+        @include respond-to(tablet) {
+          font-family: Poppins;
+          font-size: 12px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.48;
+          letter-spacing: -0.2px;
+          text-align: left;
+          color: #0d0d0d;
+          padding: 5px 0 0px;
+          opacity: .7;
+        }
+        @include respond-to(desktop) {
+          font-family: Poppins;
+          font-size: 16px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.48;
+          letter-spacing: -0.2px;
+          text-align: left;
+          color: #0d0d0d;
+          padding: 5px 0 0px;
+          opacity: .7;
+        }
+      }
+      .img-wrap{
+        display: flex;
+        img{
+          margin: auto;
+          height: 270px;
+          object-fit: contain;
+        }
+      }
+      .text{
+        font-family: Poppins;
+        font-size: 12px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: #0d0d0d;
+        opacity: .6;
+        @include respond-to(tablet) {
+          font-family: Poppins;
+          font-size: 12px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: #0d0d0d;
+          opacity: .6;
+        }
+        @include respond-to(desktop) {
+          font-family: Poppins;
+          font-size: 16px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: #0d0d0d;
+          opacity: .6;
+        }
+      }
+      .price{
+        font-family: Poppins;
+        font-size: 12px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: #0d0d0d;
+        opacity: .9;
+        padding-top: 5px;
+        span{
+          font-weight: bold;
+        }
+        @include respond-to(tablet) {
+          font-family: Poppins;
+          font-size: 12px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: #0d0d0d;
+          opacity: .9;
+          padding-top: 5px;
+        }
+        @include respond-to(desktop) {
+          font-family: Poppins;
+          font-size: 16px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          text-align: left;
+          color: #0d0d0d;
+          opacity: .9;
+          padding-top: 5px;
+        }
+      }
+      .buttons a {
+        width: 100%;
+        height: 38px;
+        background-color: #0075bf;
+        font-family: Poppins;
+        font-size: 13px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.43;
+        letter-spacing: normal;
+        text-align: center;
+        color: #ffffff;
+        display: block;
+        text-decoration: none;
+        border-radius: 4px;
+        padding-top: 10px;
+        margin-top: 20px;
+        @include respond-to(tablet) {
+          width: 100%;
+          height: 38px;
+          background-color: #0075bf;
+          font-family: Poppins;
+          font-size: 13px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.43;
+          letter-spacing: normal;
+          text-align: center;
+          color: #ffffff;
+          display: block;
+          text-decoration: none;
+          border-radius: 4px;
+          padding-top: 10px;
+          margin-top: 20px;
+        }
+        @include respond-to(desktop) {
+          width: 100%;
+          height: 43px;
+          background-color: #0075bf;
+          font-family: Poppins;
+          font-size: 14px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.43;
+          letter-spacing: normal;
+          text-align: center;
+          color: #ffffff;
+          display: block;
+          text-decoration: none;
+          border-radius: 4px;
+          padding-top: 10px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+  .buttons {
+    text-align: center;
+    a {
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.43;
+      letter-spacing: normal;
+      text-align: center;
+      color: #ffffff;
+      cursor: pointer;
+      box-sizing: border-box;
+      display: inline-block;
+      text-decoration: none;
+      z-index: 3;
+      padding-top: 9px;
+      margin-top: 60px;
+      width: 238px;
+      height: 38px;
+      border-radius: 18px;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+      background-color: #818286;
+      @include respond-to(tablet) {
+        margin-top: 47px;
+      }
+      @include respond-to(desktop) {
+        margin-top: 47px;
+      }
+    }
+  }
+}
+
+.ch7{
+  background-color: #f2f2f2;
+  padding: 19px 16px 40px;
+  @include respond-to(tablet) {
+    background-color: #f2f2f2;
+    padding: 50px 0 46px;
+  }
+  @include respond-to(desktop) {
+    background-color: #f2f2f2;
+    padding: 50px 0 46px;
+  }
+  .info-wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include respond-to(tablet) {
+      flex-wrap: nowrap;
+    }
+    @include respond-to(desktop) {
+      flex-wrap: nowrap;
+    }
+    .text{
+      font-family: Poppins;
+      font-size: 21px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.48;
+      letter-spacing: -0.2px;
+      text-align: center;
+      color: #042430;
+      margin: auto 0;
+      padding-right: 0px;
+      padding-bottom: 20px;
+      @include respond-to(tablet) {
+        font-family: Poppins;
+        font-size: 21px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.48;
+        letter-spacing: -0.2px;
+        text-align: center;
+        color: #042430;
+        margin: auto 0;
+        padding-right: 20px;
+        padding-bottom: 0px;
+      }
+      @include respond-to(desktop) {
+        font-family: Poppins;
+        font-size: 21px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.48;
+        letter-spacing: -0.2px;
+        text-align: center;
+        color: #042430;
+        margin: auto 0;
+        padding-right: 20px;
+        padding-bottom: 0px;
+      }
+    }
+    .logo-wrap{
+      display: flex;
+      .logo{
+        text-align: center;
+        margin: 0 10px;
+        @include respond-to(tablet) {
+          margin: 0 20px;
+        }
+        @include respond-to(desktop) {
+          margin: 0 20px;
+        }
+        img{
+          margin: auto;
+        }
+        .sub-title{
+          width: 100%;
+          font-family: Poppins;
+          font-size: 14px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.43;
+          letter-spacing: normal;
+          color: #0d0d0d;
+          text-align: center;
+          padding-top: 5px;
+        }
+      }
+    }
+  }
+}
+
+.ch8{
+  padding: 40px 16px 49px;
+  @include respond-to(tablet) {
+    padding: 58px 16px 63px;
+  }
+  @include respond-to(desktop) {
+    padding: 58px 16px 63px;
+  }
+  .info-wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include respond-to(tablet) {
+      flex-wrap: wrap;
+    }
+    @include respond-to(desktop) {
+      flex-wrap: nowrap;
+    }
+    .text{
+      font-family: Poppins;
+      font-size: 21px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.48;
+      letter-spacing: -0.2px;
+      text-align: center;
+      color: #042430;
+      margin: auto 0;
+      padding-right: 20px;
+      width: 100%;
+      padding-bottom: 35px;
+      @include respond-to(tablet) {
+        width: 100%;
+        padding-bottom: 35px;
+      }
+      @include respond-to(desktop) {
+        width: auto;
+        padding-bottom: 0px;
+      }
+    }
+    .logo-wrap{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      @include respond-to(tablet) {
+        flex-wrap: nowrap;
+      }
+      @include respond-to(desktop) {
+        flex-wrap: nowrap;
+      }
+      .logo{
+        text-align: center;
+        margin: 0 20px;
+        width: 35%;
+        padding-bottom: 15px;
+        @include respond-to(tablet) {
+          width: auto;
+          padding-bottom: 0px;
+        }
+        @include respond-to(desktop) {
+          width: auto;
+          padding-bottom: 0px;
+        }
+        img{
+          margin: auto;
         }
       }
     }
