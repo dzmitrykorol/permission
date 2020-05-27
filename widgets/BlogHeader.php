@@ -170,17 +170,33 @@ class BlogHeader extends Widget_Base {
     protected function render() {
         $path = '/wp-content/plugins/elementor-custom-widgets/';
 
-        $url = $_SERVER['REQUEST_URI'];
+        $currentUrl = $_SERVER['REQUEST_URI'];
         ?>
         <link href="/wp-content/plugins/elementor-custom-widgets/base.css" rel="stylesheet">
         <?php
-        if (strpos($url,'blog') !== false) { ?>
-            <style>
-                .elementor-section.elementor-section-boxed>.elementor-container {
-                    max-width: unset;
-                }
-            </style>
-        <?php } ?>
+        $oldPages = [
+                'shop-with-ask',
+                'blog',
+                'leaders',
+                'partners',
+                'technology',
+                'homepage',
+                'china-landing',
+                'ko',
+                'zh',
+        ];
+
+        foreach ($oldPages as $url) {
+            if (strpos($currentUrl, $url) !== false || is_front_page()) { ?>
+                <style>
+                    .elementor-section.elementor-section-boxed>.elementor-container {
+                        max-width: unset;
+                    }
+                </style>
+            <?php }
+        }
+
+        ?>
         <body class="body-blog">
         <div class="menu-overlay"></div>
         <header>
@@ -193,7 +209,7 @@ class BlogHeader extends Widget_Base {
                         <li class="mobile-only"><a href="https://my.permission.io" target="_blank">Log In</a></li>
                         <li class="mobile-only"><a href="https://my.permission.io/signup" target="_blank">Sign Up</a></li>
                         <li><a href="/">Developers</a></li>
-                        <li><a href="https://permission.io/shop-with-ask" target="_blank">Shop with ASK</a></li>
+                        <li><a href="/shop-with-ask" target="_blank">Shop with ASK</a></li>
                         <li><a href="/blog">Blog</a></li>
                         <li><a href="https://permission.gitlab.io/blockchain/testnet.html" target="_blank">Docs</a></li>
                         <li class="submenu" data-formenu="about"><div>About<svg width="11px" height="9px" viewBox="0 0 11 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -226,7 +242,9 @@ class BlogHeader extends Widget_Base {
                                 </g>
                             </svg>
                             <ul data-menu="languages">
-                                <li><a href="" ><img src="<?php echo $path; ?>/assets/icons/flag-us.png" data-language="cn">English</a></li>
+                                <li><a href="/" ><img src="<?php echo $path; ?>/assets/icons/flag-us.png" data-language="cn">English</a></li>
+                                <li><a href="/zh" ><img src="<?php echo $path; ?>/assets/icons/china-flag.jpg" data-language="cn">Chinese</a></li>
+                                <li><a href="/ko" ><img src="<?php echo $path; ?>/assets/icons/korean-flag.jpg" data-language="cn">Korean</a></li>
                             </ul>
                         </li>
                     </ul>

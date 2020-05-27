@@ -176,9 +176,6 @@ class Homepage extends Widget_Base
     protected function render()
     {
         $path = '/wp-content/plugins/elementor-custom-widgets/';
-
-
-
         ?>
         <link href="/wp-content/plugins/elementor-custom-widgets/base.css" rel="stylesheet">
         <div class="homepage">
@@ -217,19 +214,6 @@ class Homepage extends Widget_Base
             </div>
         </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         <section class="s2">
             <div class="columnar">
                 <div class="columns-twelve">
@@ -267,20 +251,6 @@ class Homepage extends Widget_Base
             </div>
         </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <section class="s3">
             <div class="video-block">
                 <div class="permission-secondary-video">
@@ -296,15 +266,6 @@ class Homepage extends Widget_Base
                 <div class="text">Permission is leading the Web Toward a New Engagement Model</div>
             </div>
         </section>
-
-
-
-
-
-
-
-
-
 
         <section class="s4">
             <div class="columnar">
@@ -337,12 +298,6 @@ class Homepage extends Widget_Base
             </div>
         </section>
 
-
-
-
-
-
-
         <section class="s5">
             <div class="columnar">
                 <div class="columns-six img-block">
@@ -355,8 +310,6 @@ class Homepage extends Widget_Base
                 </div>
             </div>
         </section>
-
-
 
         <section class="s6">
             <div class="columnar">
@@ -379,9 +332,6 @@ class Homepage extends Widget_Base
             </div>
         </section>
 
-
-
-
         <section class="s7">
             <div class="columnar">
                 <div class="home-col-wrap columns-twelve">
@@ -403,7 +353,6 @@ class Homepage extends Widget_Base
                 </div>
             </div>
         </section>
-
 
         <section class="s8">
             <div class="columnar">
@@ -437,70 +386,70 @@ class Homepage extends Widget_Base
 
                 <div class="team-container">
                     <figure>
-                        <img src="https://about.permission.io/wp-content/uploads/2019/08/charlie.png">
+                        <img src="/wp-content/uploads/2019/08/charlie.png">
                         <figcaption>
                             <h4>CHARLES H. SILVER</h4>
                             <span>CEO</span>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="https://about.permission.io/wp-content/uploads/2019/08/stephen.png">
+                        <img src="/wp-content/uploads/2019/08/stephen.png">
                         <figcaption>
                             <h4>STEVEN WILKINSON CISSP, CBP</h4>
                             <span>CISO</span>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="http://stageabout.local/wp-content/uploads/2020/04/Hunter-Jensen.png">
+                        <img src="/wp-content/uploads/2020/04/Hunter-Jensen.png">
                         <figcaption>
                             <h4>HUNTER JENSEN</h4>
                             <span>CTO</span>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="http://stageabout.local/wp-content/uploads/2020/04/bobby-v5.png">
+                        <img src="/wp-content/uploads/2020/04/bobby-v5.png">
                         <figcaption>
                             <h4>BOBBY PETERSEN</h4>
                             <span>VP OF MARKETING</span>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="https://about.stageabout.wpengine.com/wp-content/uploads/2019/08/Matt.png">
+                        <img src="/wp-content/uploads/2019/08/Matt.png">
                         <figcaption>
                             <h4>MATT ERHART</h4>
                             <span>VP OF FINANCE &amp; COMPLIANCE</span>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="https://about.stageabout.wpengine.com/wp-content/uploads/2019/08/therese.png">
+                        <img src="/wp-content/uploads/2019/08/therese.png">
                         <figcaption>
                             <h4>THERESE FAHY</h4>
                             <span>HR &amp; CONTROLLER</span>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="https://about.stageabout.wpengine.com/wp-content/uploads/2019/08/gary1.png">
+                        <img src="/wp-content/uploads/2019/08/gary1.png">
                         <figcaption>
                             <h4>GARY J. SHERMAN Ph.D</h4>
                             <span>FOUNDING MATHEMATICIAN</span>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="http://stageabout.local/wp-content/uploads/2020/04/Jennifer-Silver.png">
+                        <img src="/wp-content/uploads/2020/04/Jennifer-Silver.png">
                         <figcaption>
                             <h4>JENNY SILVER</h4>
                             <span>VP OF COMMUNICATIONS</span>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="https://about.stageabout.wpengine.com/wp-content/uploads/2019/08/daniel_hiltbrand.png">
+                        <img src="/wp-content/uploads/2019/08/daniel_hiltbrand.png">
                         <figcaption>
                             <h4>DANIEL HILTBRAND</h4>
                             <span>DEVELOPMENT ENGINEER</span>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="http://stageabout.local/wp-content/uploads/2020/04/Robert-Morris.png">
+                        <img src="/wp-content/uploads/2020/04/Robert-Morris.png">
                         <figcaption>
                             <h4>ROBERT MORRIS</h4>
                             <span>MARKETING MANAGER</span>
@@ -529,7 +478,7 @@ class Homepage extends Widget_Base
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="/wp-content/uploads/2019/08/Eric-1.png" data-src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
+                        <img src="/wp-content/uploads/2019/08/Eric-1.png" >
                         <figcaption>
                             <h4>ERIC ERVIN</h4>
                             <span>CEO OF BLOCKFORCE CAPITAL</span>
