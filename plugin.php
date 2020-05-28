@@ -82,6 +82,7 @@ class Plugin
         require_once __DIR__.'/widgets/HomepageChina.php';
         require_once __DIR__.'/widgets/HomepageKorean.php';
         require_once __DIR__.'/widgets/ChinaLandingChinese.php';
+        require_once __DIR__.'/widgets/ChinaLandingEnglish.php';
     }
 
     /**
@@ -110,6 +111,7 @@ class Plugin
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new HomepageChina());
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new HomepageKorean());
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new ChinaLandingChinese());
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new ChinaLandingEnglish());
     }
 
     /**
