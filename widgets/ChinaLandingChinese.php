@@ -12,7 +12,7 @@ if (!defined('ABSPATH')) {
 }
 
 
-class Chinalanding extends Widget_Base
+class ChinaLandingChinese extends Widget_Base
 {
 
     /**
@@ -26,7 +26,7 @@ class Chinalanding extends Widget_Base
      */
     public function get_name()
     {
-        return 'chinalanding';
+        return 'chinalanding_chinese';
     }
 
     /**
@@ -40,7 +40,7 @@ class Chinalanding extends Widget_Base
      */
     public function get_title()
     {
-        return __('[D.Korol] Chinalanding English Widget', 'elementor-header-bullet');
+        return __('[D.Korol] ChinaLanding Widget', 'elementor-header-bullet');
     }
 
     /**
@@ -75,22 +75,6 @@ class Chinalanding extends Widget_Base
     {
         return ['general'];
     }
-
-    /**
-     * Retrieve the list of scripts the widget depended on.
-     *
-     * Used to set scripts dependencies required to run the widget.
-     *
-     * @since 1.0.0
-     *
-     * @access public
-     *
-     * @return array Widget scripts dependencies.
-     */
-//    public function get_script_depends() {
-//        return [ 'elementor-hello-world' ];
-//    }
-
 
     /**
      * Register the widget controls.
@@ -162,7 +146,6 @@ class Chinalanding extends Widget_Base
         $this->end_controls_section();
     }
 
-
     /**
      * Render the widget output on the frontend.
      *
@@ -176,9 +159,6 @@ class Chinalanding extends Widget_Base
     protected function render()
     {
         $path = '/wp-content/plugins/elementor-custom-widgets/';
-
-
-
         ?>
         <link href="/wp-content/plugins/elementor-custom-widgets/base.css" rel="stylesheet">
         <div class="chinalanding">
@@ -186,10 +166,10 @@ class Chinalanding extends Widget_Base
                 <div class="columnar">
                     <div class="columns-twelve">
                         <div class="text-wrap">
-                            <h2>Shop & Earn Now</h2>
-                            <div class="text">350,000 Wallets to Date.<br>Create a wallet today and immediately EARN 100 <span>ASK</span>!</div>
+                            <h2>即刻开始购物并赚钱</h2>
+                            <div class="text">迄今已注册35万个钱包<br>注册钱包即可赢得100<span>ASK</span>!</div>
                             <div class="buttons">
-                                <a href="https://my.permission.io/signup" role="button" target="_blank"click="">Create a Wallet</a>
+                                <a href="https://my.permission.io/signup" role="button" target="_blank"click="">创建钱包</a>
                             </div>
                         </div>
                     </div>
@@ -199,7 +179,7 @@ class Chinalanding extends Widget_Base
             <section class="ch2">
                 <div class="info-wrap">
                     <div class="logo-ali"><img src="<?php echo $path; ?>assets/chinalanding/Aliexpress_logo.png"></div>
-                    <div class="text">available now with secure payment & international shipping</div>
+                    <div class="text">已上线，享受安全付款及全球运输</div>
                     <div class="logo-wrap">
                         <div class="logo"><img src="<?php echo $path; ?>assets/chinalanding/alipay.png"></div>
                         <div class="logo"><img src="<?php echo $path; ?>assets/chinalanding/ask.png"></div>
@@ -215,14 +195,14 @@ class Chinalanding extends Widget_Base
             <section class="ch3">
                 <div class="columnar">
                     <div class="columns-twelve">
-                        <div class="title">Shop Your Favorite Brands & Get Paid Now</div>
+                        <div class="title">现在就购买你喜爱的品牌，并获得奖励</div>
                         <div class="logo-wrap">
                             <div class="logo"><img src="<?php echo $path; ?>assets/chinalanding/snker.png"></div>
                             <div class="logo"><img src="<?php echo $path; ?>assets/chinalanding/mi.png"></div>
                             <div class="logo"><img src="<?php echo $path; ?>assets/chinalanding/ugreen.png"></div>
                             <div class="logo"><img src="<?php echo $path; ?>assets/chinalanding/livolo.png"></div>
                         </div>
-                        <div class="text">Coming Soon</div>
+                        <div class="text">即将入驻</div>
                         <div class="logo-wrap">
                             <div class="logo logo-nocolor"><img src="<?php echo $path; ?>assets/chinalanding/apple.png"></div>
                             <div class="logo logo-nocolor"><img src="<?php echo $path; ?>assets/chinalanding/logi.png"></div>
@@ -232,7 +212,7 @@ class Chinalanding extends Widget_Base
                             <div class="logo logo-nocolor"><img src="<?php echo $path; ?>assets/chinalanding/union.png"></div>
                         </div>
                         <div class="buttons">
-                            <a href="https://shopping.permission.io/" role="button" target="_blank"click="">Get Started</a>
+                            <a href="https://shopping.permission.io/" role="button" target="_blank"click="">开始</a>
                         </div>
                     </div>
                 </div>
@@ -244,37 +224,37 @@ class Chinalanding extends Widget_Base
                 <div class="columnar">
                     <div class="columns-twelve">
                         <div class="logo"><img src="<?php echo $path; ?>assets/chinalanding/pepm-ask.png"></div>
-                        <div class="title">Earn <span>ASK</span> Now</div>
+                        <div class="title">即刻赚取<span>ASK</span></div>
                     </div>
                 </div>
                 <div class="columnar">
                     <div class="columns-twelve items-wrap">
                         <div class="card-item">
                             <div class="number">1.</div>
-                            <div class="card-title">Sign Up</div>
+                            <div class="card-title">注册</div>
                             <div class="img-wrap">
                                 <img src="<?php echo $path; ?>assets/chinalanding/s4-1.png">
                                 <div class="circle"></div>
                             </div>
-                            <div class="text">Sign up, earn <span>ASK</span></div>
+                            <div class="text">注册，赢得<span>ASK</span></div>
                         </div>
                         <div class="card-item">
                             <div class="number">2.</div>
-                            <div class="card-title">Shop</div>
+                            <div class="card-title">购物</div>
                             <div class="img-wrap">
                                 <img src="<?php echo $path; ?>assets/chinalanding/s4-2.png">
                                 <div class="circle"></div>
                             </div>
-                            <div class="text">Shop for what you love, earn <span>ASK</span></div>
+                            <div class="text">购买你的所爱，赢得<span>ASK</span></div>
                         </div>
                         <div class="card-item">
                             <div class="number">3.</div>
-                            <div class="card-title">Refer</div>
+                            <div class="card-title">推荐</div>
                             <div class="img-wrap">
                                 <img src="<?php echo $path; ?>assets/chinalanding/s4-3.png">
                                 <div class="circle"></div>
                             </div>
-                            <div class="text">Refer friends, earn <span>ASK</span></div>
+                            <div class="text">推荐朋友，赢得<span>ASK</span></div>
                         </div>
                     </div>
                 </div>
@@ -286,8 +266,8 @@ class Chinalanding extends Widget_Base
             <section class="ch5">
                 <div class="columnar">
                     <div class="columns-twelve">
-                        <div class="title">More Ways To Earn ASK</div>
-                        <div class="sub-title">Coming Soon</div>
+                        <div class="title">赢得ASK的更多方式</div>
+                        <div class="sub-title">即将到来</div>
                     </div>
                 </div>
                 <div class="columnar">
@@ -295,17 +275,17 @@ class Chinalanding extends Widget_Base
                         <div class="card card-item">
                             <div class="img-wrap"><img src="<?php echo $path; ?>assets/chinalanding/ic1.png"></div>
                             <div class="card-title">permission.tv</div>
-                            <div class="text">Watch videos & earn</div>
+                            <div class="text">观看视频</div>
                         </div>
                         <div class="card card-item">
                             <div class="img-wrap"><img src="<?php echo $path; ?>assets/chinalanding/ic2.png"></div>
                             <div class="card-title">PermissionID</div>
-                            <div class="text">Build your own personal data store & earn</div>
+                            <div class="text">建立你的个人数据库</div>
                         </div>
                         <div class="card card-item">
                             <div class="img-wrap"><img src="<?php echo $path; ?>assets/chinalanding/ic3.png"></div>
                             <div class="card-title">Gaming</div>
-                            <div class="text">Play games and earn</div>
+                            <div class="text">玩游戏</div>
                         </div>
 
                     </div>
@@ -316,8 +296,8 @@ class Chinalanding extends Widget_Base
             <section class="ch6">
                 <div class="columnar">
                     <div class="columns-twelve">
-                        <div class="title">Pay With <span>ASK</span></div>
-                        <div class="sub-title">Redeem Your ASK For Electronics, Lifestyle Products, Permission.io Swag & More</div>
+                        <div class="title">用<span>ASK</span>支付</div>
+                        <div class="sub-title">用你的ASK可以兑换电子产品、生活用品、Permission.io礼品及更多</div>
                     </div>
                 </div>
                 <div class="columnar">
@@ -328,7 +308,7 @@ class Chinalanding extends Widget_Base
                             <div class="card-title">Bluetooth Smart Watch</div>
                             <div class="price">7000<span>ASK</span></div>
                             <div class="buttons">
-                                <a href="https://permission.io/product/oled-bluetooth-smart-watch/" role="button" target="_blank"click="">Shop Now</a>
+                                <a href="https://permission.io/product/oled-bluetooth-smart-watch/" role="button" target="_blank"click="">购买</a>
                             </div>
                         </div>
                         <div class="card-item">
@@ -337,7 +317,7 @@ class Chinalanding extends Widget_Base
                             <div class="card-title">Anker Wireless Earphones</div>
                             <div class="price">14000<span>ASK</span></div>
                             <div class="buttons">
-                                <a href="https://permission.io/product/anker-wireless-earphones/" role="button" target="_blank"click="">Shop Now</a>
+                                <a href="https://permission.io/product/anker-wireless-earphones/" role="button" target="_blank"click="">购买</a>
                             </div>
                         </div>
                         <div class="card-item">
@@ -346,7 +326,7 @@ class Chinalanding extends Widget_Base
                             <div class="card-title">Unisex Full Zip Hoodie</div>
                             <div class="price">15000<span>ASK</span>-17000<span>ASK</span></div>
                             <div class="buttons">
-                                <a href="https://permission.io/product/unisex-heavy-blend-full-zip-hooded-sweatshirt/" role="button" target="_blank"click="">Shop Now</a>
+                                <a href="https://permission.io/product/unisex-heavy-blend-full-zip-hooded-sweatshirt/" role="button" target="_blank"click="">购买</a>
                             </div>
                         </div>
                         <div class="card-item">
@@ -355,7 +335,7 @@ class Chinalanding extends Widget_Base
                             <div class="card-title">Smart LED Light Bulb</div>
                             <div class="price">4400<span>ASK</span></div>
                             <div class="buttons">
-                                <a href="https://permission.io/product/smart-led-light-bulb/" role="button" target="_blank"click="">Shop Now</a>
+                                <a href="https://permission.io/product/smart-led-light-bulb/" role="button" target="_blank"click="">购买</a>
                             </div>
                         </div>
                     </div>
@@ -363,7 +343,7 @@ class Chinalanding extends Widget_Base
                 <div class="columnar">
                     <div class="columns-twelve">
                         <div class="buttons">
-                            <a href="https://support.permission.io/" role="button" target="_blank"click="">Customer Support & FAQ’s</a>
+                            <a href="https://support.permission.io/" role="button" target="_blank"click="">客户支持及常见问题</a>
                         </div>
                     </div>
                 </div>
@@ -374,7 +354,7 @@ class Chinalanding extends Widget_Base
 
             <section class="ch7">
                 <div class="info-wrap">
-                    <div class="text">Powered by: </div>
+                    <div class="text">技术支持：</div>
                     <div class="logo-wrap">
                         <div class="logo"><img src="<?php echo $path; ?>assets/chinalanding/BigData.svg"><div class="sub-title">Big Data</div></div>
                         <div class="logo"><img src="<?php echo $path; ?>assets/chinalanding/Blockchain.svg"><div class="sub-title">Blockchain</div></div>
@@ -386,7 +366,7 @@ class Chinalanding extends Widget_Base
 
             <section class="ch8">
                 <div class="info-wrap">
-                    <div class="text">Our investors have invested into: </div>
+                    <div class="text">我们的投资者曾投资过：</div>
                     <div class="logo-wrap">
                         <div class="logo"><img src="<?php echo $path; ?>assets/chinalanding/Ripple-logo.png"></div>
                         <div class="logo"><img src="<?php echo $path; ?>assets/chinalanding/filecoin-logo.png"></div>
@@ -397,36 +377,6 @@ class Chinalanding extends Widget_Base
 
 
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <?php
     }

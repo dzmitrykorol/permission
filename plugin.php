@@ -79,8 +79,9 @@ class Plugin
         require_once __DIR__.'/widgets/BlogHeader.php';
         require_once __DIR__.'/widgets/BlogFooter.php';
         require_once __DIR__.'/widgets/Homepage.php';
-        require_once __DIR__.'/widgets/Chinalanding.php';
-        require_once __DIR__.'/widgets/ChinalandingChinese.php';
+        require_once __DIR__.'/widgets/HomepageChina.php';
+        require_once __DIR__.'/widgets/HomepageKorean.php';
+        require_once __DIR__.'/widgets/ChinaLandingChinese.php';
     }
 
     /**
@@ -106,8 +107,9 @@ class Plugin
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new BlogHeader());
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new BlogFooter());
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Homepage());
-        \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Chinalanding());
-        \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new ChinalandingChinese());
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new HomepageChina());
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new HomepageKorean());
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new ChinaLandingChinese());
     }
 
     /**
