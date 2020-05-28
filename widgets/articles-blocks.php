@@ -3,7 +3,7 @@ $path = '/wp-content/plugins/elementor-custom-widgets/';
 ?>
 <div class="columnar category-item <?php if (is_page('blog')) { echo 'first'; } ?>">
     <div class="columns-seven">
-        <h2>More articles about Permission</h2>
+        <h2>Articles about Permission</h2>
     </div>
     <div class="columns-ten-three">
         <a href="/blog" class="all-articles">
