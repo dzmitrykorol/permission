@@ -263,23 +263,30 @@ class BlogAllArticlesPage extends Widget_Base
                             $id = $query['page_id'];
                             ?>
                             <div class="columns-blog">
-                                <div class="blog-card card">
-                                    <div class="blog-card-thumb"><img
-                                                src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
-                                    </div>
-                                    <div class="blog-card-desc">
-                                        <div class="blog-card-cat">
-                                            <?php echo get_the_title($page->post_parent); ?>
+
+                                <a href="<?php echo get_page_link($id); ?>">
+
+                                    <div class="blog-card card">
+                                        <div class="blog-card-thumb"><img
+                                                    src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
                                         </div>
-                                        <div class="blog-card-excerpt">
-                                            <?php echo $page->post_title; ?>
+                                        <div class="blog-card-desc">
+                                            <div class="blog-card-cat">
+                                                <?php echo get_the_title($page->post_parent); ?>
+                                            </div>
+                                            <div class="blog-card-excerpt">
+                                                <?php echo $page->post_title; ?>
+                                            </div>
+                                            <div class="blog-card-link test">
+                                                Read More
+                                                <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
+                                            </div>
                                         </div>
-                                        <a href="<?php echo get_page_link($id); ?>" class="blog-card-link test">
-                                            Read More
-                                            <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                        </a>
                                     </div>
-                                </div>
+                                </a>
+
+
+
                             </div>
                         <?php } ?>
                     </div>
