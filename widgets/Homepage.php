@@ -40,7 +40,7 @@ class Homepage extends Widget_Base
      */
     public function get_title()
     {
-        return __('[D.Korol] Homepage Widget', 'elementor-header-bullet');
+        return __('[D.Korol] English Homepage Widget', 'elementor-header-bullet');
     }
 
     /**
@@ -75,22 +75,6 @@ class Homepage extends Widget_Base
     {
         return ['general'];
     }
-
-    /**
-     * Retrieve the list of scripts the widget depended on.
-     *
-     * Used to set scripts dependencies required to run the widget.
-     *
-     * @since 1.0.0
-     *
-     * @access public
-     *
-     * @return array Widget scripts dependencies.
-     */
-//    public function get_script_depends() {
-//        return [ 'elementor-hello-world' ];
-//    }
-
 
     /**
      * Register the widget controls.
