@@ -239,8 +239,8 @@ class Homepage extends Widget_Base
             <div class="video-block">
                 <div class="permission-secondary-video">
                     <iframe id="perm-sec-video" src="https://player.vimeo.com/video/366780942" width="640" height="360" frameborder="0" allow="autoplay;"></iframe>
-                    <div class="overlay">
-                        <div class="play-icon">
+                    <div id="overlay-v2" class="overlay">
+                        <div class="play-icon" id="play-icon-id" >
                             <img src="<?php echo $path; ?>assets/icons/Play_Icon.svg">
                         </div>
                     </div>
@@ -810,11 +810,22 @@ class Homepage extends Widget_Base
 
         </script>
 
+
+
         <script>
+
+            $("#play-icon-id").click(function(){
+                $("#overlay-v2").addClass("remove");
+            });
+
+
+
             (function() {
                 var player = new Vimeo.Player(document.querySelector('#perm-sec-video'));
 
                 var overlay = document.querySelector('.permission-secondary-video .overlay');
+
+
 
                 function handleClick(evt) {
                     evt.target.style.display = 'none';
@@ -822,6 +833,7 @@ class Homepage extends Widget_Base
                 };
 
                 overlay[bindEvent]('click', handleClick.bind(this));
+
             })()
         </script>
 

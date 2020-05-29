@@ -24,7 +24,9 @@ $breakpoints: (
 }
 
 
-
+.chinalanding {
+  margin-top: -1px;
+}
 .columnar {
   grid-template-columns: repeat(4, [col-start] 1fr);
   @include respond-to(tablet) {
@@ -734,16 +736,26 @@ $breakpoints: (
     grid-template-columns: repeat(1, 1fr);
     grid-column-gap: inherit;
     grid-row-gap: 32px;
+    margin: 0 28px;
     @include respond-to(tablet) {
       grid-template-columns: repeat(3, 1fr);
+      margin: 0px;
     }
 
     @include respond-to(desktop) {
       grid-template-columns: repeat(3, 1fr);
+      margin: 0;
     }
     .card-item{
-      padding: 21px;
+      padding: 28px;
       display: block;
+      @include respond-to(tablet) {
+        padding: 21px;
+      }
+
+      @include respond-to(desktop) {
+        padding: 21px;
+      }
       .card-title{
         font-family: Poppins;
         font-size: 21px;

@@ -221,7 +221,7 @@ class BlogFooter extends Widget_Base {
                                     src="https://cdn.permission.io/apps/permissionbase/assets/logos/facebook.svg"></a>
                         <a href="https://medium.com/permissionio" class="medium" target="_blank"><img
                                     src="https://cdn.permission.io/apps/permissionbase/assets/logos/medium.svg"></a>
-                        <a href="https://www.reddit.com/r/PermissionIO" target="_blank"><img
+                        <a href="https://t.me/permission_io" target="_blank"><img
                                     src="https://cdn.permission.io/apps/permissionbase/assets/logos/telegram.svg"></a>
                         <a href="https://www.reddit.com/r/PermissionIO" target="_blank"><img
                                     src="https://cdn.permission.io/apps/permissionbase/assets/logos/reddit.svg"></a>
