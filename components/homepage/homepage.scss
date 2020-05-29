@@ -27,7 +27,12 @@ $breakpoints: (
 
 
 
-
+.homepage{
+  margin-top: -1px;
+  .remove{
+    display: none;
+  }
+}
 
 
 
