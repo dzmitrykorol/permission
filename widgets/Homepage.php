@@ -178,7 +178,7 @@ class Homepage extends Widget_Base
                                         </div>
                                         <h2>Permission’s blockchain and cryptocurrency enable you to <span">own, control</span> and <span>profit</span> from your time and personal information.</h2>
                                         <div class="buttons">
-                                            <a href="https://shopping.stageabout.wpengine.com" role="button" target="_blank"click="">Join Us Now</a>
+                                            <a href="https://shopping.permission.io/" role="button" target="_blank"click="">Join Us Now</a>
                                         </div>
                                         <div class="social-icons">
                                             <a href="#"><img src="<?php echo $path; ?>assets/icons/TelegramLogo.svg">Telegram Chat</a>
@@ -226,7 +226,7 @@ class Homepage extends Widget_Base
                         <p class="content">Permission blockchain provides accountability and transparency, eliminating ad spend waste.</p>
                     </div>
                     <div class="buttons">
-                        <a href="https://shopping.stageabout.wpengine.com" role="button" target="_blank"click="">Start Earning Now</a>
+                        <a href="https://shopping.permission.com" role="button" target="_blank"click="">Start Earning Now</a>
                     </div>
                 </div>
                 <div class="columns-four-eight">
@@ -310,7 +310,7 @@ class Homepage extends Widget_Base
                     <div class="text">Empowers consumers to <span>profit from their time and data</span> without giving up control</div>
                     <div class="text">Enables businesses to earn <span>trust</span> and <span>loyalty</span> by asking permission and rewarding customers for their engagement, leading to <span>long-term relationships</span> and <span>increased ROI</span></div>
                     <div class="buttons">
-                        <a href="https://shopping.stageabout.wpengine.com" role="button" target="_blank"click="">Start Earning Now</a>
+                        <a href="https://shopping.permission.com" role="button" target="_blank"click="">Start Earning Now</a>
                     </div>
                 </div>
             </div>

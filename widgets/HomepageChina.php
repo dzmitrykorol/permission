@@ -196,7 +196,7 @@ class HomepageChina extends Widget_Base
                                             </div>
                                             <h2>Permission的区块链和加密货币使您能够拥有、控制自己的时间和个人信息并从中获利。</h2>
                                             <div class="buttons">
-                                                <a href="https://shopping.stageabout.wpengine.com" role="button" target="_blank"click="">现在加入</a>
+                                                <a href="https://shopping.permission.io/" role="button" target="_blank"click="">现在加入</a>
                                             </div>
                                             <div class="social-icons">
                                                 <a href="#"><img src="<?php echo $path; ?>assets/icons/TelegramLogo.svg">Telegram Chat</a>
@@ -243,7 +243,7 @@ class HomepageChina extends Widget_Base
                             <p class="content">Permission区块链提供责任感和透明度，消除了广告支出浪费。</p>
                         </div>
                         <div class="buttons">
-                            <a href="https://shopping.stageabout.wpengine.com" role="button" target="_blank"click="">Start Earning Now</a>
+                            <a href="https://shopping.permission.io/" role="button" target="_blank"click="">Start Earning Now</a>
                         </div>
                     </div>
                     <div class="columns-four-eight">
@@ -327,7 +327,7 @@ class HomepageChina extends Widget_Base
                         <div class="text">使消费者能够从他们的时间和数据中获利而无需放弃控制</div>
                         <div class="text">通过征求许可和奖励客户的参与，使企业赢得 <span>信任</span> 和 <span>忠诚</span> b从而建立<span>长期关系</span> 并 <span>提高ROI</span></div>
                         <div class="buttons">
-                            <a href="https://shopping.stageabout.wpengine.com" role="button" target="_blank"click="">Start Earning Now</a>
+                            <a href="https://shopping.permission.com" role="button" target="_blank"click="">Start Earning Now</a>
                         </div>
                     </div>
                 </div>

@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
-class BlogHeader extends Widget_Base {
+class BlogHeaderChinese extends Widget_Base {
 
     /**
      * Retrieve the widget name.
@@ -23,7 +23,7 @@ class BlogHeader extends Widget_Base {
      * @return string Widget name.
      */
     public function get_name() {
-        return 'blog-header';
+        return 'blog-header-chinese';
     }
 
     /**
@@ -36,7 +36,7 @@ class BlogHeader extends Widget_Base {
      * @return string Widget title.
      */
     public function get_title() {
-        return __( '[D.Korol] Blog Header Widget', 'elementor-header-bullet' );
+        return __( '[D.Korol] Blog Header Chinese Widget', 'elementor-header-bullet' );
     }
 
     /**
@@ -69,6 +69,7 @@ class BlogHeader extends Widget_Base {
     public function get_categories() {
         return [ 'general' ];
     }
+
 
     /**
      * Register the widget controls.
@@ -152,8 +153,8 @@ class BlogHeader extends Widget_Base {
      */
 
     protected function render() {
-        global $post;
         $path = '/wp-content/plugins/elementor-custom-widgets/';
+
         $currentUrl = $_SERVER['REQUEST_URI'];
         ?>
         <link href="/wp-content/plugins/elementor-custom-widgets/base.css" rel="stylesheet">
@@ -231,8 +232,7 @@ class BlogHeader extends Widget_Base {
                                 default : ?>
                                     <img src="<?php echo $path; ?>/assets/icons/flag-us.png" class="current-language">
                                 <?php } ?>
-                            <svg width="11px" height="9px" viewBox="0 0 11 9" version="1.1"
-                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <svg width="11px" height="9px" viewBox="0 0 11 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                     <g class="fill-group" transform="translate(-684.000000, -355.000000)" fill-rule="nonzero">
                                         <g transform="translate(684.000000, 355.000000)">
@@ -242,14 +242,9 @@ class BlogHeader extends Widget_Base {
                                 </g>
                             </svg>
                             <ul data-menu="languages">
-                                <?php
-                                if (isset($GLOBALS["polylang"])) {
-                                    $translations = $GLOBALS["polylang"]->model->post->get_translations($post->ID);
-                                }
-                                ?>
-                                <li><a href="<?php if ($translations['en']) {echo get_permalink($translations['en']);} else { echo '#';}  ?>" ><img src="<?php echo $path; ?>/assets/icons/flag-us.png" data-language="cn">English</a></li>
-                                <li><a href="<?php if ($translations['zh']) {echo get_permalink($translations['zh']);} else { echo '#';}  ?>" ><img src="<?php echo $path; ?>/assets/icons/china-flag.jpg" data-language="cn">Chinese</a></li>
-                                <li><a href="<?php if ($translations['ko']) {echo get_permalink($translations['ko']);} else { echo '#';}  ?>" ><img src="<?php echo $path; ?>/assets/icons/korean-flag.jpg" data-language="cn">Korean</a></li>
+                                <li><a href="/" ><img src="<?php echo $path; ?>/assets/icons/flag-us.png" data-language="cn">English</a></li>
+                                <li><a href="/zh" ><img src="<?php echo $path; ?>/assets/icons/china-flag.jpg" data-language="cn">Chinese</a></li>
+                                <li><a href="/ko" ><img src="<?php echo $path; ?>/assets/icons/korean-flag.jpg" data-language="cn">Korean</a></li>
                             </ul>
                         </li>
                     </ul>

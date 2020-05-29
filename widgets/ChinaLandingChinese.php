@@ -158,7 +158,13 @@ class ChinaLandingChinese extends Widget_Base
 
     protected function render()
     {
+        global $post;
         $path = '/wp-content/plugins/elementor-custom-widgets/';
+        if (isset($GLOBALS["polylang"])) {
+            $translations = $GLOBALS["polylang"]->model->post->get_translations($post->ID);
+
+        }
+
         ?>
         <link href="/wp-content/plugins/elementor-custom-widgets/base.css" rel="stylesheet">
         <div class="chinalanding">

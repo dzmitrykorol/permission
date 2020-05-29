@@ -77,6 +77,7 @@ class Plugin
         require_once __DIR__.'/widgets/BlogTotallyAllArticlesPage.php';
         require_once __DIR__.'/widgets/BlogTags.php';
         require_once __DIR__.'/widgets/BlogHeader.php';
+        require_once __DIR__.'/widgets/BlogHeaderChinese.php';
         require_once __DIR__.'/widgets/BlogFooter.php';
         require_once __DIR__.'/widgets/Homepage.php';
         require_once __DIR__.'/widgets/HomepageChina.php';
@@ -106,6 +107,7 @@ class Plugin
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new BlogTags());
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new BlogTotallyAllArticlesPage());
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new BlogHeader());
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new BlogHeaderChinese());
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new BlogFooter());
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Homepage());
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new HomepageChina());
