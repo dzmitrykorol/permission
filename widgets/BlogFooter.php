@@ -189,7 +189,7 @@ class BlogFooter extends Widget_Base {
                 <div class="columns-four-three">
                     <h2>Resources</h2>
                     <ul>
-                        <li><a href="https://permission.io/permission-foundation-technical-whitepaper_012920/" target="_blank">Whitepaper</a></li>
+                        <li><a href="https://cdn.permission.io/about/Permission-Foundation-Technical-Whitepaper.pdf" target="_blank">Whitepaper</a></li>
                         <li><a href="https://permission.io/technology" target="_blank">Technology</a></li>
                         <li><a href="https://permission.io/team" target="_blank">An Exceptional Team</a></li>
                         <li><a href="https://permission.io/careers" target="_blank">Careers</a></li>
@@ -279,7 +279,7 @@ class BlogFooter extends Widget_Base {
                 <div class="columns-four-three">
                     <h2>Resources</h2>
                     <ul>
-                        <li><a href="https://permission.io/permission-foundation-technical-whitepaper_012920/" target="_blank">Whitepaper</a></li>
+                        <li><a href="https://cdn.permission.io/about/Permission-Foundation-Technical-Whitepaper.pdf" target="_blank">Whitepaper</a></li>
                         <li><a href="https://permission.io/technology" target="_blank">Technology</a></li>
                         <li><a href="https://permission.io/team" target="_blank">An Exceptional Team</a></li>
                         <li><a href="https://permission.io/careers" target="_blank">Careers</a></li>

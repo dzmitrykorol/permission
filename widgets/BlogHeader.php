@@ -225,7 +225,7 @@ class BlogHeader extends Widget_Base {
                             <ul data-menu="about">
                                 <li><a href="https://permission.io/leaders" target="_blank">Team</a></li>
                                 <li><a href="https://permission.io/partners" target="_blank">Partners</a></li>
-                                <li><a href="https://permission.io/wp-content/uploads/2020/01/Permission-Foundation-Technical-Whitepaper_012920.pdf" target="_blank">Whitepaper</a></li>
+                                <li><a href="https://cdn.permission.io/about/Permission-Foundation-Technical-Whitepaper.pdf" target="_blank">Whitepaper</a></li>
                                 <li><a href="https://permission.io/technology" target="_blank">Patents</a></li>
                             </ul>
                         </li>
@@ -333,7 +333,7 @@ class BlogHeader extends Widget_Base {
                             <li><a href="https://permission.io/leaders" target="_blank">Team</a></li>
                             <li><a href="https://permission.io/partners" target="_blank">Partners</a></li>
                             <li>
-                                <a href="https://permission.io/wp-content/uploads/2020/01/Permission-Foundation-Technical-Whitepaper_012920.pdf"
+                                <a href="https://cdn.permission.io/about/Permission-Foundation-Technical-Whitepaper.pdf"
                                    target="_blank">Whitepaper</a></li>
                             <li><a href="https://permission.io/technology" target="_blank">Patents</a></li>
                         </ul>

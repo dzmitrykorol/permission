@@ -26,7 +26,7 @@ class ChinaLandingEnglish extends Widget_Base
      */
     public function get_name()
     {
-        return 'chinalanding_chinese';
+        return 'chinalanding_english';
     }
 
     /**
