@@ -194,9 +194,9 @@ class HomepageChina extends Widget_Base
                                         <div class="floating-text">
                                             <div class="play-icon"><img src="<?php echo $path; ?>assets/icons/Play_Icon.svg">
                                             </div>
-                                            <h2>Permission’s blockchain and cryptocurrency enable you to <span">own, control</span> and <span>profit</span> from your time and personal information.</h2>
+                                            <h2>Permission的区块链和加密货币使您能够拥有、控制自己的时间和个人信息并从中获利。</h2>
                                             <div class="buttons">
-                                                <a href="https://shopping.stageabout.wpengine.com" role="button" target="_blank"click="">Join Us Now</a>
+                                                <a href="https://shopping.stageabout.wpengine.com" role="button" target="_blank"click="">现在加入</a>
                                             </div>
                                             <div class="social-icons">
                                                 <a href="#"><img src="<?php echo $path; ?>assets/icons/TelegramLogo.svg">Telegram Chat</a>
@@ -219,36 +219,35 @@ class HomepageChina extends Widget_Base
             <section class="s2">
                 <div class="columnar">
                     <div class="columns-twelve">
-                        <div class="title">Think of Permission as your digital “agent.”</div>
-                        <div class="sub-title">We make it easy for you to receive value for your time and data while engaging with the web as you normally do.</div>
+                        <div class="title">将Permission视为您的数字“代理”。</div>
+                        <div class="sub-title">与平常一样，我们使您可以轻松地在与网络互动的同时通过您的时间和数据获得价值。</div>
                     </div>
                 </div>
                 <div class="columnar tabs-home">
                     <ul class="tabs__caption columns-twelve">
-                        <li class="active">For Members</li>
-                        <li>For Brands</li>
+                        <li class="active">对于会员：</li>
+                        <li>对于商家：</li>
                     </ul>
                     <div class="columns-six">
                         <div class="tabs__content  active">
-                            <div class="name">For Members</div>
-                            <p class="content">Be part of a consumer-focused community that values transparency and trust</p>
-                            <p class="content">Permission your data to brands and service providers and be paid for data you choose to share while shopping, being entertained, and other online engagement</p>
-                            <p class="content">Opt-in to interact with brands on an unobtrusive basis and receive content that is personalized and relevant</p>
-                            <p class="content">Know that your data is secure, anonymized, and never (ever) sold to third parties</p>
+                            <div class="name">对于会员：</div>
+                            <p class="content">成为重视透明度和信任的、以消费者为中心的社区的一部分</p>
+                            <p class="content">向品牌商和服务提供商授予您的数据许可权，并利用您选择在购物，娱乐和其他在线互动时共享的数据获得收入</p>
+                            <p class="content">选择加入即可与品牌进行互动，并获得个性化且相关的内容</p>
+                            <p class="content">知道您的数据是安全的，匿名的，并且永远不会出售给第三方</p>
                         </div>
                         <div class="tabs__content">
                             <div class="name">For Brands</div>
-                            <p class="content">
-                                Value exchange advertising achieves 1:1 engagement and a holistic view of members’ needs and desires in real time.</p>
-                            <p class="content">The ability to identify and reward members based on their permissioned data leads to brand loyalty and increased ROI.</p>
-                            <p class="content">Permission blockchain provides accountability and transparency, eliminating ad spend waste.</p>
+                            <p class="content">价值交换广告可实现1：1互动，并实时全面了解会员的需求。</p>
+                            <p class="content">通过成员的许可数据识别和奖励成员，可提高品牌忠诚度并提高投入回报率（ROI）。</p>
+                            <p class="content">Permission区块链提供责任感和透明度，消除了广告支出浪费。</p>
                         </div>
                         <div class="buttons">
                             <a href="https://shopping.stageabout.wpengine.com" role="button" target="_blank"click="">Start Earning Now</a>
                         </div>
                     </div>
                     <div class="columns-four-eight">
-                        <img src="https://permission.io/wp-content/uploads/2019/11/heroCatalogue.png">
+                        <img src="/wp-content/uploads/2020/05/Phone-China.png">
                     </div>
                 </div>
             </section>
@@ -265,27 +264,27 @@ class HomepageChina extends Widget_Base
                     </div>
                 </div>
                 <div class="text-block">
-                    <div class="text">Permission is leading the Web Toward a New Engagement Model</div>
+                    <div class="text">Permission正在引导网络迈向新的参与模式</div>
                 </div>
             </section>
 
             <section class="s4">
                 <div class="columnar">
                     <div class="columns-twelve">
-                        <div class="title">The Staus Quo</div>
-                        <div class="sub-title">Merchants pay centralized third-party platforms to show you their products, interrupting you and exploiting your data in the process.  Tech giants yield mind-boggling profits while <span>you gain zero financial benefit from your time and information.</span></div>
+                        <div class="title">现状</div>
+                        <div class="sub-title">商家付费使用集中的第三方平台向您展示他们的产品，从而打扰您上网并利用您的数据。在您从时间和信息中获得零财务收益的同时，科技巨头产生了令人难以置信的利润。</span></div>
                     </div>
                 </div>
                 <div class="columnar content-wrapper">
                     <div class="columns-five">
                         <div class="title-color color-blue">60%</div>
-                        <div class="text">of millennials have installed ad blockers to escape chronic interruptions</div>
+                        <div class="text">的千禧一代安装了广告拦截器，以逃避长期的干扰</div>
                         <div class="title-color">87%</div>
-                        <div class="text">of consumers would opt out of having their personal information sold to third parties</div>
-                        <div class="title-color color-orange">8x</div>
-                        <div class="text">attention has escalated by a factor of 8 in the past 2 decades</div>
+                        <div class="text">的消费者会选择不将其个人信息出售给第三方</div>
+                        <div class="title-color color-orange">8倍</div>
+                        <div class="text">在过去的20年中，获得消费者关注的成本已经上升了8倍</div>
                         <div class="title-color color-blue">50B</div>
-                        <div class="text">stimated global loss in 2020 due to bots and click fraud</div>
+                        <div class="text">估计到2020年，由于漫游器和点击欺诈而造成的全球损失</div>
                     </div>
                     <div class="columns-six-seven">
                         <img src="<?php echo $path; ?>assets/ad_revenue_piechart.svg">
@@ -294,7 +293,7 @@ class HomepageChina extends Widget_Base
                 <div class="columnar">
                     <div class="columns-twelve">
                         <div class="text-bottom">
-                            Google, Amazon, and Facebook dominate the web and take nearly 70% of all ad dollars, while <span>shrinking your choices</span> and suffocating merchants with declining ROI and a lack of transparency about whether their ad dollars are spent on real people.
+                            Google，Amazon和Facebook主导着网络，并占据了所有广告收入的近70％，同时由于ROI下降以及广告费用是否花在真实人群上而缺乏透明度，从而缩小了选择范围，并给商家造成了困扰。
                         </div>
                     </div>
                 </div>
@@ -304,10 +303,10 @@ class HomepageChina extends Widget_Base
                 <div class="columnar">
                     <div class="columns-six img-block">
                         <div class="img-wrap"><img src="<?php echo $path; ?>assets/Illustration.png"></div>
-                        <div class="text">Own Your Data™</div>
+                        <div class="text">拥有您的数据™</div>
                     </div>
                     <div class="content-block columns-five-eight">
-                        <div class="text">Permission.io is changing the status quo with <span>ASK</span>,™ <span>the Standard Currency for Permission</span></div>
+                        <div class="text">Permission.io正在通过Permission网络上的标准数字货币ASK更改现状，™</span></div>
                         <div class="img-wrap"><img src="<?php echo $path; ?>assets/icons/s5-ask.svg"></div>
                     </div>
                 </div>
@@ -316,7 +315,7 @@ class HomepageChina extends Widget_Base
             <section class="s6">
                 <div class="columnar">
                     <div class="columns-twelve">
-                        <div class="title"><span>ASK</span> fuels an ecosystem for sellers and buyers to engage on a permission basis</div>
+                        <div class="title"><span>ASK</span> 促进了买卖双方在许可基础上参与的生态系统</div>
                     </div>
                 </div>
                 <div class="columnar content-wrapper">
@@ -324,9 +323,9 @@ class HomepageChina extends Widget_Base
                         <img src="<?php echo $path; ?>assets/handphone.png">
                     </div>
                     <div class="columns-four-eight">
-                        <div class="sub-title">Join Us</div>
-                        <div class="text">Empowers consumers to <span>profit from their time and data</span> without giving up control</div>
-                        <div class="text">Enables businesses to earn <span>trust</span> and <span>loyalty</span> by asking permission and rewarding customers for their engagement, leading to <span>long-term relationships</span> and <span>increased ROI</span></div>
+                        <div class="sub-title">现在加入</div>
+                        <div class="text">使消费者能够从他们的时间和数据中获利而无需放弃控制</div>
+                        <div class="text">通过征求许可和奖励客户的参与，使企业赢得 <span>信任</span> 和 <span>忠诚</span> b从而建立<span>长期关系</span> 并 <span>提高ROI</span></div>
                         <div class="buttons">
                             <a href="https://shopping.stageabout.wpengine.com" role="button" target="_blank"click="">Start Earning Now</a>
                         </div>
@@ -339,18 +338,19 @@ class HomepageChina extends Widget_Base
                     <div class="home-col-wrap columns-twelve">
                         <div class="card card-home">
                             <div class="img-wrap"><img src="<?php echo $path; ?>assets/icons/card3.svg"></div>
-                            <div class="title">Revolutionizing Rewards</div>
-                            <div class="text"><span>ASK</span> is a currency that can be earned, traded and spent at the time and location of your choice.  Its utility extends beyond the ordinary rewards program.  Businesses can instantly tap into the power of permission by using ASK to engage and reward customers.</div>
+                            <div class="title">颠覆奖励机制</div>
+                            <div class="text"><span>ASK</span> 是一种可以在您选择的时间和地点赚取，交易和消费的货币。它的效用超出了普通奖励计划的范围。企业可以使用ASK来吸引和奖励客户，从而立即利用许可的力量。
+                            </div>
                         </div>
                         <div class="card card-home">
                             <div class="img-wrap"><img src="<?php echo $path; ?>assets/icons/card2.svg"></div>
-                            <div class="title">A use case for <span>ASK</span></div>
-                            <div class="text">Our flagship app where users opt-in to register their personal interests and other key data, and embark on various shopping and entertainment journeys. Users earn ASK for engaging with videos, surveys, and other content that addresses their needs and desires. Users can spend ASK and other leading currencies on the Permission platform.</div>
+                            <div class="title"><span>ASK</span>的用例</div>
+                            <div class="text">我们的旗舰应用程序，用户可以选择注册他们的个人兴趣和其他关键数据，并进行各种购物和娱乐之旅。用户通过与视频，调查和其他满足其需求和欲望的内容互动而获得ASK。用户可以在Permission平台上花费ASK和其他主要货币。</div>
                         </div>
                         <div class="card card-home">
                             <div class="img-wrap"><img src="<?php echo $path; ?>assets/icons/card1.svg"></div>
-                            <div class="title">An optimized ecosystem</div>
-                            <div class="text">Permission’s SDK will allow devs to build apps that enable businesses to become permission marketers and meet consumers’ increasing (and rightful!) demand for rewards.  The growth of permission-based applications will incentivize the currency’s growth and enhance its compounding effect. </div>
+                            <div class="title">优化的生态系统</div>
+                            <div class="text">Permission的SDK使开发人员能够构建应用程序，以允许用户在集成的生态系统中进行许可并通过其获利。基于权限的应用程序的广泛使用将激励货币的增长并增强其复利效果。 </div>
                         </div>
                     </div>
                 </div>
@@ -371,11 +371,9 @@ class HomepageChina extends Widget_Base
 
 
                     <div class="team-blurb">
-                        <h3>Exceptional Leaders</h3>
+                        <h3>杰出的领导者</h3>
                         <p>
-                            Serial entrepreneurs in tech, media, and finance, as well as PhDs and
-                            Engineering leaders from
-                            Fortune 500 companies
+                            Permission由科技，媒体和金融领域的连续企业家，以及《财富》 500强公司的博士学位和工程师领导。
                         </p>
                         <div class="navigation">
                             <span class="previous">&lt;</span>
@@ -395,109 +393,103 @@ class HomepageChina extends Widget_Base
                             </figcaption>
                         </figure>
                         <figure>
-                            <img src="/wp-content/uploads/2019/08/stephen.png">
+                            <img src="/wp-content/uploads/2019/08/robin.png">
                             <figcaption>
-                                <h4>STEVEN WILKINSON CISSP, CBP</h4>
-                                <span>CISO</span>
+                                <h4>ROBIN BLOOR, 博士</h4>
+                                <span>技术推广负责人</span>
                             </figcaption>
                         </figure>
                         <figure>
                             <img src="/wp-content/uploads/2020/04/Hunter-Jensen.png">
                             <figcaption>
-                                <h4>HUNTER JENSEN</h4>
-                                <span>CTO</span>
+                                <h4>JOE UNDERBRINK</h4>
+                                <span>首席数据科学家、数学家</span>
                             </figcaption>
                         </figure>
                         <figure>
                             <img src="/wp-content/uploads/2020/04/bobby-v5.png">
                             <figcaption>
                                 <h4>BOBBY PETERSEN</h4>
-                                <span>VP OF MARKETING</span>
+                                <span>营销副总裁</span>
                             </figcaption>
                         </figure>
                         <figure>
                             <img src="/wp-content/uploads/2019/08/Matt.png">
                             <figcaption>
                                 <h4>MATT ERHART</h4>
-                                <span>VP OF FINANCE &amp; COMPLIANCE</span>
+                                <span>财务与合规副总裁</span>
                             </figcaption>
                         </figure>
                         <figure>
                             <img src="/wp-content/uploads/2019/08/therese.png">
                             <figcaption>
                                 <h4>THERESE FAHY</h4>
-                                <span>HR &amp; CONTROLLER</span>
+                                <span>人力资源</span>
                             </figcaption>
                         </figure>
                         <figure>
                             <img src="/wp-content/uploads/2019/08/gary1.png">
                             <figcaption>
-                                <h4>GARY J. SHERMAN Ph.D</h4>
-                                <span>FOUNDING MATHEMATICIAN</span>
+                                <h4>GARY J. SHERMAN 博士</h4>
+                                <span>基础数学家</span>
                             </figcaption>
                         </figure>
                         <figure>
                             <img src="/wp-content/uploads/2020/04/Jennifer-Silver.png">
                             <figcaption>
                                 <h4>JENNY SILVER</h4>
-                                <span>VP OF COMMUNICATIONS</span>
+                                <span>通信副总裁</span>
                             </figcaption>
                         </figure>
                         <figure>
                             <img src="/wp-content/uploads/2019/08/daniel_hiltbrand.png">
                             <figcaption>
                                 <h4>DANIEL HILTBRAND</h4>
-                                <span>DEVELOPMENT ENGINEER</span>
+                                <span>D开发工程师</span>
                             </figcaption>
                         </figure>
                         <figure>
                             <img src="/wp-content/uploads/2020/04/Robert-Morris.png">
                             <figcaption>
                                 <h4>ROBERT MORRIS</h4>
-                                <span>MARKETING MANAGER</span>
+                                <span>市场经理</span>
                             </figcaption>
                         </figure>
-                        <h3>Our Advisors</h3>
-                        <figure>
-                            <img src="/wp-content/uploads/2019/08/robin.png">
-                            <figcaption>
-                                <h4>ROBIN BLOOR, PHD</h4>
-                                <span>FOUNDER OF BLOOR RESEARCH</span>
-                            </figcaption>
-                        </figure>
+                        <h3>我们的顾问</h3>
+
                         <figure>
                             <img src="/wp-content/uploads/2019/08/Richard-1.png">
                             <figcaption>
                                 <h4>RICHARD LI</h4>
-                                <span>GENERAL PARTNER AT<br /> ALPHABLOCK.COM</span>
+                                <span>ALPHABLOCK.COM<br />的管理合伙人</span>
                             </figcaption>
                         </figure>
                         <figure>
                             <img src="/wp-content/uploads/2019/08/Andrew-1.png">
                             <figcaption>
                                 <h4>ANDREW ESSEX</h4>
-                                <span>FORMER CEO OF DROGA5</span>
+                                <span>DROGA5前首席执行官</span>
                             </figcaption>
                         </figure>
                         <figure>
                             <img src="/wp-content/uploads/2019/08/Eric-1.png" >
                             <figcaption>
                                 <h4>ERIC ERVIN</h4>
-                                <span>CEO OF BLOCKFORCE CAPITAL</span>
+                                <span>区块链资本首席执行官</span>
                             </figcaption>
                         </figure>
                         <figure>
                             <img src="/wp-content/uploads/2019/08/Ichiro.png">
                             <figcaption>
-                                <h4>ICHIRO MINAMIKAWA</h4>
-                                <span>CEO OF COINTED JAPAN,<br /> FOUNDER AT BLOCKCHAIN TOKYO</span>
+                                <h4>南川一郎</h4>
+                                <span>COINTED JAPAN首席执行官， <br />东京区块链创始人</span>
                             </figcaption>
                         </figure>
                         <figure>
                             <img src="/wp-content/uploads/2019/08/Rob.png">
                             <figcaption>
-                                <h4>ROB GREGORY</h4>
-                                <span>CEO OF POST-INTERRUPTIVE,<br /> FORMER PRESIDENT OF WHOSAY</span>
+                                <h4>罗伯·格里</h4>
+                                <span>POST-INTERRUPTIVE的首席执行官， <br />WHOSAY的前总统</span>
                             </figcaption>
                         </figure>
                         <div class="spacer"></div>
@@ -520,7 +512,7 @@ class HomepageChina extends Widget_Base
             <section class="s11">
                 <div class="columnar">
                     <div class="columns-twelve">
-                        <div class="title-block">Permission.io Roadmap</div>
+                        <div class="title-block">Permission.io路线图</div>
                     </div>
                 </div>
                 <div class="time-line">
@@ -528,62 +520,62 @@ class HomepageChina extends Widget_Base
                         <div class="columns-twelve time-line-wrap">
                             <div class="time-line-block item-order-1">
                                 <div class="dot"></div>
-                                <div class="title">Q3 2019</div>
+                                <div class="title">2019年第三季度</div>
                                 <div class="text-wrap">
-                                    <p>Affiliate Programs Partnerships</p>
-                                    <p>Ecommerce Platform Partnerships</p>
-                                    <p>Merchant Portal</p>
-                                    <p>3rd Party Permission nodes</p>
+                                    <p>会员计划合作伙伴</p>
+                                    <p>电子商务平台合作伙伴</p>
+                                    <p>商家门户</p>
+                                    <p>第三方权限节点</p>
                                 </div>
                             </div>
                             <div class="time-line-block item-order-4">
                                 <div class="dot"></div>
-                                <div class="title">Q4 2019</div>
+                                <div class="title">2019年第四季度</div>
                                 <div class="text-wrap">
-                                    <p>Integration with ID Management Systems</p>
-                                    <p>Enhanced Persnal Datasets</p>
-                                    <p>Shop with ASK on Permission Platform</p>
-                                    <p>Permission Blockchain Governance Policy and System</p>
+                                    <p>与ID管理系统集成</p>
+                                    <p>增强型个人数据集</p>
+                                    <p>在Permission平台上使用ASK进行购物</p>
+                                    <p>权限区块链治理政策与系统</p>
                                 </div>
                             </div>
                             <div class="time-line-block item-order-2">
                                 <div class="dot"></div>
-                                <div class="title">Q1 2020</div>
+                                <div class="title">2020年第一季度</div>
                                 <div class="text-wrap">
-                                    <p>SDK release</p>
-                                    <p>Reporting & Analytics</p>
-                                    <p>Targeted Personal Dataset Query</p>
-                                    <p>Developer Website and Community Outreach</p>
+                                    <p>SDK版本</p>
+                                    <p>报告与分析</p>
+                                    <p>有针对性的个人数据集查询</p>
+                                    <p>开发者网站和社区扩展</p>
                                 </div>
                             </div>
                             <div class="time-line-block item-order-5">
                                 <div class="dot"></div>
-                                <div class="title">Q2 2020</div>
+                                <div class="title">2020年第二季度</div>
                                 <div class="text-wrap">
-                                    <p>IOS App Release</p>
-                                    <p>Android App release</p>
-                                    <p>Web App release</p>
-                                    <p>Integration with Decentralized Identity Systems</p>
+                                    <p>iOS App发布</p>
+                                    <p>Android App发布</p>
+                                    <p>网络应用发布</p>
+                                    <p>与去中心化身份系统集成</p>
                                 </div>
                             </div>
                             <div class="time-line-block item-order-3">
                                 <div class="dot"></div>
-                                <div class="title">Q3/Q4 2020</div>
+                                <div class="title">2020年第三季度</div>
                                 <div class="text-wrap">
-                                    <p>Decentralized Blockchain</p>
-                                    <p>Keyword Bidding System</p>
-                                    <p>Permission Blockchain Governance</p>
-                                    <p>Member, Merchant and Advertiser Reputation</p>
+                                    <p>去中心化区块链</p>
+                                    <p>关键字竞价系统</p>
+                                    <p>Permission区块链治理</p>
+                                    <p>商家和广告商中建立声誉</p>
                                 </div>
                             </div>
                             <div class="time-line-block item-order-6">
                                 <div class="dot"></div>
-                                <div class="title">Q4 2020</div>
+                                <div class="title">2020年第四季度</div>
                                 <div class="text-wrap">
-                                    <p>Developer API</p>
-                                    <p>Two-Sided Marketplace</p>
-                                    <p>Permission Browser Plugin</p>
-                                    <p>Data Query Optimization</p>
+                                    <p>开发人员API</p>
+                                    <p>双向市场</p>
+                                    <p>Permission浏览器插件</p>
+                                    <p>数据查询优化</p>
                                 </div>
                             </div>
                         </div>
@@ -596,14 +588,14 @@ class HomepageChina extends Widget_Base
             <section class="s12">
                 <div class="columnar">
                     <div class="columns-twelve">
-                        <div class="title-block">In The News</div>
+                        <div class="title-block">相关报道：</div>
                     </div>
                 </div>
                 <div class="columnar">
                     <div class="home-col-wrap columns-twelve">
                         <div class="card card-home">
                             <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/Fortune.jpg"></div>
-                            <div class="text">Messari adds Permission to it’s Disclosure Registry, joining the ranks of world-renowned projects…</div>
+                            <div class="text">11个加密项目周二宣布已加入梅萨里（Massari）披露注册表…</div>
                             <a href="#" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
                         </div>
                         <div class="card card-home">
@@ -651,7 +643,7 @@ class HomepageChina extends Widget_Base
             <section class="s13">
                 <div class="columnar">
                     <div class="columns-twelve">
-                        <div class="title-block">On The Air</div>
+                        <div class="title-block">相关采访</div>
                     </div>
                 </div>
                 <div class="columnar">
@@ -659,10 +651,20 @@ class HomepageChina extends Widget_Base
 
                         <div class="card card-home card-soundcloud">
                             <div class="img-wrap"></div>
-                            <iframe width="100%" height="260" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/464133330&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                            <iframe width="100%" height="260" scrolling="no" frameborder="no" allow="autoplay" src="https://player.fm/series/business-leaders-podcast-2544232/charlie-silvers-mission-to-take-power-back-for-the-consumer-from-facebook-and-youtube"></iframe>
                             <div class="text-wrap">
                                 <div class="podcast"><img src="<?php echo $path; ?>assets/podcast.png"></div>
-                                <div class="text">CEO Charles Silver talks the Permission Marketplace, Ask, and more...</div>
+                                <div class="text">首席执行官Charles Silver谈Permission的市场、ASK及其他</div>
+                            </div>
+                        </div>
+
+
+                        <div class="card card-home card-soundcloud">
+                            <div class="img-wrap"></div>
+                            <iframe width="100%" height="260" scrolling="no" frameborder="no" allow="autoplay" src="https://coinpm.podbean.com/e/talks-%E2%80%94-charlie-silver-ceo-of-permissionio/"></iframe>
+                            <div class="text-wrap">
+                                <div class="podcast"><img src="<?php echo $path; ?>assets/podcast.png"></div>
+                                <div class="text">Permission市场用加密货币为用户的时间和数据提供补偿</div>
                             </div>
                         </div>
 
@@ -672,25 +674,7 @@ class HomepageChina extends Widget_Base
                             <iframe width="100%" height="260" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/464133330&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                             <div class="text-wrap">
                                 <div class="podcast"><img src="<?php echo $path; ?>assets/podcast.png"></div>
-                                <div class="text">CEO Charles Silver talks the Permission Marketplace, Ask, and more...</div>
-                            </div>
-                        </div>
-
-
-                        <div class="columns-blog">
-                            <div class="blog-card card blog-home">
-                                <div class="blog-card-thumb"><img src="https://stageabout.wpengine.com/wp-content/uploads/2020/04/1_V5BBxrLPOhb03UvUF0rxlQ-1024x868.jpeg">
-                                </div>
-                                <div class="blog-card-desc">
-                                    <div class="blog-card-cat">
-                                        Data Privacy                                        </div>
-                                    <div class="blog-card-excerpt">
-                                        Solving the “Data Rights” Problem: It’s about Compensation                                        </div>
-                                    <a href="https://stageabout.wpengine.com/blog/data-privacy/solving-the-data-rights-problem-its-about-compensation/" class="blog-card-link test">
-                                        Read More
-                                        <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                    </a>
-                                </div>
+                                <div class="text">首席执行官Charles Silvers的使命是为消费者夺回权力</div>
                             </div>
                         </div>
 
@@ -702,7 +686,7 @@ class HomepageChina extends Widget_Base
             <section class="s14">
                 <div class="columnar">
                     <div class="columns-twelve">
-                        <div class="title-block">Our Partners</div>
+                        <div class="title-block">合作伙伴</div>
                     </div>
                 </div>
 
