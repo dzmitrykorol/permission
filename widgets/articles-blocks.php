@@ -30,6 +30,10 @@ $path = '/wp-content/plugins/elementor-custom-widgets/';
             $id = $query['page_id'];
             ?>
             <div class="columns-blog">
+
+
+                <a href="<?php echo get_page_link($page->ID);
+                ?>" >
                 <div class="blog-card card">
                     <div class="blog-card-thumb"><img
                             src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
@@ -41,13 +45,15 @@ $path = '/wp-content/plugins/elementor-custom-widgets/';
                         <div class="blog-card-excerpt">
                             <?php echo $page->post_title; ?>
                         </div>
-                        <a href="<?php echo get_page_link($page->ID);
+                        <div href="<?php echo get_page_link($page->ID);
                         ?>" class="blog-card-link test">
                             Read More
                             <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                        </a>
+                        </div>
                     </div>
                 </div>
+                </a>
+
             </div>
         <?php } ?>
     </div>
@@ -82,6 +88,9 @@ $path = '/wp-content/plugins/elementor-custom-widgets/';
             parse_str($parts['query'], $query);
             $id = $query['page_id']; ?>
             <div class="columns-blog">
+
+
+                <a href="<?php echo get_page_link($page->ID); ?>">
                 <div class="blog-card card">
                     <div class="blog-card-thumb"><img
                             src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
@@ -93,12 +102,14 @@ $path = '/wp-content/plugins/elementor-custom-widgets/';
                         <div class="blog-card-excerpt">
                             <?php echo $page->post_title; ?>
                         </div>
-                        <a href="<?php echo get_page_link($page->ID); ?>" class="blog-card-link test">
+                        <div class="blog-card-link test">
                             Read More
                             <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                        </a>
+                        </div>
                     </div>
                 </div>
+                </a>
+
             </div>
         <?php } ?>
     </div>
@@ -131,6 +142,10 @@ $path = '/wp-content/plugins/elementor-custom-widgets/';
             parse_str($parts['query'], $query);
             $id = $query['page_id']; ?>
             <div class="columns-blog">
+
+
+
+                <a href="<?php echo get_page_link($page->ID); ?>">
                 <div class="blog-card card">
                     <div class="blog-card-thumb"><img
                             src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
@@ -142,12 +157,16 @@ $path = '/wp-content/plugins/elementor-custom-widgets/';
                         <div class="blog-card-excerpt">
                             <?php echo $page->post_title; ?>
                         </div>
-                        <a href="<?php echo get_page_link($page->ID); ?>" class="blog-card-link test">
+                        <div class="blog-card-link test">
                             Read More
                             <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                        </a>
+                        </div>
                     </div>
                 </div>
+                </a>
+
+
+
             </div>
         <?php } ?>
     </div>
