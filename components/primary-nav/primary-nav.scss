@@ -101,14 +101,14 @@
         display: inline-block;
         font-size: 18px;
         font-weight: 700;
-        line-height: 26px;
+        line-height: unset;
         margin: 0 0 4px;
 
         @include respond-to(desktop) {
           color: $color-white;
           font-size: 14px;
           font-weight: 500;
-          line-height: 20px;
+          line-height: unset;
           margin: 0;
         }
 

@@ -248,6 +248,8 @@ class BlogPermissionUpdatesPage extends Widget_Base
                             $id = $query['page_id'];
                             ?>
                             <div class="columns-blog">
+
+                                <a href="<?php echo get_page_link($id); ?>" class="">
                                 <div class="blog-card card">
                                     <div class="blog-card-thumb"><img
                                                 src="<?php echo get_the_post_thumbnail_url($page->ID, 'large'); ?>">
@@ -259,12 +261,15 @@ class BlogPermissionUpdatesPage extends Widget_Base
                                         <div class="blog-card-excerpt">
                                             <?php echo $page->post_title; ?>
                                         </div>
-                                        <a href="<?php echo get_page_link($id); ?>" class="blog-card-link test">
+                                        <div class="blog-card-link test">
                                             Read More
                                             <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                        </a>
+                                        </div>
                                     </div>
                                 </div>
+                                </a>
+
+
                             </div>
                         <?php } ?>
                     </div>
@@ -302,6 +307,9 @@ class BlogPermissionUpdatesPage extends Widget_Base
                                 $pageId = $categoryPage->ID;
                                 ?>
                                 <div class="columns-blog">
+
+
+                                    <a href="<?php echo get_page_link($pageId); ?>">
                                     <div class="blog-card card">
                                         <div class="blog-card-thumb">
                                             <img src="<?php echo get_the_post_thumbnail_url($categoryPage->ID, 'large'); ?>">
@@ -313,12 +321,15 @@ class BlogPermissionUpdatesPage extends Widget_Base
                                             <div class="blog-card-excerpt">
                                                 <?php echo $categoryPage->post_title; ?>
                                             </div>
-                                            <a href="<?php echo get_page_link($pageId); ?>" class="blog-card-link">
+                                            <div class="blog-card-link">
                                                 Read More
                                                 <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg">
-                                            </a>
+                                            </div>
                                         </div>
                                     </div>
+                                    </a>
+
+
                                 </div>
                             <?php } ?>
                         </div>
