@@ -641,7 +641,7 @@ class Homepage extends Widget_Base
 
                     <div class="card card-home card-soundcloud">
                         <div class="img-wrap"></div>
-                            <iframe width="100%" height="260" scrolling="no" frameborder="no" allow="autoplay" src="https://player.fm/series/business-leaders-podcast-2544232/charlie-silvers-mission-to-take-power-back-for-the-consumer-from-facebook-and-youtube"></iframe>
+                            <iframe width="100%" height="260" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/697685587&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                              <div class="text-wrap">
                                 <div class="podcast"><img src="<?php echo $path; ?>assets/podcast.png"></div>
                                 <div class="text">CEO Charles Silver talks the Permission Marketplace, Ask, and more...</div>
@@ -651,7 +651,7 @@ class Homepage extends Widget_Base
 
                     <div class="card card-home card-soundcloud">
                         <div class="img-wrap"></div>
-                        <iframe width="100%" height="260" scrolling="no" frameborder="no" allow="autoplay" src="https://coinpm.podbean.com/e/talks-%E2%80%94-charlie-silver-ceo-of-permissionio/"></iframe>
+                        <iframe width="100%" height="260" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/464133330&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                         <div class="text-wrap">
                             <div class="podcast"><img src="<?php echo $path; ?>assets/podcast.png"></div>
                             <div class="text">CEO Charles Silver talks the Permission Marketplace, Ask, and more...</div>
@@ -660,7 +660,7 @@ class Homepage extends Widget_Base
 
                     <div class="card card-home card-soundcloud">
                         <div class="img-wrap"></div>
-                        <iframe width="100%" height="260" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/464133330&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                        <iframe title="Charlie Silver’s mission to take power back, for the consumer, from facebook and youtube." src="https://www.podbean.com/media/player/u573x-cc3708?from=usersite&vjs=1&skin=1&fonts=Helvetica&auto=0&download=1" height="260" width="100%" style="border: none;" scrolling="no" data-name="pb-iframe-player"></iframe>
                         <div class="text-wrap">
                             <div class="podcast"><img src="<?php echo $path; ?>assets/podcast.png"></div>
                             <div class="text">CEO Charlie Silver's Mission To Take Power Back For The Consumer</div>
