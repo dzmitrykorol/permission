@@ -181,10 +181,10 @@ class Homepage extends Widget_Base
                                             <a href="https://shopping.permission.io/" role="button" target="_blank"click="">Join Us Now</a>
                                         </div>
                                         <div class="social-icons">
-                                            <a href="#"><img src="<?php echo $path; ?>assets/icons/TelegramLogo.svg">Telegram Chat</a>
+                                            <a href="https://t.me/permission_io"><img src="<?php echo $path; ?>assets/icons/TelegramLogo.svg">Telegram Chat</a>
                                             <a href="#"><img src="<?php echo $path; ?>assets/icons/TelegramLogo.svg">Telegram Announcement</a>
-                                            <a href="#"><img src="<?php echo $path; ?>assets/icons/TwitterLogo.svg">Twitter</a>
-                                            <a href="#"><img src="<?php echo $path; ?>assets/icons/MediumLogo.svg">Medium</a>
+                                            <a href="https://twitter.com/permissionIO"><img src="<?php echo $path; ?>assets/icons/TwitterLogo.svg">Twitter</a>
+                                            <a href="https://medium.com/permissionio"><img src="<?php echo $path; ?>assets/icons/MediumLogo.svg">Medium</a>
                                         </div>
                                     </div>
                                 </div>
@@ -254,7 +254,7 @@ class Homepage extends Widget_Base
         <section class="s4">
             <div class="columnar">
                 <div class="columns-twelve">
-                    <div class="title">The Staus Quo</div>
+                    <div class="title">The Status Quo</div>
                     <div class="sub-title">Merchants pay centralized third-party platforms to show you their products, interrupting you and exploiting your data in the process.  Tech giants yield mind-boggling profits while <span>you gain zero financial benefit from your time and information.</span></div>
                 </div>
             </div>
@@ -342,7 +342,7 @@ class Homepage extends Widget_Base
             <div class="columnar">
                 <div class="title columns-twelve">See What Developers Are Creating</div>
                 <div class="buttons columns-twelve">
-                    <a href="#" role="button" target="_blank"click="">Read the Documentation</a>
+                    <a href="https://permission.gitlab.io/" role="button" target="_blank"click="">Read the Documentation</a>
                 </div>
             </div>
         </section>
@@ -374,13 +374,6 @@ class Homepage extends Widget_Base
                         <figcaption>
                             <h4>CHARLES H. SILVER</h4>
                             <span>CEO</span>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <img src="/wp-content/uploads/2019/08/stephen.png">
-                        <figcaption>
-                            <h4>STEVEN WILKINSON CISSP, CBP</h4>
-                            <span>CISO</span>
                         </figcaption>
                     </figure>
                     <figure>
@@ -585,33 +578,36 @@ class Homepage extends Widget_Base
                 <div class="home-col-wrap columns-twelve">
                     <div class="card card-home">
                         <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/Fortune.jpg"></div>
-                        <div class="text">Messari adds Permission to it’s Disclosure Registry, joining the ranks of world-renowned projects…</div>
-                        <a href="#" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
+                        <div class="text">Permission.io and RockTree Lex Sign Global Strategic Partnership</div>
+                        <a href="https://web.archive.org/web/20200516215422/https://www.marketwatch.com/press-release/advertising-industry-being-disrupted-by-ask-permission-first-ad-blockchain-2020-02-21" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
                     </div>
                     <div class="card card-home">
-                        <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/Medium.jpg"></div>
-                        <div class="text">Messari adds Permission to it’s Disclosure Registry, joining the ranks of world-renowned projects…</div>
-                        <a href="#" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
+                        <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/news/Coindesk.jpg"></div>
+                        <div class="text">Messari adds Permission.io to its Disclosure Registry, joining the ranks of world-renowned projects…</div>
+                        <a href="https://www.coindesk.com/messari-disclosures-registry-tops-50-cryptocurrencies-with-10-new-additions" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
                     </div>
                     <div class="card card-home">
-                        <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/Forbes.jpg"></div>
-                        <div class="text">Messari adds Permission to it’s Disclosure Registry, joining the ranks of world-renowned projects…</div>
-                        <a href="#" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
+                        <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/news/ForbesTechnologyCouncil.jpg"></div>
+                        <div class="text">How the Transparency of Blockchain Drives Value</div>
+                        <a href="https://www.forbes.com/sites/forbestechcouncil/2020/02/14/how-the-transparency-of-blockchain-drives-value/#4411d33731a6" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
                     </div>
                     <div class="card card-home">
-                        <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/BlockTribune.jpg"></div>
-                        <div class="text">Messari adds Permission to it’s Disclosure Registry, joining the ranks of world-renowned projects…</div>
-                        <a href="#" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
+                        <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/news/PublishOx.jpg"></div>
+                        <div class="text">Two Blockchain Based E-commerce Platforms Which Could Disrupt Legacy Enterprises</div>
+                        <a href="https://www.publish0x.com/cryptoscrimper/two-blockchain-based-e-commerce-platforms-which-could-disrup-xqvldn" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
+                    </div>
+
+
+
+                    <div class="card card-home">
+                        <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/news/BItcoinExchangeGuide.jpg"></div>
+                        <div class="text">Permission.io Founder and CEO in discussion with Bitcoin Exchange Guide about new e-commerce platform...</div>
+                        <a href="https://bitcoinexchangeguide.com/permission-interview-new-e-com-marketplace-compensates-users-in-crypto-for-time-and-data/" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
                     </div>
                     <div class="card card-home">
-                        <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/BusinessWire.jpg"></div>
-                        <div class="text">Messari adds Permission to it’s Disclosure Registry, joining the ranks of world-renowned projects…</div>
-                        <a href="#" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
-                    </div>
-                    <div class="card card-home">
-                        <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/BitcoinExchange.jpg"></div>
-                        <div class="text">Messari adds Permission to it’s Disclosure Registry, joining the ranks of world-renowned projects…</div>
-                        <a href="#" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
+                        <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/news/BlockTribune.jpg"></div>
+                        <div class="text">Permission.io Launches E-Commerce Marketplace With Crypto Rewards</div>
+                        <a href="https://blocktribune.com/permission-io-launches-e-commerce-marketplace-with-crypto-rewards" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
                     </div>
                 </div>
             </div>
