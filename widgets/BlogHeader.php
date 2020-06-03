@@ -249,7 +249,7 @@ class BlogHeader extends Widget_Base {
                                 ?>
                                 <li><a href="<?php if ($translations['en']) {echo get_permalink($translations['en']);} else { echo '#';}  ?>" ><img src="<?php echo $path; ?>/assets/icons/flag-us.png" data-language="cn">English</a></li>
                                 <li><a href="<?php if ($translations['zh']) {echo get_permalink($translations['zh']);} else { echo '#';}  ?>" ><img src="<?php echo $path; ?>/assets/icons/china-flag.jpg" data-language="cn">Chinese</a></li>
-                                <li><a href="<?php if ($translations['ko']) {echo get_permalink($translations['ko']);} else { echo '#';}  ?>" ><img src="<?php echo $path; ?>/assets/icons/korean-flag.jpg" data-language="cn">Korean</a></li>
+                              <!--  <li><a href="<?php /*if ($translations['ko']) {echo get_permalink($translations['ko']);} else { echo '#';}  */?>" ><img src="<?php /*echo $path; */?>/assets/icons/korean-flag.jpg" data-language="cn">Korean</a></li>-->
                             </ul>
                         </li>
                     </ul>
