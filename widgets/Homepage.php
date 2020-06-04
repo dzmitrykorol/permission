@@ -182,7 +182,7 @@ class Homepage extends Widget_Base
                                         </div>
                                         <div class="social-icons">
                                             <a href="https://t.me/permission_io"><img src="<?php echo $path; ?>assets/icons/TelegramLogo.svg">Telegram Chat</a>
-                                            <a href="#"><img src="<?php echo $path; ?>assets/icons/TelegramLogo.svg">Telegram Announcement</a>
+                                            <a href="https://t.me/PermissionAnnouncements"><img src="<?php echo $path; ?>assets/icons/TelegramLogo.svg">Telegram Announcement</a>
                                             <a href="https://twitter.com/permissionIO"><img src="<?php echo $path; ?>assets/icons/TwitterLogo.svg">Twitter</a>
                                             <a href="https://medium.com/permissionio"><img src="<?php echo $path; ?>assets/icons/MediumLogo.svg">Medium</a>
                                         </div>
@@ -192,7 +192,7 @@ class Homepage extends Widget_Base
                         </div>
                     </div>
                 </div>
-                <iframe id="hero-player" src="https://player.vimeo.com/video/366780942" style="width: 100vw;height: 56.25vw;" frameborder="0" webkit-playsinline="true"
+                <iframe id="hero-player" src="https://player.vimeo.com/video/424898561" style="width: 100vw;height: 56.25vw;" frameborder="0" webkit-playsinline="true"
                         playsinline="true" allow="autoplay">
                 </iframe>
             </div>
@@ -238,7 +238,7 @@ class Homepage extends Widget_Base
         <section class="s3">
             <div class="video-block">
                 <div class="permission-secondary-video">
-                    <iframe id="perm-sec-video" src="https://player.vimeo.com/video/366780942" width="640" height="360" frameborder="0" allow="autoplay;"></iframe>
+                    <iframe id="perm-sec-video" src="https://player.vimeo.com/video/424898561" width="640" height="360" frameborder="0" allow="autoplay;"></iframe>
                     <div id="overlay-v2" class="overlay">
                         <div class="play-icon" id="play-icon-id" >
                             <img src="<?php echo $path; ?>assets/icons/Play_Icon.svg">
@@ -377,6 +377,13 @@ class Homepage extends Widget_Base
                         </figcaption>
                     </figure>
                     <figure>
+                        <img src="/wp-content/uploads/2019/08/robin.png">
+                        <figcaption>
+                            <h4>ROBIN BLOOR, PHD</h4>
+                            <span>FOUNDER OF BLOOR RESEARCH</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
                         <img src="/wp-content/uploads/2020/04/Hunter-Jensen.png">
                         <figcaption>
                             <h4>HUNTER JENSEN</h4>
@@ -433,13 +440,6 @@ class Homepage extends Widget_Base
                         </figcaption>
                     </figure>
                     <h3>Our Advisors</h3>
-                    <figure>
-                        <img src="/wp-content/uploads/2019/08/robin.png">
-                        <figcaption>
-                            <h4>ROBIN BLOOR, PHD</h4>
-                            <span>FOUNDER OF BLOOR RESEARCH</span>
-                        </figcaption>
-                    </figure>
                     <figure>
                         <img src="/wp-content/uploads/2019/08/Richard-1.png">
                         <figcaption>
@@ -577,7 +577,7 @@ class Homepage extends Widget_Base
             <div class="columnar">
                 <div class="home-col-wrap columns-twelve">
                     <div class="card card-home">
-                        <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/Fortune.jpg"></div>
+                        <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/news/news_item_marketwatch_logo.png"></div>
                         <div class="text">Permission.io and RockTree Lex Sign Global Strategic Partnership</div>
                         <a href="https://web.archive.org/web/20200516215422/https://www.marketwatch.com/press-release/advertising-industry-being-disrupted-by-ask-permission-first-ad-blockchain-2020-02-21" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
                     </div>
@@ -615,7 +615,7 @@ class Homepage extends Widget_Base
             <div class="columnar">
                 <div class="columns-twelve">
                     <div class="buttons">
-                        <a href="#" role="button" target="_blank"click="">All News</a>
+                        <a href="https://permission.io/news/" role="button" target="_blank"click="">All News</a>
                     </div>
                 </div>
             </div>
@@ -645,14 +645,7 @@ class Homepage extends Widget_Base
                     </div>
 
 
-                    <div class="card card-home card-soundcloud">
-                        <div class="img-wrap"></div>
-                        <iframe width="100%" height="260" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/464133330&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-                        <div class="text-wrap">
-                            <div class="podcast"><img src="<?php echo $path; ?>assets/podcast.png"></div>
-                            <div class="text">CEO Charles Silver talks the Permission Marketplace, Ask, and more...</div>
-                        </div>
-                    </div>
+
 
                     <div class="card card-home card-soundcloud">
                         <div class="img-wrap"></div>

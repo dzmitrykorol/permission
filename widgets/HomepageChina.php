@@ -199,10 +199,10 @@ class HomepageChina extends Widget_Base
                                                 <a href="https://shopping.permission.io/" role="button" target="_blank"click="">现在加入</a>
                                             </div>
                                             <div class="social-icons">
-                                                <a href="#"><img src="<?php echo $path; ?>assets/icons/TelegramLogo.svg">Telegram Chat</a>
-                                                <a href="#"><img src="<?php echo $path; ?>assets/icons/TelegramLogo.svg">Telegram Announcement</a>
-                                                <a href="#"><img src="<?php echo $path; ?>assets/icons/TwitterLogo.svg">Twitter</a>
-                                                <a href="#"><img src="<?php echo $path; ?>assets/icons/MediumLogo.svg">Medium</a>
+                                                <a href="https://t.me/permission_io"><img src="<?php echo $path; ?>assets/icons/TelegramLogo.svg">Telegram Chat</a>
+                                                <a href="https://t.me/PermissionAnnouncements"><img src="<?php echo $path; ?>assets/icons/TelegramLogo.svg">Telegram Announcement</a>
+                                                <a href="https://twitter.com/permissionIO"><img src="<?php echo $path; ?>assets/icons/TwitterLogo.svg">Twitter</a>
+                                                <a href="https://medium.com/permissionio"><img src="<?php echo $path; ?>assets/icons/MediumLogo.svg">Medium</a>
                                             </div>
                                         </div>
                                     </div>
@@ -210,7 +210,7 @@ class HomepageChina extends Widget_Base
                             </div>
                         </div>
                     </div>
-                    <iframe id="hero-player" src="https://player.vimeo.com/video/366780942" style="width: 100vw;height: 56.25vw;" frameborder="0" webkit-playsinline="true"
+                    <iframe id="hero-player" src="https://player.vimeo.com/video/424959726" style="width: 100vw;height: 56.25vw;" frameborder="0" webkit-playsinline="true"
                             playsinline="true" allow="autoplay">
                     </iframe>
                 </div>
@@ -243,7 +243,7 @@ class HomepageChina extends Widget_Base
                             <p class="content">Permission区块链提供责任感和透明度，消除了广告支出浪费。</p>
                         </div>
                         <div class="buttons">
-                            <a href="https://shopping.permission.io/" role="button" target="_blank"click="">Start Earning Now</a>
+                            <a href="https://shopping.permission.io/" role="button" target="_blank"click="">即刻开始赚钱</a>
                         </div>
                     </div>
                     <div class="columns-four-eight">
@@ -255,7 +255,7 @@ class HomepageChina extends Widget_Base
             <section class="s3">
                 <div class="video-block">
                     <div class="permission-secondary-video">
-                        <iframe id="perm-sec-video" src="https://player.vimeo.com/video/366780942" width="640" height="360" frameborder="0" allow="autoplay;"></iframe>
+                        <iframe id="perm-sec-video" src="https://player.vimeo.com/video/424959726" width="640" height="360" frameborder="0" allow="autoplay;"></iframe>
                         <div class="overlay">
                             <div class="play-icon">
                                 <img src="<?php echo $path; ?>assets/icons/Play_Icon.svg">
@@ -358,9 +358,9 @@ class HomepageChina extends Widget_Base
 
             <section class="s8">
                 <div class="columnar">
-                    <div class="title columns-twelve">See What Developers Are Creating</div>
+                    <div class="title columns-twelve">了解开发人员创建了什么</div>
                     <div class="buttons columns-twelve">
-                        <a href="#" role="button" target="_blank"click="">Read the Documentation</a>
+                        <a href="https://permission.gitlab.io/" role="button" target="_blank"click="">阅读文档</a>
                     </div>
                 </div>
             </section>
@@ -402,8 +402,8 @@ class HomepageChina extends Widget_Base
                         <figure>
                             <img src="/wp-content/uploads/2020/04/Hunter-Jensen.png">
                             <figcaption>
-                                <h4>JOE UNDERBRINK</h4>
-                                <span>首席数据科学家、数学家</span>
+                                <h4>HUNTER JENSEN</h4>
+                                <span>CTO</span>
                             </figcaption>
                         </figure>
                         <figure>
@@ -592,44 +592,49 @@ class HomepageChina extends Widget_Base
                     </div>
                 </div>
                 <div class="columnar">
+
                     <div class="home-col-wrap columns-twelve">
                         <div class="card card-home">
-                            <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/Fortune.jpg"></div>
-                            <div class="text">11个加密项目周二宣布已加入梅萨里（Massari）披露注册表…</div>
-                            <a href="#" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
+                            <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/news/news_item_marketwatch_logo.png"></div>
+                            <div class="text">Permission.io与RockTree Lex签署全球合作伙伴战略协议</div>
+                            <a href="https://web.archive.org/web/20200516215422/https://www.marketwatch.com/press-release/advertising-industry-being-disrupted-by-ask-permission-first-ad-blockchain-2020-02-21" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
                         </div>
                         <div class="card card-home">
-                            <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/Medium.jpg"></div>
-                            <div class="text">Messari adds Permission to it’s Disclosure Registry, joining the ranks of world-renowned projects…</div>
-                            <a href="#" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
+                            <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/news/Coindesk.jpg"></div>
+                            <div class="text">梅萨里（Messari）在其披露注册表中添加了Permission，加入了世界知名项目的行列，这些项目旨在为加密经济带来清晰性和透明度。</div>
+                            <a href="https://www.coindesk.com/messari-disclosures-registry-tops-50-cryptocurrencies-with-10-new-additions" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
                         </div>
                         <div class="card card-home">
-                            <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/Forbes.jpg"></div>
-                            <div class="text">Messari adds Permission to it’s Disclosure Registry, joining the ranks of world-renowned projects…</div>
-                            <a href="#" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
+                            <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/news/ForbesTechnologyCouncil.jpg"></div>
+                            <div class="text">区块链的透明度如何驱动价值</div>
+                            <a href="https://www.forbes.com/sites/forbestechcouncil/2020/02/14/how-the-transparency-of-blockchain-drives-value/#4411d33731a6" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
                         </div>
                         <div class="card card-home">
-                            <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/BlockTribune.jpg"></div>
-                            <div class="text">Messari adds Permission to it’s Disclosure Registry, joining the ranks of world-renowned projects…</div>
-                            <a href="#" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
+                            <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/news/PublishOx.jpg"></div>
+                            <div class="text">两个会颠覆传统企业的以区块链为基础的电子商务平台</div>
+                            <a href="https://www.publish0x.com/cryptoscrimper/two-blockchain-based-e-commerce-platforms-which-could-disrup-xqvldn" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
+                        </div>
+
+
+
+                        <div class="card card-home">
+                            <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/news/BItcoinExchangeGuide.jpg"></div>
+                            <div class="text">Permission.io的创始人、首席执行官与比特币交易指南讨论一种新的电子商务平台，支付用户的时间和数据。</div>
+                            <a href="https://bitcoinexchangeguide.com/permission-interview-new-e-com-marketplace-compensates-users-in-crypto-for-time-and-data/" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
                         </div>
                         <div class="card card-home">
-                            <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/BusinessWire.jpg"></div>
-                            <div class="text">Messari adds Permission to it’s Disclosure Registry, joining the ranks of world-renowned projects…</div>
-                            <a href="#" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
-                        </div>
-                        <div class="card card-home">
-                            <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/BitcoinExchange.jpg"></div>
-                            <div class="text">Messari adds Permission to it’s Disclosure Registry, joining the ranks of world-renowned projects…</div>
-                            <a href="#" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
+                            <div class="img-wrap"><img src="<?php echo $path; ?>assets/logos/news/BlockTribune.jpg"></div>
+                            <div class="text">Permission.io推出奖励加密货币的电子商务市场</div>
+                            <a href="https://blocktribune.com/permission-io-launches-e-commerce-marketplace-with-crypto-rewards" class="blog-card-link">Read More <img src="https://cdn.permission.io/apps/permissionbase/assets/icons/chevron-right.svg"></a>
                         </div>
                     </div>
+
                 </div>
 
                 <div class="columnar">
                     <div class="columns-twelve">
                         <div class="buttons">
-                            <a href="#" role="button" target="_blank"click="">All News</a>
+                            <a href="https://permission.io/news/" role="button" target="_blank"click="">所有新闻</a>
                         </div>
                     </div>
                 </div>
@@ -659,14 +664,7 @@ class HomepageChina extends Widget_Base
                         </div>
 
 
-                        <div class="card card-home card-soundcloud">
-                            <div class="img-wrap"></div>
-                            <iframe width="100%" height="260" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/464133330&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-                            <div class="text-wrap">
-                                <div class="podcast"><img src="<?php echo $path; ?>assets/podcast.png"></div>
-                                <div class="text">Permission市场用加密货币为用户的时间和数据提供补偿</div>
-                            </div>
-                        </div>
+
 
 
                         <div class="card card-home card-soundcloud">
