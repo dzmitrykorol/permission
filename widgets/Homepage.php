@@ -192,7 +192,7 @@ class Homepage extends Widget_Base
                         </div>
                     </div>
                 </div>
-                <iframe id="hero-player" src="https://player.vimeo.com/video/366780942" style="width: 100vw;height: 56.25vw;" frameborder="0" webkit-playsinline="true"
+                <iframe id="hero-player" src="https://player.vimeo.com/video/424898561" style="width: 100vw;height: 56.25vw;" frameborder="0" webkit-playsinline="true"
                         playsinline="true" allow="autoplay">
                 </iframe>
             </div>
@@ -238,7 +238,7 @@ class Homepage extends Widget_Base
         <section class="s3">
             <div class="video-block">
                 <div class="permission-secondary-video">
-                    <iframe id="perm-sec-video" src="https://player.vimeo.com/video/366780942" width="640" height="360" frameborder="0" allow="autoplay;"></iframe>
+                    <iframe id="perm-sec-video" src="https://player.vimeo.com/video/424898561" width="640" height="360" frameborder="0" allow="autoplay;"></iframe>
                     <div id="overlay-v2" class="overlay">
                         <div class="play-icon" id="play-icon-id" >
                             <img src="<?php echo $path; ?>assets/icons/Play_Icon.svg">
